@@ -4,6 +4,8 @@
 
 package maps
 
+import "fmt"
+
 type OfBoolNBoolIf interface {
 	Load(bool) (bool, bool)
 }
@@ -19,9 +21,13 @@ type OfBoolNBoolIterIf interface {
 
 type OfBoolNBool map[bool]bool
 
-func (__ OfBoolNBool) Load(k bool) (bool, bool) {
+func (__ OfBoolNBool) Load(k bool) (bool, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfBoolNBool) Store(k bool, v bool) {
@@ -65,9 +71,13 @@ type OfBoolNByteIterIf interface {
 
 type OfBoolNByte map[bool]byte
 
-func (__ OfBoolNByte) Load(k bool) (byte, bool) {
+func (__ OfBoolNByte) Load(k bool) (byte, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfBoolNByte) Store(k bool, v byte) {
@@ -111,9 +121,13 @@ type OfBoolNComplex128IterIf interface {
 
 type OfBoolNComplex128 map[bool]complex128
 
-func (__ OfBoolNComplex128) Load(k bool) (complex128, bool) {
+func (__ OfBoolNComplex128) Load(k bool) (complex128, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfBoolNComplex128) Store(k bool, v complex128) {
@@ -157,9 +171,13 @@ type OfBoolNComplex64IterIf interface {
 
 type OfBoolNComplex64 map[bool]complex64
 
-func (__ OfBoolNComplex64) Load(k bool) (complex64, bool) {
+func (__ OfBoolNComplex64) Load(k bool) (complex64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfBoolNComplex64) Store(k bool, v complex64) {
@@ -203,9 +221,13 @@ type OfBoolNErrorIterIf interface {
 
 type OfBoolNError map[bool]error
 
-func (__ OfBoolNError) Load(k bool) (error, bool) {
+func (__ OfBoolNError) Load(k bool) (error, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfBoolNError) Store(k bool, v error) {
@@ -249,9 +271,13 @@ type OfBoolNFloat32IterIf interface {
 
 type OfBoolNFloat32 map[bool]float32
 
-func (__ OfBoolNFloat32) Load(k bool) (float32, bool) {
+func (__ OfBoolNFloat32) Load(k bool) (float32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfBoolNFloat32) Store(k bool, v float32) {
@@ -295,9 +321,13 @@ type OfBoolNFloat64IterIf interface {
 
 type OfBoolNFloat64 map[bool]float64
 
-func (__ OfBoolNFloat64) Load(k bool) (float64, bool) {
+func (__ OfBoolNFloat64) Load(k bool) (float64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfBoolNFloat64) Store(k bool, v float64) {
@@ -341,9 +371,13 @@ type OfBoolNIntIterIf interface {
 
 type OfBoolNInt map[bool]int
 
-func (__ OfBoolNInt) Load(k bool) (int, bool) {
+func (__ OfBoolNInt) Load(k bool) (int, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfBoolNInt) Store(k bool, v int) {
@@ -387,9 +421,13 @@ type OfBoolNInt16IterIf interface {
 
 type OfBoolNInt16 map[bool]int16
 
-func (__ OfBoolNInt16) Load(k bool) (int16, bool) {
+func (__ OfBoolNInt16) Load(k bool) (int16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfBoolNInt16) Store(k bool, v int16) {
@@ -433,9 +471,13 @@ type OfBoolNInt32IterIf interface {
 
 type OfBoolNInt32 map[bool]int32
 
-func (__ OfBoolNInt32) Load(k bool) (int32, bool) {
+func (__ OfBoolNInt32) Load(k bool) (int32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfBoolNInt32) Store(k bool, v int32) {
@@ -479,9 +521,13 @@ type OfBoolNInt64IterIf interface {
 
 type OfBoolNInt64 map[bool]int64
 
-func (__ OfBoolNInt64) Load(k bool) (int64, bool) {
+func (__ OfBoolNInt64) Load(k bool) (int64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfBoolNInt64) Store(k bool, v int64) {
@@ -525,9 +571,13 @@ type OfBoolNInt8IterIf interface {
 
 type OfBoolNInt8 map[bool]int8
 
-func (__ OfBoolNInt8) Load(k bool) (int8, bool) {
+func (__ OfBoolNInt8) Load(k bool) (int8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfBoolNInt8) Store(k bool, v int8) {
@@ -571,9 +621,13 @@ type OfBoolNRuneIterIf interface {
 
 type OfBoolNRune map[bool]rune
 
-func (__ OfBoolNRune) Load(k bool) (rune, bool) {
+func (__ OfBoolNRune) Load(k bool) (rune, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfBoolNRune) Store(k bool, v rune) {
@@ -617,9 +671,13 @@ type OfBoolNStringIterIf interface {
 
 type OfBoolNString map[bool]string
 
-func (__ OfBoolNString) Load(k bool) (string, bool) {
+func (__ OfBoolNString) Load(k bool) (string, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfBoolNString) Store(k bool, v string) {
@@ -663,9 +721,13 @@ type OfBoolNUintIterIf interface {
 
 type OfBoolNUint map[bool]uint
 
-func (__ OfBoolNUint) Load(k bool) (uint, bool) {
+func (__ OfBoolNUint) Load(k bool) (uint, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfBoolNUint) Store(k bool, v uint) {
@@ -709,9 +771,13 @@ type OfBoolNUint16IterIf interface {
 
 type OfBoolNUint16 map[bool]uint16
 
-func (__ OfBoolNUint16) Load(k bool) (uint16, bool) {
+func (__ OfBoolNUint16) Load(k bool) (uint16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfBoolNUint16) Store(k bool, v uint16) {
@@ -755,9 +821,13 @@ type OfBoolNUint32IterIf interface {
 
 type OfBoolNUint32 map[bool]uint32
 
-func (__ OfBoolNUint32) Load(k bool) (uint32, bool) {
+func (__ OfBoolNUint32) Load(k bool) (uint32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfBoolNUint32) Store(k bool, v uint32) {
@@ -801,9 +871,13 @@ type OfBoolNUint64IterIf interface {
 
 type OfBoolNUint64 map[bool]uint64
 
-func (__ OfBoolNUint64) Load(k bool) (uint64, bool) {
+func (__ OfBoolNUint64) Load(k bool) (uint64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfBoolNUint64) Store(k bool, v uint64) {
@@ -847,9 +921,13 @@ type OfBoolNUint8IterIf interface {
 
 type OfBoolNUint8 map[bool]uint8
 
-func (__ OfBoolNUint8) Load(k bool) (uint8, bool) {
+func (__ OfBoolNUint8) Load(k bool) (uint8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfBoolNUint8) Store(k bool, v uint8) {
@@ -893,9 +971,13 @@ type OfBoolNUintptrIterIf interface {
 
 type OfBoolNUintptr map[bool]uintptr
 
-func (__ OfBoolNUintptr) Load(k bool) (uintptr, bool) {
+func (__ OfBoolNUintptr) Load(k bool) (uintptr, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfBoolNUintptr) Store(k bool, v uintptr) {
@@ -939,9 +1021,13 @@ type OfBoolNInterfaceIterIf interface {
 
 type OfBoolNInterface map[bool]interface{}
 
-func (__ OfBoolNInterface) Load(k bool) (interface{}, bool) {
+func (__ OfBoolNInterface) Load(k bool) (interface{}, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfBoolNInterface) Store(k bool, v interface{}) {
@@ -985,9 +1071,13 @@ type OfByteNBoolIterIf interface {
 
 type OfByteNBool map[byte]bool
 
-func (__ OfByteNBool) Load(k byte) (bool, bool) {
+func (__ OfByteNBool) Load(k byte) (bool, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfByteNBool) Store(k byte, v bool) {
@@ -1031,9 +1121,13 @@ type OfByteNByteIterIf interface {
 
 type OfByteNByte map[byte]byte
 
-func (__ OfByteNByte) Load(k byte) (byte, bool) {
+func (__ OfByteNByte) Load(k byte) (byte, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfByteNByte) Store(k byte, v byte) {
@@ -1077,9 +1171,13 @@ type OfByteNComplex128IterIf interface {
 
 type OfByteNComplex128 map[byte]complex128
 
-func (__ OfByteNComplex128) Load(k byte) (complex128, bool) {
+func (__ OfByteNComplex128) Load(k byte) (complex128, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfByteNComplex128) Store(k byte, v complex128) {
@@ -1123,9 +1221,13 @@ type OfByteNComplex64IterIf interface {
 
 type OfByteNComplex64 map[byte]complex64
 
-func (__ OfByteNComplex64) Load(k byte) (complex64, bool) {
+func (__ OfByteNComplex64) Load(k byte) (complex64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfByteNComplex64) Store(k byte, v complex64) {
@@ -1169,9 +1271,13 @@ type OfByteNErrorIterIf interface {
 
 type OfByteNError map[byte]error
 
-func (__ OfByteNError) Load(k byte) (error, bool) {
+func (__ OfByteNError) Load(k byte) (error, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfByteNError) Store(k byte, v error) {
@@ -1215,9 +1321,13 @@ type OfByteNFloat32IterIf interface {
 
 type OfByteNFloat32 map[byte]float32
 
-func (__ OfByteNFloat32) Load(k byte) (float32, bool) {
+func (__ OfByteNFloat32) Load(k byte) (float32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfByteNFloat32) Store(k byte, v float32) {
@@ -1261,9 +1371,13 @@ type OfByteNFloat64IterIf interface {
 
 type OfByteNFloat64 map[byte]float64
 
-func (__ OfByteNFloat64) Load(k byte) (float64, bool) {
+func (__ OfByteNFloat64) Load(k byte) (float64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfByteNFloat64) Store(k byte, v float64) {
@@ -1307,9 +1421,13 @@ type OfByteNIntIterIf interface {
 
 type OfByteNInt map[byte]int
 
-func (__ OfByteNInt) Load(k byte) (int, bool) {
+func (__ OfByteNInt) Load(k byte) (int, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfByteNInt) Store(k byte, v int) {
@@ -1353,9 +1471,13 @@ type OfByteNInt16IterIf interface {
 
 type OfByteNInt16 map[byte]int16
 
-func (__ OfByteNInt16) Load(k byte) (int16, bool) {
+func (__ OfByteNInt16) Load(k byte) (int16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfByteNInt16) Store(k byte, v int16) {
@@ -1399,9 +1521,13 @@ type OfByteNInt32IterIf interface {
 
 type OfByteNInt32 map[byte]int32
 
-func (__ OfByteNInt32) Load(k byte) (int32, bool) {
+func (__ OfByteNInt32) Load(k byte) (int32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfByteNInt32) Store(k byte, v int32) {
@@ -1445,9 +1571,13 @@ type OfByteNInt64IterIf interface {
 
 type OfByteNInt64 map[byte]int64
 
-func (__ OfByteNInt64) Load(k byte) (int64, bool) {
+func (__ OfByteNInt64) Load(k byte) (int64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfByteNInt64) Store(k byte, v int64) {
@@ -1491,9 +1621,13 @@ type OfByteNInt8IterIf interface {
 
 type OfByteNInt8 map[byte]int8
 
-func (__ OfByteNInt8) Load(k byte) (int8, bool) {
+func (__ OfByteNInt8) Load(k byte) (int8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfByteNInt8) Store(k byte, v int8) {
@@ -1537,9 +1671,13 @@ type OfByteNRuneIterIf interface {
 
 type OfByteNRune map[byte]rune
 
-func (__ OfByteNRune) Load(k byte) (rune, bool) {
+func (__ OfByteNRune) Load(k byte) (rune, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfByteNRune) Store(k byte, v rune) {
@@ -1583,9 +1721,13 @@ type OfByteNStringIterIf interface {
 
 type OfByteNString map[byte]string
 
-func (__ OfByteNString) Load(k byte) (string, bool) {
+func (__ OfByteNString) Load(k byte) (string, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfByteNString) Store(k byte, v string) {
@@ -1629,9 +1771,13 @@ type OfByteNUintIterIf interface {
 
 type OfByteNUint map[byte]uint
 
-func (__ OfByteNUint) Load(k byte) (uint, bool) {
+func (__ OfByteNUint) Load(k byte) (uint, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfByteNUint) Store(k byte, v uint) {
@@ -1675,9 +1821,13 @@ type OfByteNUint16IterIf interface {
 
 type OfByteNUint16 map[byte]uint16
 
-func (__ OfByteNUint16) Load(k byte) (uint16, bool) {
+func (__ OfByteNUint16) Load(k byte) (uint16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfByteNUint16) Store(k byte, v uint16) {
@@ -1721,9 +1871,13 @@ type OfByteNUint32IterIf interface {
 
 type OfByteNUint32 map[byte]uint32
 
-func (__ OfByteNUint32) Load(k byte) (uint32, bool) {
+func (__ OfByteNUint32) Load(k byte) (uint32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfByteNUint32) Store(k byte, v uint32) {
@@ -1767,9 +1921,13 @@ type OfByteNUint64IterIf interface {
 
 type OfByteNUint64 map[byte]uint64
 
-func (__ OfByteNUint64) Load(k byte) (uint64, bool) {
+func (__ OfByteNUint64) Load(k byte) (uint64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfByteNUint64) Store(k byte, v uint64) {
@@ -1813,9 +1971,13 @@ type OfByteNUint8IterIf interface {
 
 type OfByteNUint8 map[byte]uint8
 
-func (__ OfByteNUint8) Load(k byte) (uint8, bool) {
+func (__ OfByteNUint8) Load(k byte) (uint8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfByteNUint8) Store(k byte, v uint8) {
@@ -1859,9 +2021,13 @@ type OfByteNUintptrIterIf interface {
 
 type OfByteNUintptr map[byte]uintptr
 
-func (__ OfByteNUintptr) Load(k byte) (uintptr, bool) {
+func (__ OfByteNUintptr) Load(k byte) (uintptr, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfByteNUintptr) Store(k byte, v uintptr) {
@@ -1905,9 +2071,13 @@ type OfByteNInterfaceIterIf interface {
 
 type OfByteNInterface map[byte]interface{}
 
-func (__ OfByteNInterface) Load(k byte) (interface{}, bool) {
+func (__ OfByteNInterface) Load(k byte) (interface{}, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfByteNInterface) Store(k byte, v interface{}) {
@@ -1951,9 +2121,13 @@ type OfComplex128NBoolIterIf interface {
 
 type OfComplex128NBool map[complex128]bool
 
-func (__ OfComplex128NBool) Load(k complex128) (bool, bool) {
+func (__ OfComplex128NBool) Load(k complex128) (bool, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex128NBool) Store(k complex128, v bool) {
@@ -1997,9 +2171,13 @@ type OfComplex128NByteIterIf interface {
 
 type OfComplex128NByte map[complex128]byte
 
-func (__ OfComplex128NByte) Load(k complex128) (byte, bool) {
+func (__ OfComplex128NByte) Load(k complex128) (byte, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex128NByte) Store(k complex128, v byte) {
@@ -2043,9 +2221,13 @@ type OfComplex128NComplex128IterIf interface {
 
 type OfComplex128NComplex128 map[complex128]complex128
 
-func (__ OfComplex128NComplex128) Load(k complex128) (complex128, bool) {
+func (__ OfComplex128NComplex128) Load(k complex128) (complex128, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex128NComplex128) Store(k complex128, v complex128) {
@@ -2089,9 +2271,13 @@ type OfComplex128NComplex64IterIf interface {
 
 type OfComplex128NComplex64 map[complex128]complex64
 
-func (__ OfComplex128NComplex64) Load(k complex128) (complex64, bool) {
+func (__ OfComplex128NComplex64) Load(k complex128) (complex64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex128NComplex64) Store(k complex128, v complex64) {
@@ -2135,9 +2321,13 @@ type OfComplex128NErrorIterIf interface {
 
 type OfComplex128NError map[complex128]error
 
-func (__ OfComplex128NError) Load(k complex128) (error, bool) {
+func (__ OfComplex128NError) Load(k complex128) (error, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex128NError) Store(k complex128, v error) {
@@ -2181,9 +2371,13 @@ type OfComplex128NFloat32IterIf interface {
 
 type OfComplex128NFloat32 map[complex128]float32
 
-func (__ OfComplex128NFloat32) Load(k complex128) (float32, bool) {
+func (__ OfComplex128NFloat32) Load(k complex128) (float32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex128NFloat32) Store(k complex128, v float32) {
@@ -2227,9 +2421,13 @@ type OfComplex128NFloat64IterIf interface {
 
 type OfComplex128NFloat64 map[complex128]float64
 
-func (__ OfComplex128NFloat64) Load(k complex128) (float64, bool) {
+func (__ OfComplex128NFloat64) Load(k complex128) (float64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex128NFloat64) Store(k complex128, v float64) {
@@ -2273,9 +2471,13 @@ type OfComplex128NIntIterIf interface {
 
 type OfComplex128NInt map[complex128]int
 
-func (__ OfComplex128NInt) Load(k complex128) (int, bool) {
+func (__ OfComplex128NInt) Load(k complex128) (int, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex128NInt) Store(k complex128, v int) {
@@ -2319,9 +2521,13 @@ type OfComplex128NInt16IterIf interface {
 
 type OfComplex128NInt16 map[complex128]int16
 
-func (__ OfComplex128NInt16) Load(k complex128) (int16, bool) {
+func (__ OfComplex128NInt16) Load(k complex128) (int16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex128NInt16) Store(k complex128, v int16) {
@@ -2365,9 +2571,13 @@ type OfComplex128NInt32IterIf interface {
 
 type OfComplex128NInt32 map[complex128]int32
 
-func (__ OfComplex128NInt32) Load(k complex128) (int32, bool) {
+func (__ OfComplex128NInt32) Load(k complex128) (int32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex128NInt32) Store(k complex128, v int32) {
@@ -2411,9 +2621,13 @@ type OfComplex128NInt64IterIf interface {
 
 type OfComplex128NInt64 map[complex128]int64
 
-func (__ OfComplex128NInt64) Load(k complex128) (int64, bool) {
+func (__ OfComplex128NInt64) Load(k complex128) (int64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex128NInt64) Store(k complex128, v int64) {
@@ -2457,9 +2671,13 @@ type OfComplex128NInt8IterIf interface {
 
 type OfComplex128NInt8 map[complex128]int8
 
-func (__ OfComplex128NInt8) Load(k complex128) (int8, bool) {
+func (__ OfComplex128NInt8) Load(k complex128) (int8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex128NInt8) Store(k complex128, v int8) {
@@ -2503,9 +2721,13 @@ type OfComplex128NRuneIterIf interface {
 
 type OfComplex128NRune map[complex128]rune
 
-func (__ OfComplex128NRune) Load(k complex128) (rune, bool) {
+func (__ OfComplex128NRune) Load(k complex128) (rune, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex128NRune) Store(k complex128, v rune) {
@@ -2549,9 +2771,13 @@ type OfComplex128NStringIterIf interface {
 
 type OfComplex128NString map[complex128]string
 
-func (__ OfComplex128NString) Load(k complex128) (string, bool) {
+func (__ OfComplex128NString) Load(k complex128) (string, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex128NString) Store(k complex128, v string) {
@@ -2595,9 +2821,13 @@ type OfComplex128NUintIterIf interface {
 
 type OfComplex128NUint map[complex128]uint
 
-func (__ OfComplex128NUint) Load(k complex128) (uint, bool) {
+func (__ OfComplex128NUint) Load(k complex128) (uint, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex128NUint) Store(k complex128, v uint) {
@@ -2641,9 +2871,13 @@ type OfComplex128NUint16IterIf interface {
 
 type OfComplex128NUint16 map[complex128]uint16
 
-func (__ OfComplex128NUint16) Load(k complex128) (uint16, bool) {
+func (__ OfComplex128NUint16) Load(k complex128) (uint16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex128NUint16) Store(k complex128, v uint16) {
@@ -2687,9 +2921,13 @@ type OfComplex128NUint32IterIf interface {
 
 type OfComplex128NUint32 map[complex128]uint32
 
-func (__ OfComplex128NUint32) Load(k complex128) (uint32, bool) {
+func (__ OfComplex128NUint32) Load(k complex128) (uint32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex128NUint32) Store(k complex128, v uint32) {
@@ -2733,9 +2971,13 @@ type OfComplex128NUint64IterIf interface {
 
 type OfComplex128NUint64 map[complex128]uint64
 
-func (__ OfComplex128NUint64) Load(k complex128) (uint64, bool) {
+func (__ OfComplex128NUint64) Load(k complex128) (uint64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex128NUint64) Store(k complex128, v uint64) {
@@ -2779,9 +3021,13 @@ type OfComplex128NUint8IterIf interface {
 
 type OfComplex128NUint8 map[complex128]uint8
 
-func (__ OfComplex128NUint8) Load(k complex128) (uint8, bool) {
+func (__ OfComplex128NUint8) Load(k complex128) (uint8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex128NUint8) Store(k complex128, v uint8) {
@@ -2825,9 +3071,13 @@ type OfComplex128NUintptrIterIf interface {
 
 type OfComplex128NUintptr map[complex128]uintptr
 
-func (__ OfComplex128NUintptr) Load(k complex128) (uintptr, bool) {
+func (__ OfComplex128NUintptr) Load(k complex128) (uintptr, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex128NUintptr) Store(k complex128, v uintptr) {
@@ -2871,9 +3121,13 @@ type OfComplex128NInterfaceIterIf interface {
 
 type OfComplex128NInterface map[complex128]interface{}
 
-func (__ OfComplex128NInterface) Load(k complex128) (interface{}, bool) {
+func (__ OfComplex128NInterface) Load(k complex128) (interface{}, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex128NInterface) Store(k complex128, v interface{}) {
@@ -2917,9 +3171,13 @@ type OfComplex64NBoolIterIf interface {
 
 type OfComplex64NBool map[complex64]bool
 
-func (__ OfComplex64NBool) Load(k complex64) (bool, bool) {
+func (__ OfComplex64NBool) Load(k complex64) (bool, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex64NBool) Store(k complex64, v bool) {
@@ -2963,9 +3221,13 @@ type OfComplex64NByteIterIf interface {
 
 type OfComplex64NByte map[complex64]byte
 
-func (__ OfComplex64NByte) Load(k complex64) (byte, bool) {
+func (__ OfComplex64NByte) Load(k complex64) (byte, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex64NByte) Store(k complex64, v byte) {
@@ -3009,9 +3271,13 @@ type OfComplex64NComplex128IterIf interface {
 
 type OfComplex64NComplex128 map[complex64]complex128
 
-func (__ OfComplex64NComplex128) Load(k complex64) (complex128, bool) {
+func (__ OfComplex64NComplex128) Load(k complex64) (complex128, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex64NComplex128) Store(k complex64, v complex128) {
@@ -3055,9 +3321,13 @@ type OfComplex64NComplex64IterIf interface {
 
 type OfComplex64NComplex64 map[complex64]complex64
 
-func (__ OfComplex64NComplex64) Load(k complex64) (complex64, bool) {
+func (__ OfComplex64NComplex64) Load(k complex64) (complex64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex64NComplex64) Store(k complex64, v complex64) {
@@ -3101,9 +3371,13 @@ type OfComplex64NErrorIterIf interface {
 
 type OfComplex64NError map[complex64]error
 
-func (__ OfComplex64NError) Load(k complex64) (error, bool) {
+func (__ OfComplex64NError) Load(k complex64) (error, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex64NError) Store(k complex64, v error) {
@@ -3147,9 +3421,13 @@ type OfComplex64NFloat32IterIf interface {
 
 type OfComplex64NFloat32 map[complex64]float32
 
-func (__ OfComplex64NFloat32) Load(k complex64) (float32, bool) {
+func (__ OfComplex64NFloat32) Load(k complex64) (float32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex64NFloat32) Store(k complex64, v float32) {
@@ -3193,9 +3471,13 @@ type OfComplex64NFloat64IterIf interface {
 
 type OfComplex64NFloat64 map[complex64]float64
 
-func (__ OfComplex64NFloat64) Load(k complex64) (float64, bool) {
+func (__ OfComplex64NFloat64) Load(k complex64) (float64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex64NFloat64) Store(k complex64, v float64) {
@@ -3239,9 +3521,13 @@ type OfComplex64NIntIterIf interface {
 
 type OfComplex64NInt map[complex64]int
 
-func (__ OfComplex64NInt) Load(k complex64) (int, bool) {
+func (__ OfComplex64NInt) Load(k complex64) (int, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex64NInt) Store(k complex64, v int) {
@@ -3285,9 +3571,13 @@ type OfComplex64NInt16IterIf interface {
 
 type OfComplex64NInt16 map[complex64]int16
 
-func (__ OfComplex64NInt16) Load(k complex64) (int16, bool) {
+func (__ OfComplex64NInt16) Load(k complex64) (int16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex64NInt16) Store(k complex64, v int16) {
@@ -3331,9 +3621,13 @@ type OfComplex64NInt32IterIf interface {
 
 type OfComplex64NInt32 map[complex64]int32
 
-func (__ OfComplex64NInt32) Load(k complex64) (int32, bool) {
+func (__ OfComplex64NInt32) Load(k complex64) (int32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex64NInt32) Store(k complex64, v int32) {
@@ -3377,9 +3671,13 @@ type OfComplex64NInt64IterIf interface {
 
 type OfComplex64NInt64 map[complex64]int64
 
-func (__ OfComplex64NInt64) Load(k complex64) (int64, bool) {
+func (__ OfComplex64NInt64) Load(k complex64) (int64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex64NInt64) Store(k complex64, v int64) {
@@ -3423,9 +3721,13 @@ type OfComplex64NInt8IterIf interface {
 
 type OfComplex64NInt8 map[complex64]int8
 
-func (__ OfComplex64NInt8) Load(k complex64) (int8, bool) {
+func (__ OfComplex64NInt8) Load(k complex64) (int8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex64NInt8) Store(k complex64, v int8) {
@@ -3469,9 +3771,13 @@ type OfComplex64NRuneIterIf interface {
 
 type OfComplex64NRune map[complex64]rune
 
-func (__ OfComplex64NRune) Load(k complex64) (rune, bool) {
+func (__ OfComplex64NRune) Load(k complex64) (rune, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex64NRune) Store(k complex64, v rune) {
@@ -3515,9 +3821,13 @@ type OfComplex64NStringIterIf interface {
 
 type OfComplex64NString map[complex64]string
 
-func (__ OfComplex64NString) Load(k complex64) (string, bool) {
+func (__ OfComplex64NString) Load(k complex64) (string, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex64NString) Store(k complex64, v string) {
@@ -3561,9 +3871,13 @@ type OfComplex64NUintIterIf interface {
 
 type OfComplex64NUint map[complex64]uint
 
-func (__ OfComplex64NUint) Load(k complex64) (uint, bool) {
+func (__ OfComplex64NUint) Load(k complex64) (uint, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex64NUint) Store(k complex64, v uint) {
@@ -3607,9 +3921,13 @@ type OfComplex64NUint16IterIf interface {
 
 type OfComplex64NUint16 map[complex64]uint16
 
-func (__ OfComplex64NUint16) Load(k complex64) (uint16, bool) {
+func (__ OfComplex64NUint16) Load(k complex64) (uint16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex64NUint16) Store(k complex64, v uint16) {
@@ -3653,9 +3971,13 @@ type OfComplex64NUint32IterIf interface {
 
 type OfComplex64NUint32 map[complex64]uint32
 
-func (__ OfComplex64NUint32) Load(k complex64) (uint32, bool) {
+func (__ OfComplex64NUint32) Load(k complex64) (uint32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex64NUint32) Store(k complex64, v uint32) {
@@ -3699,9 +4021,13 @@ type OfComplex64NUint64IterIf interface {
 
 type OfComplex64NUint64 map[complex64]uint64
 
-func (__ OfComplex64NUint64) Load(k complex64) (uint64, bool) {
+func (__ OfComplex64NUint64) Load(k complex64) (uint64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex64NUint64) Store(k complex64, v uint64) {
@@ -3745,9 +4071,13 @@ type OfComplex64NUint8IterIf interface {
 
 type OfComplex64NUint8 map[complex64]uint8
 
-func (__ OfComplex64NUint8) Load(k complex64) (uint8, bool) {
+func (__ OfComplex64NUint8) Load(k complex64) (uint8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex64NUint8) Store(k complex64, v uint8) {
@@ -3791,9 +4121,13 @@ type OfComplex64NUintptrIterIf interface {
 
 type OfComplex64NUintptr map[complex64]uintptr
 
-func (__ OfComplex64NUintptr) Load(k complex64) (uintptr, bool) {
+func (__ OfComplex64NUintptr) Load(k complex64) (uintptr, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex64NUintptr) Store(k complex64, v uintptr) {
@@ -3837,9 +4171,13 @@ type OfComplex64NInterfaceIterIf interface {
 
 type OfComplex64NInterface map[complex64]interface{}
 
-func (__ OfComplex64NInterface) Load(k complex64) (interface{}, bool) {
+func (__ OfComplex64NInterface) Load(k complex64) (interface{}, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfComplex64NInterface) Store(k complex64, v interface{}) {
@@ -3883,9 +4221,13 @@ type OfErrorNBoolIterIf interface {
 
 type OfErrorNBool map[error]bool
 
-func (__ OfErrorNBool) Load(k error) (bool, bool) {
+func (__ OfErrorNBool) Load(k error) (bool, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfErrorNBool) Store(k error, v bool) {
@@ -3929,9 +4271,13 @@ type OfErrorNByteIterIf interface {
 
 type OfErrorNByte map[error]byte
 
-func (__ OfErrorNByte) Load(k error) (byte, bool) {
+func (__ OfErrorNByte) Load(k error) (byte, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfErrorNByte) Store(k error, v byte) {
@@ -3975,9 +4321,13 @@ type OfErrorNComplex128IterIf interface {
 
 type OfErrorNComplex128 map[error]complex128
 
-func (__ OfErrorNComplex128) Load(k error) (complex128, bool) {
+func (__ OfErrorNComplex128) Load(k error) (complex128, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfErrorNComplex128) Store(k error, v complex128) {
@@ -4021,9 +4371,13 @@ type OfErrorNComplex64IterIf interface {
 
 type OfErrorNComplex64 map[error]complex64
 
-func (__ OfErrorNComplex64) Load(k error) (complex64, bool) {
+func (__ OfErrorNComplex64) Load(k error) (complex64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfErrorNComplex64) Store(k error, v complex64) {
@@ -4067,9 +4421,13 @@ type OfErrorNErrorIterIf interface {
 
 type OfErrorNError map[error]error
 
-func (__ OfErrorNError) Load(k error) (error, bool) {
+func (__ OfErrorNError) Load(k error) (error, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfErrorNError) Store(k error, v error) {
@@ -4113,9 +4471,13 @@ type OfErrorNFloat32IterIf interface {
 
 type OfErrorNFloat32 map[error]float32
 
-func (__ OfErrorNFloat32) Load(k error) (float32, bool) {
+func (__ OfErrorNFloat32) Load(k error) (float32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfErrorNFloat32) Store(k error, v float32) {
@@ -4159,9 +4521,13 @@ type OfErrorNFloat64IterIf interface {
 
 type OfErrorNFloat64 map[error]float64
 
-func (__ OfErrorNFloat64) Load(k error) (float64, bool) {
+func (__ OfErrorNFloat64) Load(k error) (float64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfErrorNFloat64) Store(k error, v float64) {
@@ -4205,9 +4571,13 @@ type OfErrorNIntIterIf interface {
 
 type OfErrorNInt map[error]int
 
-func (__ OfErrorNInt) Load(k error) (int, bool) {
+func (__ OfErrorNInt) Load(k error) (int, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfErrorNInt) Store(k error, v int) {
@@ -4251,9 +4621,13 @@ type OfErrorNInt16IterIf interface {
 
 type OfErrorNInt16 map[error]int16
 
-func (__ OfErrorNInt16) Load(k error) (int16, bool) {
+func (__ OfErrorNInt16) Load(k error) (int16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfErrorNInt16) Store(k error, v int16) {
@@ -4297,9 +4671,13 @@ type OfErrorNInt32IterIf interface {
 
 type OfErrorNInt32 map[error]int32
 
-func (__ OfErrorNInt32) Load(k error) (int32, bool) {
+func (__ OfErrorNInt32) Load(k error) (int32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfErrorNInt32) Store(k error, v int32) {
@@ -4343,9 +4721,13 @@ type OfErrorNInt64IterIf interface {
 
 type OfErrorNInt64 map[error]int64
 
-func (__ OfErrorNInt64) Load(k error) (int64, bool) {
+func (__ OfErrorNInt64) Load(k error) (int64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfErrorNInt64) Store(k error, v int64) {
@@ -4389,9 +4771,13 @@ type OfErrorNInt8IterIf interface {
 
 type OfErrorNInt8 map[error]int8
 
-func (__ OfErrorNInt8) Load(k error) (int8, bool) {
+func (__ OfErrorNInt8) Load(k error) (int8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfErrorNInt8) Store(k error, v int8) {
@@ -4435,9 +4821,13 @@ type OfErrorNRuneIterIf interface {
 
 type OfErrorNRune map[error]rune
 
-func (__ OfErrorNRune) Load(k error) (rune, bool) {
+func (__ OfErrorNRune) Load(k error) (rune, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfErrorNRune) Store(k error, v rune) {
@@ -4481,9 +4871,13 @@ type OfErrorNStringIterIf interface {
 
 type OfErrorNString map[error]string
 
-func (__ OfErrorNString) Load(k error) (string, bool) {
+func (__ OfErrorNString) Load(k error) (string, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfErrorNString) Store(k error, v string) {
@@ -4527,9 +4921,13 @@ type OfErrorNUintIterIf interface {
 
 type OfErrorNUint map[error]uint
 
-func (__ OfErrorNUint) Load(k error) (uint, bool) {
+func (__ OfErrorNUint) Load(k error) (uint, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfErrorNUint) Store(k error, v uint) {
@@ -4573,9 +4971,13 @@ type OfErrorNUint16IterIf interface {
 
 type OfErrorNUint16 map[error]uint16
 
-func (__ OfErrorNUint16) Load(k error) (uint16, bool) {
+func (__ OfErrorNUint16) Load(k error) (uint16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfErrorNUint16) Store(k error, v uint16) {
@@ -4619,9 +5021,13 @@ type OfErrorNUint32IterIf interface {
 
 type OfErrorNUint32 map[error]uint32
 
-func (__ OfErrorNUint32) Load(k error) (uint32, bool) {
+func (__ OfErrorNUint32) Load(k error) (uint32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfErrorNUint32) Store(k error, v uint32) {
@@ -4665,9 +5071,13 @@ type OfErrorNUint64IterIf interface {
 
 type OfErrorNUint64 map[error]uint64
 
-func (__ OfErrorNUint64) Load(k error) (uint64, bool) {
+func (__ OfErrorNUint64) Load(k error) (uint64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfErrorNUint64) Store(k error, v uint64) {
@@ -4711,9 +5121,13 @@ type OfErrorNUint8IterIf interface {
 
 type OfErrorNUint8 map[error]uint8
 
-func (__ OfErrorNUint8) Load(k error) (uint8, bool) {
+func (__ OfErrorNUint8) Load(k error) (uint8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfErrorNUint8) Store(k error, v uint8) {
@@ -4757,9 +5171,13 @@ type OfErrorNUintptrIterIf interface {
 
 type OfErrorNUintptr map[error]uintptr
 
-func (__ OfErrorNUintptr) Load(k error) (uintptr, bool) {
+func (__ OfErrorNUintptr) Load(k error) (uintptr, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfErrorNUintptr) Store(k error, v uintptr) {
@@ -4803,9 +5221,13 @@ type OfErrorNInterfaceIterIf interface {
 
 type OfErrorNInterface map[error]interface{}
 
-func (__ OfErrorNInterface) Load(k error) (interface{}, bool) {
+func (__ OfErrorNInterface) Load(k error) (interface{}, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfErrorNInterface) Store(k error, v interface{}) {
@@ -4849,9 +5271,13 @@ type OfFloat32NBoolIterIf interface {
 
 type OfFloat32NBool map[float32]bool
 
-func (__ OfFloat32NBool) Load(k float32) (bool, bool) {
+func (__ OfFloat32NBool) Load(k float32) (bool, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat32NBool) Store(k float32, v bool) {
@@ -4895,9 +5321,13 @@ type OfFloat32NByteIterIf interface {
 
 type OfFloat32NByte map[float32]byte
 
-func (__ OfFloat32NByte) Load(k float32) (byte, bool) {
+func (__ OfFloat32NByte) Load(k float32) (byte, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat32NByte) Store(k float32, v byte) {
@@ -4941,9 +5371,13 @@ type OfFloat32NComplex128IterIf interface {
 
 type OfFloat32NComplex128 map[float32]complex128
 
-func (__ OfFloat32NComplex128) Load(k float32) (complex128, bool) {
+func (__ OfFloat32NComplex128) Load(k float32) (complex128, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat32NComplex128) Store(k float32, v complex128) {
@@ -4987,9 +5421,13 @@ type OfFloat32NComplex64IterIf interface {
 
 type OfFloat32NComplex64 map[float32]complex64
 
-func (__ OfFloat32NComplex64) Load(k float32) (complex64, bool) {
+func (__ OfFloat32NComplex64) Load(k float32) (complex64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat32NComplex64) Store(k float32, v complex64) {
@@ -5033,9 +5471,13 @@ type OfFloat32NErrorIterIf interface {
 
 type OfFloat32NError map[float32]error
 
-func (__ OfFloat32NError) Load(k float32) (error, bool) {
+func (__ OfFloat32NError) Load(k float32) (error, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat32NError) Store(k float32, v error) {
@@ -5079,9 +5521,13 @@ type OfFloat32NFloat32IterIf interface {
 
 type OfFloat32NFloat32 map[float32]float32
 
-func (__ OfFloat32NFloat32) Load(k float32) (float32, bool) {
+func (__ OfFloat32NFloat32) Load(k float32) (float32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat32NFloat32) Store(k float32, v float32) {
@@ -5125,9 +5571,13 @@ type OfFloat32NFloat64IterIf interface {
 
 type OfFloat32NFloat64 map[float32]float64
 
-func (__ OfFloat32NFloat64) Load(k float32) (float64, bool) {
+func (__ OfFloat32NFloat64) Load(k float32) (float64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat32NFloat64) Store(k float32, v float64) {
@@ -5171,9 +5621,13 @@ type OfFloat32NIntIterIf interface {
 
 type OfFloat32NInt map[float32]int
 
-func (__ OfFloat32NInt) Load(k float32) (int, bool) {
+func (__ OfFloat32NInt) Load(k float32) (int, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat32NInt) Store(k float32, v int) {
@@ -5217,9 +5671,13 @@ type OfFloat32NInt16IterIf interface {
 
 type OfFloat32NInt16 map[float32]int16
 
-func (__ OfFloat32NInt16) Load(k float32) (int16, bool) {
+func (__ OfFloat32NInt16) Load(k float32) (int16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat32NInt16) Store(k float32, v int16) {
@@ -5263,9 +5721,13 @@ type OfFloat32NInt32IterIf interface {
 
 type OfFloat32NInt32 map[float32]int32
 
-func (__ OfFloat32NInt32) Load(k float32) (int32, bool) {
+func (__ OfFloat32NInt32) Load(k float32) (int32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat32NInt32) Store(k float32, v int32) {
@@ -5309,9 +5771,13 @@ type OfFloat32NInt64IterIf interface {
 
 type OfFloat32NInt64 map[float32]int64
 
-func (__ OfFloat32NInt64) Load(k float32) (int64, bool) {
+func (__ OfFloat32NInt64) Load(k float32) (int64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat32NInt64) Store(k float32, v int64) {
@@ -5355,9 +5821,13 @@ type OfFloat32NInt8IterIf interface {
 
 type OfFloat32NInt8 map[float32]int8
 
-func (__ OfFloat32NInt8) Load(k float32) (int8, bool) {
+func (__ OfFloat32NInt8) Load(k float32) (int8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat32NInt8) Store(k float32, v int8) {
@@ -5401,9 +5871,13 @@ type OfFloat32NRuneIterIf interface {
 
 type OfFloat32NRune map[float32]rune
 
-func (__ OfFloat32NRune) Load(k float32) (rune, bool) {
+func (__ OfFloat32NRune) Load(k float32) (rune, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat32NRune) Store(k float32, v rune) {
@@ -5447,9 +5921,13 @@ type OfFloat32NStringIterIf interface {
 
 type OfFloat32NString map[float32]string
 
-func (__ OfFloat32NString) Load(k float32) (string, bool) {
+func (__ OfFloat32NString) Load(k float32) (string, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat32NString) Store(k float32, v string) {
@@ -5493,9 +5971,13 @@ type OfFloat32NUintIterIf interface {
 
 type OfFloat32NUint map[float32]uint
 
-func (__ OfFloat32NUint) Load(k float32) (uint, bool) {
+func (__ OfFloat32NUint) Load(k float32) (uint, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat32NUint) Store(k float32, v uint) {
@@ -5539,9 +6021,13 @@ type OfFloat32NUint16IterIf interface {
 
 type OfFloat32NUint16 map[float32]uint16
 
-func (__ OfFloat32NUint16) Load(k float32) (uint16, bool) {
+func (__ OfFloat32NUint16) Load(k float32) (uint16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat32NUint16) Store(k float32, v uint16) {
@@ -5585,9 +6071,13 @@ type OfFloat32NUint32IterIf interface {
 
 type OfFloat32NUint32 map[float32]uint32
 
-func (__ OfFloat32NUint32) Load(k float32) (uint32, bool) {
+func (__ OfFloat32NUint32) Load(k float32) (uint32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat32NUint32) Store(k float32, v uint32) {
@@ -5631,9 +6121,13 @@ type OfFloat32NUint64IterIf interface {
 
 type OfFloat32NUint64 map[float32]uint64
 
-func (__ OfFloat32NUint64) Load(k float32) (uint64, bool) {
+func (__ OfFloat32NUint64) Load(k float32) (uint64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat32NUint64) Store(k float32, v uint64) {
@@ -5677,9 +6171,13 @@ type OfFloat32NUint8IterIf interface {
 
 type OfFloat32NUint8 map[float32]uint8
 
-func (__ OfFloat32NUint8) Load(k float32) (uint8, bool) {
+func (__ OfFloat32NUint8) Load(k float32) (uint8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat32NUint8) Store(k float32, v uint8) {
@@ -5723,9 +6221,13 @@ type OfFloat32NUintptrIterIf interface {
 
 type OfFloat32NUintptr map[float32]uintptr
 
-func (__ OfFloat32NUintptr) Load(k float32) (uintptr, bool) {
+func (__ OfFloat32NUintptr) Load(k float32) (uintptr, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat32NUintptr) Store(k float32, v uintptr) {
@@ -5769,9 +6271,13 @@ type OfFloat32NInterfaceIterIf interface {
 
 type OfFloat32NInterface map[float32]interface{}
 
-func (__ OfFloat32NInterface) Load(k float32) (interface{}, bool) {
+func (__ OfFloat32NInterface) Load(k float32) (interface{}, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat32NInterface) Store(k float32, v interface{}) {
@@ -5815,9 +6321,13 @@ type OfFloat64NBoolIterIf interface {
 
 type OfFloat64NBool map[float64]bool
 
-func (__ OfFloat64NBool) Load(k float64) (bool, bool) {
+func (__ OfFloat64NBool) Load(k float64) (bool, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat64NBool) Store(k float64, v bool) {
@@ -5861,9 +6371,13 @@ type OfFloat64NByteIterIf interface {
 
 type OfFloat64NByte map[float64]byte
 
-func (__ OfFloat64NByte) Load(k float64) (byte, bool) {
+func (__ OfFloat64NByte) Load(k float64) (byte, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat64NByte) Store(k float64, v byte) {
@@ -5907,9 +6421,13 @@ type OfFloat64NComplex128IterIf interface {
 
 type OfFloat64NComplex128 map[float64]complex128
 
-func (__ OfFloat64NComplex128) Load(k float64) (complex128, bool) {
+func (__ OfFloat64NComplex128) Load(k float64) (complex128, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat64NComplex128) Store(k float64, v complex128) {
@@ -5953,9 +6471,13 @@ type OfFloat64NComplex64IterIf interface {
 
 type OfFloat64NComplex64 map[float64]complex64
 
-func (__ OfFloat64NComplex64) Load(k float64) (complex64, bool) {
+func (__ OfFloat64NComplex64) Load(k float64) (complex64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat64NComplex64) Store(k float64, v complex64) {
@@ -5999,9 +6521,13 @@ type OfFloat64NErrorIterIf interface {
 
 type OfFloat64NError map[float64]error
 
-func (__ OfFloat64NError) Load(k float64) (error, bool) {
+func (__ OfFloat64NError) Load(k float64) (error, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat64NError) Store(k float64, v error) {
@@ -6045,9 +6571,13 @@ type OfFloat64NFloat32IterIf interface {
 
 type OfFloat64NFloat32 map[float64]float32
 
-func (__ OfFloat64NFloat32) Load(k float64) (float32, bool) {
+func (__ OfFloat64NFloat32) Load(k float64) (float32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat64NFloat32) Store(k float64, v float32) {
@@ -6091,9 +6621,13 @@ type OfFloat64NFloat64IterIf interface {
 
 type OfFloat64NFloat64 map[float64]float64
 
-func (__ OfFloat64NFloat64) Load(k float64) (float64, bool) {
+func (__ OfFloat64NFloat64) Load(k float64) (float64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat64NFloat64) Store(k float64, v float64) {
@@ -6137,9 +6671,13 @@ type OfFloat64NIntIterIf interface {
 
 type OfFloat64NInt map[float64]int
 
-func (__ OfFloat64NInt) Load(k float64) (int, bool) {
+func (__ OfFloat64NInt) Load(k float64) (int, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat64NInt) Store(k float64, v int) {
@@ -6183,9 +6721,13 @@ type OfFloat64NInt16IterIf interface {
 
 type OfFloat64NInt16 map[float64]int16
 
-func (__ OfFloat64NInt16) Load(k float64) (int16, bool) {
+func (__ OfFloat64NInt16) Load(k float64) (int16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat64NInt16) Store(k float64, v int16) {
@@ -6229,9 +6771,13 @@ type OfFloat64NInt32IterIf interface {
 
 type OfFloat64NInt32 map[float64]int32
 
-func (__ OfFloat64NInt32) Load(k float64) (int32, bool) {
+func (__ OfFloat64NInt32) Load(k float64) (int32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat64NInt32) Store(k float64, v int32) {
@@ -6275,9 +6821,13 @@ type OfFloat64NInt64IterIf interface {
 
 type OfFloat64NInt64 map[float64]int64
 
-func (__ OfFloat64NInt64) Load(k float64) (int64, bool) {
+func (__ OfFloat64NInt64) Load(k float64) (int64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat64NInt64) Store(k float64, v int64) {
@@ -6321,9 +6871,13 @@ type OfFloat64NInt8IterIf interface {
 
 type OfFloat64NInt8 map[float64]int8
 
-func (__ OfFloat64NInt8) Load(k float64) (int8, bool) {
+func (__ OfFloat64NInt8) Load(k float64) (int8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat64NInt8) Store(k float64, v int8) {
@@ -6367,9 +6921,13 @@ type OfFloat64NRuneIterIf interface {
 
 type OfFloat64NRune map[float64]rune
 
-func (__ OfFloat64NRune) Load(k float64) (rune, bool) {
+func (__ OfFloat64NRune) Load(k float64) (rune, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat64NRune) Store(k float64, v rune) {
@@ -6413,9 +6971,13 @@ type OfFloat64NStringIterIf interface {
 
 type OfFloat64NString map[float64]string
 
-func (__ OfFloat64NString) Load(k float64) (string, bool) {
+func (__ OfFloat64NString) Load(k float64) (string, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat64NString) Store(k float64, v string) {
@@ -6459,9 +7021,13 @@ type OfFloat64NUintIterIf interface {
 
 type OfFloat64NUint map[float64]uint
 
-func (__ OfFloat64NUint) Load(k float64) (uint, bool) {
+func (__ OfFloat64NUint) Load(k float64) (uint, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat64NUint) Store(k float64, v uint) {
@@ -6505,9 +7071,13 @@ type OfFloat64NUint16IterIf interface {
 
 type OfFloat64NUint16 map[float64]uint16
 
-func (__ OfFloat64NUint16) Load(k float64) (uint16, bool) {
+func (__ OfFloat64NUint16) Load(k float64) (uint16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat64NUint16) Store(k float64, v uint16) {
@@ -6551,9 +7121,13 @@ type OfFloat64NUint32IterIf interface {
 
 type OfFloat64NUint32 map[float64]uint32
 
-func (__ OfFloat64NUint32) Load(k float64) (uint32, bool) {
+func (__ OfFloat64NUint32) Load(k float64) (uint32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat64NUint32) Store(k float64, v uint32) {
@@ -6597,9 +7171,13 @@ type OfFloat64NUint64IterIf interface {
 
 type OfFloat64NUint64 map[float64]uint64
 
-func (__ OfFloat64NUint64) Load(k float64) (uint64, bool) {
+func (__ OfFloat64NUint64) Load(k float64) (uint64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat64NUint64) Store(k float64, v uint64) {
@@ -6643,9 +7221,13 @@ type OfFloat64NUint8IterIf interface {
 
 type OfFloat64NUint8 map[float64]uint8
 
-func (__ OfFloat64NUint8) Load(k float64) (uint8, bool) {
+func (__ OfFloat64NUint8) Load(k float64) (uint8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat64NUint8) Store(k float64, v uint8) {
@@ -6689,9 +7271,13 @@ type OfFloat64NUintptrIterIf interface {
 
 type OfFloat64NUintptr map[float64]uintptr
 
-func (__ OfFloat64NUintptr) Load(k float64) (uintptr, bool) {
+func (__ OfFloat64NUintptr) Load(k float64) (uintptr, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat64NUintptr) Store(k float64, v uintptr) {
@@ -6735,9 +7321,13 @@ type OfFloat64NInterfaceIterIf interface {
 
 type OfFloat64NInterface map[float64]interface{}
 
-func (__ OfFloat64NInterface) Load(k float64) (interface{}, bool) {
+func (__ OfFloat64NInterface) Load(k float64) (interface{}, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfFloat64NInterface) Store(k float64, v interface{}) {
@@ -6781,9 +7371,13 @@ type OfIntNBoolIterIf interface {
 
 type OfIntNBool map[int]bool
 
-func (__ OfIntNBool) Load(k int) (bool, bool) {
+func (__ OfIntNBool) Load(k int) (bool, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfIntNBool) Store(k int, v bool) {
@@ -6827,9 +7421,13 @@ type OfIntNByteIterIf interface {
 
 type OfIntNByte map[int]byte
 
-func (__ OfIntNByte) Load(k int) (byte, bool) {
+func (__ OfIntNByte) Load(k int) (byte, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfIntNByte) Store(k int, v byte) {
@@ -6873,9 +7471,13 @@ type OfIntNComplex128IterIf interface {
 
 type OfIntNComplex128 map[int]complex128
 
-func (__ OfIntNComplex128) Load(k int) (complex128, bool) {
+func (__ OfIntNComplex128) Load(k int) (complex128, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfIntNComplex128) Store(k int, v complex128) {
@@ -6919,9 +7521,13 @@ type OfIntNComplex64IterIf interface {
 
 type OfIntNComplex64 map[int]complex64
 
-func (__ OfIntNComplex64) Load(k int) (complex64, bool) {
+func (__ OfIntNComplex64) Load(k int) (complex64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfIntNComplex64) Store(k int, v complex64) {
@@ -6965,9 +7571,13 @@ type OfIntNErrorIterIf interface {
 
 type OfIntNError map[int]error
 
-func (__ OfIntNError) Load(k int) (error, bool) {
+func (__ OfIntNError) Load(k int) (error, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfIntNError) Store(k int, v error) {
@@ -7011,9 +7621,13 @@ type OfIntNFloat32IterIf interface {
 
 type OfIntNFloat32 map[int]float32
 
-func (__ OfIntNFloat32) Load(k int) (float32, bool) {
+func (__ OfIntNFloat32) Load(k int) (float32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfIntNFloat32) Store(k int, v float32) {
@@ -7057,9 +7671,13 @@ type OfIntNFloat64IterIf interface {
 
 type OfIntNFloat64 map[int]float64
 
-func (__ OfIntNFloat64) Load(k int) (float64, bool) {
+func (__ OfIntNFloat64) Load(k int) (float64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfIntNFloat64) Store(k int, v float64) {
@@ -7103,9 +7721,13 @@ type OfIntNIntIterIf interface {
 
 type OfIntNInt map[int]int
 
-func (__ OfIntNInt) Load(k int) (int, bool) {
+func (__ OfIntNInt) Load(k int) (int, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfIntNInt) Store(k int, v int) {
@@ -7149,9 +7771,13 @@ type OfIntNInt16IterIf interface {
 
 type OfIntNInt16 map[int]int16
 
-func (__ OfIntNInt16) Load(k int) (int16, bool) {
+func (__ OfIntNInt16) Load(k int) (int16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfIntNInt16) Store(k int, v int16) {
@@ -7195,9 +7821,13 @@ type OfIntNInt32IterIf interface {
 
 type OfIntNInt32 map[int]int32
 
-func (__ OfIntNInt32) Load(k int) (int32, bool) {
+func (__ OfIntNInt32) Load(k int) (int32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfIntNInt32) Store(k int, v int32) {
@@ -7241,9 +7871,13 @@ type OfIntNInt64IterIf interface {
 
 type OfIntNInt64 map[int]int64
 
-func (__ OfIntNInt64) Load(k int) (int64, bool) {
+func (__ OfIntNInt64) Load(k int) (int64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfIntNInt64) Store(k int, v int64) {
@@ -7287,9 +7921,13 @@ type OfIntNInt8IterIf interface {
 
 type OfIntNInt8 map[int]int8
 
-func (__ OfIntNInt8) Load(k int) (int8, bool) {
+func (__ OfIntNInt8) Load(k int) (int8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfIntNInt8) Store(k int, v int8) {
@@ -7333,9 +7971,13 @@ type OfIntNRuneIterIf interface {
 
 type OfIntNRune map[int]rune
 
-func (__ OfIntNRune) Load(k int) (rune, bool) {
+func (__ OfIntNRune) Load(k int) (rune, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfIntNRune) Store(k int, v rune) {
@@ -7379,9 +8021,13 @@ type OfIntNStringIterIf interface {
 
 type OfIntNString map[int]string
 
-func (__ OfIntNString) Load(k int) (string, bool) {
+func (__ OfIntNString) Load(k int) (string, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfIntNString) Store(k int, v string) {
@@ -7425,9 +8071,13 @@ type OfIntNUintIterIf interface {
 
 type OfIntNUint map[int]uint
 
-func (__ OfIntNUint) Load(k int) (uint, bool) {
+func (__ OfIntNUint) Load(k int) (uint, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfIntNUint) Store(k int, v uint) {
@@ -7471,9 +8121,13 @@ type OfIntNUint16IterIf interface {
 
 type OfIntNUint16 map[int]uint16
 
-func (__ OfIntNUint16) Load(k int) (uint16, bool) {
+func (__ OfIntNUint16) Load(k int) (uint16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfIntNUint16) Store(k int, v uint16) {
@@ -7517,9 +8171,13 @@ type OfIntNUint32IterIf interface {
 
 type OfIntNUint32 map[int]uint32
 
-func (__ OfIntNUint32) Load(k int) (uint32, bool) {
+func (__ OfIntNUint32) Load(k int) (uint32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfIntNUint32) Store(k int, v uint32) {
@@ -7563,9 +8221,13 @@ type OfIntNUint64IterIf interface {
 
 type OfIntNUint64 map[int]uint64
 
-func (__ OfIntNUint64) Load(k int) (uint64, bool) {
+func (__ OfIntNUint64) Load(k int) (uint64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfIntNUint64) Store(k int, v uint64) {
@@ -7609,9 +8271,13 @@ type OfIntNUint8IterIf interface {
 
 type OfIntNUint8 map[int]uint8
 
-func (__ OfIntNUint8) Load(k int) (uint8, bool) {
+func (__ OfIntNUint8) Load(k int) (uint8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfIntNUint8) Store(k int, v uint8) {
@@ -7655,9 +8321,13 @@ type OfIntNUintptrIterIf interface {
 
 type OfIntNUintptr map[int]uintptr
 
-func (__ OfIntNUintptr) Load(k int) (uintptr, bool) {
+func (__ OfIntNUintptr) Load(k int) (uintptr, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfIntNUintptr) Store(k int, v uintptr) {
@@ -7701,9 +8371,13 @@ type OfIntNInterfaceIterIf interface {
 
 type OfIntNInterface map[int]interface{}
 
-func (__ OfIntNInterface) Load(k int) (interface{}, bool) {
+func (__ OfIntNInterface) Load(k int) (interface{}, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfIntNInterface) Store(k int, v interface{}) {
@@ -7747,9 +8421,13 @@ type OfInt16NBoolIterIf interface {
 
 type OfInt16NBool map[int16]bool
 
-func (__ OfInt16NBool) Load(k int16) (bool, bool) {
+func (__ OfInt16NBool) Load(k int16) (bool, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt16NBool) Store(k int16, v bool) {
@@ -7793,9 +8471,13 @@ type OfInt16NByteIterIf interface {
 
 type OfInt16NByte map[int16]byte
 
-func (__ OfInt16NByte) Load(k int16) (byte, bool) {
+func (__ OfInt16NByte) Load(k int16) (byte, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt16NByte) Store(k int16, v byte) {
@@ -7839,9 +8521,13 @@ type OfInt16NComplex128IterIf interface {
 
 type OfInt16NComplex128 map[int16]complex128
 
-func (__ OfInt16NComplex128) Load(k int16) (complex128, bool) {
+func (__ OfInt16NComplex128) Load(k int16) (complex128, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt16NComplex128) Store(k int16, v complex128) {
@@ -7885,9 +8571,13 @@ type OfInt16NComplex64IterIf interface {
 
 type OfInt16NComplex64 map[int16]complex64
 
-func (__ OfInt16NComplex64) Load(k int16) (complex64, bool) {
+func (__ OfInt16NComplex64) Load(k int16) (complex64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt16NComplex64) Store(k int16, v complex64) {
@@ -7931,9 +8621,13 @@ type OfInt16NErrorIterIf interface {
 
 type OfInt16NError map[int16]error
 
-func (__ OfInt16NError) Load(k int16) (error, bool) {
+func (__ OfInt16NError) Load(k int16) (error, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt16NError) Store(k int16, v error) {
@@ -7977,9 +8671,13 @@ type OfInt16NFloat32IterIf interface {
 
 type OfInt16NFloat32 map[int16]float32
 
-func (__ OfInt16NFloat32) Load(k int16) (float32, bool) {
+func (__ OfInt16NFloat32) Load(k int16) (float32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt16NFloat32) Store(k int16, v float32) {
@@ -8023,9 +8721,13 @@ type OfInt16NFloat64IterIf interface {
 
 type OfInt16NFloat64 map[int16]float64
 
-func (__ OfInt16NFloat64) Load(k int16) (float64, bool) {
+func (__ OfInt16NFloat64) Load(k int16) (float64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt16NFloat64) Store(k int16, v float64) {
@@ -8069,9 +8771,13 @@ type OfInt16NIntIterIf interface {
 
 type OfInt16NInt map[int16]int
 
-func (__ OfInt16NInt) Load(k int16) (int, bool) {
+func (__ OfInt16NInt) Load(k int16) (int, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt16NInt) Store(k int16, v int) {
@@ -8115,9 +8821,13 @@ type OfInt16NInt16IterIf interface {
 
 type OfInt16NInt16 map[int16]int16
 
-func (__ OfInt16NInt16) Load(k int16) (int16, bool) {
+func (__ OfInt16NInt16) Load(k int16) (int16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt16NInt16) Store(k int16, v int16) {
@@ -8161,9 +8871,13 @@ type OfInt16NInt32IterIf interface {
 
 type OfInt16NInt32 map[int16]int32
 
-func (__ OfInt16NInt32) Load(k int16) (int32, bool) {
+func (__ OfInt16NInt32) Load(k int16) (int32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt16NInt32) Store(k int16, v int32) {
@@ -8207,9 +8921,13 @@ type OfInt16NInt64IterIf interface {
 
 type OfInt16NInt64 map[int16]int64
 
-func (__ OfInt16NInt64) Load(k int16) (int64, bool) {
+func (__ OfInt16NInt64) Load(k int16) (int64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt16NInt64) Store(k int16, v int64) {
@@ -8253,9 +8971,13 @@ type OfInt16NInt8IterIf interface {
 
 type OfInt16NInt8 map[int16]int8
 
-func (__ OfInt16NInt8) Load(k int16) (int8, bool) {
+func (__ OfInt16NInt8) Load(k int16) (int8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt16NInt8) Store(k int16, v int8) {
@@ -8299,9 +9021,13 @@ type OfInt16NRuneIterIf interface {
 
 type OfInt16NRune map[int16]rune
 
-func (__ OfInt16NRune) Load(k int16) (rune, bool) {
+func (__ OfInt16NRune) Load(k int16) (rune, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt16NRune) Store(k int16, v rune) {
@@ -8345,9 +9071,13 @@ type OfInt16NStringIterIf interface {
 
 type OfInt16NString map[int16]string
 
-func (__ OfInt16NString) Load(k int16) (string, bool) {
+func (__ OfInt16NString) Load(k int16) (string, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt16NString) Store(k int16, v string) {
@@ -8391,9 +9121,13 @@ type OfInt16NUintIterIf interface {
 
 type OfInt16NUint map[int16]uint
 
-func (__ OfInt16NUint) Load(k int16) (uint, bool) {
+func (__ OfInt16NUint) Load(k int16) (uint, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt16NUint) Store(k int16, v uint) {
@@ -8437,9 +9171,13 @@ type OfInt16NUint16IterIf interface {
 
 type OfInt16NUint16 map[int16]uint16
 
-func (__ OfInt16NUint16) Load(k int16) (uint16, bool) {
+func (__ OfInt16NUint16) Load(k int16) (uint16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt16NUint16) Store(k int16, v uint16) {
@@ -8483,9 +9221,13 @@ type OfInt16NUint32IterIf interface {
 
 type OfInt16NUint32 map[int16]uint32
 
-func (__ OfInt16NUint32) Load(k int16) (uint32, bool) {
+func (__ OfInt16NUint32) Load(k int16) (uint32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt16NUint32) Store(k int16, v uint32) {
@@ -8529,9 +9271,13 @@ type OfInt16NUint64IterIf interface {
 
 type OfInt16NUint64 map[int16]uint64
 
-func (__ OfInt16NUint64) Load(k int16) (uint64, bool) {
+func (__ OfInt16NUint64) Load(k int16) (uint64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt16NUint64) Store(k int16, v uint64) {
@@ -8575,9 +9321,13 @@ type OfInt16NUint8IterIf interface {
 
 type OfInt16NUint8 map[int16]uint8
 
-func (__ OfInt16NUint8) Load(k int16) (uint8, bool) {
+func (__ OfInt16NUint8) Load(k int16) (uint8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt16NUint8) Store(k int16, v uint8) {
@@ -8621,9 +9371,13 @@ type OfInt16NUintptrIterIf interface {
 
 type OfInt16NUintptr map[int16]uintptr
 
-func (__ OfInt16NUintptr) Load(k int16) (uintptr, bool) {
+func (__ OfInt16NUintptr) Load(k int16) (uintptr, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt16NUintptr) Store(k int16, v uintptr) {
@@ -8667,9 +9421,13 @@ type OfInt16NInterfaceIterIf interface {
 
 type OfInt16NInterface map[int16]interface{}
 
-func (__ OfInt16NInterface) Load(k int16) (interface{}, bool) {
+func (__ OfInt16NInterface) Load(k int16) (interface{}, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt16NInterface) Store(k int16, v interface{}) {
@@ -8713,9 +9471,13 @@ type OfInt32NBoolIterIf interface {
 
 type OfInt32NBool map[int32]bool
 
-func (__ OfInt32NBool) Load(k int32) (bool, bool) {
+func (__ OfInt32NBool) Load(k int32) (bool, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt32NBool) Store(k int32, v bool) {
@@ -8759,9 +9521,13 @@ type OfInt32NByteIterIf interface {
 
 type OfInt32NByte map[int32]byte
 
-func (__ OfInt32NByte) Load(k int32) (byte, bool) {
+func (__ OfInt32NByte) Load(k int32) (byte, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt32NByte) Store(k int32, v byte) {
@@ -8805,9 +9571,13 @@ type OfInt32NComplex128IterIf interface {
 
 type OfInt32NComplex128 map[int32]complex128
 
-func (__ OfInt32NComplex128) Load(k int32) (complex128, bool) {
+func (__ OfInt32NComplex128) Load(k int32) (complex128, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt32NComplex128) Store(k int32, v complex128) {
@@ -8851,9 +9621,13 @@ type OfInt32NComplex64IterIf interface {
 
 type OfInt32NComplex64 map[int32]complex64
 
-func (__ OfInt32NComplex64) Load(k int32) (complex64, bool) {
+func (__ OfInt32NComplex64) Load(k int32) (complex64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt32NComplex64) Store(k int32, v complex64) {
@@ -8897,9 +9671,13 @@ type OfInt32NErrorIterIf interface {
 
 type OfInt32NError map[int32]error
 
-func (__ OfInt32NError) Load(k int32) (error, bool) {
+func (__ OfInt32NError) Load(k int32) (error, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt32NError) Store(k int32, v error) {
@@ -8943,9 +9721,13 @@ type OfInt32NFloat32IterIf interface {
 
 type OfInt32NFloat32 map[int32]float32
 
-func (__ OfInt32NFloat32) Load(k int32) (float32, bool) {
+func (__ OfInt32NFloat32) Load(k int32) (float32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt32NFloat32) Store(k int32, v float32) {
@@ -8989,9 +9771,13 @@ type OfInt32NFloat64IterIf interface {
 
 type OfInt32NFloat64 map[int32]float64
 
-func (__ OfInt32NFloat64) Load(k int32) (float64, bool) {
+func (__ OfInt32NFloat64) Load(k int32) (float64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt32NFloat64) Store(k int32, v float64) {
@@ -9035,9 +9821,13 @@ type OfInt32NIntIterIf interface {
 
 type OfInt32NInt map[int32]int
 
-func (__ OfInt32NInt) Load(k int32) (int, bool) {
+func (__ OfInt32NInt) Load(k int32) (int, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt32NInt) Store(k int32, v int) {
@@ -9081,9 +9871,13 @@ type OfInt32NInt16IterIf interface {
 
 type OfInt32NInt16 map[int32]int16
 
-func (__ OfInt32NInt16) Load(k int32) (int16, bool) {
+func (__ OfInt32NInt16) Load(k int32) (int16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt32NInt16) Store(k int32, v int16) {
@@ -9127,9 +9921,13 @@ type OfInt32NInt32IterIf interface {
 
 type OfInt32NInt32 map[int32]int32
 
-func (__ OfInt32NInt32) Load(k int32) (int32, bool) {
+func (__ OfInt32NInt32) Load(k int32) (int32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt32NInt32) Store(k int32, v int32) {
@@ -9173,9 +9971,13 @@ type OfInt32NInt64IterIf interface {
 
 type OfInt32NInt64 map[int32]int64
 
-func (__ OfInt32NInt64) Load(k int32) (int64, bool) {
+func (__ OfInt32NInt64) Load(k int32) (int64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt32NInt64) Store(k int32, v int64) {
@@ -9219,9 +10021,13 @@ type OfInt32NInt8IterIf interface {
 
 type OfInt32NInt8 map[int32]int8
 
-func (__ OfInt32NInt8) Load(k int32) (int8, bool) {
+func (__ OfInt32NInt8) Load(k int32) (int8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt32NInt8) Store(k int32, v int8) {
@@ -9265,9 +10071,13 @@ type OfInt32NRuneIterIf interface {
 
 type OfInt32NRune map[int32]rune
 
-func (__ OfInt32NRune) Load(k int32) (rune, bool) {
+func (__ OfInt32NRune) Load(k int32) (rune, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt32NRune) Store(k int32, v rune) {
@@ -9311,9 +10121,13 @@ type OfInt32NStringIterIf interface {
 
 type OfInt32NString map[int32]string
 
-func (__ OfInt32NString) Load(k int32) (string, bool) {
+func (__ OfInt32NString) Load(k int32) (string, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt32NString) Store(k int32, v string) {
@@ -9357,9 +10171,13 @@ type OfInt32NUintIterIf interface {
 
 type OfInt32NUint map[int32]uint
 
-func (__ OfInt32NUint) Load(k int32) (uint, bool) {
+func (__ OfInt32NUint) Load(k int32) (uint, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt32NUint) Store(k int32, v uint) {
@@ -9403,9 +10221,13 @@ type OfInt32NUint16IterIf interface {
 
 type OfInt32NUint16 map[int32]uint16
 
-func (__ OfInt32NUint16) Load(k int32) (uint16, bool) {
+func (__ OfInt32NUint16) Load(k int32) (uint16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt32NUint16) Store(k int32, v uint16) {
@@ -9449,9 +10271,13 @@ type OfInt32NUint32IterIf interface {
 
 type OfInt32NUint32 map[int32]uint32
 
-func (__ OfInt32NUint32) Load(k int32) (uint32, bool) {
+func (__ OfInt32NUint32) Load(k int32) (uint32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt32NUint32) Store(k int32, v uint32) {
@@ -9495,9 +10321,13 @@ type OfInt32NUint64IterIf interface {
 
 type OfInt32NUint64 map[int32]uint64
 
-func (__ OfInt32NUint64) Load(k int32) (uint64, bool) {
+func (__ OfInt32NUint64) Load(k int32) (uint64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt32NUint64) Store(k int32, v uint64) {
@@ -9541,9 +10371,13 @@ type OfInt32NUint8IterIf interface {
 
 type OfInt32NUint8 map[int32]uint8
 
-func (__ OfInt32NUint8) Load(k int32) (uint8, bool) {
+func (__ OfInt32NUint8) Load(k int32) (uint8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt32NUint8) Store(k int32, v uint8) {
@@ -9587,9 +10421,13 @@ type OfInt32NUintptrIterIf interface {
 
 type OfInt32NUintptr map[int32]uintptr
 
-func (__ OfInt32NUintptr) Load(k int32) (uintptr, bool) {
+func (__ OfInt32NUintptr) Load(k int32) (uintptr, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt32NUintptr) Store(k int32, v uintptr) {
@@ -9633,9 +10471,13 @@ type OfInt32NInterfaceIterIf interface {
 
 type OfInt32NInterface map[int32]interface{}
 
-func (__ OfInt32NInterface) Load(k int32) (interface{}, bool) {
+func (__ OfInt32NInterface) Load(k int32) (interface{}, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt32NInterface) Store(k int32, v interface{}) {
@@ -9679,9 +10521,13 @@ type OfInt64NBoolIterIf interface {
 
 type OfInt64NBool map[int64]bool
 
-func (__ OfInt64NBool) Load(k int64) (bool, bool) {
+func (__ OfInt64NBool) Load(k int64) (bool, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt64NBool) Store(k int64, v bool) {
@@ -9725,9 +10571,13 @@ type OfInt64NByteIterIf interface {
 
 type OfInt64NByte map[int64]byte
 
-func (__ OfInt64NByte) Load(k int64) (byte, bool) {
+func (__ OfInt64NByte) Load(k int64) (byte, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt64NByte) Store(k int64, v byte) {
@@ -9771,9 +10621,13 @@ type OfInt64NComplex128IterIf interface {
 
 type OfInt64NComplex128 map[int64]complex128
 
-func (__ OfInt64NComplex128) Load(k int64) (complex128, bool) {
+func (__ OfInt64NComplex128) Load(k int64) (complex128, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt64NComplex128) Store(k int64, v complex128) {
@@ -9817,9 +10671,13 @@ type OfInt64NComplex64IterIf interface {
 
 type OfInt64NComplex64 map[int64]complex64
 
-func (__ OfInt64NComplex64) Load(k int64) (complex64, bool) {
+func (__ OfInt64NComplex64) Load(k int64) (complex64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt64NComplex64) Store(k int64, v complex64) {
@@ -9863,9 +10721,13 @@ type OfInt64NErrorIterIf interface {
 
 type OfInt64NError map[int64]error
 
-func (__ OfInt64NError) Load(k int64) (error, bool) {
+func (__ OfInt64NError) Load(k int64) (error, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt64NError) Store(k int64, v error) {
@@ -9909,9 +10771,13 @@ type OfInt64NFloat32IterIf interface {
 
 type OfInt64NFloat32 map[int64]float32
 
-func (__ OfInt64NFloat32) Load(k int64) (float32, bool) {
+func (__ OfInt64NFloat32) Load(k int64) (float32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt64NFloat32) Store(k int64, v float32) {
@@ -9955,9 +10821,13 @@ type OfInt64NFloat64IterIf interface {
 
 type OfInt64NFloat64 map[int64]float64
 
-func (__ OfInt64NFloat64) Load(k int64) (float64, bool) {
+func (__ OfInt64NFloat64) Load(k int64) (float64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt64NFloat64) Store(k int64, v float64) {
@@ -10001,9 +10871,13 @@ type OfInt64NIntIterIf interface {
 
 type OfInt64NInt map[int64]int
 
-func (__ OfInt64NInt) Load(k int64) (int, bool) {
+func (__ OfInt64NInt) Load(k int64) (int, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt64NInt) Store(k int64, v int) {
@@ -10047,9 +10921,13 @@ type OfInt64NInt16IterIf interface {
 
 type OfInt64NInt16 map[int64]int16
 
-func (__ OfInt64NInt16) Load(k int64) (int16, bool) {
+func (__ OfInt64NInt16) Load(k int64) (int16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt64NInt16) Store(k int64, v int16) {
@@ -10093,9 +10971,13 @@ type OfInt64NInt32IterIf interface {
 
 type OfInt64NInt32 map[int64]int32
 
-func (__ OfInt64NInt32) Load(k int64) (int32, bool) {
+func (__ OfInt64NInt32) Load(k int64) (int32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt64NInt32) Store(k int64, v int32) {
@@ -10139,9 +11021,13 @@ type OfInt64NInt64IterIf interface {
 
 type OfInt64NInt64 map[int64]int64
 
-func (__ OfInt64NInt64) Load(k int64) (int64, bool) {
+func (__ OfInt64NInt64) Load(k int64) (int64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt64NInt64) Store(k int64, v int64) {
@@ -10185,9 +11071,13 @@ type OfInt64NInt8IterIf interface {
 
 type OfInt64NInt8 map[int64]int8
 
-func (__ OfInt64NInt8) Load(k int64) (int8, bool) {
+func (__ OfInt64NInt8) Load(k int64) (int8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt64NInt8) Store(k int64, v int8) {
@@ -10231,9 +11121,13 @@ type OfInt64NRuneIterIf interface {
 
 type OfInt64NRune map[int64]rune
 
-func (__ OfInt64NRune) Load(k int64) (rune, bool) {
+func (__ OfInt64NRune) Load(k int64) (rune, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt64NRune) Store(k int64, v rune) {
@@ -10277,9 +11171,13 @@ type OfInt64NStringIterIf interface {
 
 type OfInt64NString map[int64]string
 
-func (__ OfInt64NString) Load(k int64) (string, bool) {
+func (__ OfInt64NString) Load(k int64) (string, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt64NString) Store(k int64, v string) {
@@ -10323,9 +11221,13 @@ type OfInt64NUintIterIf interface {
 
 type OfInt64NUint map[int64]uint
 
-func (__ OfInt64NUint) Load(k int64) (uint, bool) {
+func (__ OfInt64NUint) Load(k int64) (uint, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt64NUint) Store(k int64, v uint) {
@@ -10369,9 +11271,13 @@ type OfInt64NUint16IterIf interface {
 
 type OfInt64NUint16 map[int64]uint16
 
-func (__ OfInt64NUint16) Load(k int64) (uint16, bool) {
+func (__ OfInt64NUint16) Load(k int64) (uint16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt64NUint16) Store(k int64, v uint16) {
@@ -10415,9 +11321,13 @@ type OfInt64NUint32IterIf interface {
 
 type OfInt64NUint32 map[int64]uint32
 
-func (__ OfInt64NUint32) Load(k int64) (uint32, bool) {
+func (__ OfInt64NUint32) Load(k int64) (uint32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt64NUint32) Store(k int64, v uint32) {
@@ -10461,9 +11371,13 @@ type OfInt64NUint64IterIf interface {
 
 type OfInt64NUint64 map[int64]uint64
 
-func (__ OfInt64NUint64) Load(k int64) (uint64, bool) {
+func (__ OfInt64NUint64) Load(k int64) (uint64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt64NUint64) Store(k int64, v uint64) {
@@ -10507,9 +11421,13 @@ type OfInt64NUint8IterIf interface {
 
 type OfInt64NUint8 map[int64]uint8
 
-func (__ OfInt64NUint8) Load(k int64) (uint8, bool) {
+func (__ OfInt64NUint8) Load(k int64) (uint8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt64NUint8) Store(k int64, v uint8) {
@@ -10553,9 +11471,13 @@ type OfInt64NUintptrIterIf interface {
 
 type OfInt64NUintptr map[int64]uintptr
 
-func (__ OfInt64NUintptr) Load(k int64) (uintptr, bool) {
+func (__ OfInt64NUintptr) Load(k int64) (uintptr, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt64NUintptr) Store(k int64, v uintptr) {
@@ -10599,9 +11521,13 @@ type OfInt64NInterfaceIterIf interface {
 
 type OfInt64NInterface map[int64]interface{}
 
-func (__ OfInt64NInterface) Load(k int64) (interface{}, bool) {
+func (__ OfInt64NInterface) Load(k int64) (interface{}, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt64NInterface) Store(k int64, v interface{}) {
@@ -10645,9 +11571,13 @@ type OfInt8NBoolIterIf interface {
 
 type OfInt8NBool map[int8]bool
 
-func (__ OfInt8NBool) Load(k int8) (bool, bool) {
+func (__ OfInt8NBool) Load(k int8) (bool, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt8NBool) Store(k int8, v bool) {
@@ -10691,9 +11621,13 @@ type OfInt8NByteIterIf interface {
 
 type OfInt8NByte map[int8]byte
 
-func (__ OfInt8NByte) Load(k int8) (byte, bool) {
+func (__ OfInt8NByte) Load(k int8) (byte, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt8NByte) Store(k int8, v byte) {
@@ -10737,9 +11671,13 @@ type OfInt8NComplex128IterIf interface {
 
 type OfInt8NComplex128 map[int8]complex128
 
-func (__ OfInt8NComplex128) Load(k int8) (complex128, bool) {
+func (__ OfInt8NComplex128) Load(k int8) (complex128, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt8NComplex128) Store(k int8, v complex128) {
@@ -10783,9 +11721,13 @@ type OfInt8NComplex64IterIf interface {
 
 type OfInt8NComplex64 map[int8]complex64
 
-func (__ OfInt8NComplex64) Load(k int8) (complex64, bool) {
+func (__ OfInt8NComplex64) Load(k int8) (complex64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt8NComplex64) Store(k int8, v complex64) {
@@ -10829,9 +11771,13 @@ type OfInt8NErrorIterIf interface {
 
 type OfInt8NError map[int8]error
 
-func (__ OfInt8NError) Load(k int8) (error, bool) {
+func (__ OfInt8NError) Load(k int8) (error, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt8NError) Store(k int8, v error) {
@@ -10875,9 +11821,13 @@ type OfInt8NFloat32IterIf interface {
 
 type OfInt8NFloat32 map[int8]float32
 
-func (__ OfInt8NFloat32) Load(k int8) (float32, bool) {
+func (__ OfInt8NFloat32) Load(k int8) (float32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt8NFloat32) Store(k int8, v float32) {
@@ -10921,9 +11871,13 @@ type OfInt8NFloat64IterIf interface {
 
 type OfInt8NFloat64 map[int8]float64
 
-func (__ OfInt8NFloat64) Load(k int8) (float64, bool) {
+func (__ OfInt8NFloat64) Load(k int8) (float64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt8NFloat64) Store(k int8, v float64) {
@@ -10967,9 +11921,13 @@ type OfInt8NIntIterIf interface {
 
 type OfInt8NInt map[int8]int
 
-func (__ OfInt8NInt) Load(k int8) (int, bool) {
+func (__ OfInt8NInt) Load(k int8) (int, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt8NInt) Store(k int8, v int) {
@@ -11013,9 +11971,13 @@ type OfInt8NInt16IterIf interface {
 
 type OfInt8NInt16 map[int8]int16
 
-func (__ OfInt8NInt16) Load(k int8) (int16, bool) {
+func (__ OfInt8NInt16) Load(k int8) (int16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt8NInt16) Store(k int8, v int16) {
@@ -11059,9 +12021,13 @@ type OfInt8NInt32IterIf interface {
 
 type OfInt8NInt32 map[int8]int32
 
-func (__ OfInt8NInt32) Load(k int8) (int32, bool) {
+func (__ OfInt8NInt32) Load(k int8) (int32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt8NInt32) Store(k int8, v int32) {
@@ -11105,9 +12071,13 @@ type OfInt8NInt64IterIf interface {
 
 type OfInt8NInt64 map[int8]int64
 
-func (__ OfInt8NInt64) Load(k int8) (int64, bool) {
+func (__ OfInt8NInt64) Load(k int8) (int64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt8NInt64) Store(k int8, v int64) {
@@ -11151,9 +12121,13 @@ type OfInt8NInt8IterIf interface {
 
 type OfInt8NInt8 map[int8]int8
 
-func (__ OfInt8NInt8) Load(k int8) (int8, bool) {
+func (__ OfInt8NInt8) Load(k int8) (int8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt8NInt8) Store(k int8, v int8) {
@@ -11197,9 +12171,13 @@ type OfInt8NRuneIterIf interface {
 
 type OfInt8NRune map[int8]rune
 
-func (__ OfInt8NRune) Load(k int8) (rune, bool) {
+func (__ OfInt8NRune) Load(k int8) (rune, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt8NRune) Store(k int8, v rune) {
@@ -11243,9 +12221,13 @@ type OfInt8NStringIterIf interface {
 
 type OfInt8NString map[int8]string
 
-func (__ OfInt8NString) Load(k int8) (string, bool) {
+func (__ OfInt8NString) Load(k int8) (string, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt8NString) Store(k int8, v string) {
@@ -11289,9 +12271,13 @@ type OfInt8NUintIterIf interface {
 
 type OfInt8NUint map[int8]uint
 
-func (__ OfInt8NUint) Load(k int8) (uint, bool) {
+func (__ OfInt8NUint) Load(k int8) (uint, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt8NUint) Store(k int8, v uint) {
@@ -11335,9 +12321,13 @@ type OfInt8NUint16IterIf interface {
 
 type OfInt8NUint16 map[int8]uint16
 
-func (__ OfInt8NUint16) Load(k int8) (uint16, bool) {
+func (__ OfInt8NUint16) Load(k int8) (uint16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt8NUint16) Store(k int8, v uint16) {
@@ -11381,9 +12371,13 @@ type OfInt8NUint32IterIf interface {
 
 type OfInt8NUint32 map[int8]uint32
 
-func (__ OfInt8NUint32) Load(k int8) (uint32, bool) {
+func (__ OfInt8NUint32) Load(k int8) (uint32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt8NUint32) Store(k int8, v uint32) {
@@ -11427,9 +12421,13 @@ type OfInt8NUint64IterIf interface {
 
 type OfInt8NUint64 map[int8]uint64
 
-func (__ OfInt8NUint64) Load(k int8) (uint64, bool) {
+func (__ OfInt8NUint64) Load(k int8) (uint64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt8NUint64) Store(k int8, v uint64) {
@@ -11473,9 +12471,13 @@ type OfInt8NUint8IterIf interface {
 
 type OfInt8NUint8 map[int8]uint8
 
-func (__ OfInt8NUint8) Load(k int8) (uint8, bool) {
+func (__ OfInt8NUint8) Load(k int8) (uint8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt8NUint8) Store(k int8, v uint8) {
@@ -11519,9 +12521,13 @@ type OfInt8NUintptrIterIf interface {
 
 type OfInt8NUintptr map[int8]uintptr
 
-func (__ OfInt8NUintptr) Load(k int8) (uintptr, bool) {
+func (__ OfInt8NUintptr) Load(k int8) (uintptr, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt8NUintptr) Store(k int8, v uintptr) {
@@ -11565,9 +12571,13 @@ type OfInt8NInterfaceIterIf interface {
 
 type OfInt8NInterface map[int8]interface{}
 
-func (__ OfInt8NInterface) Load(k int8) (interface{}, bool) {
+func (__ OfInt8NInterface) Load(k int8) (interface{}, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInt8NInterface) Store(k int8, v interface{}) {
@@ -11611,9 +12621,13 @@ type OfRuneNBoolIterIf interface {
 
 type OfRuneNBool map[rune]bool
 
-func (__ OfRuneNBool) Load(k rune) (bool, bool) {
+func (__ OfRuneNBool) Load(k rune) (bool, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfRuneNBool) Store(k rune, v bool) {
@@ -11657,9 +12671,13 @@ type OfRuneNByteIterIf interface {
 
 type OfRuneNByte map[rune]byte
 
-func (__ OfRuneNByte) Load(k rune) (byte, bool) {
+func (__ OfRuneNByte) Load(k rune) (byte, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfRuneNByte) Store(k rune, v byte) {
@@ -11703,9 +12721,13 @@ type OfRuneNComplex128IterIf interface {
 
 type OfRuneNComplex128 map[rune]complex128
 
-func (__ OfRuneNComplex128) Load(k rune) (complex128, bool) {
+func (__ OfRuneNComplex128) Load(k rune) (complex128, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfRuneNComplex128) Store(k rune, v complex128) {
@@ -11749,9 +12771,13 @@ type OfRuneNComplex64IterIf interface {
 
 type OfRuneNComplex64 map[rune]complex64
 
-func (__ OfRuneNComplex64) Load(k rune) (complex64, bool) {
+func (__ OfRuneNComplex64) Load(k rune) (complex64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfRuneNComplex64) Store(k rune, v complex64) {
@@ -11795,9 +12821,13 @@ type OfRuneNErrorIterIf interface {
 
 type OfRuneNError map[rune]error
 
-func (__ OfRuneNError) Load(k rune) (error, bool) {
+func (__ OfRuneNError) Load(k rune) (error, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfRuneNError) Store(k rune, v error) {
@@ -11841,9 +12871,13 @@ type OfRuneNFloat32IterIf interface {
 
 type OfRuneNFloat32 map[rune]float32
 
-func (__ OfRuneNFloat32) Load(k rune) (float32, bool) {
+func (__ OfRuneNFloat32) Load(k rune) (float32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfRuneNFloat32) Store(k rune, v float32) {
@@ -11887,9 +12921,13 @@ type OfRuneNFloat64IterIf interface {
 
 type OfRuneNFloat64 map[rune]float64
 
-func (__ OfRuneNFloat64) Load(k rune) (float64, bool) {
+func (__ OfRuneNFloat64) Load(k rune) (float64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfRuneNFloat64) Store(k rune, v float64) {
@@ -11933,9 +12971,13 @@ type OfRuneNIntIterIf interface {
 
 type OfRuneNInt map[rune]int
 
-func (__ OfRuneNInt) Load(k rune) (int, bool) {
+func (__ OfRuneNInt) Load(k rune) (int, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfRuneNInt) Store(k rune, v int) {
@@ -11979,9 +13021,13 @@ type OfRuneNInt16IterIf interface {
 
 type OfRuneNInt16 map[rune]int16
 
-func (__ OfRuneNInt16) Load(k rune) (int16, bool) {
+func (__ OfRuneNInt16) Load(k rune) (int16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfRuneNInt16) Store(k rune, v int16) {
@@ -12025,9 +13071,13 @@ type OfRuneNInt32IterIf interface {
 
 type OfRuneNInt32 map[rune]int32
 
-func (__ OfRuneNInt32) Load(k rune) (int32, bool) {
+func (__ OfRuneNInt32) Load(k rune) (int32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfRuneNInt32) Store(k rune, v int32) {
@@ -12071,9 +13121,13 @@ type OfRuneNInt64IterIf interface {
 
 type OfRuneNInt64 map[rune]int64
 
-func (__ OfRuneNInt64) Load(k rune) (int64, bool) {
+func (__ OfRuneNInt64) Load(k rune) (int64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfRuneNInt64) Store(k rune, v int64) {
@@ -12117,9 +13171,13 @@ type OfRuneNInt8IterIf interface {
 
 type OfRuneNInt8 map[rune]int8
 
-func (__ OfRuneNInt8) Load(k rune) (int8, bool) {
+func (__ OfRuneNInt8) Load(k rune) (int8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfRuneNInt8) Store(k rune, v int8) {
@@ -12163,9 +13221,13 @@ type OfRuneNRuneIterIf interface {
 
 type OfRuneNRune map[rune]rune
 
-func (__ OfRuneNRune) Load(k rune) (rune, bool) {
+func (__ OfRuneNRune) Load(k rune) (rune, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfRuneNRune) Store(k rune, v rune) {
@@ -12209,9 +13271,13 @@ type OfRuneNStringIterIf interface {
 
 type OfRuneNString map[rune]string
 
-func (__ OfRuneNString) Load(k rune) (string, bool) {
+func (__ OfRuneNString) Load(k rune) (string, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfRuneNString) Store(k rune, v string) {
@@ -12255,9 +13321,13 @@ type OfRuneNUintIterIf interface {
 
 type OfRuneNUint map[rune]uint
 
-func (__ OfRuneNUint) Load(k rune) (uint, bool) {
+func (__ OfRuneNUint) Load(k rune) (uint, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfRuneNUint) Store(k rune, v uint) {
@@ -12301,9 +13371,13 @@ type OfRuneNUint16IterIf interface {
 
 type OfRuneNUint16 map[rune]uint16
 
-func (__ OfRuneNUint16) Load(k rune) (uint16, bool) {
+func (__ OfRuneNUint16) Load(k rune) (uint16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfRuneNUint16) Store(k rune, v uint16) {
@@ -12347,9 +13421,13 @@ type OfRuneNUint32IterIf interface {
 
 type OfRuneNUint32 map[rune]uint32
 
-func (__ OfRuneNUint32) Load(k rune) (uint32, bool) {
+func (__ OfRuneNUint32) Load(k rune) (uint32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfRuneNUint32) Store(k rune, v uint32) {
@@ -12393,9 +13471,13 @@ type OfRuneNUint64IterIf interface {
 
 type OfRuneNUint64 map[rune]uint64
 
-func (__ OfRuneNUint64) Load(k rune) (uint64, bool) {
+func (__ OfRuneNUint64) Load(k rune) (uint64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfRuneNUint64) Store(k rune, v uint64) {
@@ -12439,9 +13521,13 @@ type OfRuneNUint8IterIf interface {
 
 type OfRuneNUint8 map[rune]uint8
 
-func (__ OfRuneNUint8) Load(k rune) (uint8, bool) {
+func (__ OfRuneNUint8) Load(k rune) (uint8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfRuneNUint8) Store(k rune, v uint8) {
@@ -12485,9 +13571,13 @@ type OfRuneNUintptrIterIf interface {
 
 type OfRuneNUintptr map[rune]uintptr
 
-func (__ OfRuneNUintptr) Load(k rune) (uintptr, bool) {
+func (__ OfRuneNUintptr) Load(k rune) (uintptr, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfRuneNUintptr) Store(k rune, v uintptr) {
@@ -12531,9 +13621,13 @@ type OfRuneNInterfaceIterIf interface {
 
 type OfRuneNInterface map[rune]interface{}
 
-func (__ OfRuneNInterface) Load(k rune) (interface{}, bool) {
+func (__ OfRuneNInterface) Load(k rune) (interface{}, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfRuneNInterface) Store(k rune, v interface{}) {
@@ -12577,9 +13671,13 @@ type OfStringNBoolIterIf interface {
 
 type OfStringNBool map[string]bool
 
-func (__ OfStringNBool) Load(k string) (bool, bool) {
+func (__ OfStringNBool) Load(k string) (bool, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfStringNBool) Store(k string, v bool) {
@@ -12623,9 +13721,13 @@ type OfStringNByteIterIf interface {
 
 type OfStringNByte map[string]byte
 
-func (__ OfStringNByte) Load(k string) (byte, bool) {
+func (__ OfStringNByte) Load(k string) (byte, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfStringNByte) Store(k string, v byte) {
@@ -12669,9 +13771,13 @@ type OfStringNComplex128IterIf interface {
 
 type OfStringNComplex128 map[string]complex128
 
-func (__ OfStringNComplex128) Load(k string) (complex128, bool) {
+func (__ OfStringNComplex128) Load(k string) (complex128, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfStringNComplex128) Store(k string, v complex128) {
@@ -12715,9 +13821,13 @@ type OfStringNComplex64IterIf interface {
 
 type OfStringNComplex64 map[string]complex64
 
-func (__ OfStringNComplex64) Load(k string) (complex64, bool) {
+func (__ OfStringNComplex64) Load(k string) (complex64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfStringNComplex64) Store(k string, v complex64) {
@@ -12761,9 +13871,13 @@ type OfStringNErrorIterIf interface {
 
 type OfStringNError map[string]error
 
-func (__ OfStringNError) Load(k string) (error, bool) {
+func (__ OfStringNError) Load(k string) (error, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfStringNError) Store(k string, v error) {
@@ -12807,9 +13921,13 @@ type OfStringNFloat32IterIf interface {
 
 type OfStringNFloat32 map[string]float32
 
-func (__ OfStringNFloat32) Load(k string) (float32, bool) {
+func (__ OfStringNFloat32) Load(k string) (float32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfStringNFloat32) Store(k string, v float32) {
@@ -12853,9 +13971,13 @@ type OfStringNFloat64IterIf interface {
 
 type OfStringNFloat64 map[string]float64
 
-func (__ OfStringNFloat64) Load(k string) (float64, bool) {
+func (__ OfStringNFloat64) Load(k string) (float64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfStringNFloat64) Store(k string, v float64) {
@@ -12899,9 +14021,13 @@ type OfStringNIntIterIf interface {
 
 type OfStringNInt map[string]int
 
-func (__ OfStringNInt) Load(k string) (int, bool) {
+func (__ OfStringNInt) Load(k string) (int, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfStringNInt) Store(k string, v int) {
@@ -12945,9 +14071,13 @@ type OfStringNInt16IterIf interface {
 
 type OfStringNInt16 map[string]int16
 
-func (__ OfStringNInt16) Load(k string) (int16, bool) {
+func (__ OfStringNInt16) Load(k string) (int16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfStringNInt16) Store(k string, v int16) {
@@ -12991,9 +14121,13 @@ type OfStringNInt32IterIf interface {
 
 type OfStringNInt32 map[string]int32
 
-func (__ OfStringNInt32) Load(k string) (int32, bool) {
+func (__ OfStringNInt32) Load(k string) (int32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfStringNInt32) Store(k string, v int32) {
@@ -13037,9 +14171,13 @@ type OfStringNInt64IterIf interface {
 
 type OfStringNInt64 map[string]int64
 
-func (__ OfStringNInt64) Load(k string) (int64, bool) {
+func (__ OfStringNInt64) Load(k string) (int64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfStringNInt64) Store(k string, v int64) {
@@ -13083,9 +14221,13 @@ type OfStringNInt8IterIf interface {
 
 type OfStringNInt8 map[string]int8
 
-func (__ OfStringNInt8) Load(k string) (int8, bool) {
+func (__ OfStringNInt8) Load(k string) (int8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfStringNInt8) Store(k string, v int8) {
@@ -13129,9 +14271,13 @@ type OfStringNRuneIterIf interface {
 
 type OfStringNRune map[string]rune
 
-func (__ OfStringNRune) Load(k string) (rune, bool) {
+func (__ OfStringNRune) Load(k string) (rune, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfStringNRune) Store(k string, v rune) {
@@ -13175,9 +14321,13 @@ type OfStringNStringIterIf interface {
 
 type OfStringNString map[string]string
 
-func (__ OfStringNString) Load(k string) (string, bool) {
+func (__ OfStringNString) Load(k string) (string, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfStringNString) Store(k string, v string) {
@@ -13221,9 +14371,13 @@ type OfStringNUintIterIf interface {
 
 type OfStringNUint map[string]uint
 
-func (__ OfStringNUint) Load(k string) (uint, bool) {
+func (__ OfStringNUint) Load(k string) (uint, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfStringNUint) Store(k string, v uint) {
@@ -13267,9 +14421,13 @@ type OfStringNUint16IterIf interface {
 
 type OfStringNUint16 map[string]uint16
 
-func (__ OfStringNUint16) Load(k string) (uint16, bool) {
+func (__ OfStringNUint16) Load(k string) (uint16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfStringNUint16) Store(k string, v uint16) {
@@ -13313,9 +14471,13 @@ type OfStringNUint32IterIf interface {
 
 type OfStringNUint32 map[string]uint32
 
-func (__ OfStringNUint32) Load(k string) (uint32, bool) {
+func (__ OfStringNUint32) Load(k string) (uint32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfStringNUint32) Store(k string, v uint32) {
@@ -13359,9 +14521,13 @@ type OfStringNUint64IterIf interface {
 
 type OfStringNUint64 map[string]uint64
 
-func (__ OfStringNUint64) Load(k string) (uint64, bool) {
+func (__ OfStringNUint64) Load(k string) (uint64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfStringNUint64) Store(k string, v uint64) {
@@ -13405,9 +14571,13 @@ type OfStringNUint8IterIf interface {
 
 type OfStringNUint8 map[string]uint8
 
-func (__ OfStringNUint8) Load(k string) (uint8, bool) {
+func (__ OfStringNUint8) Load(k string) (uint8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfStringNUint8) Store(k string, v uint8) {
@@ -13451,9 +14621,13 @@ type OfStringNUintptrIterIf interface {
 
 type OfStringNUintptr map[string]uintptr
 
-func (__ OfStringNUintptr) Load(k string) (uintptr, bool) {
+func (__ OfStringNUintptr) Load(k string) (uintptr, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfStringNUintptr) Store(k string, v uintptr) {
@@ -13497,9 +14671,13 @@ type OfStringNInterfaceIterIf interface {
 
 type OfStringNInterface map[string]interface{}
 
-func (__ OfStringNInterface) Load(k string) (interface{}, bool) {
+func (__ OfStringNInterface) Load(k string) (interface{}, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfStringNInterface) Store(k string, v interface{}) {
@@ -13543,9 +14721,13 @@ type OfUintNBoolIterIf interface {
 
 type OfUintNBool map[uint]bool
 
-func (__ OfUintNBool) Load(k uint) (bool, bool) {
+func (__ OfUintNBool) Load(k uint) (bool, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintNBool) Store(k uint, v bool) {
@@ -13589,9 +14771,13 @@ type OfUintNByteIterIf interface {
 
 type OfUintNByte map[uint]byte
 
-func (__ OfUintNByte) Load(k uint) (byte, bool) {
+func (__ OfUintNByte) Load(k uint) (byte, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintNByte) Store(k uint, v byte) {
@@ -13635,9 +14821,13 @@ type OfUintNComplex128IterIf interface {
 
 type OfUintNComplex128 map[uint]complex128
 
-func (__ OfUintNComplex128) Load(k uint) (complex128, bool) {
+func (__ OfUintNComplex128) Load(k uint) (complex128, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintNComplex128) Store(k uint, v complex128) {
@@ -13681,9 +14871,13 @@ type OfUintNComplex64IterIf interface {
 
 type OfUintNComplex64 map[uint]complex64
 
-func (__ OfUintNComplex64) Load(k uint) (complex64, bool) {
+func (__ OfUintNComplex64) Load(k uint) (complex64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintNComplex64) Store(k uint, v complex64) {
@@ -13727,9 +14921,13 @@ type OfUintNErrorIterIf interface {
 
 type OfUintNError map[uint]error
 
-func (__ OfUintNError) Load(k uint) (error, bool) {
+func (__ OfUintNError) Load(k uint) (error, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintNError) Store(k uint, v error) {
@@ -13773,9 +14971,13 @@ type OfUintNFloat32IterIf interface {
 
 type OfUintNFloat32 map[uint]float32
 
-func (__ OfUintNFloat32) Load(k uint) (float32, bool) {
+func (__ OfUintNFloat32) Load(k uint) (float32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintNFloat32) Store(k uint, v float32) {
@@ -13819,9 +15021,13 @@ type OfUintNFloat64IterIf interface {
 
 type OfUintNFloat64 map[uint]float64
 
-func (__ OfUintNFloat64) Load(k uint) (float64, bool) {
+func (__ OfUintNFloat64) Load(k uint) (float64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintNFloat64) Store(k uint, v float64) {
@@ -13865,9 +15071,13 @@ type OfUintNIntIterIf interface {
 
 type OfUintNInt map[uint]int
 
-func (__ OfUintNInt) Load(k uint) (int, bool) {
+func (__ OfUintNInt) Load(k uint) (int, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintNInt) Store(k uint, v int) {
@@ -13911,9 +15121,13 @@ type OfUintNInt16IterIf interface {
 
 type OfUintNInt16 map[uint]int16
 
-func (__ OfUintNInt16) Load(k uint) (int16, bool) {
+func (__ OfUintNInt16) Load(k uint) (int16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintNInt16) Store(k uint, v int16) {
@@ -13957,9 +15171,13 @@ type OfUintNInt32IterIf interface {
 
 type OfUintNInt32 map[uint]int32
 
-func (__ OfUintNInt32) Load(k uint) (int32, bool) {
+func (__ OfUintNInt32) Load(k uint) (int32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintNInt32) Store(k uint, v int32) {
@@ -14003,9 +15221,13 @@ type OfUintNInt64IterIf interface {
 
 type OfUintNInt64 map[uint]int64
 
-func (__ OfUintNInt64) Load(k uint) (int64, bool) {
+func (__ OfUintNInt64) Load(k uint) (int64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintNInt64) Store(k uint, v int64) {
@@ -14049,9 +15271,13 @@ type OfUintNInt8IterIf interface {
 
 type OfUintNInt8 map[uint]int8
 
-func (__ OfUintNInt8) Load(k uint) (int8, bool) {
+func (__ OfUintNInt8) Load(k uint) (int8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintNInt8) Store(k uint, v int8) {
@@ -14095,9 +15321,13 @@ type OfUintNRuneIterIf interface {
 
 type OfUintNRune map[uint]rune
 
-func (__ OfUintNRune) Load(k uint) (rune, bool) {
+func (__ OfUintNRune) Load(k uint) (rune, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintNRune) Store(k uint, v rune) {
@@ -14141,9 +15371,13 @@ type OfUintNStringIterIf interface {
 
 type OfUintNString map[uint]string
 
-func (__ OfUintNString) Load(k uint) (string, bool) {
+func (__ OfUintNString) Load(k uint) (string, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintNString) Store(k uint, v string) {
@@ -14187,9 +15421,13 @@ type OfUintNUintIterIf interface {
 
 type OfUintNUint map[uint]uint
 
-func (__ OfUintNUint) Load(k uint) (uint, bool) {
+func (__ OfUintNUint) Load(k uint) (uint, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintNUint) Store(k uint, v uint) {
@@ -14233,9 +15471,13 @@ type OfUintNUint16IterIf interface {
 
 type OfUintNUint16 map[uint]uint16
 
-func (__ OfUintNUint16) Load(k uint) (uint16, bool) {
+func (__ OfUintNUint16) Load(k uint) (uint16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintNUint16) Store(k uint, v uint16) {
@@ -14279,9 +15521,13 @@ type OfUintNUint32IterIf interface {
 
 type OfUintNUint32 map[uint]uint32
 
-func (__ OfUintNUint32) Load(k uint) (uint32, bool) {
+func (__ OfUintNUint32) Load(k uint) (uint32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintNUint32) Store(k uint, v uint32) {
@@ -14325,9 +15571,13 @@ type OfUintNUint64IterIf interface {
 
 type OfUintNUint64 map[uint]uint64
 
-func (__ OfUintNUint64) Load(k uint) (uint64, bool) {
+func (__ OfUintNUint64) Load(k uint) (uint64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintNUint64) Store(k uint, v uint64) {
@@ -14371,9 +15621,13 @@ type OfUintNUint8IterIf interface {
 
 type OfUintNUint8 map[uint]uint8
 
-func (__ OfUintNUint8) Load(k uint) (uint8, bool) {
+func (__ OfUintNUint8) Load(k uint) (uint8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintNUint8) Store(k uint, v uint8) {
@@ -14417,9 +15671,13 @@ type OfUintNUintptrIterIf interface {
 
 type OfUintNUintptr map[uint]uintptr
 
-func (__ OfUintNUintptr) Load(k uint) (uintptr, bool) {
+func (__ OfUintNUintptr) Load(k uint) (uintptr, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintNUintptr) Store(k uint, v uintptr) {
@@ -14463,9 +15721,13 @@ type OfUintNInterfaceIterIf interface {
 
 type OfUintNInterface map[uint]interface{}
 
-func (__ OfUintNInterface) Load(k uint) (interface{}, bool) {
+func (__ OfUintNInterface) Load(k uint) (interface{}, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintNInterface) Store(k uint, v interface{}) {
@@ -14509,9 +15771,13 @@ type OfUint16NBoolIterIf interface {
 
 type OfUint16NBool map[uint16]bool
 
-func (__ OfUint16NBool) Load(k uint16) (bool, bool) {
+func (__ OfUint16NBool) Load(k uint16) (bool, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint16NBool) Store(k uint16, v bool) {
@@ -14555,9 +15821,13 @@ type OfUint16NByteIterIf interface {
 
 type OfUint16NByte map[uint16]byte
 
-func (__ OfUint16NByte) Load(k uint16) (byte, bool) {
+func (__ OfUint16NByte) Load(k uint16) (byte, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint16NByte) Store(k uint16, v byte) {
@@ -14601,9 +15871,13 @@ type OfUint16NComplex128IterIf interface {
 
 type OfUint16NComplex128 map[uint16]complex128
 
-func (__ OfUint16NComplex128) Load(k uint16) (complex128, bool) {
+func (__ OfUint16NComplex128) Load(k uint16) (complex128, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint16NComplex128) Store(k uint16, v complex128) {
@@ -14647,9 +15921,13 @@ type OfUint16NComplex64IterIf interface {
 
 type OfUint16NComplex64 map[uint16]complex64
 
-func (__ OfUint16NComplex64) Load(k uint16) (complex64, bool) {
+func (__ OfUint16NComplex64) Load(k uint16) (complex64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint16NComplex64) Store(k uint16, v complex64) {
@@ -14693,9 +15971,13 @@ type OfUint16NErrorIterIf interface {
 
 type OfUint16NError map[uint16]error
 
-func (__ OfUint16NError) Load(k uint16) (error, bool) {
+func (__ OfUint16NError) Load(k uint16) (error, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint16NError) Store(k uint16, v error) {
@@ -14739,9 +16021,13 @@ type OfUint16NFloat32IterIf interface {
 
 type OfUint16NFloat32 map[uint16]float32
 
-func (__ OfUint16NFloat32) Load(k uint16) (float32, bool) {
+func (__ OfUint16NFloat32) Load(k uint16) (float32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint16NFloat32) Store(k uint16, v float32) {
@@ -14785,9 +16071,13 @@ type OfUint16NFloat64IterIf interface {
 
 type OfUint16NFloat64 map[uint16]float64
 
-func (__ OfUint16NFloat64) Load(k uint16) (float64, bool) {
+func (__ OfUint16NFloat64) Load(k uint16) (float64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint16NFloat64) Store(k uint16, v float64) {
@@ -14831,9 +16121,13 @@ type OfUint16NIntIterIf interface {
 
 type OfUint16NInt map[uint16]int
 
-func (__ OfUint16NInt) Load(k uint16) (int, bool) {
+func (__ OfUint16NInt) Load(k uint16) (int, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint16NInt) Store(k uint16, v int) {
@@ -14877,9 +16171,13 @@ type OfUint16NInt16IterIf interface {
 
 type OfUint16NInt16 map[uint16]int16
 
-func (__ OfUint16NInt16) Load(k uint16) (int16, bool) {
+func (__ OfUint16NInt16) Load(k uint16) (int16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint16NInt16) Store(k uint16, v int16) {
@@ -14923,9 +16221,13 @@ type OfUint16NInt32IterIf interface {
 
 type OfUint16NInt32 map[uint16]int32
 
-func (__ OfUint16NInt32) Load(k uint16) (int32, bool) {
+func (__ OfUint16NInt32) Load(k uint16) (int32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint16NInt32) Store(k uint16, v int32) {
@@ -14969,9 +16271,13 @@ type OfUint16NInt64IterIf interface {
 
 type OfUint16NInt64 map[uint16]int64
 
-func (__ OfUint16NInt64) Load(k uint16) (int64, bool) {
+func (__ OfUint16NInt64) Load(k uint16) (int64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint16NInt64) Store(k uint16, v int64) {
@@ -15015,9 +16321,13 @@ type OfUint16NInt8IterIf interface {
 
 type OfUint16NInt8 map[uint16]int8
 
-func (__ OfUint16NInt8) Load(k uint16) (int8, bool) {
+func (__ OfUint16NInt8) Load(k uint16) (int8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint16NInt8) Store(k uint16, v int8) {
@@ -15061,9 +16371,13 @@ type OfUint16NRuneIterIf interface {
 
 type OfUint16NRune map[uint16]rune
 
-func (__ OfUint16NRune) Load(k uint16) (rune, bool) {
+func (__ OfUint16NRune) Load(k uint16) (rune, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint16NRune) Store(k uint16, v rune) {
@@ -15107,9 +16421,13 @@ type OfUint16NStringIterIf interface {
 
 type OfUint16NString map[uint16]string
 
-func (__ OfUint16NString) Load(k uint16) (string, bool) {
+func (__ OfUint16NString) Load(k uint16) (string, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint16NString) Store(k uint16, v string) {
@@ -15153,9 +16471,13 @@ type OfUint16NUintIterIf interface {
 
 type OfUint16NUint map[uint16]uint
 
-func (__ OfUint16NUint) Load(k uint16) (uint, bool) {
+func (__ OfUint16NUint) Load(k uint16) (uint, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint16NUint) Store(k uint16, v uint) {
@@ -15199,9 +16521,13 @@ type OfUint16NUint16IterIf interface {
 
 type OfUint16NUint16 map[uint16]uint16
 
-func (__ OfUint16NUint16) Load(k uint16) (uint16, bool) {
+func (__ OfUint16NUint16) Load(k uint16) (uint16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint16NUint16) Store(k uint16, v uint16) {
@@ -15245,9 +16571,13 @@ type OfUint16NUint32IterIf interface {
 
 type OfUint16NUint32 map[uint16]uint32
 
-func (__ OfUint16NUint32) Load(k uint16) (uint32, bool) {
+func (__ OfUint16NUint32) Load(k uint16) (uint32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint16NUint32) Store(k uint16, v uint32) {
@@ -15291,9 +16621,13 @@ type OfUint16NUint64IterIf interface {
 
 type OfUint16NUint64 map[uint16]uint64
 
-func (__ OfUint16NUint64) Load(k uint16) (uint64, bool) {
+func (__ OfUint16NUint64) Load(k uint16) (uint64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint16NUint64) Store(k uint16, v uint64) {
@@ -15337,9 +16671,13 @@ type OfUint16NUint8IterIf interface {
 
 type OfUint16NUint8 map[uint16]uint8
 
-func (__ OfUint16NUint8) Load(k uint16) (uint8, bool) {
+func (__ OfUint16NUint8) Load(k uint16) (uint8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint16NUint8) Store(k uint16, v uint8) {
@@ -15383,9 +16721,13 @@ type OfUint16NUintptrIterIf interface {
 
 type OfUint16NUintptr map[uint16]uintptr
 
-func (__ OfUint16NUintptr) Load(k uint16) (uintptr, bool) {
+func (__ OfUint16NUintptr) Load(k uint16) (uintptr, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint16NUintptr) Store(k uint16, v uintptr) {
@@ -15429,9 +16771,13 @@ type OfUint16NInterfaceIterIf interface {
 
 type OfUint16NInterface map[uint16]interface{}
 
-func (__ OfUint16NInterface) Load(k uint16) (interface{}, bool) {
+func (__ OfUint16NInterface) Load(k uint16) (interface{}, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint16NInterface) Store(k uint16, v interface{}) {
@@ -15475,9 +16821,13 @@ type OfUint32NBoolIterIf interface {
 
 type OfUint32NBool map[uint32]bool
 
-func (__ OfUint32NBool) Load(k uint32) (bool, bool) {
+func (__ OfUint32NBool) Load(k uint32) (bool, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint32NBool) Store(k uint32, v bool) {
@@ -15521,9 +16871,13 @@ type OfUint32NByteIterIf interface {
 
 type OfUint32NByte map[uint32]byte
 
-func (__ OfUint32NByte) Load(k uint32) (byte, bool) {
+func (__ OfUint32NByte) Load(k uint32) (byte, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint32NByte) Store(k uint32, v byte) {
@@ -15567,9 +16921,13 @@ type OfUint32NComplex128IterIf interface {
 
 type OfUint32NComplex128 map[uint32]complex128
 
-func (__ OfUint32NComplex128) Load(k uint32) (complex128, bool) {
+func (__ OfUint32NComplex128) Load(k uint32) (complex128, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint32NComplex128) Store(k uint32, v complex128) {
@@ -15613,9 +16971,13 @@ type OfUint32NComplex64IterIf interface {
 
 type OfUint32NComplex64 map[uint32]complex64
 
-func (__ OfUint32NComplex64) Load(k uint32) (complex64, bool) {
+func (__ OfUint32NComplex64) Load(k uint32) (complex64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint32NComplex64) Store(k uint32, v complex64) {
@@ -15659,9 +17021,13 @@ type OfUint32NErrorIterIf interface {
 
 type OfUint32NError map[uint32]error
 
-func (__ OfUint32NError) Load(k uint32) (error, bool) {
+func (__ OfUint32NError) Load(k uint32) (error, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint32NError) Store(k uint32, v error) {
@@ -15705,9 +17071,13 @@ type OfUint32NFloat32IterIf interface {
 
 type OfUint32NFloat32 map[uint32]float32
 
-func (__ OfUint32NFloat32) Load(k uint32) (float32, bool) {
+func (__ OfUint32NFloat32) Load(k uint32) (float32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint32NFloat32) Store(k uint32, v float32) {
@@ -15751,9 +17121,13 @@ type OfUint32NFloat64IterIf interface {
 
 type OfUint32NFloat64 map[uint32]float64
 
-func (__ OfUint32NFloat64) Load(k uint32) (float64, bool) {
+func (__ OfUint32NFloat64) Load(k uint32) (float64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint32NFloat64) Store(k uint32, v float64) {
@@ -15797,9 +17171,13 @@ type OfUint32NIntIterIf interface {
 
 type OfUint32NInt map[uint32]int
 
-func (__ OfUint32NInt) Load(k uint32) (int, bool) {
+func (__ OfUint32NInt) Load(k uint32) (int, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint32NInt) Store(k uint32, v int) {
@@ -15843,9 +17221,13 @@ type OfUint32NInt16IterIf interface {
 
 type OfUint32NInt16 map[uint32]int16
 
-func (__ OfUint32NInt16) Load(k uint32) (int16, bool) {
+func (__ OfUint32NInt16) Load(k uint32) (int16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint32NInt16) Store(k uint32, v int16) {
@@ -15889,9 +17271,13 @@ type OfUint32NInt32IterIf interface {
 
 type OfUint32NInt32 map[uint32]int32
 
-func (__ OfUint32NInt32) Load(k uint32) (int32, bool) {
+func (__ OfUint32NInt32) Load(k uint32) (int32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint32NInt32) Store(k uint32, v int32) {
@@ -15935,9 +17321,13 @@ type OfUint32NInt64IterIf interface {
 
 type OfUint32NInt64 map[uint32]int64
 
-func (__ OfUint32NInt64) Load(k uint32) (int64, bool) {
+func (__ OfUint32NInt64) Load(k uint32) (int64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint32NInt64) Store(k uint32, v int64) {
@@ -15981,9 +17371,13 @@ type OfUint32NInt8IterIf interface {
 
 type OfUint32NInt8 map[uint32]int8
 
-func (__ OfUint32NInt8) Load(k uint32) (int8, bool) {
+func (__ OfUint32NInt8) Load(k uint32) (int8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint32NInt8) Store(k uint32, v int8) {
@@ -16027,9 +17421,13 @@ type OfUint32NRuneIterIf interface {
 
 type OfUint32NRune map[uint32]rune
 
-func (__ OfUint32NRune) Load(k uint32) (rune, bool) {
+func (__ OfUint32NRune) Load(k uint32) (rune, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint32NRune) Store(k uint32, v rune) {
@@ -16073,9 +17471,13 @@ type OfUint32NStringIterIf interface {
 
 type OfUint32NString map[uint32]string
 
-func (__ OfUint32NString) Load(k uint32) (string, bool) {
+func (__ OfUint32NString) Load(k uint32) (string, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint32NString) Store(k uint32, v string) {
@@ -16119,9 +17521,13 @@ type OfUint32NUintIterIf interface {
 
 type OfUint32NUint map[uint32]uint
 
-func (__ OfUint32NUint) Load(k uint32) (uint, bool) {
+func (__ OfUint32NUint) Load(k uint32) (uint, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint32NUint) Store(k uint32, v uint) {
@@ -16165,9 +17571,13 @@ type OfUint32NUint16IterIf interface {
 
 type OfUint32NUint16 map[uint32]uint16
 
-func (__ OfUint32NUint16) Load(k uint32) (uint16, bool) {
+func (__ OfUint32NUint16) Load(k uint32) (uint16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint32NUint16) Store(k uint32, v uint16) {
@@ -16211,9 +17621,13 @@ type OfUint32NUint32IterIf interface {
 
 type OfUint32NUint32 map[uint32]uint32
 
-func (__ OfUint32NUint32) Load(k uint32) (uint32, bool) {
+func (__ OfUint32NUint32) Load(k uint32) (uint32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint32NUint32) Store(k uint32, v uint32) {
@@ -16257,9 +17671,13 @@ type OfUint32NUint64IterIf interface {
 
 type OfUint32NUint64 map[uint32]uint64
 
-func (__ OfUint32NUint64) Load(k uint32) (uint64, bool) {
+func (__ OfUint32NUint64) Load(k uint32) (uint64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint32NUint64) Store(k uint32, v uint64) {
@@ -16303,9 +17721,13 @@ type OfUint32NUint8IterIf interface {
 
 type OfUint32NUint8 map[uint32]uint8
 
-func (__ OfUint32NUint8) Load(k uint32) (uint8, bool) {
+func (__ OfUint32NUint8) Load(k uint32) (uint8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint32NUint8) Store(k uint32, v uint8) {
@@ -16349,9 +17771,13 @@ type OfUint32NUintptrIterIf interface {
 
 type OfUint32NUintptr map[uint32]uintptr
 
-func (__ OfUint32NUintptr) Load(k uint32) (uintptr, bool) {
+func (__ OfUint32NUintptr) Load(k uint32) (uintptr, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint32NUintptr) Store(k uint32, v uintptr) {
@@ -16395,9 +17821,13 @@ type OfUint32NInterfaceIterIf interface {
 
 type OfUint32NInterface map[uint32]interface{}
 
-func (__ OfUint32NInterface) Load(k uint32) (interface{}, bool) {
+func (__ OfUint32NInterface) Load(k uint32) (interface{}, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint32NInterface) Store(k uint32, v interface{}) {
@@ -16441,9 +17871,13 @@ type OfUint64NBoolIterIf interface {
 
 type OfUint64NBool map[uint64]bool
 
-func (__ OfUint64NBool) Load(k uint64) (bool, bool) {
+func (__ OfUint64NBool) Load(k uint64) (bool, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint64NBool) Store(k uint64, v bool) {
@@ -16487,9 +17921,13 @@ type OfUint64NByteIterIf interface {
 
 type OfUint64NByte map[uint64]byte
 
-func (__ OfUint64NByte) Load(k uint64) (byte, bool) {
+func (__ OfUint64NByte) Load(k uint64) (byte, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint64NByte) Store(k uint64, v byte) {
@@ -16533,9 +17971,13 @@ type OfUint64NComplex128IterIf interface {
 
 type OfUint64NComplex128 map[uint64]complex128
 
-func (__ OfUint64NComplex128) Load(k uint64) (complex128, bool) {
+func (__ OfUint64NComplex128) Load(k uint64) (complex128, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint64NComplex128) Store(k uint64, v complex128) {
@@ -16579,9 +18021,13 @@ type OfUint64NComplex64IterIf interface {
 
 type OfUint64NComplex64 map[uint64]complex64
 
-func (__ OfUint64NComplex64) Load(k uint64) (complex64, bool) {
+func (__ OfUint64NComplex64) Load(k uint64) (complex64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint64NComplex64) Store(k uint64, v complex64) {
@@ -16625,9 +18071,13 @@ type OfUint64NErrorIterIf interface {
 
 type OfUint64NError map[uint64]error
 
-func (__ OfUint64NError) Load(k uint64) (error, bool) {
+func (__ OfUint64NError) Load(k uint64) (error, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint64NError) Store(k uint64, v error) {
@@ -16671,9 +18121,13 @@ type OfUint64NFloat32IterIf interface {
 
 type OfUint64NFloat32 map[uint64]float32
 
-func (__ OfUint64NFloat32) Load(k uint64) (float32, bool) {
+func (__ OfUint64NFloat32) Load(k uint64) (float32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint64NFloat32) Store(k uint64, v float32) {
@@ -16717,9 +18171,13 @@ type OfUint64NFloat64IterIf interface {
 
 type OfUint64NFloat64 map[uint64]float64
 
-func (__ OfUint64NFloat64) Load(k uint64) (float64, bool) {
+func (__ OfUint64NFloat64) Load(k uint64) (float64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint64NFloat64) Store(k uint64, v float64) {
@@ -16763,9 +18221,13 @@ type OfUint64NIntIterIf interface {
 
 type OfUint64NInt map[uint64]int
 
-func (__ OfUint64NInt) Load(k uint64) (int, bool) {
+func (__ OfUint64NInt) Load(k uint64) (int, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint64NInt) Store(k uint64, v int) {
@@ -16809,9 +18271,13 @@ type OfUint64NInt16IterIf interface {
 
 type OfUint64NInt16 map[uint64]int16
 
-func (__ OfUint64NInt16) Load(k uint64) (int16, bool) {
+func (__ OfUint64NInt16) Load(k uint64) (int16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint64NInt16) Store(k uint64, v int16) {
@@ -16855,9 +18321,13 @@ type OfUint64NInt32IterIf interface {
 
 type OfUint64NInt32 map[uint64]int32
 
-func (__ OfUint64NInt32) Load(k uint64) (int32, bool) {
+func (__ OfUint64NInt32) Load(k uint64) (int32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint64NInt32) Store(k uint64, v int32) {
@@ -16901,9 +18371,13 @@ type OfUint64NInt64IterIf interface {
 
 type OfUint64NInt64 map[uint64]int64
 
-func (__ OfUint64NInt64) Load(k uint64) (int64, bool) {
+func (__ OfUint64NInt64) Load(k uint64) (int64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint64NInt64) Store(k uint64, v int64) {
@@ -16947,9 +18421,13 @@ type OfUint64NInt8IterIf interface {
 
 type OfUint64NInt8 map[uint64]int8
 
-func (__ OfUint64NInt8) Load(k uint64) (int8, bool) {
+func (__ OfUint64NInt8) Load(k uint64) (int8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint64NInt8) Store(k uint64, v int8) {
@@ -16993,9 +18471,13 @@ type OfUint64NRuneIterIf interface {
 
 type OfUint64NRune map[uint64]rune
 
-func (__ OfUint64NRune) Load(k uint64) (rune, bool) {
+func (__ OfUint64NRune) Load(k uint64) (rune, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint64NRune) Store(k uint64, v rune) {
@@ -17039,9 +18521,13 @@ type OfUint64NStringIterIf interface {
 
 type OfUint64NString map[uint64]string
 
-func (__ OfUint64NString) Load(k uint64) (string, bool) {
+func (__ OfUint64NString) Load(k uint64) (string, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint64NString) Store(k uint64, v string) {
@@ -17085,9 +18571,13 @@ type OfUint64NUintIterIf interface {
 
 type OfUint64NUint map[uint64]uint
 
-func (__ OfUint64NUint) Load(k uint64) (uint, bool) {
+func (__ OfUint64NUint) Load(k uint64) (uint, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint64NUint) Store(k uint64, v uint) {
@@ -17131,9 +18621,13 @@ type OfUint64NUint16IterIf interface {
 
 type OfUint64NUint16 map[uint64]uint16
 
-func (__ OfUint64NUint16) Load(k uint64) (uint16, bool) {
+func (__ OfUint64NUint16) Load(k uint64) (uint16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint64NUint16) Store(k uint64, v uint16) {
@@ -17177,9 +18671,13 @@ type OfUint64NUint32IterIf interface {
 
 type OfUint64NUint32 map[uint64]uint32
 
-func (__ OfUint64NUint32) Load(k uint64) (uint32, bool) {
+func (__ OfUint64NUint32) Load(k uint64) (uint32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint64NUint32) Store(k uint64, v uint32) {
@@ -17223,9 +18721,13 @@ type OfUint64NUint64IterIf interface {
 
 type OfUint64NUint64 map[uint64]uint64
 
-func (__ OfUint64NUint64) Load(k uint64) (uint64, bool) {
+func (__ OfUint64NUint64) Load(k uint64) (uint64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint64NUint64) Store(k uint64, v uint64) {
@@ -17269,9 +18771,13 @@ type OfUint64NUint8IterIf interface {
 
 type OfUint64NUint8 map[uint64]uint8
 
-func (__ OfUint64NUint8) Load(k uint64) (uint8, bool) {
+func (__ OfUint64NUint8) Load(k uint64) (uint8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint64NUint8) Store(k uint64, v uint8) {
@@ -17315,9 +18821,13 @@ type OfUint64NUintptrIterIf interface {
 
 type OfUint64NUintptr map[uint64]uintptr
 
-func (__ OfUint64NUintptr) Load(k uint64) (uintptr, bool) {
+func (__ OfUint64NUintptr) Load(k uint64) (uintptr, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint64NUintptr) Store(k uint64, v uintptr) {
@@ -17361,9 +18871,13 @@ type OfUint64NInterfaceIterIf interface {
 
 type OfUint64NInterface map[uint64]interface{}
 
-func (__ OfUint64NInterface) Load(k uint64) (interface{}, bool) {
+func (__ OfUint64NInterface) Load(k uint64) (interface{}, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint64NInterface) Store(k uint64, v interface{}) {
@@ -17407,9 +18921,13 @@ type OfUint8NBoolIterIf interface {
 
 type OfUint8NBool map[uint8]bool
 
-func (__ OfUint8NBool) Load(k uint8) (bool, bool) {
+func (__ OfUint8NBool) Load(k uint8) (bool, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint8NBool) Store(k uint8, v bool) {
@@ -17453,9 +18971,13 @@ type OfUint8NByteIterIf interface {
 
 type OfUint8NByte map[uint8]byte
 
-func (__ OfUint8NByte) Load(k uint8) (byte, bool) {
+func (__ OfUint8NByte) Load(k uint8) (byte, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint8NByte) Store(k uint8, v byte) {
@@ -17499,9 +19021,13 @@ type OfUint8NComplex128IterIf interface {
 
 type OfUint8NComplex128 map[uint8]complex128
 
-func (__ OfUint8NComplex128) Load(k uint8) (complex128, bool) {
+func (__ OfUint8NComplex128) Load(k uint8) (complex128, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint8NComplex128) Store(k uint8, v complex128) {
@@ -17545,9 +19071,13 @@ type OfUint8NComplex64IterIf interface {
 
 type OfUint8NComplex64 map[uint8]complex64
 
-func (__ OfUint8NComplex64) Load(k uint8) (complex64, bool) {
+func (__ OfUint8NComplex64) Load(k uint8) (complex64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint8NComplex64) Store(k uint8, v complex64) {
@@ -17591,9 +19121,13 @@ type OfUint8NErrorIterIf interface {
 
 type OfUint8NError map[uint8]error
 
-func (__ OfUint8NError) Load(k uint8) (error, bool) {
+func (__ OfUint8NError) Load(k uint8) (error, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint8NError) Store(k uint8, v error) {
@@ -17637,9 +19171,13 @@ type OfUint8NFloat32IterIf interface {
 
 type OfUint8NFloat32 map[uint8]float32
 
-func (__ OfUint8NFloat32) Load(k uint8) (float32, bool) {
+func (__ OfUint8NFloat32) Load(k uint8) (float32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint8NFloat32) Store(k uint8, v float32) {
@@ -17683,9 +19221,13 @@ type OfUint8NFloat64IterIf interface {
 
 type OfUint8NFloat64 map[uint8]float64
 
-func (__ OfUint8NFloat64) Load(k uint8) (float64, bool) {
+func (__ OfUint8NFloat64) Load(k uint8) (float64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint8NFloat64) Store(k uint8, v float64) {
@@ -17729,9 +19271,13 @@ type OfUint8NIntIterIf interface {
 
 type OfUint8NInt map[uint8]int
 
-func (__ OfUint8NInt) Load(k uint8) (int, bool) {
+func (__ OfUint8NInt) Load(k uint8) (int, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint8NInt) Store(k uint8, v int) {
@@ -17775,9 +19321,13 @@ type OfUint8NInt16IterIf interface {
 
 type OfUint8NInt16 map[uint8]int16
 
-func (__ OfUint8NInt16) Load(k uint8) (int16, bool) {
+func (__ OfUint8NInt16) Load(k uint8) (int16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint8NInt16) Store(k uint8, v int16) {
@@ -17821,9 +19371,13 @@ type OfUint8NInt32IterIf interface {
 
 type OfUint8NInt32 map[uint8]int32
 
-func (__ OfUint8NInt32) Load(k uint8) (int32, bool) {
+func (__ OfUint8NInt32) Load(k uint8) (int32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint8NInt32) Store(k uint8, v int32) {
@@ -17867,9 +19421,13 @@ type OfUint8NInt64IterIf interface {
 
 type OfUint8NInt64 map[uint8]int64
 
-func (__ OfUint8NInt64) Load(k uint8) (int64, bool) {
+func (__ OfUint8NInt64) Load(k uint8) (int64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint8NInt64) Store(k uint8, v int64) {
@@ -17913,9 +19471,13 @@ type OfUint8NInt8IterIf interface {
 
 type OfUint8NInt8 map[uint8]int8
 
-func (__ OfUint8NInt8) Load(k uint8) (int8, bool) {
+func (__ OfUint8NInt8) Load(k uint8) (int8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint8NInt8) Store(k uint8, v int8) {
@@ -17959,9 +19521,13 @@ type OfUint8NRuneIterIf interface {
 
 type OfUint8NRune map[uint8]rune
 
-func (__ OfUint8NRune) Load(k uint8) (rune, bool) {
+func (__ OfUint8NRune) Load(k uint8) (rune, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint8NRune) Store(k uint8, v rune) {
@@ -18005,9 +19571,13 @@ type OfUint8NStringIterIf interface {
 
 type OfUint8NString map[uint8]string
 
-func (__ OfUint8NString) Load(k uint8) (string, bool) {
+func (__ OfUint8NString) Load(k uint8) (string, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint8NString) Store(k uint8, v string) {
@@ -18051,9 +19621,13 @@ type OfUint8NUintIterIf interface {
 
 type OfUint8NUint map[uint8]uint
 
-func (__ OfUint8NUint) Load(k uint8) (uint, bool) {
+func (__ OfUint8NUint) Load(k uint8) (uint, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint8NUint) Store(k uint8, v uint) {
@@ -18097,9 +19671,13 @@ type OfUint8NUint16IterIf interface {
 
 type OfUint8NUint16 map[uint8]uint16
 
-func (__ OfUint8NUint16) Load(k uint8) (uint16, bool) {
+func (__ OfUint8NUint16) Load(k uint8) (uint16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint8NUint16) Store(k uint8, v uint16) {
@@ -18143,9 +19721,13 @@ type OfUint8NUint32IterIf interface {
 
 type OfUint8NUint32 map[uint8]uint32
 
-func (__ OfUint8NUint32) Load(k uint8) (uint32, bool) {
+func (__ OfUint8NUint32) Load(k uint8) (uint32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint8NUint32) Store(k uint8, v uint32) {
@@ -18189,9 +19771,13 @@ type OfUint8NUint64IterIf interface {
 
 type OfUint8NUint64 map[uint8]uint64
 
-func (__ OfUint8NUint64) Load(k uint8) (uint64, bool) {
+func (__ OfUint8NUint64) Load(k uint8) (uint64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint8NUint64) Store(k uint8, v uint64) {
@@ -18235,9 +19821,13 @@ type OfUint8NUint8IterIf interface {
 
 type OfUint8NUint8 map[uint8]uint8
 
-func (__ OfUint8NUint8) Load(k uint8) (uint8, bool) {
+func (__ OfUint8NUint8) Load(k uint8) (uint8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint8NUint8) Store(k uint8, v uint8) {
@@ -18281,9 +19871,13 @@ type OfUint8NUintptrIterIf interface {
 
 type OfUint8NUintptr map[uint8]uintptr
 
-func (__ OfUint8NUintptr) Load(k uint8) (uintptr, bool) {
+func (__ OfUint8NUintptr) Load(k uint8) (uintptr, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint8NUintptr) Store(k uint8, v uintptr) {
@@ -18327,9 +19921,13 @@ type OfUint8NInterfaceIterIf interface {
 
 type OfUint8NInterface map[uint8]interface{}
 
-func (__ OfUint8NInterface) Load(k uint8) (interface{}, bool) {
+func (__ OfUint8NInterface) Load(k uint8) (interface{}, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUint8NInterface) Store(k uint8, v interface{}) {
@@ -18373,9 +19971,13 @@ type OfUintptrNBoolIterIf interface {
 
 type OfUintptrNBool map[uintptr]bool
 
-func (__ OfUintptrNBool) Load(k uintptr) (bool, bool) {
+func (__ OfUintptrNBool) Load(k uintptr) (bool, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintptrNBool) Store(k uintptr, v bool) {
@@ -18419,9 +20021,13 @@ type OfUintptrNByteIterIf interface {
 
 type OfUintptrNByte map[uintptr]byte
 
-func (__ OfUintptrNByte) Load(k uintptr) (byte, bool) {
+func (__ OfUintptrNByte) Load(k uintptr) (byte, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintptrNByte) Store(k uintptr, v byte) {
@@ -18465,9 +20071,13 @@ type OfUintptrNComplex128IterIf interface {
 
 type OfUintptrNComplex128 map[uintptr]complex128
 
-func (__ OfUintptrNComplex128) Load(k uintptr) (complex128, bool) {
+func (__ OfUintptrNComplex128) Load(k uintptr) (complex128, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintptrNComplex128) Store(k uintptr, v complex128) {
@@ -18511,9 +20121,13 @@ type OfUintptrNComplex64IterIf interface {
 
 type OfUintptrNComplex64 map[uintptr]complex64
 
-func (__ OfUintptrNComplex64) Load(k uintptr) (complex64, bool) {
+func (__ OfUintptrNComplex64) Load(k uintptr) (complex64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintptrNComplex64) Store(k uintptr, v complex64) {
@@ -18557,9 +20171,13 @@ type OfUintptrNErrorIterIf interface {
 
 type OfUintptrNError map[uintptr]error
 
-func (__ OfUintptrNError) Load(k uintptr) (error, bool) {
+func (__ OfUintptrNError) Load(k uintptr) (error, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintptrNError) Store(k uintptr, v error) {
@@ -18603,9 +20221,13 @@ type OfUintptrNFloat32IterIf interface {
 
 type OfUintptrNFloat32 map[uintptr]float32
 
-func (__ OfUintptrNFloat32) Load(k uintptr) (float32, bool) {
+func (__ OfUintptrNFloat32) Load(k uintptr) (float32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintptrNFloat32) Store(k uintptr, v float32) {
@@ -18649,9 +20271,13 @@ type OfUintptrNFloat64IterIf interface {
 
 type OfUintptrNFloat64 map[uintptr]float64
 
-func (__ OfUintptrNFloat64) Load(k uintptr) (float64, bool) {
+func (__ OfUintptrNFloat64) Load(k uintptr) (float64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintptrNFloat64) Store(k uintptr, v float64) {
@@ -18695,9 +20321,13 @@ type OfUintptrNIntIterIf interface {
 
 type OfUintptrNInt map[uintptr]int
 
-func (__ OfUintptrNInt) Load(k uintptr) (int, bool) {
+func (__ OfUintptrNInt) Load(k uintptr) (int, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintptrNInt) Store(k uintptr, v int) {
@@ -18741,9 +20371,13 @@ type OfUintptrNInt16IterIf interface {
 
 type OfUintptrNInt16 map[uintptr]int16
 
-func (__ OfUintptrNInt16) Load(k uintptr) (int16, bool) {
+func (__ OfUintptrNInt16) Load(k uintptr) (int16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintptrNInt16) Store(k uintptr, v int16) {
@@ -18787,9 +20421,13 @@ type OfUintptrNInt32IterIf interface {
 
 type OfUintptrNInt32 map[uintptr]int32
 
-func (__ OfUintptrNInt32) Load(k uintptr) (int32, bool) {
+func (__ OfUintptrNInt32) Load(k uintptr) (int32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintptrNInt32) Store(k uintptr, v int32) {
@@ -18833,9 +20471,13 @@ type OfUintptrNInt64IterIf interface {
 
 type OfUintptrNInt64 map[uintptr]int64
 
-func (__ OfUintptrNInt64) Load(k uintptr) (int64, bool) {
+func (__ OfUintptrNInt64) Load(k uintptr) (int64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintptrNInt64) Store(k uintptr, v int64) {
@@ -18879,9 +20521,13 @@ type OfUintptrNInt8IterIf interface {
 
 type OfUintptrNInt8 map[uintptr]int8
 
-func (__ OfUintptrNInt8) Load(k uintptr) (int8, bool) {
+func (__ OfUintptrNInt8) Load(k uintptr) (int8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintptrNInt8) Store(k uintptr, v int8) {
@@ -18925,9 +20571,13 @@ type OfUintptrNRuneIterIf interface {
 
 type OfUintptrNRune map[uintptr]rune
 
-func (__ OfUintptrNRune) Load(k uintptr) (rune, bool) {
+func (__ OfUintptrNRune) Load(k uintptr) (rune, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintptrNRune) Store(k uintptr, v rune) {
@@ -18971,9 +20621,13 @@ type OfUintptrNStringIterIf interface {
 
 type OfUintptrNString map[uintptr]string
 
-func (__ OfUintptrNString) Load(k uintptr) (string, bool) {
+func (__ OfUintptrNString) Load(k uintptr) (string, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintptrNString) Store(k uintptr, v string) {
@@ -19017,9 +20671,13 @@ type OfUintptrNUintIterIf interface {
 
 type OfUintptrNUint map[uintptr]uint
 
-func (__ OfUintptrNUint) Load(k uintptr) (uint, bool) {
+func (__ OfUintptrNUint) Load(k uintptr) (uint, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintptrNUint) Store(k uintptr, v uint) {
@@ -19063,9 +20721,13 @@ type OfUintptrNUint16IterIf interface {
 
 type OfUintptrNUint16 map[uintptr]uint16
 
-func (__ OfUintptrNUint16) Load(k uintptr) (uint16, bool) {
+func (__ OfUintptrNUint16) Load(k uintptr) (uint16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintptrNUint16) Store(k uintptr, v uint16) {
@@ -19109,9 +20771,13 @@ type OfUintptrNUint32IterIf interface {
 
 type OfUintptrNUint32 map[uintptr]uint32
 
-func (__ OfUintptrNUint32) Load(k uintptr) (uint32, bool) {
+func (__ OfUintptrNUint32) Load(k uintptr) (uint32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintptrNUint32) Store(k uintptr, v uint32) {
@@ -19155,9 +20821,13 @@ type OfUintptrNUint64IterIf interface {
 
 type OfUintptrNUint64 map[uintptr]uint64
 
-func (__ OfUintptrNUint64) Load(k uintptr) (uint64, bool) {
+func (__ OfUintptrNUint64) Load(k uintptr) (uint64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintptrNUint64) Store(k uintptr, v uint64) {
@@ -19201,9 +20871,13 @@ type OfUintptrNUint8IterIf interface {
 
 type OfUintptrNUint8 map[uintptr]uint8
 
-func (__ OfUintptrNUint8) Load(k uintptr) (uint8, bool) {
+func (__ OfUintptrNUint8) Load(k uintptr) (uint8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintptrNUint8) Store(k uintptr, v uint8) {
@@ -19247,9 +20921,13 @@ type OfUintptrNUintptrIterIf interface {
 
 type OfUintptrNUintptr map[uintptr]uintptr
 
-func (__ OfUintptrNUintptr) Load(k uintptr) (uintptr, bool) {
+func (__ OfUintptrNUintptr) Load(k uintptr) (uintptr, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintptrNUintptr) Store(k uintptr, v uintptr) {
@@ -19293,9 +20971,13 @@ type OfUintptrNInterfaceIterIf interface {
 
 type OfUintptrNInterface map[uintptr]interface{}
 
-func (__ OfUintptrNInterface) Load(k uintptr) (interface{}, bool) {
+func (__ OfUintptrNInterface) Load(k uintptr) (interface{}, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfUintptrNInterface) Store(k uintptr, v interface{}) {
@@ -19339,9 +21021,13 @@ type OfInterfaceNBoolIterIf interface {
 
 type OfInterfaceNBool map[interface{}]bool
 
-func (__ OfInterfaceNBool) Load(k interface{}) (bool, bool) {
+func (__ OfInterfaceNBool) Load(k interface{}) (bool, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInterfaceNBool) Store(k interface{}, v bool) {
@@ -19385,9 +21071,13 @@ type OfInterfaceNByteIterIf interface {
 
 type OfInterfaceNByte map[interface{}]byte
 
-func (__ OfInterfaceNByte) Load(k interface{}) (byte, bool) {
+func (__ OfInterfaceNByte) Load(k interface{}) (byte, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInterfaceNByte) Store(k interface{}, v byte) {
@@ -19431,9 +21121,13 @@ type OfInterfaceNComplex128IterIf interface {
 
 type OfInterfaceNComplex128 map[interface{}]complex128
 
-func (__ OfInterfaceNComplex128) Load(k interface{}) (complex128, bool) {
+func (__ OfInterfaceNComplex128) Load(k interface{}) (complex128, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInterfaceNComplex128) Store(k interface{}, v complex128) {
@@ -19477,9 +21171,13 @@ type OfInterfaceNComplex64IterIf interface {
 
 type OfInterfaceNComplex64 map[interface{}]complex64
 
-func (__ OfInterfaceNComplex64) Load(k interface{}) (complex64, bool) {
+func (__ OfInterfaceNComplex64) Load(k interface{}) (complex64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInterfaceNComplex64) Store(k interface{}, v complex64) {
@@ -19523,9 +21221,13 @@ type OfInterfaceNErrorIterIf interface {
 
 type OfInterfaceNError map[interface{}]error
 
-func (__ OfInterfaceNError) Load(k interface{}) (error, bool) {
+func (__ OfInterfaceNError) Load(k interface{}) (error, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInterfaceNError) Store(k interface{}, v error) {
@@ -19569,9 +21271,13 @@ type OfInterfaceNFloat32IterIf interface {
 
 type OfInterfaceNFloat32 map[interface{}]float32
 
-func (__ OfInterfaceNFloat32) Load(k interface{}) (float32, bool) {
+func (__ OfInterfaceNFloat32) Load(k interface{}) (float32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInterfaceNFloat32) Store(k interface{}, v float32) {
@@ -19615,9 +21321,13 @@ type OfInterfaceNFloat64IterIf interface {
 
 type OfInterfaceNFloat64 map[interface{}]float64
 
-func (__ OfInterfaceNFloat64) Load(k interface{}) (float64, bool) {
+func (__ OfInterfaceNFloat64) Load(k interface{}) (float64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInterfaceNFloat64) Store(k interface{}, v float64) {
@@ -19661,9 +21371,13 @@ type OfInterfaceNIntIterIf interface {
 
 type OfInterfaceNInt map[interface{}]int
 
-func (__ OfInterfaceNInt) Load(k interface{}) (int, bool) {
+func (__ OfInterfaceNInt) Load(k interface{}) (int, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInterfaceNInt) Store(k interface{}, v int) {
@@ -19707,9 +21421,13 @@ type OfInterfaceNInt16IterIf interface {
 
 type OfInterfaceNInt16 map[interface{}]int16
 
-func (__ OfInterfaceNInt16) Load(k interface{}) (int16, bool) {
+func (__ OfInterfaceNInt16) Load(k interface{}) (int16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInterfaceNInt16) Store(k interface{}, v int16) {
@@ -19753,9 +21471,13 @@ type OfInterfaceNInt32IterIf interface {
 
 type OfInterfaceNInt32 map[interface{}]int32
 
-func (__ OfInterfaceNInt32) Load(k interface{}) (int32, bool) {
+func (__ OfInterfaceNInt32) Load(k interface{}) (int32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInterfaceNInt32) Store(k interface{}, v int32) {
@@ -19799,9 +21521,13 @@ type OfInterfaceNInt64IterIf interface {
 
 type OfInterfaceNInt64 map[interface{}]int64
 
-func (__ OfInterfaceNInt64) Load(k interface{}) (int64, bool) {
+func (__ OfInterfaceNInt64) Load(k interface{}) (int64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInterfaceNInt64) Store(k interface{}, v int64) {
@@ -19845,9 +21571,13 @@ type OfInterfaceNInt8IterIf interface {
 
 type OfInterfaceNInt8 map[interface{}]int8
 
-func (__ OfInterfaceNInt8) Load(k interface{}) (int8, bool) {
+func (__ OfInterfaceNInt8) Load(k interface{}) (int8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInterfaceNInt8) Store(k interface{}, v int8) {
@@ -19891,9 +21621,13 @@ type OfInterfaceNRuneIterIf interface {
 
 type OfInterfaceNRune map[interface{}]rune
 
-func (__ OfInterfaceNRune) Load(k interface{}) (rune, bool) {
+func (__ OfInterfaceNRune) Load(k interface{}) (rune, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInterfaceNRune) Store(k interface{}, v rune) {
@@ -19937,9 +21671,13 @@ type OfInterfaceNStringIterIf interface {
 
 type OfInterfaceNString map[interface{}]string
 
-func (__ OfInterfaceNString) Load(k interface{}) (string, bool) {
+func (__ OfInterfaceNString) Load(k interface{}) (string, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInterfaceNString) Store(k interface{}, v string) {
@@ -19983,9 +21721,13 @@ type OfInterfaceNUintIterIf interface {
 
 type OfInterfaceNUint map[interface{}]uint
 
-func (__ OfInterfaceNUint) Load(k interface{}) (uint, bool) {
+func (__ OfInterfaceNUint) Load(k interface{}) (uint, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInterfaceNUint) Store(k interface{}, v uint) {
@@ -20029,9 +21771,13 @@ type OfInterfaceNUint16IterIf interface {
 
 type OfInterfaceNUint16 map[interface{}]uint16
 
-func (__ OfInterfaceNUint16) Load(k interface{}) (uint16, bool) {
+func (__ OfInterfaceNUint16) Load(k interface{}) (uint16, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInterfaceNUint16) Store(k interface{}, v uint16) {
@@ -20075,9 +21821,13 @@ type OfInterfaceNUint32IterIf interface {
 
 type OfInterfaceNUint32 map[interface{}]uint32
 
-func (__ OfInterfaceNUint32) Load(k interface{}) (uint32, bool) {
+func (__ OfInterfaceNUint32) Load(k interface{}) (uint32, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInterfaceNUint32) Store(k interface{}, v uint32) {
@@ -20121,9 +21871,13 @@ type OfInterfaceNUint64IterIf interface {
 
 type OfInterfaceNUint64 map[interface{}]uint64
 
-func (__ OfInterfaceNUint64) Load(k interface{}) (uint64, bool) {
+func (__ OfInterfaceNUint64) Load(k interface{}) (uint64, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInterfaceNUint64) Store(k interface{}, v uint64) {
@@ -20167,9 +21921,13 @@ type OfInterfaceNUint8IterIf interface {
 
 type OfInterfaceNUint8 map[interface{}]uint8
 
-func (__ OfInterfaceNUint8) Load(k interface{}) (uint8, bool) {
+func (__ OfInterfaceNUint8) Load(k interface{}) (uint8, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInterfaceNUint8) Store(k interface{}, v uint8) {
@@ -20213,9 +21971,13 @@ type OfInterfaceNUintptrIterIf interface {
 
 type OfInterfaceNUintptr map[interface{}]uintptr
 
-func (__ OfInterfaceNUintptr) Load(k interface{}) (uintptr, bool) {
+func (__ OfInterfaceNUintptr) Load(k interface{}) (uintptr, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInterfaceNUintptr) Store(k interface{}, v uintptr) {
@@ -20259,9 +22021,13 @@ type OfInterfaceNInterfaceIterIf interface {
 
 type OfInterfaceNInterface map[interface{}]interface{}
 
-func (__ OfInterfaceNInterface) Load(k interface{}) (interface{}, bool) {
+func (__ OfInterfaceNInterface) Load(k interface{}) (interface{}, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ OfInterfaceNInterface) Store(k interface{}, v interface{}) {

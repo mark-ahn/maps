@@ -1,6 +1,10 @@
 package maps
 
-import "github.com/cheekybits/genny/generic"
+import (
+	"fmt"
+
+	"github.com/cheekybits/genny/generic"
+)
 
 type SomeK generic.Type
 type SomeV generic.Type
@@ -20,9 +24,13 @@ type _Prefix_SomeKNSomeVIterIf interface {
 
 type _Prefix_SomeKNSomeV map[SomeK]SomeV
 
-func (__ _Prefix_SomeKNSomeV) Load(k SomeK) (SomeV, bool) {
+func (__ _Prefix_SomeKNSomeV) Load(k SomeK) (SomeV, error) {
 	v, ok := __[k]
-	return v, ok
+	var err error
+	if !ok {
+		err = fmt.Errorf("not found for key %v", k)
+	}
+	return v, err
 }
 
 func (__ _Prefix_SomeKNSomeV) Store(k SomeK, v SomeV) {
