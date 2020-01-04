@@ -10,7 +10,7 @@ type SomeK generic.Type
 type SomeV generic.Type
 
 type _Prefix_SomeKNSomeVIf interface {
-	Load(SomeK) (SomeV, bool)
+	Load(SomeK) (SomeV, error)
 }
 
 type _Prefix_SomeKNSomeVMutIf interface {

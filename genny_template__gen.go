@@ -7,7 +7,7 @@ package maps
 import "fmt"
 
 type OfBoolNBoolIf interface {
-	Load(bool) (bool, bool)
+	Load(bool) (bool, error)
 }
 
 type OfBoolNBoolMutIf interface {
@@ -57,7 +57,7 @@ func NewOfBoolNBoolSt(somes OfBoolNBool) *OfBoolNBoolSt {
 }
 
 type OfBoolNByteIf interface {
-	Load(bool) (byte, bool)
+	Load(bool) (byte, error)
 }
 
 type OfBoolNByteMutIf interface {
@@ -107,7 +107,7 @@ func NewOfBoolNByteSt(somes OfBoolNByte) *OfBoolNByteSt {
 }
 
 type OfBoolNComplex128If interface {
-	Load(bool) (complex128, bool)
+	Load(bool) (complex128, error)
 }
 
 type OfBoolNComplex128MutIf interface {
@@ -157,7 +157,7 @@ func NewOfBoolNComplex128St(somes OfBoolNComplex128) *OfBoolNComplex128St {
 }
 
 type OfBoolNComplex64If interface {
-	Load(bool) (complex64, bool)
+	Load(bool) (complex64, error)
 }
 
 type OfBoolNComplex64MutIf interface {
@@ -207,7 +207,7 @@ func NewOfBoolNComplex64St(somes OfBoolNComplex64) *OfBoolNComplex64St {
 }
 
 type OfBoolNErrorIf interface {
-	Load(bool) (error, bool)
+	Load(bool) (error, error)
 }
 
 type OfBoolNErrorMutIf interface {
@@ -257,7 +257,7 @@ func NewOfBoolNErrorSt(somes OfBoolNError) *OfBoolNErrorSt {
 }
 
 type OfBoolNFloat32If interface {
-	Load(bool) (float32, bool)
+	Load(bool) (float32, error)
 }
 
 type OfBoolNFloat32MutIf interface {
@@ -307,7 +307,7 @@ func NewOfBoolNFloat32St(somes OfBoolNFloat32) *OfBoolNFloat32St {
 }
 
 type OfBoolNFloat64If interface {
-	Load(bool) (float64, bool)
+	Load(bool) (float64, error)
 }
 
 type OfBoolNFloat64MutIf interface {
@@ -357,7 +357,7 @@ func NewOfBoolNFloat64St(somes OfBoolNFloat64) *OfBoolNFloat64St {
 }
 
 type OfBoolNIntIf interface {
-	Load(bool) (int, bool)
+	Load(bool) (int, error)
 }
 
 type OfBoolNIntMutIf interface {
@@ -407,7 +407,7 @@ func NewOfBoolNIntSt(somes OfBoolNInt) *OfBoolNIntSt {
 }
 
 type OfBoolNInt16If interface {
-	Load(bool) (int16, bool)
+	Load(bool) (int16, error)
 }
 
 type OfBoolNInt16MutIf interface {
@@ -457,7 +457,7 @@ func NewOfBoolNInt16St(somes OfBoolNInt16) *OfBoolNInt16St {
 }
 
 type OfBoolNInt32If interface {
-	Load(bool) (int32, bool)
+	Load(bool) (int32, error)
 }
 
 type OfBoolNInt32MutIf interface {
@@ -507,7 +507,7 @@ func NewOfBoolNInt32St(somes OfBoolNInt32) *OfBoolNInt32St {
 }
 
 type OfBoolNInt64If interface {
-	Load(bool) (int64, bool)
+	Load(bool) (int64, error)
 }
 
 type OfBoolNInt64MutIf interface {
@@ -557,7 +557,7 @@ func NewOfBoolNInt64St(somes OfBoolNInt64) *OfBoolNInt64St {
 }
 
 type OfBoolNInt8If interface {
-	Load(bool) (int8, bool)
+	Load(bool) (int8, error)
 }
 
 type OfBoolNInt8MutIf interface {
@@ -607,7 +607,7 @@ func NewOfBoolNInt8St(somes OfBoolNInt8) *OfBoolNInt8St {
 }
 
 type OfBoolNRuneIf interface {
-	Load(bool) (rune, bool)
+	Load(bool) (rune, error)
 }
 
 type OfBoolNRuneMutIf interface {
@@ -657,7 +657,7 @@ func NewOfBoolNRuneSt(somes OfBoolNRune) *OfBoolNRuneSt {
 }
 
 type OfBoolNStringIf interface {
-	Load(bool) (string, bool)
+	Load(bool) (string, error)
 }
 
 type OfBoolNStringMutIf interface {
@@ -707,7 +707,7 @@ func NewOfBoolNStringSt(somes OfBoolNString) *OfBoolNStringSt {
 }
 
 type OfBoolNUintIf interface {
-	Load(bool) (uint, bool)
+	Load(bool) (uint, error)
 }
 
 type OfBoolNUintMutIf interface {
@@ -757,7 +757,7 @@ func NewOfBoolNUintSt(somes OfBoolNUint) *OfBoolNUintSt {
 }
 
 type OfBoolNUint16If interface {
-	Load(bool) (uint16, bool)
+	Load(bool) (uint16, error)
 }
 
 type OfBoolNUint16MutIf interface {
@@ -807,7 +807,7 @@ func NewOfBoolNUint16St(somes OfBoolNUint16) *OfBoolNUint16St {
 }
 
 type OfBoolNUint32If interface {
-	Load(bool) (uint32, bool)
+	Load(bool) (uint32, error)
 }
 
 type OfBoolNUint32MutIf interface {
@@ -857,7 +857,7 @@ func NewOfBoolNUint32St(somes OfBoolNUint32) *OfBoolNUint32St {
 }
 
 type OfBoolNUint64If interface {
-	Load(bool) (uint64, bool)
+	Load(bool) (uint64, error)
 }
 
 type OfBoolNUint64MutIf interface {
@@ -907,7 +907,7 @@ func NewOfBoolNUint64St(somes OfBoolNUint64) *OfBoolNUint64St {
 }
 
 type OfBoolNUint8If interface {
-	Load(bool) (uint8, bool)
+	Load(bool) (uint8, error)
 }
 
 type OfBoolNUint8MutIf interface {
@@ -957,7 +957,7 @@ func NewOfBoolNUint8St(somes OfBoolNUint8) *OfBoolNUint8St {
 }
 
 type OfBoolNUintptrIf interface {
-	Load(bool) (uintptr, bool)
+	Load(bool) (uintptr, error)
 }
 
 type OfBoolNUintptrMutIf interface {
@@ -1007,7 +1007,7 @@ func NewOfBoolNUintptrSt(somes OfBoolNUintptr) *OfBoolNUintptrSt {
 }
 
 type OfBoolNInterfaceIf interface {
-	Load(bool) (interface{}, bool)
+	Load(bool) (interface{}, error)
 }
 
 type OfBoolNInterfaceMutIf interface {
@@ -1057,7 +1057,7 @@ func NewOfBoolNInterfaceSt(somes OfBoolNInterface) *OfBoolNInterfaceSt {
 }
 
 type OfByteNBoolIf interface {
-	Load(byte) (bool, bool)
+	Load(byte) (bool, error)
 }
 
 type OfByteNBoolMutIf interface {
@@ -1107,7 +1107,7 @@ func NewOfByteNBoolSt(somes OfByteNBool) *OfByteNBoolSt {
 }
 
 type OfByteNByteIf interface {
-	Load(byte) (byte, bool)
+	Load(byte) (byte, error)
 }
 
 type OfByteNByteMutIf interface {
@@ -1157,7 +1157,7 @@ func NewOfByteNByteSt(somes OfByteNByte) *OfByteNByteSt {
 }
 
 type OfByteNComplex128If interface {
-	Load(byte) (complex128, bool)
+	Load(byte) (complex128, error)
 }
 
 type OfByteNComplex128MutIf interface {
@@ -1207,7 +1207,7 @@ func NewOfByteNComplex128St(somes OfByteNComplex128) *OfByteNComplex128St {
 }
 
 type OfByteNComplex64If interface {
-	Load(byte) (complex64, bool)
+	Load(byte) (complex64, error)
 }
 
 type OfByteNComplex64MutIf interface {
@@ -1257,7 +1257,7 @@ func NewOfByteNComplex64St(somes OfByteNComplex64) *OfByteNComplex64St {
 }
 
 type OfByteNErrorIf interface {
-	Load(byte) (error, bool)
+	Load(byte) (error, error)
 }
 
 type OfByteNErrorMutIf interface {
@@ -1307,7 +1307,7 @@ func NewOfByteNErrorSt(somes OfByteNError) *OfByteNErrorSt {
 }
 
 type OfByteNFloat32If interface {
-	Load(byte) (float32, bool)
+	Load(byte) (float32, error)
 }
 
 type OfByteNFloat32MutIf interface {
@@ -1357,7 +1357,7 @@ func NewOfByteNFloat32St(somes OfByteNFloat32) *OfByteNFloat32St {
 }
 
 type OfByteNFloat64If interface {
-	Load(byte) (float64, bool)
+	Load(byte) (float64, error)
 }
 
 type OfByteNFloat64MutIf interface {
@@ -1407,7 +1407,7 @@ func NewOfByteNFloat64St(somes OfByteNFloat64) *OfByteNFloat64St {
 }
 
 type OfByteNIntIf interface {
-	Load(byte) (int, bool)
+	Load(byte) (int, error)
 }
 
 type OfByteNIntMutIf interface {
@@ -1457,7 +1457,7 @@ func NewOfByteNIntSt(somes OfByteNInt) *OfByteNIntSt {
 }
 
 type OfByteNInt16If interface {
-	Load(byte) (int16, bool)
+	Load(byte) (int16, error)
 }
 
 type OfByteNInt16MutIf interface {
@@ -1507,7 +1507,7 @@ func NewOfByteNInt16St(somes OfByteNInt16) *OfByteNInt16St {
 }
 
 type OfByteNInt32If interface {
-	Load(byte) (int32, bool)
+	Load(byte) (int32, error)
 }
 
 type OfByteNInt32MutIf interface {
@@ -1557,7 +1557,7 @@ func NewOfByteNInt32St(somes OfByteNInt32) *OfByteNInt32St {
 }
 
 type OfByteNInt64If interface {
-	Load(byte) (int64, bool)
+	Load(byte) (int64, error)
 }
 
 type OfByteNInt64MutIf interface {
@@ -1607,7 +1607,7 @@ func NewOfByteNInt64St(somes OfByteNInt64) *OfByteNInt64St {
 }
 
 type OfByteNInt8If interface {
-	Load(byte) (int8, bool)
+	Load(byte) (int8, error)
 }
 
 type OfByteNInt8MutIf interface {
@@ -1657,7 +1657,7 @@ func NewOfByteNInt8St(somes OfByteNInt8) *OfByteNInt8St {
 }
 
 type OfByteNRuneIf interface {
-	Load(byte) (rune, bool)
+	Load(byte) (rune, error)
 }
 
 type OfByteNRuneMutIf interface {
@@ -1707,7 +1707,7 @@ func NewOfByteNRuneSt(somes OfByteNRune) *OfByteNRuneSt {
 }
 
 type OfByteNStringIf interface {
-	Load(byte) (string, bool)
+	Load(byte) (string, error)
 }
 
 type OfByteNStringMutIf interface {
@@ -1757,7 +1757,7 @@ func NewOfByteNStringSt(somes OfByteNString) *OfByteNStringSt {
 }
 
 type OfByteNUintIf interface {
-	Load(byte) (uint, bool)
+	Load(byte) (uint, error)
 }
 
 type OfByteNUintMutIf interface {
@@ -1807,7 +1807,7 @@ func NewOfByteNUintSt(somes OfByteNUint) *OfByteNUintSt {
 }
 
 type OfByteNUint16If interface {
-	Load(byte) (uint16, bool)
+	Load(byte) (uint16, error)
 }
 
 type OfByteNUint16MutIf interface {
@@ -1857,7 +1857,7 @@ func NewOfByteNUint16St(somes OfByteNUint16) *OfByteNUint16St {
 }
 
 type OfByteNUint32If interface {
-	Load(byte) (uint32, bool)
+	Load(byte) (uint32, error)
 }
 
 type OfByteNUint32MutIf interface {
@@ -1907,7 +1907,7 @@ func NewOfByteNUint32St(somes OfByteNUint32) *OfByteNUint32St {
 }
 
 type OfByteNUint64If interface {
-	Load(byte) (uint64, bool)
+	Load(byte) (uint64, error)
 }
 
 type OfByteNUint64MutIf interface {
@@ -1957,7 +1957,7 @@ func NewOfByteNUint64St(somes OfByteNUint64) *OfByteNUint64St {
 }
 
 type OfByteNUint8If interface {
-	Load(byte) (uint8, bool)
+	Load(byte) (uint8, error)
 }
 
 type OfByteNUint8MutIf interface {
@@ -2007,7 +2007,7 @@ func NewOfByteNUint8St(somes OfByteNUint8) *OfByteNUint8St {
 }
 
 type OfByteNUintptrIf interface {
-	Load(byte) (uintptr, bool)
+	Load(byte) (uintptr, error)
 }
 
 type OfByteNUintptrMutIf interface {
@@ -2057,7 +2057,7 @@ func NewOfByteNUintptrSt(somes OfByteNUintptr) *OfByteNUintptrSt {
 }
 
 type OfByteNInterfaceIf interface {
-	Load(byte) (interface{}, bool)
+	Load(byte) (interface{}, error)
 }
 
 type OfByteNInterfaceMutIf interface {
@@ -2107,7 +2107,7 @@ func NewOfByteNInterfaceSt(somes OfByteNInterface) *OfByteNInterfaceSt {
 }
 
 type OfComplex128NBoolIf interface {
-	Load(complex128) (bool, bool)
+	Load(complex128) (bool, error)
 }
 
 type OfComplex128NBoolMutIf interface {
@@ -2157,7 +2157,7 @@ func NewOfComplex128NBoolSt(somes OfComplex128NBool) *OfComplex128NBoolSt {
 }
 
 type OfComplex128NByteIf interface {
-	Load(complex128) (byte, bool)
+	Load(complex128) (byte, error)
 }
 
 type OfComplex128NByteMutIf interface {
@@ -2207,7 +2207,7 @@ func NewOfComplex128NByteSt(somes OfComplex128NByte) *OfComplex128NByteSt {
 }
 
 type OfComplex128NComplex128If interface {
-	Load(complex128) (complex128, bool)
+	Load(complex128) (complex128, error)
 }
 
 type OfComplex128NComplex128MutIf interface {
@@ -2257,7 +2257,7 @@ func NewOfComplex128NComplex128St(somes OfComplex128NComplex128) *OfComplex128NC
 }
 
 type OfComplex128NComplex64If interface {
-	Load(complex128) (complex64, bool)
+	Load(complex128) (complex64, error)
 }
 
 type OfComplex128NComplex64MutIf interface {
@@ -2307,7 +2307,7 @@ func NewOfComplex128NComplex64St(somes OfComplex128NComplex64) *OfComplex128NCom
 }
 
 type OfComplex128NErrorIf interface {
-	Load(complex128) (error, bool)
+	Load(complex128) (error, error)
 }
 
 type OfComplex128NErrorMutIf interface {
@@ -2357,7 +2357,7 @@ func NewOfComplex128NErrorSt(somes OfComplex128NError) *OfComplex128NErrorSt {
 }
 
 type OfComplex128NFloat32If interface {
-	Load(complex128) (float32, bool)
+	Load(complex128) (float32, error)
 }
 
 type OfComplex128NFloat32MutIf interface {
@@ -2407,7 +2407,7 @@ func NewOfComplex128NFloat32St(somes OfComplex128NFloat32) *OfComplex128NFloat32
 }
 
 type OfComplex128NFloat64If interface {
-	Load(complex128) (float64, bool)
+	Load(complex128) (float64, error)
 }
 
 type OfComplex128NFloat64MutIf interface {
@@ -2457,7 +2457,7 @@ func NewOfComplex128NFloat64St(somes OfComplex128NFloat64) *OfComplex128NFloat64
 }
 
 type OfComplex128NIntIf interface {
-	Load(complex128) (int, bool)
+	Load(complex128) (int, error)
 }
 
 type OfComplex128NIntMutIf interface {
@@ -2507,7 +2507,7 @@ func NewOfComplex128NIntSt(somes OfComplex128NInt) *OfComplex128NIntSt {
 }
 
 type OfComplex128NInt16If interface {
-	Load(complex128) (int16, bool)
+	Load(complex128) (int16, error)
 }
 
 type OfComplex128NInt16MutIf interface {
@@ -2557,7 +2557,7 @@ func NewOfComplex128NInt16St(somes OfComplex128NInt16) *OfComplex128NInt16St {
 }
 
 type OfComplex128NInt32If interface {
-	Load(complex128) (int32, bool)
+	Load(complex128) (int32, error)
 }
 
 type OfComplex128NInt32MutIf interface {
@@ -2607,7 +2607,7 @@ func NewOfComplex128NInt32St(somes OfComplex128NInt32) *OfComplex128NInt32St {
 }
 
 type OfComplex128NInt64If interface {
-	Load(complex128) (int64, bool)
+	Load(complex128) (int64, error)
 }
 
 type OfComplex128NInt64MutIf interface {
@@ -2657,7 +2657,7 @@ func NewOfComplex128NInt64St(somes OfComplex128NInt64) *OfComplex128NInt64St {
 }
 
 type OfComplex128NInt8If interface {
-	Load(complex128) (int8, bool)
+	Load(complex128) (int8, error)
 }
 
 type OfComplex128NInt8MutIf interface {
@@ -2707,7 +2707,7 @@ func NewOfComplex128NInt8St(somes OfComplex128NInt8) *OfComplex128NInt8St {
 }
 
 type OfComplex128NRuneIf interface {
-	Load(complex128) (rune, bool)
+	Load(complex128) (rune, error)
 }
 
 type OfComplex128NRuneMutIf interface {
@@ -2757,7 +2757,7 @@ func NewOfComplex128NRuneSt(somes OfComplex128NRune) *OfComplex128NRuneSt {
 }
 
 type OfComplex128NStringIf interface {
-	Load(complex128) (string, bool)
+	Load(complex128) (string, error)
 }
 
 type OfComplex128NStringMutIf interface {
@@ -2807,7 +2807,7 @@ func NewOfComplex128NStringSt(somes OfComplex128NString) *OfComplex128NStringSt 
 }
 
 type OfComplex128NUintIf interface {
-	Load(complex128) (uint, bool)
+	Load(complex128) (uint, error)
 }
 
 type OfComplex128NUintMutIf interface {
@@ -2857,7 +2857,7 @@ func NewOfComplex128NUintSt(somes OfComplex128NUint) *OfComplex128NUintSt {
 }
 
 type OfComplex128NUint16If interface {
-	Load(complex128) (uint16, bool)
+	Load(complex128) (uint16, error)
 }
 
 type OfComplex128NUint16MutIf interface {
@@ -2907,7 +2907,7 @@ func NewOfComplex128NUint16St(somes OfComplex128NUint16) *OfComplex128NUint16St 
 }
 
 type OfComplex128NUint32If interface {
-	Load(complex128) (uint32, bool)
+	Load(complex128) (uint32, error)
 }
 
 type OfComplex128NUint32MutIf interface {
@@ -2957,7 +2957,7 @@ func NewOfComplex128NUint32St(somes OfComplex128NUint32) *OfComplex128NUint32St 
 }
 
 type OfComplex128NUint64If interface {
-	Load(complex128) (uint64, bool)
+	Load(complex128) (uint64, error)
 }
 
 type OfComplex128NUint64MutIf interface {
@@ -3007,7 +3007,7 @@ func NewOfComplex128NUint64St(somes OfComplex128NUint64) *OfComplex128NUint64St 
 }
 
 type OfComplex128NUint8If interface {
-	Load(complex128) (uint8, bool)
+	Load(complex128) (uint8, error)
 }
 
 type OfComplex128NUint8MutIf interface {
@@ -3057,7 +3057,7 @@ func NewOfComplex128NUint8St(somes OfComplex128NUint8) *OfComplex128NUint8St {
 }
 
 type OfComplex128NUintptrIf interface {
-	Load(complex128) (uintptr, bool)
+	Load(complex128) (uintptr, error)
 }
 
 type OfComplex128NUintptrMutIf interface {
@@ -3107,7 +3107,7 @@ func NewOfComplex128NUintptrSt(somes OfComplex128NUintptr) *OfComplex128NUintptr
 }
 
 type OfComplex128NInterfaceIf interface {
-	Load(complex128) (interface{}, bool)
+	Load(complex128) (interface{}, error)
 }
 
 type OfComplex128NInterfaceMutIf interface {
@@ -3157,7 +3157,7 @@ func NewOfComplex128NInterfaceSt(somes OfComplex128NInterface) *OfComplex128NInt
 }
 
 type OfComplex64NBoolIf interface {
-	Load(complex64) (bool, bool)
+	Load(complex64) (bool, error)
 }
 
 type OfComplex64NBoolMutIf interface {
@@ -3207,7 +3207,7 @@ func NewOfComplex64NBoolSt(somes OfComplex64NBool) *OfComplex64NBoolSt {
 }
 
 type OfComplex64NByteIf interface {
-	Load(complex64) (byte, bool)
+	Load(complex64) (byte, error)
 }
 
 type OfComplex64NByteMutIf interface {
@@ -3257,7 +3257,7 @@ func NewOfComplex64NByteSt(somes OfComplex64NByte) *OfComplex64NByteSt {
 }
 
 type OfComplex64NComplex128If interface {
-	Load(complex64) (complex128, bool)
+	Load(complex64) (complex128, error)
 }
 
 type OfComplex64NComplex128MutIf interface {
@@ -3307,7 +3307,7 @@ func NewOfComplex64NComplex128St(somes OfComplex64NComplex128) *OfComplex64NComp
 }
 
 type OfComplex64NComplex64If interface {
-	Load(complex64) (complex64, bool)
+	Load(complex64) (complex64, error)
 }
 
 type OfComplex64NComplex64MutIf interface {
@@ -3357,7 +3357,7 @@ func NewOfComplex64NComplex64St(somes OfComplex64NComplex64) *OfComplex64NComple
 }
 
 type OfComplex64NErrorIf interface {
-	Load(complex64) (error, bool)
+	Load(complex64) (error, error)
 }
 
 type OfComplex64NErrorMutIf interface {
@@ -3407,7 +3407,7 @@ func NewOfComplex64NErrorSt(somes OfComplex64NError) *OfComplex64NErrorSt {
 }
 
 type OfComplex64NFloat32If interface {
-	Load(complex64) (float32, bool)
+	Load(complex64) (float32, error)
 }
 
 type OfComplex64NFloat32MutIf interface {
@@ -3457,7 +3457,7 @@ func NewOfComplex64NFloat32St(somes OfComplex64NFloat32) *OfComplex64NFloat32St 
 }
 
 type OfComplex64NFloat64If interface {
-	Load(complex64) (float64, bool)
+	Load(complex64) (float64, error)
 }
 
 type OfComplex64NFloat64MutIf interface {
@@ -3507,7 +3507,7 @@ func NewOfComplex64NFloat64St(somes OfComplex64NFloat64) *OfComplex64NFloat64St 
 }
 
 type OfComplex64NIntIf interface {
-	Load(complex64) (int, bool)
+	Load(complex64) (int, error)
 }
 
 type OfComplex64NIntMutIf interface {
@@ -3557,7 +3557,7 @@ func NewOfComplex64NIntSt(somes OfComplex64NInt) *OfComplex64NIntSt {
 }
 
 type OfComplex64NInt16If interface {
-	Load(complex64) (int16, bool)
+	Load(complex64) (int16, error)
 }
 
 type OfComplex64NInt16MutIf interface {
@@ -3607,7 +3607,7 @@ func NewOfComplex64NInt16St(somes OfComplex64NInt16) *OfComplex64NInt16St {
 }
 
 type OfComplex64NInt32If interface {
-	Load(complex64) (int32, bool)
+	Load(complex64) (int32, error)
 }
 
 type OfComplex64NInt32MutIf interface {
@@ -3657,7 +3657,7 @@ func NewOfComplex64NInt32St(somes OfComplex64NInt32) *OfComplex64NInt32St {
 }
 
 type OfComplex64NInt64If interface {
-	Load(complex64) (int64, bool)
+	Load(complex64) (int64, error)
 }
 
 type OfComplex64NInt64MutIf interface {
@@ -3707,7 +3707,7 @@ func NewOfComplex64NInt64St(somes OfComplex64NInt64) *OfComplex64NInt64St {
 }
 
 type OfComplex64NInt8If interface {
-	Load(complex64) (int8, bool)
+	Load(complex64) (int8, error)
 }
 
 type OfComplex64NInt8MutIf interface {
@@ -3757,7 +3757,7 @@ func NewOfComplex64NInt8St(somes OfComplex64NInt8) *OfComplex64NInt8St {
 }
 
 type OfComplex64NRuneIf interface {
-	Load(complex64) (rune, bool)
+	Load(complex64) (rune, error)
 }
 
 type OfComplex64NRuneMutIf interface {
@@ -3807,7 +3807,7 @@ func NewOfComplex64NRuneSt(somes OfComplex64NRune) *OfComplex64NRuneSt {
 }
 
 type OfComplex64NStringIf interface {
-	Load(complex64) (string, bool)
+	Load(complex64) (string, error)
 }
 
 type OfComplex64NStringMutIf interface {
@@ -3857,7 +3857,7 @@ func NewOfComplex64NStringSt(somes OfComplex64NString) *OfComplex64NStringSt {
 }
 
 type OfComplex64NUintIf interface {
-	Load(complex64) (uint, bool)
+	Load(complex64) (uint, error)
 }
 
 type OfComplex64NUintMutIf interface {
@@ -3907,7 +3907,7 @@ func NewOfComplex64NUintSt(somes OfComplex64NUint) *OfComplex64NUintSt {
 }
 
 type OfComplex64NUint16If interface {
-	Load(complex64) (uint16, bool)
+	Load(complex64) (uint16, error)
 }
 
 type OfComplex64NUint16MutIf interface {
@@ -3957,7 +3957,7 @@ func NewOfComplex64NUint16St(somes OfComplex64NUint16) *OfComplex64NUint16St {
 }
 
 type OfComplex64NUint32If interface {
-	Load(complex64) (uint32, bool)
+	Load(complex64) (uint32, error)
 }
 
 type OfComplex64NUint32MutIf interface {
@@ -4007,7 +4007,7 @@ func NewOfComplex64NUint32St(somes OfComplex64NUint32) *OfComplex64NUint32St {
 }
 
 type OfComplex64NUint64If interface {
-	Load(complex64) (uint64, bool)
+	Load(complex64) (uint64, error)
 }
 
 type OfComplex64NUint64MutIf interface {
@@ -4057,7 +4057,7 @@ func NewOfComplex64NUint64St(somes OfComplex64NUint64) *OfComplex64NUint64St {
 }
 
 type OfComplex64NUint8If interface {
-	Load(complex64) (uint8, bool)
+	Load(complex64) (uint8, error)
 }
 
 type OfComplex64NUint8MutIf interface {
@@ -4107,7 +4107,7 @@ func NewOfComplex64NUint8St(somes OfComplex64NUint8) *OfComplex64NUint8St {
 }
 
 type OfComplex64NUintptrIf interface {
-	Load(complex64) (uintptr, bool)
+	Load(complex64) (uintptr, error)
 }
 
 type OfComplex64NUintptrMutIf interface {
@@ -4157,7 +4157,7 @@ func NewOfComplex64NUintptrSt(somes OfComplex64NUintptr) *OfComplex64NUintptrSt 
 }
 
 type OfComplex64NInterfaceIf interface {
-	Load(complex64) (interface{}, bool)
+	Load(complex64) (interface{}, error)
 }
 
 type OfComplex64NInterfaceMutIf interface {
@@ -4207,7 +4207,7 @@ func NewOfComplex64NInterfaceSt(somes OfComplex64NInterface) *OfComplex64NInterf
 }
 
 type OfErrorNBoolIf interface {
-	Load(error) (bool, bool)
+	Load(error) (bool, error)
 }
 
 type OfErrorNBoolMutIf interface {
@@ -4257,7 +4257,7 @@ func NewOfErrorNBoolSt(somes OfErrorNBool) *OfErrorNBoolSt {
 }
 
 type OfErrorNByteIf interface {
-	Load(error) (byte, bool)
+	Load(error) (byte, error)
 }
 
 type OfErrorNByteMutIf interface {
@@ -4307,7 +4307,7 @@ func NewOfErrorNByteSt(somes OfErrorNByte) *OfErrorNByteSt {
 }
 
 type OfErrorNComplex128If interface {
-	Load(error) (complex128, bool)
+	Load(error) (complex128, error)
 }
 
 type OfErrorNComplex128MutIf interface {
@@ -4357,7 +4357,7 @@ func NewOfErrorNComplex128St(somes OfErrorNComplex128) *OfErrorNComplex128St {
 }
 
 type OfErrorNComplex64If interface {
-	Load(error) (complex64, bool)
+	Load(error) (complex64, error)
 }
 
 type OfErrorNComplex64MutIf interface {
@@ -4407,7 +4407,7 @@ func NewOfErrorNComplex64St(somes OfErrorNComplex64) *OfErrorNComplex64St {
 }
 
 type OfErrorNErrorIf interface {
-	Load(error) (error, bool)
+	Load(error) (error, error)
 }
 
 type OfErrorNErrorMutIf interface {
@@ -4457,7 +4457,7 @@ func NewOfErrorNErrorSt(somes OfErrorNError) *OfErrorNErrorSt {
 }
 
 type OfErrorNFloat32If interface {
-	Load(error) (float32, bool)
+	Load(error) (float32, error)
 }
 
 type OfErrorNFloat32MutIf interface {
@@ -4507,7 +4507,7 @@ func NewOfErrorNFloat32St(somes OfErrorNFloat32) *OfErrorNFloat32St {
 }
 
 type OfErrorNFloat64If interface {
-	Load(error) (float64, bool)
+	Load(error) (float64, error)
 }
 
 type OfErrorNFloat64MutIf interface {
@@ -4557,7 +4557,7 @@ func NewOfErrorNFloat64St(somes OfErrorNFloat64) *OfErrorNFloat64St {
 }
 
 type OfErrorNIntIf interface {
-	Load(error) (int, bool)
+	Load(error) (int, error)
 }
 
 type OfErrorNIntMutIf interface {
@@ -4607,7 +4607,7 @@ func NewOfErrorNIntSt(somes OfErrorNInt) *OfErrorNIntSt {
 }
 
 type OfErrorNInt16If interface {
-	Load(error) (int16, bool)
+	Load(error) (int16, error)
 }
 
 type OfErrorNInt16MutIf interface {
@@ -4657,7 +4657,7 @@ func NewOfErrorNInt16St(somes OfErrorNInt16) *OfErrorNInt16St {
 }
 
 type OfErrorNInt32If interface {
-	Load(error) (int32, bool)
+	Load(error) (int32, error)
 }
 
 type OfErrorNInt32MutIf interface {
@@ -4707,7 +4707,7 @@ func NewOfErrorNInt32St(somes OfErrorNInt32) *OfErrorNInt32St {
 }
 
 type OfErrorNInt64If interface {
-	Load(error) (int64, bool)
+	Load(error) (int64, error)
 }
 
 type OfErrorNInt64MutIf interface {
@@ -4757,7 +4757,7 @@ func NewOfErrorNInt64St(somes OfErrorNInt64) *OfErrorNInt64St {
 }
 
 type OfErrorNInt8If interface {
-	Load(error) (int8, bool)
+	Load(error) (int8, error)
 }
 
 type OfErrorNInt8MutIf interface {
@@ -4807,7 +4807,7 @@ func NewOfErrorNInt8St(somes OfErrorNInt8) *OfErrorNInt8St {
 }
 
 type OfErrorNRuneIf interface {
-	Load(error) (rune, bool)
+	Load(error) (rune, error)
 }
 
 type OfErrorNRuneMutIf interface {
@@ -4857,7 +4857,7 @@ func NewOfErrorNRuneSt(somes OfErrorNRune) *OfErrorNRuneSt {
 }
 
 type OfErrorNStringIf interface {
-	Load(error) (string, bool)
+	Load(error) (string, error)
 }
 
 type OfErrorNStringMutIf interface {
@@ -4907,7 +4907,7 @@ func NewOfErrorNStringSt(somes OfErrorNString) *OfErrorNStringSt {
 }
 
 type OfErrorNUintIf interface {
-	Load(error) (uint, bool)
+	Load(error) (uint, error)
 }
 
 type OfErrorNUintMutIf interface {
@@ -4957,7 +4957,7 @@ func NewOfErrorNUintSt(somes OfErrorNUint) *OfErrorNUintSt {
 }
 
 type OfErrorNUint16If interface {
-	Load(error) (uint16, bool)
+	Load(error) (uint16, error)
 }
 
 type OfErrorNUint16MutIf interface {
@@ -5007,7 +5007,7 @@ func NewOfErrorNUint16St(somes OfErrorNUint16) *OfErrorNUint16St {
 }
 
 type OfErrorNUint32If interface {
-	Load(error) (uint32, bool)
+	Load(error) (uint32, error)
 }
 
 type OfErrorNUint32MutIf interface {
@@ -5057,7 +5057,7 @@ func NewOfErrorNUint32St(somes OfErrorNUint32) *OfErrorNUint32St {
 }
 
 type OfErrorNUint64If interface {
-	Load(error) (uint64, bool)
+	Load(error) (uint64, error)
 }
 
 type OfErrorNUint64MutIf interface {
@@ -5107,7 +5107,7 @@ func NewOfErrorNUint64St(somes OfErrorNUint64) *OfErrorNUint64St {
 }
 
 type OfErrorNUint8If interface {
-	Load(error) (uint8, bool)
+	Load(error) (uint8, error)
 }
 
 type OfErrorNUint8MutIf interface {
@@ -5157,7 +5157,7 @@ func NewOfErrorNUint8St(somes OfErrorNUint8) *OfErrorNUint8St {
 }
 
 type OfErrorNUintptrIf interface {
-	Load(error) (uintptr, bool)
+	Load(error) (uintptr, error)
 }
 
 type OfErrorNUintptrMutIf interface {
@@ -5207,7 +5207,7 @@ func NewOfErrorNUintptrSt(somes OfErrorNUintptr) *OfErrorNUintptrSt {
 }
 
 type OfErrorNInterfaceIf interface {
-	Load(error) (interface{}, bool)
+	Load(error) (interface{}, error)
 }
 
 type OfErrorNInterfaceMutIf interface {
@@ -5257,7 +5257,7 @@ func NewOfErrorNInterfaceSt(somes OfErrorNInterface) *OfErrorNInterfaceSt {
 }
 
 type OfFloat32NBoolIf interface {
-	Load(float32) (bool, bool)
+	Load(float32) (bool, error)
 }
 
 type OfFloat32NBoolMutIf interface {
@@ -5307,7 +5307,7 @@ func NewOfFloat32NBoolSt(somes OfFloat32NBool) *OfFloat32NBoolSt {
 }
 
 type OfFloat32NByteIf interface {
-	Load(float32) (byte, bool)
+	Load(float32) (byte, error)
 }
 
 type OfFloat32NByteMutIf interface {
@@ -5357,7 +5357,7 @@ func NewOfFloat32NByteSt(somes OfFloat32NByte) *OfFloat32NByteSt {
 }
 
 type OfFloat32NComplex128If interface {
-	Load(float32) (complex128, bool)
+	Load(float32) (complex128, error)
 }
 
 type OfFloat32NComplex128MutIf interface {
@@ -5407,7 +5407,7 @@ func NewOfFloat32NComplex128St(somes OfFloat32NComplex128) *OfFloat32NComplex128
 }
 
 type OfFloat32NComplex64If interface {
-	Load(float32) (complex64, bool)
+	Load(float32) (complex64, error)
 }
 
 type OfFloat32NComplex64MutIf interface {
@@ -5457,7 +5457,7 @@ func NewOfFloat32NComplex64St(somes OfFloat32NComplex64) *OfFloat32NComplex64St 
 }
 
 type OfFloat32NErrorIf interface {
-	Load(float32) (error, bool)
+	Load(float32) (error, error)
 }
 
 type OfFloat32NErrorMutIf interface {
@@ -5507,7 +5507,7 @@ func NewOfFloat32NErrorSt(somes OfFloat32NError) *OfFloat32NErrorSt {
 }
 
 type OfFloat32NFloat32If interface {
-	Load(float32) (float32, bool)
+	Load(float32) (float32, error)
 }
 
 type OfFloat32NFloat32MutIf interface {
@@ -5557,7 +5557,7 @@ func NewOfFloat32NFloat32St(somes OfFloat32NFloat32) *OfFloat32NFloat32St {
 }
 
 type OfFloat32NFloat64If interface {
-	Load(float32) (float64, bool)
+	Load(float32) (float64, error)
 }
 
 type OfFloat32NFloat64MutIf interface {
@@ -5607,7 +5607,7 @@ func NewOfFloat32NFloat64St(somes OfFloat32NFloat64) *OfFloat32NFloat64St {
 }
 
 type OfFloat32NIntIf interface {
-	Load(float32) (int, bool)
+	Load(float32) (int, error)
 }
 
 type OfFloat32NIntMutIf interface {
@@ -5657,7 +5657,7 @@ func NewOfFloat32NIntSt(somes OfFloat32NInt) *OfFloat32NIntSt {
 }
 
 type OfFloat32NInt16If interface {
-	Load(float32) (int16, bool)
+	Load(float32) (int16, error)
 }
 
 type OfFloat32NInt16MutIf interface {
@@ -5707,7 +5707,7 @@ func NewOfFloat32NInt16St(somes OfFloat32NInt16) *OfFloat32NInt16St {
 }
 
 type OfFloat32NInt32If interface {
-	Load(float32) (int32, bool)
+	Load(float32) (int32, error)
 }
 
 type OfFloat32NInt32MutIf interface {
@@ -5757,7 +5757,7 @@ func NewOfFloat32NInt32St(somes OfFloat32NInt32) *OfFloat32NInt32St {
 }
 
 type OfFloat32NInt64If interface {
-	Load(float32) (int64, bool)
+	Load(float32) (int64, error)
 }
 
 type OfFloat32NInt64MutIf interface {
@@ -5807,7 +5807,7 @@ func NewOfFloat32NInt64St(somes OfFloat32NInt64) *OfFloat32NInt64St {
 }
 
 type OfFloat32NInt8If interface {
-	Load(float32) (int8, bool)
+	Load(float32) (int8, error)
 }
 
 type OfFloat32NInt8MutIf interface {
@@ -5857,7 +5857,7 @@ func NewOfFloat32NInt8St(somes OfFloat32NInt8) *OfFloat32NInt8St {
 }
 
 type OfFloat32NRuneIf interface {
-	Load(float32) (rune, bool)
+	Load(float32) (rune, error)
 }
 
 type OfFloat32NRuneMutIf interface {
@@ -5907,7 +5907,7 @@ func NewOfFloat32NRuneSt(somes OfFloat32NRune) *OfFloat32NRuneSt {
 }
 
 type OfFloat32NStringIf interface {
-	Load(float32) (string, bool)
+	Load(float32) (string, error)
 }
 
 type OfFloat32NStringMutIf interface {
@@ -5957,7 +5957,7 @@ func NewOfFloat32NStringSt(somes OfFloat32NString) *OfFloat32NStringSt {
 }
 
 type OfFloat32NUintIf interface {
-	Load(float32) (uint, bool)
+	Load(float32) (uint, error)
 }
 
 type OfFloat32NUintMutIf interface {
@@ -6007,7 +6007,7 @@ func NewOfFloat32NUintSt(somes OfFloat32NUint) *OfFloat32NUintSt {
 }
 
 type OfFloat32NUint16If interface {
-	Load(float32) (uint16, bool)
+	Load(float32) (uint16, error)
 }
 
 type OfFloat32NUint16MutIf interface {
@@ -6057,7 +6057,7 @@ func NewOfFloat32NUint16St(somes OfFloat32NUint16) *OfFloat32NUint16St {
 }
 
 type OfFloat32NUint32If interface {
-	Load(float32) (uint32, bool)
+	Load(float32) (uint32, error)
 }
 
 type OfFloat32NUint32MutIf interface {
@@ -6107,7 +6107,7 @@ func NewOfFloat32NUint32St(somes OfFloat32NUint32) *OfFloat32NUint32St {
 }
 
 type OfFloat32NUint64If interface {
-	Load(float32) (uint64, bool)
+	Load(float32) (uint64, error)
 }
 
 type OfFloat32NUint64MutIf interface {
@@ -6157,7 +6157,7 @@ func NewOfFloat32NUint64St(somes OfFloat32NUint64) *OfFloat32NUint64St {
 }
 
 type OfFloat32NUint8If interface {
-	Load(float32) (uint8, bool)
+	Load(float32) (uint8, error)
 }
 
 type OfFloat32NUint8MutIf interface {
@@ -6207,7 +6207,7 @@ func NewOfFloat32NUint8St(somes OfFloat32NUint8) *OfFloat32NUint8St {
 }
 
 type OfFloat32NUintptrIf interface {
-	Load(float32) (uintptr, bool)
+	Load(float32) (uintptr, error)
 }
 
 type OfFloat32NUintptrMutIf interface {
@@ -6257,7 +6257,7 @@ func NewOfFloat32NUintptrSt(somes OfFloat32NUintptr) *OfFloat32NUintptrSt {
 }
 
 type OfFloat32NInterfaceIf interface {
-	Load(float32) (interface{}, bool)
+	Load(float32) (interface{}, error)
 }
 
 type OfFloat32NInterfaceMutIf interface {
@@ -6307,7 +6307,7 @@ func NewOfFloat32NInterfaceSt(somes OfFloat32NInterface) *OfFloat32NInterfaceSt 
 }
 
 type OfFloat64NBoolIf interface {
-	Load(float64) (bool, bool)
+	Load(float64) (bool, error)
 }
 
 type OfFloat64NBoolMutIf interface {
@@ -6357,7 +6357,7 @@ func NewOfFloat64NBoolSt(somes OfFloat64NBool) *OfFloat64NBoolSt {
 }
 
 type OfFloat64NByteIf interface {
-	Load(float64) (byte, bool)
+	Load(float64) (byte, error)
 }
 
 type OfFloat64NByteMutIf interface {
@@ -6407,7 +6407,7 @@ func NewOfFloat64NByteSt(somes OfFloat64NByte) *OfFloat64NByteSt {
 }
 
 type OfFloat64NComplex128If interface {
-	Load(float64) (complex128, bool)
+	Load(float64) (complex128, error)
 }
 
 type OfFloat64NComplex128MutIf interface {
@@ -6457,7 +6457,7 @@ func NewOfFloat64NComplex128St(somes OfFloat64NComplex128) *OfFloat64NComplex128
 }
 
 type OfFloat64NComplex64If interface {
-	Load(float64) (complex64, bool)
+	Load(float64) (complex64, error)
 }
 
 type OfFloat64NComplex64MutIf interface {
@@ -6507,7 +6507,7 @@ func NewOfFloat64NComplex64St(somes OfFloat64NComplex64) *OfFloat64NComplex64St 
 }
 
 type OfFloat64NErrorIf interface {
-	Load(float64) (error, bool)
+	Load(float64) (error, error)
 }
 
 type OfFloat64NErrorMutIf interface {
@@ -6557,7 +6557,7 @@ func NewOfFloat64NErrorSt(somes OfFloat64NError) *OfFloat64NErrorSt {
 }
 
 type OfFloat64NFloat32If interface {
-	Load(float64) (float32, bool)
+	Load(float64) (float32, error)
 }
 
 type OfFloat64NFloat32MutIf interface {
@@ -6607,7 +6607,7 @@ func NewOfFloat64NFloat32St(somes OfFloat64NFloat32) *OfFloat64NFloat32St {
 }
 
 type OfFloat64NFloat64If interface {
-	Load(float64) (float64, bool)
+	Load(float64) (float64, error)
 }
 
 type OfFloat64NFloat64MutIf interface {
@@ -6657,7 +6657,7 @@ func NewOfFloat64NFloat64St(somes OfFloat64NFloat64) *OfFloat64NFloat64St {
 }
 
 type OfFloat64NIntIf interface {
-	Load(float64) (int, bool)
+	Load(float64) (int, error)
 }
 
 type OfFloat64NIntMutIf interface {
@@ -6707,7 +6707,7 @@ func NewOfFloat64NIntSt(somes OfFloat64NInt) *OfFloat64NIntSt {
 }
 
 type OfFloat64NInt16If interface {
-	Load(float64) (int16, bool)
+	Load(float64) (int16, error)
 }
 
 type OfFloat64NInt16MutIf interface {
@@ -6757,7 +6757,7 @@ func NewOfFloat64NInt16St(somes OfFloat64NInt16) *OfFloat64NInt16St {
 }
 
 type OfFloat64NInt32If interface {
-	Load(float64) (int32, bool)
+	Load(float64) (int32, error)
 }
 
 type OfFloat64NInt32MutIf interface {
@@ -6807,7 +6807,7 @@ func NewOfFloat64NInt32St(somes OfFloat64NInt32) *OfFloat64NInt32St {
 }
 
 type OfFloat64NInt64If interface {
-	Load(float64) (int64, bool)
+	Load(float64) (int64, error)
 }
 
 type OfFloat64NInt64MutIf interface {
@@ -6857,7 +6857,7 @@ func NewOfFloat64NInt64St(somes OfFloat64NInt64) *OfFloat64NInt64St {
 }
 
 type OfFloat64NInt8If interface {
-	Load(float64) (int8, bool)
+	Load(float64) (int8, error)
 }
 
 type OfFloat64NInt8MutIf interface {
@@ -6907,7 +6907,7 @@ func NewOfFloat64NInt8St(somes OfFloat64NInt8) *OfFloat64NInt8St {
 }
 
 type OfFloat64NRuneIf interface {
-	Load(float64) (rune, bool)
+	Load(float64) (rune, error)
 }
 
 type OfFloat64NRuneMutIf interface {
@@ -6957,7 +6957,7 @@ func NewOfFloat64NRuneSt(somes OfFloat64NRune) *OfFloat64NRuneSt {
 }
 
 type OfFloat64NStringIf interface {
-	Load(float64) (string, bool)
+	Load(float64) (string, error)
 }
 
 type OfFloat64NStringMutIf interface {
@@ -7007,7 +7007,7 @@ func NewOfFloat64NStringSt(somes OfFloat64NString) *OfFloat64NStringSt {
 }
 
 type OfFloat64NUintIf interface {
-	Load(float64) (uint, bool)
+	Load(float64) (uint, error)
 }
 
 type OfFloat64NUintMutIf interface {
@@ -7057,7 +7057,7 @@ func NewOfFloat64NUintSt(somes OfFloat64NUint) *OfFloat64NUintSt {
 }
 
 type OfFloat64NUint16If interface {
-	Load(float64) (uint16, bool)
+	Load(float64) (uint16, error)
 }
 
 type OfFloat64NUint16MutIf interface {
@@ -7107,7 +7107,7 @@ func NewOfFloat64NUint16St(somes OfFloat64NUint16) *OfFloat64NUint16St {
 }
 
 type OfFloat64NUint32If interface {
-	Load(float64) (uint32, bool)
+	Load(float64) (uint32, error)
 }
 
 type OfFloat64NUint32MutIf interface {
@@ -7157,7 +7157,7 @@ func NewOfFloat64NUint32St(somes OfFloat64NUint32) *OfFloat64NUint32St {
 }
 
 type OfFloat64NUint64If interface {
-	Load(float64) (uint64, bool)
+	Load(float64) (uint64, error)
 }
 
 type OfFloat64NUint64MutIf interface {
@@ -7207,7 +7207,7 @@ func NewOfFloat64NUint64St(somes OfFloat64NUint64) *OfFloat64NUint64St {
 }
 
 type OfFloat64NUint8If interface {
-	Load(float64) (uint8, bool)
+	Load(float64) (uint8, error)
 }
 
 type OfFloat64NUint8MutIf interface {
@@ -7257,7 +7257,7 @@ func NewOfFloat64NUint8St(somes OfFloat64NUint8) *OfFloat64NUint8St {
 }
 
 type OfFloat64NUintptrIf interface {
-	Load(float64) (uintptr, bool)
+	Load(float64) (uintptr, error)
 }
 
 type OfFloat64NUintptrMutIf interface {
@@ -7307,7 +7307,7 @@ func NewOfFloat64NUintptrSt(somes OfFloat64NUintptr) *OfFloat64NUintptrSt {
 }
 
 type OfFloat64NInterfaceIf interface {
-	Load(float64) (interface{}, bool)
+	Load(float64) (interface{}, error)
 }
 
 type OfFloat64NInterfaceMutIf interface {
@@ -7357,7 +7357,7 @@ func NewOfFloat64NInterfaceSt(somes OfFloat64NInterface) *OfFloat64NInterfaceSt 
 }
 
 type OfIntNBoolIf interface {
-	Load(int) (bool, bool)
+	Load(int) (bool, error)
 }
 
 type OfIntNBoolMutIf interface {
@@ -7407,7 +7407,7 @@ func NewOfIntNBoolSt(somes OfIntNBool) *OfIntNBoolSt {
 }
 
 type OfIntNByteIf interface {
-	Load(int) (byte, bool)
+	Load(int) (byte, error)
 }
 
 type OfIntNByteMutIf interface {
@@ -7457,7 +7457,7 @@ func NewOfIntNByteSt(somes OfIntNByte) *OfIntNByteSt {
 }
 
 type OfIntNComplex128If interface {
-	Load(int) (complex128, bool)
+	Load(int) (complex128, error)
 }
 
 type OfIntNComplex128MutIf interface {
@@ -7507,7 +7507,7 @@ func NewOfIntNComplex128St(somes OfIntNComplex128) *OfIntNComplex128St {
 }
 
 type OfIntNComplex64If interface {
-	Load(int) (complex64, bool)
+	Load(int) (complex64, error)
 }
 
 type OfIntNComplex64MutIf interface {
@@ -7557,7 +7557,7 @@ func NewOfIntNComplex64St(somes OfIntNComplex64) *OfIntNComplex64St {
 }
 
 type OfIntNErrorIf interface {
-	Load(int) (error, bool)
+	Load(int) (error, error)
 }
 
 type OfIntNErrorMutIf interface {
@@ -7607,7 +7607,7 @@ func NewOfIntNErrorSt(somes OfIntNError) *OfIntNErrorSt {
 }
 
 type OfIntNFloat32If interface {
-	Load(int) (float32, bool)
+	Load(int) (float32, error)
 }
 
 type OfIntNFloat32MutIf interface {
@@ -7657,7 +7657,7 @@ func NewOfIntNFloat32St(somes OfIntNFloat32) *OfIntNFloat32St {
 }
 
 type OfIntNFloat64If interface {
-	Load(int) (float64, bool)
+	Load(int) (float64, error)
 }
 
 type OfIntNFloat64MutIf interface {
@@ -7707,7 +7707,7 @@ func NewOfIntNFloat64St(somes OfIntNFloat64) *OfIntNFloat64St {
 }
 
 type OfIntNIntIf interface {
-	Load(int) (int, bool)
+	Load(int) (int, error)
 }
 
 type OfIntNIntMutIf interface {
@@ -7757,7 +7757,7 @@ func NewOfIntNIntSt(somes OfIntNInt) *OfIntNIntSt {
 }
 
 type OfIntNInt16If interface {
-	Load(int) (int16, bool)
+	Load(int) (int16, error)
 }
 
 type OfIntNInt16MutIf interface {
@@ -7807,7 +7807,7 @@ func NewOfIntNInt16St(somes OfIntNInt16) *OfIntNInt16St {
 }
 
 type OfIntNInt32If interface {
-	Load(int) (int32, bool)
+	Load(int) (int32, error)
 }
 
 type OfIntNInt32MutIf interface {
@@ -7857,7 +7857,7 @@ func NewOfIntNInt32St(somes OfIntNInt32) *OfIntNInt32St {
 }
 
 type OfIntNInt64If interface {
-	Load(int) (int64, bool)
+	Load(int) (int64, error)
 }
 
 type OfIntNInt64MutIf interface {
@@ -7907,7 +7907,7 @@ func NewOfIntNInt64St(somes OfIntNInt64) *OfIntNInt64St {
 }
 
 type OfIntNInt8If interface {
-	Load(int) (int8, bool)
+	Load(int) (int8, error)
 }
 
 type OfIntNInt8MutIf interface {
@@ -7957,7 +7957,7 @@ func NewOfIntNInt8St(somes OfIntNInt8) *OfIntNInt8St {
 }
 
 type OfIntNRuneIf interface {
-	Load(int) (rune, bool)
+	Load(int) (rune, error)
 }
 
 type OfIntNRuneMutIf interface {
@@ -8007,7 +8007,7 @@ func NewOfIntNRuneSt(somes OfIntNRune) *OfIntNRuneSt {
 }
 
 type OfIntNStringIf interface {
-	Load(int) (string, bool)
+	Load(int) (string, error)
 }
 
 type OfIntNStringMutIf interface {
@@ -8057,7 +8057,7 @@ func NewOfIntNStringSt(somes OfIntNString) *OfIntNStringSt {
 }
 
 type OfIntNUintIf interface {
-	Load(int) (uint, bool)
+	Load(int) (uint, error)
 }
 
 type OfIntNUintMutIf interface {
@@ -8107,7 +8107,7 @@ func NewOfIntNUintSt(somes OfIntNUint) *OfIntNUintSt {
 }
 
 type OfIntNUint16If interface {
-	Load(int) (uint16, bool)
+	Load(int) (uint16, error)
 }
 
 type OfIntNUint16MutIf interface {
@@ -8157,7 +8157,7 @@ func NewOfIntNUint16St(somes OfIntNUint16) *OfIntNUint16St {
 }
 
 type OfIntNUint32If interface {
-	Load(int) (uint32, bool)
+	Load(int) (uint32, error)
 }
 
 type OfIntNUint32MutIf interface {
@@ -8207,7 +8207,7 @@ func NewOfIntNUint32St(somes OfIntNUint32) *OfIntNUint32St {
 }
 
 type OfIntNUint64If interface {
-	Load(int) (uint64, bool)
+	Load(int) (uint64, error)
 }
 
 type OfIntNUint64MutIf interface {
@@ -8257,7 +8257,7 @@ func NewOfIntNUint64St(somes OfIntNUint64) *OfIntNUint64St {
 }
 
 type OfIntNUint8If interface {
-	Load(int) (uint8, bool)
+	Load(int) (uint8, error)
 }
 
 type OfIntNUint8MutIf interface {
@@ -8307,7 +8307,7 @@ func NewOfIntNUint8St(somes OfIntNUint8) *OfIntNUint8St {
 }
 
 type OfIntNUintptrIf interface {
-	Load(int) (uintptr, bool)
+	Load(int) (uintptr, error)
 }
 
 type OfIntNUintptrMutIf interface {
@@ -8357,7 +8357,7 @@ func NewOfIntNUintptrSt(somes OfIntNUintptr) *OfIntNUintptrSt {
 }
 
 type OfIntNInterfaceIf interface {
-	Load(int) (interface{}, bool)
+	Load(int) (interface{}, error)
 }
 
 type OfIntNInterfaceMutIf interface {
@@ -8407,7 +8407,7 @@ func NewOfIntNInterfaceSt(somes OfIntNInterface) *OfIntNInterfaceSt {
 }
 
 type OfInt16NBoolIf interface {
-	Load(int16) (bool, bool)
+	Load(int16) (bool, error)
 }
 
 type OfInt16NBoolMutIf interface {
@@ -8457,7 +8457,7 @@ func NewOfInt16NBoolSt(somes OfInt16NBool) *OfInt16NBoolSt {
 }
 
 type OfInt16NByteIf interface {
-	Load(int16) (byte, bool)
+	Load(int16) (byte, error)
 }
 
 type OfInt16NByteMutIf interface {
@@ -8507,7 +8507,7 @@ func NewOfInt16NByteSt(somes OfInt16NByte) *OfInt16NByteSt {
 }
 
 type OfInt16NComplex128If interface {
-	Load(int16) (complex128, bool)
+	Load(int16) (complex128, error)
 }
 
 type OfInt16NComplex128MutIf interface {
@@ -8557,7 +8557,7 @@ func NewOfInt16NComplex128St(somes OfInt16NComplex128) *OfInt16NComplex128St {
 }
 
 type OfInt16NComplex64If interface {
-	Load(int16) (complex64, bool)
+	Load(int16) (complex64, error)
 }
 
 type OfInt16NComplex64MutIf interface {
@@ -8607,7 +8607,7 @@ func NewOfInt16NComplex64St(somes OfInt16NComplex64) *OfInt16NComplex64St {
 }
 
 type OfInt16NErrorIf interface {
-	Load(int16) (error, bool)
+	Load(int16) (error, error)
 }
 
 type OfInt16NErrorMutIf interface {
@@ -8657,7 +8657,7 @@ func NewOfInt16NErrorSt(somes OfInt16NError) *OfInt16NErrorSt {
 }
 
 type OfInt16NFloat32If interface {
-	Load(int16) (float32, bool)
+	Load(int16) (float32, error)
 }
 
 type OfInt16NFloat32MutIf interface {
@@ -8707,7 +8707,7 @@ func NewOfInt16NFloat32St(somes OfInt16NFloat32) *OfInt16NFloat32St {
 }
 
 type OfInt16NFloat64If interface {
-	Load(int16) (float64, bool)
+	Load(int16) (float64, error)
 }
 
 type OfInt16NFloat64MutIf interface {
@@ -8757,7 +8757,7 @@ func NewOfInt16NFloat64St(somes OfInt16NFloat64) *OfInt16NFloat64St {
 }
 
 type OfInt16NIntIf interface {
-	Load(int16) (int, bool)
+	Load(int16) (int, error)
 }
 
 type OfInt16NIntMutIf interface {
@@ -8807,7 +8807,7 @@ func NewOfInt16NIntSt(somes OfInt16NInt) *OfInt16NIntSt {
 }
 
 type OfInt16NInt16If interface {
-	Load(int16) (int16, bool)
+	Load(int16) (int16, error)
 }
 
 type OfInt16NInt16MutIf interface {
@@ -8857,7 +8857,7 @@ func NewOfInt16NInt16St(somes OfInt16NInt16) *OfInt16NInt16St {
 }
 
 type OfInt16NInt32If interface {
-	Load(int16) (int32, bool)
+	Load(int16) (int32, error)
 }
 
 type OfInt16NInt32MutIf interface {
@@ -8907,7 +8907,7 @@ func NewOfInt16NInt32St(somes OfInt16NInt32) *OfInt16NInt32St {
 }
 
 type OfInt16NInt64If interface {
-	Load(int16) (int64, bool)
+	Load(int16) (int64, error)
 }
 
 type OfInt16NInt64MutIf interface {
@@ -8957,7 +8957,7 @@ func NewOfInt16NInt64St(somes OfInt16NInt64) *OfInt16NInt64St {
 }
 
 type OfInt16NInt8If interface {
-	Load(int16) (int8, bool)
+	Load(int16) (int8, error)
 }
 
 type OfInt16NInt8MutIf interface {
@@ -9007,7 +9007,7 @@ func NewOfInt16NInt8St(somes OfInt16NInt8) *OfInt16NInt8St {
 }
 
 type OfInt16NRuneIf interface {
-	Load(int16) (rune, bool)
+	Load(int16) (rune, error)
 }
 
 type OfInt16NRuneMutIf interface {
@@ -9057,7 +9057,7 @@ func NewOfInt16NRuneSt(somes OfInt16NRune) *OfInt16NRuneSt {
 }
 
 type OfInt16NStringIf interface {
-	Load(int16) (string, bool)
+	Load(int16) (string, error)
 }
 
 type OfInt16NStringMutIf interface {
@@ -9107,7 +9107,7 @@ func NewOfInt16NStringSt(somes OfInt16NString) *OfInt16NStringSt {
 }
 
 type OfInt16NUintIf interface {
-	Load(int16) (uint, bool)
+	Load(int16) (uint, error)
 }
 
 type OfInt16NUintMutIf interface {
@@ -9157,7 +9157,7 @@ func NewOfInt16NUintSt(somes OfInt16NUint) *OfInt16NUintSt {
 }
 
 type OfInt16NUint16If interface {
-	Load(int16) (uint16, bool)
+	Load(int16) (uint16, error)
 }
 
 type OfInt16NUint16MutIf interface {
@@ -9207,7 +9207,7 @@ func NewOfInt16NUint16St(somes OfInt16NUint16) *OfInt16NUint16St {
 }
 
 type OfInt16NUint32If interface {
-	Load(int16) (uint32, bool)
+	Load(int16) (uint32, error)
 }
 
 type OfInt16NUint32MutIf interface {
@@ -9257,7 +9257,7 @@ func NewOfInt16NUint32St(somes OfInt16NUint32) *OfInt16NUint32St {
 }
 
 type OfInt16NUint64If interface {
-	Load(int16) (uint64, bool)
+	Load(int16) (uint64, error)
 }
 
 type OfInt16NUint64MutIf interface {
@@ -9307,7 +9307,7 @@ func NewOfInt16NUint64St(somes OfInt16NUint64) *OfInt16NUint64St {
 }
 
 type OfInt16NUint8If interface {
-	Load(int16) (uint8, bool)
+	Load(int16) (uint8, error)
 }
 
 type OfInt16NUint8MutIf interface {
@@ -9357,7 +9357,7 @@ func NewOfInt16NUint8St(somes OfInt16NUint8) *OfInt16NUint8St {
 }
 
 type OfInt16NUintptrIf interface {
-	Load(int16) (uintptr, bool)
+	Load(int16) (uintptr, error)
 }
 
 type OfInt16NUintptrMutIf interface {
@@ -9407,7 +9407,7 @@ func NewOfInt16NUintptrSt(somes OfInt16NUintptr) *OfInt16NUintptrSt {
 }
 
 type OfInt16NInterfaceIf interface {
-	Load(int16) (interface{}, bool)
+	Load(int16) (interface{}, error)
 }
 
 type OfInt16NInterfaceMutIf interface {
@@ -9457,7 +9457,7 @@ func NewOfInt16NInterfaceSt(somes OfInt16NInterface) *OfInt16NInterfaceSt {
 }
 
 type OfInt32NBoolIf interface {
-	Load(int32) (bool, bool)
+	Load(int32) (bool, error)
 }
 
 type OfInt32NBoolMutIf interface {
@@ -9507,7 +9507,7 @@ func NewOfInt32NBoolSt(somes OfInt32NBool) *OfInt32NBoolSt {
 }
 
 type OfInt32NByteIf interface {
-	Load(int32) (byte, bool)
+	Load(int32) (byte, error)
 }
 
 type OfInt32NByteMutIf interface {
@@ -9557,7 +9557,7 @@ func NewOfInt32NByteSt(somes OfInt32NByte) *OfInt32NByteSt {
 }
 
 type OfInt32NComplex128If interface {
-	Load(int32) (complex128, bool)
+	Load(int32) (complex128, error)
 }
 
 type OfInt32NComplex128MutIf interface {
@@ -9607,7 +9607,7 @@ func NewOfInt32NComplex128St(somes OfInt32NComplex128) *OfInt32NComplex128St {
 }
 
 type OfInt32NComplex64If interface {
-	Load(int32) (complex64, bool)
+	Load(int32) (complex64, error)
 }
 
 type OfInt32NComplex64MutIf interface {
@@ -9657,7 +9657,7 @@ func NewOfInt32NComplex64St(somes OfInt32NComplex64) *OfInt32NComplex64St {
 }
 
 type OfInt32NErrorIf interface {
-	Load(int32) (error, bool)
+	Load(int32) (error, error)
 }
 
 type OfInt32NErrorMutIf interface {
@@ -9707,7 +9707,7 @@ func NewOfInt32NErrorSt(somes OfInt32NError) *OfInt32NErrorSt {
 }
 
 type OfInt32NFloat32If interface {
-	Load(int32) (float32, bool)
+	Load(int32) (float32, error)
 }
 
 type OfInt32NFloat32MutIf interface {
@@ -9757,7 +9757,7 @@ func NewOfInt32NFloat32St(somes OfInt32NFloat32) *OfInt32NFloat32St {
 }
 
 type OfInt32NFloat64If interface {
-	Load(int32) (float64, bool)
+	Load(int32) (float64, error)
 }
 
 type OfInt32NFloat64MutIf interface {
@@ -9807,7 +9807,7 @@ func NewOfInt32NFloat64St(somes OfInt32NFloat64) *OfInt32NFloat64St {
 }
 
 type OfInt32NIntIf interface {
-	Load(int32) (int, bool)
+	Load(int32) (int, error)
 }
 
 type OfInt32NIntMutIf interface {
@@ -9857,7 +9857,7 @@ func NewOfInt32NIntSt(somes OfInt32NInt) *OfInt32NIntSt {
 }
 
 type OfInt32NInt16If interface {
-	Load(int32) (int16, bool)
+	Load(int32) (int16, error)
 }
 
 type OfInt32NInt16MutIf interface {
@@ -9907,7 +9907,7 @@ func NewOfInt32NInt16St(somes OfInt32NInt16) *OfInt32NInt16St {
 }
 
 type OfInt32NInt32If interface {
-	Load(int32) (int32, bool)
+	Load(int32) (int32, error)
 }
 
 type OfInt32NInt32MutIf interface {
@@ -9957,7 +9957,7 @@ func NewOfInt32NInt32St(somes OfInt32NInt32) *OfInt32NInt32St {
 }
 
 type OfInt32NInt64If interface {
-	Load(int32) (int64, bool)
+	Load(int32) (int64, error)
 }
 
 type OfInt32NInt64MutIf interface {
@@ -10007,7 +10007,7 @@ func NewOfInt32NInt64St(somes OfInt32NInt64) *OfInt32NInt64St {
 }
 
 type OfInt32NInt8If interface {
-	Load(int32) (int8, bool)
+	Load(int32) (int8, error)
 }
 
 type OfInt32NInt8MutIf interface {
@@ -10057,7 +10057,7 @@ func NewOfInt32NInt8St(somes OfInt32NInt8) *OfInt32NInt8St {
 }
 
 type OfInt32NRuneIf interface {
-	Load(int32) (rune, bool)
+	Load(int32) (rune, error)
 }
 
 type OfInt32NRuneMutIf interface {
@@ -10107,7 +10107,7 @@ func NewOfInt32NRuneSt(somes OfInt32NRune) *OfInt32NRuneSt {
 }
 
 type OfInt32NStringIf interface {
-	Load(int32) (string, bool)
+	Load(int32) (string, error)
 }
 
 type OfInt32NStringMutIf interface {
@@ -10157,7 +10157,7 @@ func NewOfInt32NStringSt(somes OfInt32NString) *OfInt32NStringSt {
 }
 
 type OfInt32NUintIf interface {
-	Load(int32) (uint, bool)
+	Load(int32) (uint, error)
 }
 
 type OfInt32NUintMutIf interface {
@@ -10207,7 +10207,7 @@ func NewOfInt32NUintSt(somes OfInt32NUint) *OfInt32NUintSt {
 }
 
 type OfInt32NUint16If interface {
-	Load(int32) (uint16, bool)
+	Load(int32) (uint16, error)
 }
 
 type OfInt32NUint16MutIf interface {
@@ -10257,7 +10257,7 @@ func NewOfInt32NUint16St(somes OfInt32NUint16) *OfInt32NUint16St {
 }
 
 type OfInt32NUint32If interface {
-	Load(int32) (uint32, bool)
+	Load(int32) (uint32, error)
 }
 
 type OfInt32NUint32MutIf interface {
@@ -10307,7 +10307,7 @@ func NewOfInt32NUint32St(somes OfInt32NUint32) *OfInt32NUint32St {
 }
 
 type OfInt32NUint64If interface {
-	Load(int32) (uint64, bool)
+	Load(int32) (uint64, error)
 }
 
 type OfInt32NUint64MutIf interface {
@@ -10357,7 +10357,7 @@ func NewOfInt32NUint64St(somes OfInt32NUint64) *OfInt32NUint64St {
 }
 
 type OfInt32NUint8If interface {
-	Load(int32) (uint8, bool)
+	Load(int32) (uint8, error)
 }
 
 type OfInt32NUint8MutIf interface {
@@ -10407,7 +10407,7 @@ func NewOfInt32NUint8St(somes OfInt32NUint8) *OfInt32NUint8St {
 }
 
 type OfInt32NUintptrIf interface {
-	Load(int32) (uintptr, bool)
+	Load(int32) (uintptr, error)
 }
 
 type OfInt32NUintptrMutIf interface {
@@ -10457,7 +10457,7 @@ func NewOfInt32NUintptrSt(somes OfInt32NUintptr) *OfInt32NUintptrSt {
 }
 
 type OfInt32NInterfaceIf interface {
-	Load(int32) (interface{}, bool)
+	Load(int32) (interface{}, error)
 }
 
 type OfInt32NInterfaceMutIf interface {
@@ -10507,7 +10507,7 @@ func NewOfInt32NInterfaceSt(somes OfInt32NInterface) *OfInt32NInterfaceSt {
 }
 
 type OfInt64NBoolIf interface {
-	Load(int64) (bool, bool)
+	Load(int64) (bool, error)
 }
 
 type OfInt64NBoolMutIf interface {
@@ -10557,7 +10557,7 @@ func NewOfInt64NBoolSt(somes OfInt64NBool) *OfInt64NBoolSt {
 }
 
 type OfInt64NByteIf interface {
-	Load(int64) (byte, bool)
+	Load(int64) (byte, error)
 }
 
 type OfInt64NByteMutIf interface {
@@ -10607,7 +10607,7 @@ func NewOfInt64NByteSt(somes OfInt64NByte) *OfInt64NByteSt {
 }
 
 type OfInt64NComplex128If interface {
-	Load(int64) (complex128, bool)
+	Load(int64) (complex128, error)
 }
 
 type OfInt64NComplex128MutIf interface {
@@ -10657,7 +10657,7 @@ func NewOfInt64NComplex128St(somes OfInt64NComplex128) *OfInt64NComplex128St {
 }
 
 type OfInt64NComplex64If interface {
-	Load(int64) (complex64, bool)
+	Load(int64) (complex64, error)
 }
 
 type OfInt64NComplex64MutIf interface {
@@ -10707,7 +10707,7 @@ func NewOfInt64NComplex64St(somes OfInt64NComplex64) *OfInt64NComplex64St {
 }
 
 type OfInt64NErrorIf interface {
-	Load(int64) (error, bool)
+	Load(int64) (error, error)
 }
 
 type OfInt64NErrorMutIf interface {
@@ -10757,7 +10757,7 @@ func NewOfInt64NErrorSt(somes OfInt64NError) *OfInt64NErrorSt {
 }
 
 type OfInt64NFloat32If interface {
-	Load(int64) (float32, bool)
+	Load(int64) (float32, error)
 }
 
 type OfInt64NFloat32MutIf interface {
@@ -10807,7 +10807,7 @@ func NewOfInt64NFloat32St(somes OfInt64NFloat32) *OfInt64NFloat32St {
 }
 
 type OfInt64NFloat64If interface {
-	Load(int64) (float64, bool)
+	Load(int64) (float64, error)
 }
 
 type OfInt64NFloat64MutIf interface {
@@ -10857,7 +10857,7 @@ func NewOfInt64NFloat64St(somes OfInt64NFloat64) *OfInt64NFloat64St {
 }
 
 type OfInt64NIntIf interface {
-	Load(int64) (int, bool)
+	Load(int64) (int, error)
 }
 
 type OfInt64NIntMutIf interface {
@@ -10907,7 +10907,7 @@ func NewOfInt64NIntSt(somes OfInt64NInt) *OfInt64NIntSt {
 }
 
 type OfInt64NInt16If interface {
-	Load(int64) (int16, bool)
+	Load(int64) (int16, error)
 }
 
 type OfInt64NInt16MutIf interface {
@@ -10957,7 +10957,7 @@ func NewOfInt64NInt16St(somes OfInt64NInt16) *OfInt64NInt16St {
 }
 
 type OfInt64NInt32If interface {
-	Load(int64) (int32, bool)
+	Load(int64) (int32, error)
 }
 
 type OfInt64NInt32MutIf interface {
@@ -11007,7 +11007,7 @@ func NewOfInt64NInt32St(somes OfInt64NInt32) *OfInt64NInt32St {
 }
 
 type OfInt64NInt64If interface {
-	Load(int64) (int64, bool)
+	Load(int64) (int64, error)
 }
 
 type OfInt64NInt64MutIf interface {
@@ -11057,7 +11057,7 @@ func NewOfInt64NInt64St(somes OfInt64NInt64) *OfInt64NInt64St {
 }
 
 type OfInt64NInt8If interface {
-	Load(int64) (int8, bool)
+	Load(int64) (int8, error)
 }
 
 type OfInt64NInt8MutIf interface {
@@ -11107,7 +11107,7 @@ func NewOfInt64NInt8St(somes OfInt64NInt8) *OfInt64NInt8St {
 }
 
 type OfInt64NRuneIf interface {
-	Load(int64) (rune, bool)
+	Load(int64) (rune, error)
 }
 
 type OfInt64NRuneMutIf interface {
@@ -11157,7 +11157,7 @@ func NewOfInt64NRuneSt(somes OfInt64NRune) *OfInt64NRuneSt {
 }
 
 type OfInt64NStringIf interface {
-	Load(int64) (string, bool)
+	Load(int64) (string, error)
 }
 
 type OfInt64NStringMutIf interface {
@@ -11207,7 +11207,7 @@ func NewOfInt64NStringSt(somes OfInt64NString) *OfInt64NStringSt {
 }
 
 type OfInt64NUintIf interface {
-	Load(int64) (uint, bool)
+	Load(int64) (uint, error)
 }
 
 type OfInt64NUintMutIf interface {
@@ -11257,7 +11257,7 @@ func NewOfInt64NUintSt(somes OfInt64NUint) *OfInt64NUintSt {
 }
 
 type OfInt64NUint16If interface {
-	Load(int64) (uint16, bool)
+	Load(int64) (uint16, error)
 }
 
 type OfInt64NUint16MutIf interface {
@@ -11307,7 +11307,7 @@ func NewOfInt64NUint16St(somes OfInt64NUint16) *OfInt64NUint16St {
 }
 
 type OfInt64NUint32If interface {
-	Load(int64) (uint32, bool)
+	Load(int64) (uint32, error)
 }
 
 type OfInt64NUint32MutIf interface {
@@ -11357,7 +11357,7 @@ func NewOfInt64NUint32St(somes OfInt64NUint32) *OfInt64NUint32St {
 }
 
 type OfInt64NUint64If interface {
-	Load(int64) (uint64, bool)
+	Load(int64) (uint64, error)
 }
 
 type OfInt64NUint64MutIf interface {
@@ -11407,7 +11407,7 @@ func NewOfInt64NUint64St(somes OfInt64NUint64) *OfInt64NUint64St {
 }
 
 type OfInt64NUint8If interface {
-	Load(int64) (uint8, bool)
+	Load(int64) (uint8, error)
 }
 
 type OfInt64NUint8MutIf interface {
@@ -11457,7 +11457,7 @@ func NewOfInt64NUint8St(somes OfInt64NUint8) *OfInt64NUint8St {
 }
 
 type OfInt64NUintptrIf interface {
-	Load(int64) (uintptr, bool)
+	Load(int64) (uintptr, error)
 }
 
 type OfInt64NUintptrMutIf interface {
@@ -11507,7 +11507,7 @@ func NewOfInt64NUintptrSt(somes OfInt64NUintptr) *OfInt64NUintptrSt {
 }
 
 type OfInt64NInterfaceIf interface {
-	Load(int64) (interface{}, bool)
+	Load(int64) (interface{}, error)
 }
 
 type OfInt64NInterfaceMutIf interface {
@@ -11557,7 +11557,7 @@ func NewOfInt64NInterfaceSt(somes OfInt64NInterface) *OfInt64NInterfaceSt {
 }
 
 type OfInt8NBoolIf interface {
-	Load(int8) (bool, bool)
+	Load(int8) (bool, error)
 }
 
 type OfInt8NBoolMutIf interface {
@@ -11607,7 +11607,7 @@ func NewOfInt8NBoolSt(somes OfInt8NBool) *OfInt8NBoolSt {
 }
 
 type OfInt8NByteIf interface {
-	Load(int8) (byte, bool)
+	Load(int8) (byte, error)
 }
 
 type OfInt8NByteMutIf interface {
@@ -11657,7 +11657,7 @@ func NewOfInt8NByteSt(somes OfInt8NByte) *OfInt8NByteSt {
 }
 
 type OfInt8NComplex128If interface {
-	Load(int8) (complex128, bool)
+	Load(int8) (complex128, error)
 }
 
 type OfInt8NComplex128MutIf interface {
@@ -11707,7 +11707,7 @@ func NewOfInt8NComplex128St(somes OfInt8NComplex128) *OfInt8NComplex128St {
 }
 
 type OfInt8NComplex64If interface {
-	Load(int8) (complex64, bool)
+	Load(int8) (complex64, error)
 }
 
 type OfInt8NComplex64MutIf interface {
@@ -11757,7 +11757,7 @@ func NewOfInt8NComplex64St(somes OfInt8NComplex64) *OfInt8NComplex64St {
 }
 
 type OfInt8NErrorIf interface {
-	Load(int8) (error, bool)
+	Load(int8) (error, error)
 }
 
 type OfInt8NErrorMutIf interface {
@@ -11807,7 +11807,7 @@ func NewOfInt8NErrorSt(somes OfInt8NError) *OfInt8NErrorSt {
 }
 
 type OfInt8NFloat32If interface {
-	Load(int8) (float32, bool)
+	Load(int8) (float32, error)
 }
 
 type OfInt8NFloat32MutIf interface {
@@ -11857,7 +11857,7 @@ func NewOfInt8NFloat32St(somes OfInt8NFloat32) *OfInt8NFloat32St {
 }
 
 type OfInt8NFloat64If interface {
-	Load(int8) (float64, bool)
+	Load(int8) (float64, error)
 }
 
 type OfInt8NFloat64MutIf interface {
@@ -11907,7 +11907,7 @@ func NewOfInt8NFloat64St(somes OfInt8NFloat64) *OfInt8NFloat64St {
 }
 
 type OfInt8NIntIf interface {
-	Load(int8) (int, bool)
+	Load(int8) (int, error)
 }
 
 type OfInt8NIntMutIf interface {
@@ -11957,7 +11957,7 @@ func NewOfInt8NIntSt(somes OfInt8NInt) *OfInt8NIntSt {
 }
 
 type OfInt8NInt16If interface {
-	Load(int8) (int16, bool)
+	Load(int8) (int16, error)
 }
 
 type OfInt8NInt16MutIf interface {
@@ -12007,7 +12007,7 @@ func NewOfInt8NInt16St(somes OfInt8NInt16) *OfInt8NInt16St {
 }
 
 type OfInt8NInt32If interface {
-	Load(int8) (int32, bool)
+	Load(int8) (int32, error)
 }
 
 type OfInt8NInt32MutIf interface {
@@ -12057,7 +12057,7 @@ func NewOfInt8NInt32St(somes OfInt8NInt32) *OfInt8NInt32St {
 }
 
 type OfInt8NInt64If interface {
-	Load(int8) (int64, bool)
+	Load(int8) (int64, error)
 }
 
 type OfInt8NInt64MutIf interface {
@@ -12107,7 +12107,7 @@ func NewOfInt8NInt64St(somes OfInt8NInt64) *OfInt8NInt64St {
 }
 
 type OfInt8NInt8If interface {
-	Load(int8) (int8, bool)
+	Load(int8) (int8, error)
 }
 
 type OfInt8NInt8MutIf interface {
@@ -12157,7 +12157,7 @@ func NewOfInt8NInt8St(somes OfInt8NInt8) *OfInt8NInt8St {
 }
 
 type OfInt8NRuneIf interface {
-	Load(int8) (rune, bool)
+	Load(int8) (rune, error)
 }
 
 type OfInt8NRuneMutIf interface {
@@ -12207,7 +12207,7 @@ func NewOfInt8NRuneSt(somes OfInt8NRune) *OfInt8NRuneSt {
 }
 
 type OfInt8NStringIf interface {
-	Load(int8) (string, bool)
+	Load(int8) (string, error)
 }
 
 type OfInt8NStringMutIf interface {
@@ -12257,7 +12257,7 @@ func NewOfInt8NStringSt(somes OfInt8NString) *OfInt8NStringSt {
 }
 
 type OfInt8NUintIf interface {
-	Load(int8) (uint, bool)
+	Load(int8) (uint, error)
 }
 
 type OfInt8NUintMutIf interface {
@@ -12307,7 +12307,7 @@ func NewOfInt8NUintSt(somes OfInt8NUint) *OfInt8NUintSt {
 }
 
 type OfInt8NUint16If interface {
-	Load(int8) (uint16, bool)
+	Load(int8) (uint16, error)
 }
 
 type OfInt8NUint16MutIf interface {
@@ -12357,7 +12357,7 @@ func NewOfInt8NUint16St(somes OfInt8NUint16) *OfInt8NUint16St {
 }
 
 type OfInt8NUint32If interface {
-	Load(int8) (uint32, bool)
+	Load(int8) (uint32, error)
 }
 
 type OfInt8NUint32MutIf interface {
@@ -12407,7 +12407,7 @@ func NewOfInt8NUint32St(somes OfInt8NUint32) *OfInt8NUint32St {
 }
 
 type OfInt8NUint64If interface {
-	Load(int8) (uint64, bool)
+	Load(int8) (uint64, error)
 }
 
 type OfInt8NUint64MutIf interface {
@@ -12457,7 +12457,7 @@ func NewOfInt8NUint64St(somes OfInt8NUint64) *OfInt8NUint64St {
 }
 
 type OfInt8NUint8If interface {
-	Load(int8) (uint8, bool)
+	Load(int8) (uint8, error)
 }
 
 type OfInt8NUint8MutIf interface {
@@ -12507,7 +12507,7 @@ func NewOfInt8NUint8St(somes OfInt8NUint8) *OfInt8NUint8St {
 }
 
 type OfInt8NUintptrIf interface {
-	Load(int8) (uintptr, bool)
+	Load(int8) (uintptr, error)
 }
 
 type OfInt8NUintptrMutIf interface {
@@ -12557,7 +12557,7 @@ func NewOfInt8NUintptrSt(somes OfInt8NUintptr) *OfInt8NUintptrSt {
 }
 
 type OfInt8NInterfaceIf interface {
-	Load(int8) (interface{}, bool)
+	Load(int8) (interface{}, error)
 }
 
 type OfInt8NInterfaceMutIf interface {
@@ -12607,7 +12607,7 @@ func NewOfInt8NInterfaceSt(somes OfInt8NInterface) *OfInt8NInterfaceSt {
 }
 
 type OfRuneNBoolIf interface {
-	Load(rune) (bool, bool)
+	Load(rune) (bool, error)
 }
 
 type OfRuneNBoolMutIf interface {
@@ -12657,7 +12657,7 @@ func NewOfRuneNBoolSt(somes OfRuneNBool) *OfRuneNBoolSt {
 }
 
 type OfRuneNByteIf interface {
-	Load(rune) (byte, bool)
+	Load(rune) (byte, error)
 }
 
 type OfRuneNByteMutIf interface {
@@ -12707,7 +12707,7 @@ func NewOfRuneNByteSt(somes OfRuneNByte) *OfRuneNByteSt {
 }
 
 type OfRuneNComplex128If interface {
-	Load(rune) (complex128, bool)
+	Load(rune) (complex128, error)
 }
 
 type OfRuneNComplex128MutIf interface {
@@ -12757,7 +12757,7 @@ func NewOfRuneNComplex128St(somes OfRuneNComplex128) *OfRuneNComplex128St {
 }
 
 type OfRuneNComplex64If interface {
-	Load(rune) (complex64, bool)
+	Load(rune) (complex64, error)
 }
 
 type OfRuneNComplex64MutIf interface {
@@ -12807,7 +12807,7 @@ func NewOfRuneNComplex64St(somes OfRuneNComplex64) *OfRuneNComplex64St {
 }
 
 type OfRuneNErrorIf interface {
-	Load(rune) (error, bool)
+	Load(rune) (error, error)
 }
 
 type OfRuneNErrorMutIf interface {
@@ -12857,7 +12857,7 @@ func NewOfRuneNErrorSt(somes OfRuneNError) *OfRuneNErrorSt {
 }
 
 type OfRuneNFloat32If interface {
-	Load(rune) (float32, bool)
+	Load(rune) (float32, error)
 }
 
 type OfRuneNFloat32MutIf interface {
@@ -12907,7 +12907,7 @@ func NewOfRuneNFloat32St(somes OfRuneNFloat32) *OfRuneNFloat32St {
 }
 
 type OfRuneNFloat64If interface {
-	Load(rune) (float64, bool)
+	Load(rune) (float64, error)
 }
 
 type OfRuneNFloat64MutIf interface {
@@ -12957,7 +12957,7 @@ func NewOfRuneNFloat64St(somes OfRuneNFloat64) *OfRuneNFloat64St {
 }
 
 type OfRuneNIntIf interface {
-	Load(rune) (int, bool)
+	Load(rune) (int, error)
 }
 
 type OfRuneNIntMutIf interface {
@@ -13007,7 +13007,7 @@ func NewOfRuneNIntSt(somes OfRuneNInt) *OfRuneNIntSt {
 }
 
 type OfRuneNInt16If interface {
-	Load(rune) (int16, bool)
+	Load(rune) (int16, error)
 }
 
 type OfRuneNInt16MutIf interface {
@@ -13057,7 +13057,7 @@ func NewOfRuneNInt16St(somes OfRuneNInt16) *OfRuneNInt16St {
 }
 
 type OfRuneNInt32If interface {
-	Load(rune) (int32, bool)
+	Load(rune) (int32, error)
 }
 
 type OfRuneNInt32MutIf interface {
@@ -13107,7 +13107,7 @@ func NewOfRuneNInt32St(somes OfRuneNInt32) *OfRuneNInt32St {
 }
 
 type OfRuneNInt64If interface {
-	Load(rune) (int64, bool)
+	Load(rune) (int64, error)
 }
 
 type OfRuneNInt64MutIf interface {
@@ -13157,7 +13157,7 @@ func NewOfRuneNInt64St(somes OfRuneNInt64) *OfRuneNInt64St {
 }
 
 type OfRuneNInt8If interface {
-	Load(rune) (int8, bool)
+	Load(rune) (int8, error)
 }
 
 type OfRuneNInt8MutIf interface {
@@ -13207,7 +13207,7 @@ func NewOfRuneNInt8St(somes OfRuneNInt8) *OfRuneNInt8St {
 }
 
 type OfRuneNRuneIf interface {
-	Load(rune) (rune, bool)
+	Load(rune) (rune, error)
 }
 
 type OfRuneNRuneMutIf interface {
@@ -13257,7 +13257,7 @@ func NewOfRuneNRuneSt(somes OfRuneNRune) *OfRuneNRuneSt {
 }
 
 type OfRuneNStringIf interface {
-	Load(rune) (string, bool)
+	Load(rune) (string, error)
 }
 
 type OfRuneNStringMutIf interface {
@@ -13307,7 +13307,7 @@ func NewOfRuneNStringSt(somes OfRuneNString) *OfRuneNStringSt {
 }
 
 type OfRuneNUintIf interface {
-	Load(rune) (uint, bool)
+	Load(rune) (uint, error)
 }
 
 type OfRuneNUintMutIf interface {
@@ -13357,7 +13357,7 @@ func NewOfRuneNUintSt(somes OfRuneNUint) *OfRuneNUintSt {
 }
 
 type OfRuneNUint16If interface {
-	Load(rune) (uint16, bool)
+	Load(rune) (uint16, error)
 }
 
 type OfRuneNUint16MutIf interface {
@@ -13407,7 +13407,7 @@ func NewOfRuneNUint16St(somes OfRuneNUint16) *OfRuneNUint16St {
 }
 
 type OfRuneNUint32If interface {
-	Load(rune) (uint32, bool)
+	Load(rune) (uint32, error)
 }
 
 type OfRuneNUint32MutIf interface {
@@ -13457,7 +13457,7 @@ func NewOfRuneNUint32St(somes OfRuneNUint32) *OfRuneNUint32St {
 }
 
 type OfRuneNUint64If interface {
-	Load(rune) (uint64, bool)
+	Load(rune) (uint64, error)
 }
 
 type OfRuneNUint64MutIf interface {
@@ -13507,7 +13507,7 @@ func NewOfRuneNUint64St(somes OfRuneNUint64) *OfRuneNUint64St {
 }
 
 type OfRuneNUint8If interface {
-	Load(rune) (uint8, bool)
+	Load(rune) (uint8, error)
 }
 
 type OfRuneNUint8MutIf interface {
@@ -13557,7 +13557,7 @@ func NewOfRuneNUint8St(somes OfRuneNUint8) *OfRuneNUint8St {
 }
 
 type OfRuneNUintptrIf interface {
-	Load(rune) (uintptr, bool)
+	Load(rune) (uintptr, error)
 }
 
 type OfRuneNUintptrMutIf interface {
@@ -13607,7 +13607,7 @@ func NewOfRuneNUintptrSt(somes OfRuneNUintptr) *OfRuneNUintptrSt {
 }
 
 type OfRuneNInterfaceIf interface {
-	Load(rune) (interface{}, bool)
+	Load(rune) (interface{}, error)
 }
 
 type OfRuneNInterfaceMutIf interface {
@@ -13657,7 +13657,7 @@ func NewOfRuneNInterfaceSt(somes OfRuneNInterface) *OfRuneNInterfaceSt {
 }
 
 type OfStringNBoolIf interface {
-	Load(string) (bool, bool)
+	Load(string) (bool, error)
 }
 
 type OfStringNBoolMutIf interface {
@@ -13707,7 +13707,7 @@ func NewOfStringNBoolSt(somes OfStringNBool) *OfStringNBoolSt {
 }
 
 type OfStringNByteIf interface {
-	Load(string) (byte, bool)
+	Load(string) (byte, error)
 }
 
 type OfStringNByteMutIf interface {
@@ -13757,7 +13757,7 @@ func NewOfStringNByteSt(somes OfStringNByte) *OfStringNByteSt {
 }
 
 type OfStringNComplex128If interface {
-	Load(string) (complex128, bool)
+	Load(string) (complex128, error)
 }
 
 type OfStringNComplex128MutIf interface {
@@ -13807,7 +13807,7 @@ func NewOfStringNComplex128St(somes OfStringNComplex128) *OfStringNComplex128St 
 }
 
 type OfStringNComplex64If interface {
-	Load(string) (complex64, bool)
+	Load(string) (complex64, error)
 }
 
 type OfStringNComplex64MutIf interface {
@@ -13857,7 +13857,7 @@ func NewOfStringNComplex64St(somes OfStringNComplex64) *OfStringNComplex64St {
 }
 
 type OfStringNErrorIf interface {
-	Load(string) (error, bool)
+	Load(string) (error, error)
 }
 
 type OfStringNErrorMutIf interface {
@@ -13907,7 +13907,7 @@ func NewOfStringNErrorSt(somes OfStringNError) *OfStringNErrorSt {
 }
 
 type OfStringNFloat32If interface {
-	Load(string) (float32, bool)
+	Load(string) (float32, error)
 }
 
 type OfStringNFloat32MutIf interface {
@@ -13957,7 +13957,7 @@ func NewOfStringNFloat32St(somes OfStringNFloat32) *OfStringNFloat32St {
 }
 
 type OfStringNFloat64If interface {
-	Load(string) (float64, bool)
+	Load(string) (float64, error)
 }
 
 type OfStringNFloat64MutIf interface {
@@ -14007,7 +14007,7 @@ func NewOfStringNFloat64St(somes OfStringNFloat64) *OfStringNFloat64St {
 }
 
 type OfStringNIntIf interface {
-	Load(string) (int, bool)
+	Load(string) (int, error)
 }
 
 type OfStringNIntMutIf interface {
@@ -14057,7 +14057,7 @@ func NewOfStringNIntSt(somes OfStringNInt) *OfStringNIntSt {
 }
 
 type OfStringNInt16If interface {
-	Load(string) (int16, bool)
+	Load(string) (int16, error)
 }
 
 type OfStringNInt16MutIf interface {
@@ -14107,7 +14107,7 @@ func NewOfStringNInt16St(somes OfStringNInt16) *OfStringNInt16St {
 }
 
 type OfStringNInt32If interface {
-	Load(string) (int32, bool)
+	Load(string) (int32, error)
 }
 
 type OfStringNInt32MutIf interface {
@@ -14157,7 +14157,7 @@ func NewOfStringNInt32St(somes OfStringNInt32) *OfStringNInt32St {
 }
 
 type OfStringNInt64If interface {
-	Load(string) (int64, bool)
+	Load(string) (int64, error)
 }
 
 type OfStringNInt64MutIf interface {
@@ -14207,7 +14207,7 @@ func NewOfStringNInt64St(somes OfStringNInt64) *OfStringNInt64St {
 }
 
 type OfStringNInt8If interface {
-	Load(string) (int8, bool)
+	Load(string) (int8, error)
 }
 
 type OfStringNInt8MutIf interface {
@@ -14257,7 +14257,7 @@ func NewOfStringNInt8St(somes OfStringNInt8) *OfStringNInt8St {
 }
 
 type OfStringNRuneIf interface {
-	Load(string) (rune, bool)
+	Load(string) (rune, error)
 }
 
 type OfStringNRuneMutIf interface {
@@ -14307,7 +14307,7 @@ func NewOfStringNRuneSt(somes OfStringNRune) *OfStringNRuneSt {
 }
 
 type OfStringNStringIf interface {
-	Load(string) (string, bool)
+	Load(string) (string, error)
 }
 
 type OfStringNStringMutIf interface {
@@ -14357,7 +14357,7 @@ func NewOfStringNStringSt(somes OfStringNString) *OfStringNStringSt {
 }
 
 type OfStringNUintIf interface {
-	Load(string) (uint, bool)
+	Load(string) (uint, error)
 }
 
 type OfStringNUintMutIf interface {
@@ -14407,7 +14407,7 @@ func NewOfStringNUintSt(somes OfStringNUint) *OfStringNUintSt {
 }
 
 type OfStringNUint16If interface {
-	Load(string) (uint16, bool)
+	Load(string) (uint16, error)
 }
 
 type OfStringNUint16MutIf interface {
@@ -14457,7 +14457,7 @@ func NewOfStringNUint16St(somes OfStringNUint16) *OfStringNUint16St {
 }
 
 type OfStringNUint32If interface {
-	Load(string) (uint32, bool)
+	Load(string) (uint32, error)
 }
 
 type OfStringNUint32MutIf interface {
@@ -14507,7 +14507,7 @@ func NewOfStringNUint32St(somes OfStringNUint32) *OfStringNUint32St {
 }
 
 type OfStringNUint64If interface {
-	Load(string) (uint64, bool)
+	Load(string) (uint64, error)
 }
 
 type OfStringNUint64MutIf interface {
@@ -14557,7 +14557,7 @@ func NewOfStringNUint64St(somes OfStringNUint64) *OfStringNUint64St {
 }
 
 type OfStringNUint8If interface {
-	Load(string) (uint8, bool)
+	Load(string) (uint8, error)
 }
 
 type OfStringNUint8MutIf interface {
@@ -14607,7 +14607,7 @@ func NewOfStringNUint8St(somes OfStringNUint8) *OfStringNUint8St {
 }
 
 type OfStringNUintptrIf interface {
-	Load(string) (uintptr, bool)
+	Load(string) (uintptr, error)
 }
 
 type OfStringNUintptrMutIf interface {
@@ -14657,7 +14657,7 @@ func NewOfStringNUintptrSt(somes OfStringNUintptr) *OfStringNUintptrSt {
 }
 
 type OfStringNInterfaceIf interface {
-	Load(string) (interface{}, bool)
+	Load(string) (interface{}, error)
 }
 
 type OfStringNInterfaceMutIf interface {
@@ -14707,7 +14707,7 @@ func NewOfStringNInterfaceSt(somes OfStringNInterface) *OfStringNInterfaceSt {
 }
 
 type OfUintNBoolIf interface {
-	Load(uint) (bool, bool)
+	Load(uint) (bool, error)
 }
 
 type OfUintNBoolMutIf interface {
@@ -14757,7 +14757,7 @@ func NewOfUintNBoolSt(somes OfUintNBool) *OfUintNBoolSt {
 }
 
 type OfUintNByteIf interface {
-	Load(uint) (byte, bool)
+	Load(uint) (byte, error)
 }
 
 type OfUintNByteMutIf interface {
@@ -14807,7 +14807,7 @@ func NewOfUintNByteSt(somes OfUintNByte) *OfUintNByteSt {
 }
 
 type OfUintNComplex128If interface {
-	Load(uint) (complex128, bool)
+	Load(uint) (complex128, error)
 }
 
 type OfUintNComplex128MutIf interface {
@@ -14857,7 +14857,7 @@ func NewOfUintNComplex128St(somes OfUintNComplex128) *OfUintNComplex128St {
 }
 
 type OfUintNComplex64If interface {
-	Load(uint) (complex64, bool)
+	Load(uint) (complex64, error)
 }
 
 type OfUintNComplex64MutIf interface {
@@ -14907,7 +14907,7 @@ func NewOfUintNComplex64St(somes OfUintNComplex64) *OfUintNComplex64St {
 }
 
 type OfUintNErrorIf interface {
-	Load(uint) (error, bool)
+	Load(uint) (error, error)
 }
 
 type OfUintNErrorMutIf interface {
@@ -14957,7 +14957,7 @@ func NewOfUintNErrorSt(somes OfUintNError) *OfUintNErrorSt {
 }
 
 type OfUintNFloat32If interface {
-	Load(uint) (float32, bool)
+	Load(uint) (float32, error)
 }
 
 type OfUintNFloat32MutIf interface {
@@ -15007,7 +15007,7 @@ func NewOfUintNFloat32St(somes OfUintNFloat32) *OfUintNFloat32St {
 }
 
 type OfUintNFloat64If interface {
-	Load(uint) (float64, bool)
+	Load(uint) (float64, error)
 }
 
 type OfUintNFloat64MutIf interface {
@@ -15057,7 +15057,7 @@ func NewOfUintNFloat64St(somes OfUintNFloat64) *OfUintNFloat64St {
 }
 
 type OfUintNIntIf interface {
-	Load(uint) (int, bool)
+	Load(uint) (int, error)
 }
 
 type OfUintNIntMutIf interface {
@@ -15107,7 +15107,7 @@ func NewOfUintNIntSt(somes OfUintNInt) *OfUintNIntSt {
 }
 
 type OfUintNInt16If interface {
-	Load(uint) (int16, bool)
+	Load(uint) (int16, error)
 }
 
 type OfUintNInt16MutIf interface {
@@ -15157,7 +15157,7 @@ func NewOfUintNInt16St(somes OfUintNInt16) *OfUintNInt16St {
 }
 
 type OfUintNInt32If interface {
-	Load(uint) (int32, bool)
+	Load(uint) (int32, error)
 }
 
 type OfUintNInt32MutIf interface {
@@ -15207,7 +15207,7 @@ func NewOfUintNInt32St(somes OfUintNInt32) *OfUintNInt32St {
 }
 
 type OfUintNInt64If interface {
-	Load(uint) (int64, bool)
+	Load(uint) (int64, error)
 }
 
 type OfUintNInt64MutIf interface {
@@ -15257,7 +15257,7 @@ func NewOfUintNInt64St(somes OfUintNInt64) *OfUintNInt64St {
 }
 
 type OfUintNInt8If interface {
-	Load(uint) (int8, bool)
+	Load(uint) (int8, error)
 }
 
 type OfUintNInt8MutIf interface {
@@ -15307,7 +15307,7 @@ func NewOfUintNInt8St(somes OfUintNInt8) *OfUintNInt8St {
 }
 
 type OfUintNRuneIf interface {
-	Load(uint) (rune, bool)
+	Load(uint) (rune, error)
 }
 
 type OfUintNRuneMutIf interface {
@@ -15357,7 +15357,7 @@ func NewOfUintNRuneSt(somes OfUintNRune) *OfUintNRuneSt {
 }
 
 type OfUintNStringIf interface {
-	Load(uint) (string, bool)
+	Load(uint) (string, error)
 }
 
 type OfUintNStringMutIf interface {
@@ -15407,7 +15407,7 @@ func NewOfUintNStringSt(somes OfUintNString) *OfUintNStringSt {
 }
 
 type OfUintNUintIf interface {
-	Load(uint) (uint, bool)
+	Load(uint) (uint, error)
 }
 
 type OfUintNUintMutIf interface {
@@ -15457,7 +15457,7 @@ func NewOfUintNUintSt(somes OfUintNUint) *OfUintNUintSt {
 }
 
 type OfUintNUint16If interface {
-	Load(uint) (uint16, bool)
+	Load(uint) (uint16, error)
 }
 
 type OfUintNUint16MutIf interface {
@@ -15507,7 +15507,7 @@ func NewOfUintNUint16St(somes OfUintNUint16) *OfUintNUint16St {
 }
 
 type OfUintNUint32If interface {
-	Load(uint) (uint32, bool)
+	Load(uint) (uint32, error)
 }
 
 type OfUintNUint32MutIf interface {
@@ -15557,7 +15557,7 @@ func NewOfUintNUint32St(somes OfUintNUint32) *OfUintNUint32St {
 }
 
 type OfUintNUint64If interface {
-	Load(uint) (uint64, bool)
+	Load(uint) (uint64, error)
 }
 
 type OfUintNUint64MutIf interface {
@@ -15607,7 +15607,7 @@ func NewOfUintNUint64St(somes OfUintNUint64) *OfUintNUint64St {
 }
 
 type OfUintNUint8If interface {
-	Load(uint) (uint8, bool)
+	Load(uint) (uint8, error)
 }
 
 type OfUintNUint8MutIf interface {
@@ -15657,7 +15657,7 @@ func NewOfUintNUint8St(somes OfUintNUint8) *OfUintNUint8St {
 }
 
 type OfUintNUintptrIf interface {
-	Load(uint) (uintptr, bool)
+	Load(uint) (uintptr, error)
 }
 
 type OfUintNUintptrMutIf interface {
@@ -15707,7 +15707,7 @@ func NewOfUintNUintptrSt(somes OfUintNUintptr) *OfUintNUintptrSt {
 }
 
 type OfUintNInterfaceIf interface {
-	Load(uint) (interface{}, bool)
+	Load(uint) (interface{}, error)
 }
 
 type OfUintNInterfaceMutIf interface {
@@ -15757,7 +15757,7 @@ func NewOfUintNInterfaceSt(somes OfUintNInterface) *OfUintNInterfaceSt {
 }
 
 type OfUint16NBoolIf interface {
-	Load(uint16) (bool, bool)
+	Load(uint16) (bool, error)
 }
 
 type OfUint16NBoolMutIf interface {
@@ -15807,7 +15807,7 @@ func NewOfUint16NBoolSt(somes OfUint16NBool) *OfUint16NBoolSt {
 }
 
 type OfUint16NByteIf interface {
-	Load(uint16) (byte, bool)
+	Load(uint16) (byte, error)
 }
 
 type OfUint16NByteMutIf interface {
@@ -15857,7 +15857,7 @@ func NewOfUint16NByteSt(somes OfUint16NByte) *OfUint16NByteSt {
 }
 
 type OfUint16NComplex128If interface {
-	Load(uint16) (complex128, bool)
+	Load(uint16) (complex128, error)
 }
 
 type OfUint16NComplex128MutIf interface {
@@ -15907,7 +15907,7 @@ func NewOfUint16NComplex128St(somes OfUint16NComplex128) *OfUint16NComplex128St 
 }
 
 type OfUint16NComplex64If interface {
-	Load(uint16) (complex64, bool)
+	Load(uint16) (complex64, error)
 }
 
 type OfUint16NComplex64MutIf interface {
@@ -15957,7 +15957,7 @@ func NewOfUint16NComplex64St(somes OfUint16NComplex64) *OfUint16NComplex64St {
 }
 
 type OfUint16NErrorIf interface {
-	Load(uint16) (error, bool)
+	Load(uint16) (error, error)
 }
 
 type OfUint16NErrorMutIf interface {
@@ -16007,7 +16007,7 @@ func NewOfUint16NErrorSt(somes OfUint16NError) *OfUint16NErrorSt {
 }
 
 type OfUint16NFloat32If interface {
-	Load(uint16) (float32, bool)
+	Load(uint16) (float32, error)
 }
 
 type OfUint16NFloat32MutIf interface {
@@ -16057,7 +16057,7 @@ func NewOfUint16NFloat32St(somes OfUint16NFloat32) *OfUint16NFloat32St {
 }
 
 type OfUint16NFloat64If interface {
-	Load(uint16) (float64, bool)
+	Load(uint16) (float64, error)
 }
 
 type OfUint16NFloat64MutIf interface {
@@ -16107,7 +16107,7 @@ func NewOfUint16NFloat64St(somes OfUint16NFloat64) *OfUint16NFloat64St {
 }
 
 type OfUint16NIntIf interface {
-	Load(uint16) (int, bool)
+	Load(uint16) (int, error)
 }
 
 type OfUint16NIntMutIf interface {
@@ -16157,7 +16157,7 @@ func NewOfUint16NIntSt(somes OfUint16NInt) *OfUint16NIntSt {
 }
 
 type OfUint16NInt16If interface {
-	Load(uint16) (int16, bool)
+	Load(uint16) (int16, error)
 }
 
 type OfUint16NInt16MutIf interface {
@@ -16207,7 +16207,7 @@ func NewOfUint16NInt16St(somes OfUint16NInt16) *OfUint16NInt16St {
 }
 
 type OfUint16NInt32If interface {
-	Load(uint16) (int32, bool)
+	Load(uint16) (int32, error)
 }
 
 type OfUint16NInt32MutIf interface {
@@ -16257,7 +16257,7 @@ func NewOfUint16NInt32St(somes OfUint16NInt32) *OfUint16NInt32St {
 }
 
 type OfUint16NInt64If interface {
-	Load(uint16) (int64, bool)
+	Load(uint16) (int64, error)
 }
 
 type OfUint16NInt64MutIf interface {
@@ -16307,7 +16307,7 @@ func NewOfUint16NInt64St(somes OfUint16NInt64) *OfUint16NInt64St {
 }
 
 type OfUint16NInt8If interface {
-	Load(uint16) (int8, bool)
+	Load(uint16) (int8, error)
 }
 
 type OfUint16NInt8MutIf interface {
@@ -16357,7 +16357,7 @@ func NewOfUint16NInt8St(somes OfUint16NInt8) *OfUint16NInt8St {
 }
 
 type OfUint16NRuneIf interface {
-	Load(uint16) (rune, bool)
+	Load(uint16) (rune, error)
 }
 
 type OfUint16NRuneMutIf interface {
@@ -16407,7 +16407,7 @@ func NewOfUint16NRuneSt(somes OfUint16NRune) *OfUint16NRuneSt {
 }
 
 type OfUint16NStringIf interface {
-	Load(uint16) (string, bool)
+	Load(uint16) (string, error)
 }
 
 type OfUint16NStringMutIf interface {
@@ -16457,7 +16457,7 @@ func NewOfUint16NStringSt(somes OfUint16NString) *OfUint16NStringSt {
 }
 
 type OfUint16NUintIf interface {
-	Load(uint16) (uint, bool)
+	Load(uint16) (uint, error)
 }
 
 type OfUint16NUintMutIf interface {
@@ -16507,7 +16507,7 @@ func NewOfUint16NUintSt(somes OfUint16NUint) *OfUint16NUintSt {
 }
 
 type OfUint16NUint16If interface {
-	Load(uint16) (uint16, bool)
+	Load(uint16) (uint16, error)
 }
 
 type OfUint16NUint16MutIf interface {
@@ -16557,7 +16557,7 @@ func NewOfUint16NUint16St(somes OfUint16NUint16) *OfUint16NUint16St {
 }
 
 type OfUint16NUint32If interface {
-	Load(uint16) (uint32, bool)
+	Load(uint16) (uint32, error)
 }
 
 type OfUint16NUint32MutIf interface {
@@ -16607,7 +16607,7 @@ func NewOfUint16NUint32St(somes OfUint16NUint32) *OfUint16NUint32St {
 }
 
 type OfUint16NUint64If interface {
-	Load(uint16) (uint64, bool)
+	Load(uint16) (uint64, error)
 }
 
 type OfUint16NUint64MutIf interface {
@@ -16657,7 +16657,7 @@ func NewOfUint16NUint64St(somes OfUint16NUint64) *OfUint16NUint64St {
 }
 
 type OfUint16NUint8If interface {
-	Load(uint16) (uint8, bool)
+	Load(uint16) (uint8, error)
 }
 
 type OfUint16NUint8MutIf interface {
@@ -16707,7 +16707,7 @@ func NewOfUint16NUint8St(somes OfUint16NUint8) *OfUint16NUint8St {
 }
 
 type OfUint16NUintptrIf interface {
-	Load(uint16) (uintptr, bool)
+	Load(uint16) (uintptr, error)
 }
 
 type OfUint16NUintptrMutIf interface {
@@ -16757,7 +16757,7 @@ func NewOfUint16NUintptrSt(somes OfUint16NUintptr) *OfUint16NUintptrSt {
 }
 
 type OfUint16NInterfaceIf interface {
-	Load(uint16) (interface{}, bool)
+	Load(uint16) (interface{}, error)
 }
 
 type OfUint16NInterfaceMutIf interface {
@@ -16807,7 +16807,7 @@ func NewOfUint16NInterfaceSt(somes OfUint16NInterface) *OfUint16NInterfaceSt {
 }
 
 type OfUint32NBoolIf interface {
-	Load(uint32) (bool, bool)
+	Load(uint32) (bool, error)
 }
 
 type OfUint32NBoolMutIf interface {
@@ -16857,7 +16857,7 @@ func NewOfUint32NBoolSt(somes OfUint32NBool) *OfUint32NBoolSt {
 }
 
 type OfUint32NByteIf interface {
-	Load(uint32) (byte, bool)
+	Load(uint32) (byte, error)
 }
 
 type OfUint32NByteMutIf interface {
@@ -16907,7 +16907,7 @@ func NewOfUint32NByteSt(somes OfUint32NByte) *OfUint32NByteSt {
 }
 
 type OfUint32NComplex128If interface {
-	Load(uint32) (complex128, bool)
+	Load(uint32) (complex128, error)
 }
 
 type OfUint32NComplex128MutIf interface {
@@ -16957,7 +16957,7 @@ func NewOfUint32NComplex128St(somes OfUint32NComplex128) *OfUint32NComplex128St 
 }
 
 type OfUint32NComplex64If interface {
-	Load(uint32) (complex64, bool)
+	Load(uint32) (complex64, error)
 }
 
 type OfUint32NComplex64MutIf interface {
@@ -17007,7 +17007,7 @@ func NewOfUint32NComplex64St(somes OfUint32NComplex64) *OfUint32NComplex64St {
 }
 
 type OfUint32NErrorIf interface {
-	Load(uint32) (error, bool)
+	Load(uint32) (error, error)
 }
 
 type OfUint32NErrorMutIf interface {
@@ -17057,7 +17057,7 @@ func NewOfUint32NErrorSt(somes OfUint32NError) *OfUint32NErrorSt {
 }
 
 type OfUint32NFloat32If interface {
-	Load(uint32) (float32, bool)
+	Load(uint32) (float32, error)
 }
 
 type OfUint32NFloat32MutIf interface {
@@ -17107,7 +17107,7 @@ func NewOfUint32NFloat32St(somes OfUint32NFloat32) *OfUint32NFloat32St {
 }
 
 type OfUint32NFloat64If interface {
-	Load(uint32) (float64, bool)
+	Load(uint32) (float64, error)
 }
 
 type OfUint32NFloat64MutIf interface {
@@ -17157,7 +17157,7 @@ func NewOfUint32NFloat64St(somes OfUint32NFloat64) *OfUint32NFloat64St {
 }
 
 type OfUint32NIntIf interface {
-	Load(uint32) (int, bool)
+	Load(uint32) (int, error)
 }
 
 type OfUint32NIntMutIf interface {
@@ -17207,7 +17207,7 @@ func NewOfUint32NIntSt(somes OfUint32NInt) *OfUint32NIntSt {
 }
 
 type OfUint32NInt16If interface {
-	Load(uint32) (int16, bool)
+	Load(uint32) (int16, error)
 }
 
 type OfUint32NInt16MutIf interface {
@@ -17257,7 +17257,7 @@ func NewOfUint32NInt16St(somes OfUint32NInt16) *OfUint32NInt16St {
 }
 
 type OfUint32NInt32If interface {
-	Load(uint32) (int32, bool)
+	Load(uint32) (int32, error)
 }
 
 type OfUint32NInt32MutIf interface {
@@ -17307,7 +17307,7 @@ func NewOfUint32NInt32St(somes OfUint32NInt32) *OfUint32NInt32St {
 }
 
 type OfUint32NInt64If interface {
-	Load(uint32) (int64, bool)
+	Load(uint32) (int64, error)
 }
 
 type OfUint32NInt64MutIf interface {
@@ -17357,7 +17357,7 @@ func NewOfUint32NInt64St(somes OfUint32NInt64) *OfUint32NInt64St {
 }
 
 type OfUint32NInt8If interface {
-	Load(uint32) (int8, bool)
+	Load(uint32) (int8, error)
 }
 
 type OfUint32NInt8MutIf interface {
@@ -17407,7 +17407,7 @@ func NewOfUint32NInt8St(somes OfUint32NInt8) *OfUint32NInt8St {
 }
 
 type OfUint32NRuneIf interface {
-	Load(uint32) (rune, bool)
+	Load(uint32) (rune, error)
 }
 
 type OfUint32NRuneMutIf interface {
@@ -17457,7 +17457,7 @@ func NewOfUint32NRuneSt(somes OfUint32NRune) *OfUint32NRuneSt {
 }
 
 type OfUint32NStringIf interface {
-	Load(uint32) (string, bool)
+	Load(uint32) (string, error)
 }
 
 type OfUint32NStringMutIf interface {
@@ -17507,7 +17507,7 @@ func NewOfUint32NStringSt(somes OfUint32NString) *OfUint32NStringSt {
 }
 
 type OfUint32NUintIf interface {
-	Load(uint32) (uint, bool)
+	Load(uint32) (uint, error)
 }
 
 type OfUint32NUintMutIf interface {
@@ -17557,7 +17557,7 @@ func NewOfUint32NUintSt(somes OfUint32NUint) *OfUint32NUintSt {
 }
 
 type OfUint32NUint16If interface {
-	Load(uint32) (uint16, bool)
+	Load(uint32) (uint16, error)
 }
 
 type OfUint32NUint16MutIf interface {
@@ -17607,7 +17607,7 @@ func NewOfUint32NUint16St(somes OfUint32NUint16) *OfUint32NUint16St {
 }
 
 type OfUint32NUint32If interface {
-	Load(uint32) (uint32, bool)
+	Load(uint32) (uint32, error)
 }
 
 type OfUint32NUint32MutIf interface {
@@ -17657,7 +17657,7 @@ func NewOfUint32NUint32St(somes OfUint32NUint32) *OfUint32NUint32St {
 }
 
 type OfUint32NUint64If interface {
-	Load(uint32) (uint64, bool)
+	Load(uint32) (uint64, error)
 }
 
 type OfUint32NUint64MutIf interface {
@@ -17707,7 +17707,7 @@ func NewOfUint32NUint64St(somes OfUint32NUint64) *OfUint32NUint64St {
 }
 
 type OfUint32NUint8If interface {
-	Load(uint32) (uint8, bool)
+	Load(uint32) (uint8, error)
 }
 
 type OfUint32NUint8MutIf interface {
@@ -17757,7 +17757,7 @@ func NewOfUint32NUint8St(somes OfUint32NUint8) *OfUint32NUint8St {
 }
 
 type OfUint32NUintptrIf interface {
-	Load(uint32) (uintptr, bool)
+	Load(uint32) (uintptr, error)
 }
 
 type OfUint32NUintptrMutIf interface {
@@ -17807,7 +17807,7 @@ func NewOfUint32NUintptrSt(somes OfUint32NUintptr) *OfUint32NUintptrSt {
 }
 
 type OfUint32NInterfaceIf interface {
-	Load(uint32) (interface{}, bool)
+	Load(uint32) (interface{}, error)
 }
 
 type OfUint32NInterfaceMutIf interface {
@@ -17857,7 +17857,7 @@ func NewOfUint32NInterfaceSt(somes OfUint32NInterface) *OfUint32NInterfaceSt {
 }
 
 type OfUint64NBoolIf interface {
-	Load(uint64) (bool, bool)
+	Load(uint64) (bool, error)
 }
 
 type OfUint64NBoolMutIf interface {
@@ -17907,7 +17907,7 @@ func NewOfUint64NBoolSt(somes OfUint64NBool) *OfUint64NBoolSt {
 }
 
 type OfUint64NByteIf interface {
-	Load(uint64) (byte, bool)
+	Load(uint64) (byte, error)
 }
 
 type OfUint64NByteMutIf interface {
@@ -17957,7 +17957,7 @@ func NewOfUint64NByteSt(somes OfUint64NByte) *OfUint64NByteSt {
 }
 
 type OfUint64NComplex128If interface {
-	Load(uint64) (complex128, bool)
+	Load(uint64) (complex128, error)
 }
 
 type OfUint64NComplex128MutIf interface {
@@ -18007,7 +18007,7 @@ func NewOfUint64NComplex128St(somes OfUint64NComplex128) *OfUint64NComplex128St 
 }
 
 type OfUint64NComplex64If interface {
-	Load(uint64) (complex64, bool)
+	Load(uint64) (complex64, error)
 }
 
 type OfUint64NComplex64MutIf interface {
@@ -18057,7 +18057,7 @@ func NewOfUint64NComplex64St(somes OfUint64NComplex64) *OfUint64NComplex64St {
 }
 
 type OfUint64NErrorIf interface {
-	Load(uint64) (error, bool)
+	Load(uint64) (error, error)
 }
 
 type OfUint64NErrorMutIf interface {
@@ -18107,7 +18107,7 @@ func NewOfUint64NErrorSt(somes OfUint64NError) *OfUint64NErrorSt {
 }
 
 type OfUint64NFloat32If interface {
-	Load(uint64) (float32, bool)
+	Load(uint64) (float32, error)
 }
 
 type OfUint64NFloat32MutIf interface {
@@ -18157,7 +18157,7 @@ func NewOfUint64NFloat32St(somes OfUint64NFloat32) *OfUint64NFloat32St {
 }
 
 type OfUint64NFloat64If interface {
-	Load(uint64) (float64, bool)
+	Load(uint64) (float64, error)
 }
 
 type OfUint64NFloat64MutIf interface {
@@ -18207,7 +18207,7 @@ func NewOfUint64NFloat64St(somes OfUint64NFloat64) *OfUint64NFloat64St {
 }
 
 type OfUint64NIntIf interface {
-	Load(uint64) (int, bool)
+	Load(uint64) (int, error)
 }
 
 type OfUint64NIntMutIf interface {
@@ -18257,7 +18257,7 @@ func NewOfUint64NIntSt(somes OfUint64NInt) *OfUint64NIntSt {
 }
 
 type OfUint64NInt16If interface {
-	Load(uint64) (int16, bool)
+	Load(uint64) (int16, error)
 }
 
 type OfUint64NInt16MutIf interface {
@@ -18307,7 +18307,7 @@ func NewOfUint64NInt16St(somes OfUint64NInt16) *OfUint64NInt16St {
 }
 
 type OfUint64NInt32If interface {
-	Load(uint64) (int32, bool)
+	Load(uint64) (int32, error)
 }
 
 type OfUint64NInt32MutIf interface {
@@ -18357,7 +18357,7 @@ func NewOfUint64NInt32St(somes OfUint64NInt32) *OfUint64NInt32St {
 }
 
 type OfUint64NInt64If interface {
-	Load(uint64) (int64, bool)
+	Load(uint64) (int64, error)
 }
 
 type OfUint64NInt64MutIf interface {
@@ -18407,7 +18407,7 @@ func NewOfUint64NInt64St(somes OfUint64NInt64) *OfUint64NInt64St {
 }
 
 type OfUint64NInt8If interface {
-	Load(uint64) (int8, bool)
+	Load(uint64) (int8, error)
 }
 
 type OfUint64NInt8MutIf interface {
@@ -18457,7 +18457,7 @@ func NewOfUint64NInt8St(somes OfUint64NInt8) *OfUint64NInt8St {
 }
 
 type OfUint64NRuneIf interface {
-	Load(uint64) (rune, bool)
+	Load(uint64) (rune, error)
 }
 
 type OfUint64NRuneMutIf interface {
@@ -18507,7 +18507,7 @@ func NewOfUint64NRuneSt(somes OfUint64NRune) *OfUint64NRuneSt {
 }
 
 type OfUint64NStringIf interface {
-	Load(uint64) (string, bool)
+	Load(uint64) (string, error)
 }
 
 type OfUint64NStringMutIf interface {
@@ -18557,7 +18557,7 @@ func NewOfUint64NStringSt(somes OfUint64NString) *OfUint64NStringSt {
 }
 
 type OfUint64NUintIf interface {
-	Load(uint64) (uint, bool)
+	Load(uint64) (uint, error)
 }
 
 type OfUint64NUintMutIf interface {
@@ -18607,7 +18607,7 @@ func NewOfUint64NUintSt(somes OfUint64NUint) *OfUint64NUintSt {
 }
 
 type OfUint64NUint16If interface {
-	Load(uint64) (uint16, bool)
+	Load(uint64) (uint16, error)
 }
 
 type OfUint64NUint16MutIf interface {
@@ -18657,7 +18657,7 @@ func NewOfUint64NUint16St(somes OfUint64NUint16) *OfUint64NUint16St {
 }
 
 type OfUint64NUint32If interface {
-	Load(uint64) (uint32, bool)
+	Load(uint64) (uint32, error)
 }
 
 type OfUint64NUint32MutIf interface {
@@ -18707,7 +18707,7 @@ func NewOfUint64NUint32St(somes OfUint64NUint32) *OfUint64NUint32St {
 }
 
 type OfUint64NUint64If interface {
-	Load(uint64) (uint64, bool)
+	Load(uint64) (uint64, error)
 }
 
 type OfUint64NUint64MutIf interface {
@@ -18757,7 +18757,7 @@ func NewOfUint64NUint64St(somes OfUint64NUint64) *OfUint64NUint64St {
 }
 
 type OfUint64NUint8If interface {
-	Load(uint64) (uint8, bool)
+	Load(uint64) (uint8, error)
 }
 
 type OfUint64NUint8MutIf interface {
@@ -18807,7 +18807,7 @@ func NewOfUint64NUint8St(somes OfUint64NUint8) *OfUint64NUint8St {
 }
 
 type OfUint64NUintptrIf interface {
-	Load(uint64) (uintptr, bool)
+	Load(uint64) (uintptr, error)
 }
 
 type OfUint64NUintptrMutIf interface {
@@ -18857,7 +18857,7 @@ func NewOfUint64NUintptrSt(somes OfUint64NUintptr) *OfUint64NUintptrSt {
 }
 
 type OfUint64NInterfaceIf interface {
-	Load(uint64) (interface{}, bool)
+	Load(uint64) (interface{}, error)
 }
 
 type OfUint64NInterfaceMutIf interface {
@@ -18907,7 +18907,7 @@ func NewOfUint64NInterfaceSt(somes OfUint64NInterface) *OfUint64NInterfaceSt {
 }
 
 type OfUint8NBoolIf interface {
-	Load(uint8) (bool, bool)
+	Load(uint8) (bool, error)
 }
 
 type OfUint8NBoolMutIf interface {
@@ -18957,7 +18957,7 @@ func NewOfUint8NBoolSt(somes OfUint8NBool) *OfUint8NBoolSt {
 }
 
 type OfUint8NByteIf interface {
-	Load(uint8) (byte, bool)
+	Load(uint8) (byte, error)
 }
 
 type OfUint8NByteMutIf interface {
@@ -19007,7 +19007,7 @@ func NewOfUint8NByteSt(somes OfUint8NByte) *OfUint8NByteSt {
 }
 
 type OfUint8NComplex128If interface {
-	Load(uint8) (complex128, bool)
+	Load(uint8) (complex128, error)
 }
 
 type OfUint8NComplex128MutIf interface {
@@ -19057,7 +19057,7 @@ func NewOfUint8NComplex128St(somes OfUint8NComplex128) *OfUint8NComplex128St {
 }
 
 type OfUint8NComplex64If interface {
-	Load(uint8) (complex64, bool)
+	Load(uint8) (complex64, error)
 }
 
 type OfUint8NComplex64MutIf interface {
@@ -19107,7 +19107,7 @@ func NewOfUint8NComplex64St(somes OfUint8NComplex64) *OfUint8NComplex64St {
 }
 
 type OfUint8NErrorIf interface {
-	Load(uint8) (error, bool)
+	Load(uint8) (error, error)
 }
 
 type OfUint8NErrorMutIf interface {
@@ -19157,7 +19157,7 @@ func NewOfUint8NErrorSt(somes OfUint8NError) *OfUint8NErrorSt {
 }
 
 type OfUint8NFloat32If interface {
-	Load(uint8) (float32, bool)
+	Load(uint8) (float32, error)
 }
 
 type OfUint8NFloat32MutIf interface {
@@ -19207,7 +19207,7 @@ func NewOfUint8NFloat32St(somes OfUint8NFloat32) *OfUint8NFloat32St {
 }
 
 type OfUint8NFloat64If interface {
-	Load(uint8) (float64, bool)
+	Load(uint8) (float64, error)
 }
 
 type OfUint8NFloat64MutIf interface {
@@ -19257,7 +19257,7 @@ func NewOfUint8NFloat64St(somes OfUint8NFloat64) *OfUint8NFloat64St {
 }
 
 type OfUint8NIntIf interface {
-	Load(uint8) (int, bool)
+	Load(uint8) (int, error)
 }
 
 type OfUint8NIntMutIf interface {
@@ -19307,7 +19307,7 @@ func NewOfUint8NIntSt(somes OfUint8NInt) *OfUint8NIntSt {
 }
 
 type OfUint8NInt16If interface {
-	Load(uint8) (int16, bool)
+	Load(uint8) (int16, error)
 }
 
 type OfUint8NInt16MutIf interface {
@@ -19357,7 +19357,7 @@ func NewOfUint8NInt16St(somes OfUint8NInt16) *OfUint8NInt16St {
 }
 
 type OfUint8NInt32If interface {
-	Load(uint8) (int32, bool)
+	Load(uint8) (int32, error)
 }
 
 type OfUint8NInt32MutIf interface {
@@ -19407,7 +19407,7 @@ func NewOfUint8NInt32St(somes OfUint8NInt32) *OfUint8NInt32St {
 }
 
 type OfUint8NInt64If interface {
-	Load(uint8) (int64, bool)
+	Load(uint8) (int64, error)
 }
 
 type OfUint8NInt64MutIf interface {
@@ -19457,7 +19457,7 @@ func NewOfUint8NInt64St(somes OfUint8NInt64) *OfUint8NInt64St {
 }
 
 type OfUint8NInt8If interface {
-	Load(uint8) (int8, bool)
+	Load(uint8) (int8, error)
 }
 
 type OfUint8NInt8MutIf interface {
@@ -19507,7 +19507,7 @@ func NewOfUint8NInt8St(somes OfUint8NInt8) *OfUint8NInt8St {
 }
 
 type OfUint8NRuneIf interface {
-	Load(uint8) (rune, bool)
+	Load(uint8) (rune, error)
 }
 
 type OfUint8NRuneMutIf interface {
@@ -19557,7 +19557,7 @@ func NewOfUint8NRuneSt(somes OfUint8NRune) *OfUint8NRuneSt {
 }
 
 type OfUint8NStringIf interface {
-	Load(uint8) (string, bool)
+	Load(uint8) (string, error)
 }
 
 type OfUint8NStringMutIf interface {
@@ -19607,7 +19607,7 @@ func NewOfUint8NStringSt(somes OfUint8NString) *OfUint8NStringSt {
 }
 
 type OfUint8NUintIf interface {
-	Load(uint8) (uint, bool)
+	Load(uint8) (uint, error)
 }
 
 type OfUint8NUintMutIf interface {
@@ -19657,7 +19657,7 @@ func NewOfUint8NUintSt(somes OfUint8NUint) *OfUint8NUintSt {
 }
 
 type OfUint8NUint16If interface {
-	Load(uint8) (uint16, bool)
+	Load(uint8) (uint16, error)
 }
 
 type OfUint8NUint16MutIf interface {
@@ -19707,7 +19707,7 @@ func NewOfUint8NUint16St(somes OfUint8NUint16) *OfUint8NUint16St {
 }
 
 type OfUint8NUint32If interface {
-	Load(uint8) (uint32, bool)
+	Load(uint8) (uint32, error)
 }
 
 type OfUint8NUint32MutIf interface {
@@ -19757,7 +19757,7 @@ func NewOfUint8NUint32St(somes OfUint8NUint32) *OfUint8NUint32St {
 }
 
 type OfUint8NUint64If interface {
-	Load(uint8) (uint64, bool)
+	Load(uint8) (uint64, error)
 }
 
 type OfUint8NUint64MutIf interface {
@@ -19807,7 +19807,7 @@ func NewOfUint8NUint64St(somes OfUint8NUint64) *OfUint8NUint64St {
 }
 
 type OfUint8NUint8If interface {
-	Load(uint8) (uint8, bool)
+	Load(uint8) (uint8, error)
 }
 
 type OfUint8NUint8MutIf interface {
@@ -19857,7 +19857,7 @@ func NewOfUint8NUint8St(somes OfUint8NUint8) *OfUint8NUint8St {
 }
 
 type OfUint8NUintptrIf interface {
-	Load(uint8) (uintptr, bool)
+	Load(uint8) (uintptr, error)
 }
 
 type OfUint8NUintptrMutIf interface {
@@ -19907,7 +19907,7 @@ func NewOfUint8NUintptrSt(somes OfUint8NUintptr) *OfUint8NUintptrSt {
 }
 
 type OfUint8NInterfaceIf interface {
-	Load(uint8) (interface{}, bool)
+	Load(uint8) (interface{}, error)
 }
 
 type OfUint8NInterfaceMutIf interface {
@@ -19957,7 +19957,7 @@ func NewOfUint8NInterfaceSt(somes OfUint8NInterface) *OfUint8NInterfaceSt {
 }
 
 type OfUintptrNBoolIf interface {
-	Load(uintptr) (bool, bool)
+	Load(uintptr) (bool, error)
 }
 
 type OfUintptrNBoolMutIf interface {
@@ -20007,7 +20007,7 @@ func NewOfUintptrNBoolSt(somes OfUintptrNBool) *OfUintptrNBoolSt {
 }
 
 type OfUintptrNByteIf interface {
-	Load(uintptr) (byte, bool)
+	Load(uintptr) (byte, error)
 }
 
 type OfUintptrNByteMutIf interface {
@@ -20057,7 +20057,7 @@ func NewOfUintptrNByteSt(somes OfUintptrNByte) *OfUintptrNByteSt {
 }
 
 type OfUintptrNComplex128If interface {
-	Load(uintptr) (complex128, bool)
+	Load(uintptr) (complex128, error)
 }
 
 type OfUintptrNComplex128MutIf interface {
@@ -20107,7 +20107,7 @@ func NewOfUintptrNComplex128St(somes OfUintptrNComplex128) *OfUintptrNComplex128
 }
 
 type OfUintptrNComplex64If interface {
-	Load(uintptr) (complex64, bool)
+	Load(uintptr) (complex64, error)
 }
 
 type OfUintptrNComplex64MutIf interface {
@@ -20157,7 +20157,7 @@ func NewOfUintptrNComplex64St(somes OfUintptrNComplex64) *OfUintptrNComplex64St 
 }
 
 type OfUintptrNErrorIf interface {
-	Load(uintptr) (error, bool)
+	Load(uintptr) (error, error)
 }
 
 type OfUintptrNErrorMutIf interface {
@@ -20207,7 +20207,7 @@ func NewOfUintptrNErrorSt(somes OfUintptrNError) *OfUintptrNErrorSt {
 }
 
 type OfUintptrNFloat32If interface {
-	Load(uintptr) (float32, bool)
+	Load(uintptr) (float32, error)
 }
 
 type OfUintptrNFloat32MutIf interface {
@@ -20257,7 +20257,7 @@ func NewOfUintptrNFloat32St(somes OfUintptrNFloat32) *OfUintptrNFloat32St {
 }
 
 type OfUintptrNFloat64If interface {
-	Load(uintptr) (float64, bool)
+	Load(uintptr) (float64, error)
 }
 
 type OfUintptrNFloat64MutIf interface {
@@ -20307,7 +20307,7 @@ func NewOfUintptrNFloat64St(somes OfUintptrNFloat64) *OfUintptrNFloat64St {
 }
 
 type OfUintptrNIntIf interface {
-	Load(uintptr) (int, bool)
+	Load(uintptr) (int, error)
 }
 
 type OfUintptrNIntMutIf interface {
@@ -20357,7 +20357,7 @@ func NewOfUintptrNIntSt(somes OfUintptrNInt) *OfUintptrNIntSt {
 }
 
 type OfUintptrNInt16If interface {
-	Load(uintptr) (int16, bool)
+	Load(uintptr) (int16, error)
 }
 
 type OfUintptrNInt16MutIf interface {
@@ -20407,7 +20407,7 @@ func NewOfUintptrNInt16St(somes OfUintptrNInt16) *OfUintptrNInt16St {
 }
 
 type OfUintptrNInt32If interface {
-	Load(uintptr) (int32, bool)
+	Load(uintptr) (int32, error)
 }
 
 type OfUintptrNInt32MutIf interface {
@@ -20457,7 +20457,7 @@ func NewOfUintptrNInt32St(somes OfUintptrNInt32) *OfUintptrNInt32St {
 }
 
 type OfUintptrNInt64If interface {
-	Load(uintptr) (int64, bool)
+	Load(uintptr) (int64, error)
 }
 
 type OfUintptrNInt64MutIf interface {
@@ -20507,7 +20507,7 @@ func NewOfUintptrNInt64St(somes OfUintptrNInt64) *OfUintptrNInt64St {
 }
 
 type OfUintptrNInt8If interface {
-	Load(uintptr) (int8, bool)
+	Load(uintptr) (int8, error)
 }
 
 type OfUintptrNInt8MutIf interface {
@@ -20557,7 +20557,7 @@ func NewOfUintptrNInt8St(somes OfUintptrNInt8) *OfUintptrNInt8St {
 }
 
 type OfUintptrNRuneIf interface {
-	Load(uintptr) (rune, bool)
+	Load(uintptr) (rune, error)
 }
 
 type OfUintptrNRuneMutIf interface {
@@ -20607,7 +20607,7 @@ func NewOfUintptrNRuneSt(somes OfUintptrNRune) *OfUintptrNRuneSt {
 }
 
 type OfUintptrNStringIf interface {
-	Load(uintptr) (string, bool)
+	Load(uintptr) (string, error)
 }
 
 type OfUintptrNStringMutIf interface {
@@ -20657,7 +20657,7 @@ func NewOfUintptrNStringSt(somes OfUintptrNString) *OfUintptrNStringSt {
 }
 
 type OfUintptrNUintIf interface {
-	Load(uintptr) (uint, bool)
+	Load(uintptr) (uint, error)
 }
 
 type OfUintptrNUintMutIf interface {
@@ -20707,7 +20707,7 @@ func NewOfUintptrNUintSt(somes OfUintptrNUint) *OfUintptrNUintSt {
 }
 
 type OfUintptrNUint16If interface {
-	Load(uintptr) (uint16, bool)
+	Load(uintptr) (uint16, error)
 }
 
 type OfUintptrNUint16MutIf interface {
@@ -20757,7 +20757,7 @@ func NewOfUintptrNUint16St(somes OfUintptrNUint16) *OfUintptrNUint16St {
 }
 
 type OfUintptrNUint32If interface {
-	Load(uintptr) (uint32, bool)
+	Load(uintptr) (uint32, error)
 }
 
 type OfUintptrNUint32MutIf interface {
@@ -20807,7 +20807,7 @@ func NewOfUintptrNUint32St(somes OfUintptrNUint32) *OfUintptrNUint32St {
 }
 
 type OfUintptrNUint64If interface {
-	Load(uintptr) (uint64, bool)
+	Load(uintptr) (uint64, error)
 }
 
 type OfUintptrNUint64MutIf interface {
@@ -20857,7 +20857,7 @@ func NewOfUintptrNUint64St(somes OfUintptrNUint64) *OfUintptrNUint64St {
 }
 
 type OfUintptrNUint8If interface {
-	Load(uintptr) (uint8, bool)
+	Load(uintptr) (uint8, error)
 }
 
 type OfUintptrNUint8MutIf interface {
@@ -20907,7 +20907,7 @@ func NewOfUintptrNUint8St(somes OfUintptrNUint8) *OfUintptrNUint8St {
 }
 
 type OfUintptrNUintptrIf interface {
-	Load(uintptr) (uintptr, bool)
+	Load(uintptr) (uintptr, error)
 }
 
 type OfUintptrNUintptrMutIf interface {
@@ -20957,7 +20957,7 @@ func NewOfUintptrNUintptrSt(somes OfUintptrNUintptr) *OfUintptrNUintptrSt {
 }
 
 type OfUintptrNInterfaceIf interface {
-	Load(uintptr) (interface{}, bool)
+	Load(uintptr) (interface{}, error)
 }
 
 type OfUintptrNInterfaceMutIf interface {
@@ -21007,7 +21007,7 @@ func NewOfUintptrNInterfaceSt(somes OfUintptrNInterface) *OfUintptrNInterfaceSt 
 }
 
 type OfInterfaceNBoolIf interface {
-	Load(interface{}) (bool, bool)
+	Load(interface{}) (bool, error)
 }
 
 type OfInterfaceNBoolMutIf interface {
@@ -21057,7 +21057,7 @@ func NewOfInterfaceNBoolSt(somes OfInterfaceNBool) *OfInterfaceNBoolSt {
 }
 
 type OfInterfaceNByteIf interface {
-	Load(interface{}) (byte, bool)
+	Load(interface{}) (byte, error)
 }
 
 type OfInterfaceNByteMutIf interface {
@@ -21107,7 +21107,7 @@ func NewOfInterfaceNByteSt(somes OfInterfaceNByte) *OfInterfaceNByteSt {
 }
 
 type OfInterfaceNComplex128If interface {
-	Load(interface{}) (complex128, bool)
+	Load(interface{}) (complex128, error)
 }
 
 type OfInterfaceNComplex128MutIf interface {
@@ -21157,7 +21157,7 @@ func NewOfInterfaceNComplex128St(somes OfInterfaceNComplex128) *OfInterfaceNComp
 }
 
 type OfInterfaceNComplex64If interface {
-	Load(interface{}) (complex64, bool)
+	Load(interface{}) (complex64, error)
 }
 
 type OfInterfaceNComplex64MutIf interface {
@@ -21207,7 +21207,7 @@ func NewOfInterfaceNComplex64St(somes OfInterfaceNComplex64) *OfInterfaceNComple
 }
 
 type OfInterfaceNErrorIf interface {
-	Load(interface{}) (error, bool)
+	Load(interface{}) (error, error)
 }
 
 type OfInterfaceNErrorMutIf interface {
@@ -21257,7 +21257,7 @@ func NewOfInterfaceNErrorSt(somes OfInterfaceNError) *OfInterfaceNErrorSt {
 }
 
 type OfInterfaceNFloat32If interface {
-	Load(interface{}) (float32, bool)
+	Load(interface{}) (float32, error)
 }
 
 type OfInterfaceNFloat32MutIf interface {
@@ -21307,7 +21307,7 @@ func NewOfInterfaceNFloat32St(somes OfInterfaceNFloat32) *OfInterfaceNFloat32St 
 }
 
 type OfInterfaceNFloat64If interface {
-	Load(interface{}) (float64, bool)
+	Load(interface{}) (float64, error)
 }
 
 type OfInterfaceNFloat64MutIf interface {
@@ -21357,7 +21357,7 @@ func NewOfInterfaceNFloat64St(somes OfInterfaceNFloat64) *OfInterfaceNFloat64St 
 }
 
 type OfInterfaceNIntIf interface {
-	Load(interface{}) (int, bool)
+	Load(interface{}) (int, error)
 }
 
 type OfInterfaceNIntMutIf interface {
@@ -21407,7 +21407,7 @@ func NewOfInterfaceNIntSt(somes OfInterfaceNInt) *OfInterfaceNIntSt {
 }
 
 type OfInterfaceNInt16If interface {
-	Load(interface{}) (int16, bool)
+	Load(interface{}) (int16, error)
 }
 
 type OfInterfaceNInt16MutIf interface {
@@ -21457,7 +21457,7 @@ func NewOfInterfaceNInt16St(somes OfInterfaceNInt16) *OfInterfaceNInt16St {
 }
 
 type OfInterfaceNInt32If interface {
-	Load(interface{}) (int32, bool)
+	Load(interface{}) (int32, error)
 }
 
 type OfInterfaceNInt32MutIf interface {
@@ -21507,7 +21507,7 @@ func NewOfInterfaceNInt32St(somes OfInterfaceNInt32) *OfInterfaceNInt32St {
 }
 
 type OfInterfaceNInt64If interface {
-	Load(interface{}) (int64, bool)
+	Load(interface{}) (int64, error)
 }
 
 type OfInterfaceNInt64MutIf interface {
@@ -21557,7 +21557,7 @@ func NewOfInterfaceNInt64St(somes OfInterfaceNInt64) *OfInterfaceNInt64St {
 }
 
 type OfInterfaceNInt8If interface {
-	Load(interface{}) (int8, bool)
+	Load(interface{}) (int8, error)
 }
 
 type OfInterfaceNInt8MutIf interface {
@@ -21607,7 +21607,7 @@ func NewOfInterfaceNInt8St(somes OfInterfaceNInt8) *OfInterfaceNInt8St {
 }
 
 type OfInterfaceNRuneIf interface {
-	Load(interface{}) (rune, bool)
+	Load(interface{}) (rune, error)
 }
 
 type OfInterfaceNRuneMutIf interface {
@@ -21657,7 +21657,7 @@ func NewOfInterfaceNRuneSt(somes OfInterfaceNRune) *OfInterfaceNRuneSt {
 }
 
 type OfInterfaceNStringIf interface {
-	Load(interface{}) (string, bool)
+	Load(interface{}) (string, error)
 }
 
 type OfInterfaceNStringMutIf interface {
@@ -21707,7 +21707,7 @@ func NewOfInterfaceNStringSt(somes OfInterfaceNString) *OfInterfaceNStringSt {
 }
 
 type OfInterfaceNUintIf interface {
-	Load(interface{}) (uint, bool)
+	Load(interface{}) (uint, error)
 }
 
 type OfInterfaceNUintMutIf interface {
@@ -21757,7 +21757,7 @@ func NewOfInterfaceNUintSt(somes OfInterfaceNUint) *OfInterfaceNUintSt {
 }
 
 type OfInterfaceNUint16If interface {
-	Load(interface{}) (uint16, bool)
+	Load(interface{}) (uint16, error)
 }
 
 type OfInterfaceNUint16MutIf interface {
@@ -21807,7 +21807,7 @@ func NewOfInterfaceNUint16St(somes OfInterfaceNUint16) *OfInterfaceNUint16St {
 }
 
 type OfInterfaceNUint32If interface {
-	Load(interface{}) (uint32, bool)
+	Load(interface{}) (uint32, error)
 }
 
 type OfInterfaceNUint32MutIf interface {
@@ -21857,7 +21857,7 @@ func NewOfInterfaceNUint32St(somes OfInterfaceNUint32) *OfInterfaceNUint32St {
 }
 
 type OfInterfaceNUint64If interface {
-	Load(interface{}) (uint64, bool)
+	Load(interface{}) (uint64, error)
 }
 
 type OfInterfaceNUint64MutIf interface {
@@ -21907,7 +21907,7 @@ func NewOfInterfaceNUint64St(somes OfInterfaceNUint64) *OfInterfaceNUint64St {
 }
 
 type OfInterfaceNUint8If interface {
-	Load(interface{}) (uint8, bool)
+	Load(interface{}) (uint8, error)
 }
 
 type OfInterfaceNUint8MutIf interface {
@@ -21957,7 +21957,7 @@ func NewOfInterfaceNUint8St(somes OfInterfaceNUint8) *OfInterfaceNUint8St {
 }
 
 type OfInterfaceNUintptrIf interface {
-	Load(interface{}) (uintptr, bool)
+	Load(interface{}) (uintptr, error)
 }
 
 type OfInterfaceNUintptrMutIf interface {
@@ -22007,7 +22007,7 @@ func NewOfInterfaceNUintptrSt(somes OfInterfaceNUintptr) *OfInterfaceNUintptrSt 
 }
 
 type OfInterfaceNInterfaceIf interface {
-	Load(interface{}) (interface{}, bool)
+	Load(interface{}) (interface{}, error)
 }
 
 type OfInterfaceNInterfaceMutIf interface {
