@@ -15,8 +15,17 @@ type OfBoolNBoolMutIf interface {
 	Delete(bool)
 }
 
+type OfBoolNBoolLooper interface {
+	LoopItem(bool, bool) bool
+}
+type OfBoolNBoolLoopFunc func(bool, bool) bool
+
+func (__ OfBoolNBoolLoopFunc) LoopItem(k bool, v bool) bool {
+	return __(k, v)
+}
+
 type OfBoolNBoolIterIf interface {
-	Range(func(bool, bool) bool)
+	Range(OfBoolNBoolLooper)
 }
 
 type OfBoolNBool map[bool]bool
@@ -65,8 +74,17 @@ type OfBoolNByteMutIf interface {
 	Delete(bool)
 }
 
+type OfBoolNByteLooper interface {
+	LoopItem(bool, byte) bool
+}
+type OfBoolNByteLoopFunc func(bool, byte) bool
+
+func (__ OfBoolNByteLoopFunc) LoopItem(k bool, v byte) bool {
+	return __(k, v)
+}
+
 type OfBoolNByteIterIf interface {
-	Range(func(bool, byte) bool)
+	Range(OfBoolNByteLooper)
 }
 
 type OfBoolNByte map[bool]byte
@@ -115,8 +133,17 @@ type OfBoolNComplex128MutIf interface {
 	Delete(bool)
 }
 
+type OfBoolNComplex128Looper interface {
+	LoopItem(bool, complex128) bool
+}
+type OfBoolNComplex128LoopFunc func(bool, complex128) bool
+
+func (__ OfBoolNComplex128LoopFunc) LoopItem(k bool, v complex128) bool {
+	return __(k, v)
+}
+
 type OfBoolNComplex128IterIf interface {
-	Range(func(bool, complex128) bool)
+	Range(OfBoolNComplex128Looper)
 }
 
 type OfBoolNComplex128 map[bool]complex128
@@ -165,8 +192,17 @@ type OfBoolNComplex64MutIf interface {
 	Delete(bool)
 }
 
+type OfBoolNComplex64Looper interface {
+	LoopItem(bool, complex64) bool
+}
+type OfBoolNComplex64LoopFunc func(bool, complex64) bool
+
+func (__ OfBoolNComplex64LoopFunc) LoopItem(k bool, v complex64) bool {
+	return __(k, v)
+}
+
 type OfBoolNComplex64IterIf interface {
-	Range(func(bool, complex64) bool)
+	Range(OfBoolNComplex64Looper)
 }
 
 type OfBoolNComplex64 map[bool]complex64
@@ -215,8 +251,17 @@ type OfBoolNErrorMutIf interface {
 	Delete(bool)
 }
 
+type OfBoolNErrorLooper interface {
+	LoopItem(bool, error) bool
+}
+type OfBoolNErrorLoopFunc func(bool, error) bool
+
+func (__ OfBoolNErrorLoopFunc) LoopItem(k bool, v error) bool {
+	return __(k, v)
+}
+
 type OfBoolNErrorIterIf interface {
-	Range(func(bool, error) bool)
+	Range(OfBoolNErrorLooper)
 }
 
 type OfBoolNError map[bool]error
@@ -265,8 +310,17 @@ type OfBoolNFloat32MutIf interface {
 	Delete(bool)
 }
 
+type OfBoolNFloat32Looper interface {
+	LoopItem(bool, float32) bool
+}
+type OfBoolNFloat32LoopFunc func(bool, float32) bool
+
+func (__ OfBoolNFloat32LoopFunc) LoopItem(k bool, v float32) bool {
+	return __(k, v)
+}
+
 type OfBoolNFloat32IterIf interface {
-	Range(func(bool, float32) bool)
+	Range(OfBoolNFloat32Looper)
 }
 
 type OfBoolNFloat32 map[bool]float32
@@ -315,8 +369,17 @@ type OfBoolNFloat64MutIf interface {
 	Delete(bool)
 }
 
+type OfBoolNFloat64Looper interface {
+	LoopItem(bool, float64) bool
+}
+type OfBoolNFloat64LoopFunc func(bool, float64) bool
+
+func (__ OfBoolNFloat64LoopFunc) LoopItem(k bool, v float64) bool {
+	return __(k, v)
+}
+
 type OfBoolNFloat64IterIf interface {
-	Range(func(bool, float64) bool)
+	Range(OfBoolNFloat64Looper)
 }
 
 type OfBoolNFloat64 map[bool]float64
@@ -365,8 +428,17 @@ type OfBoolNIntMutIf interface {
 	Delete(bool)
 }
 
+type OfBoolNIntLooper interface {
+	LoopItem(bool, int) bool
+}
+type OfBoolNIntLoopFunc func(bool, int) bool
+
+func (__ OfBoolNIntLoopFunc) LoopItem(k bool, v int) bool {
+	return __(k, v)
+}
+
 type OfBoolNIntIterIf interface {
-	Range(func(bool, int) bool)
+	Range(OfBoolNIntLooper)
 }
 
 type OfBoolNInt map[bool]int
@@ -415,8 +487,17 @@ type OfBoolNInt16MutIf interface {
 	Delete(bool)
 }
 
+type OfBoolNInt16Looper interface {
+	LoopItem(bool, int16) bool
+}
+type OfBoolNInt16LoopFunc func(bool, int16) bool
+
+func (__ OfBoolNInt16LoopFunc) LoopItem(k bool, v int16) bool {
+	return __(k, v)
+}
+
 type OfBoolNInt16IterIf interface {
-	Range(func(bool, int16) bool)
+	Range(OfBoolNInt16Looper)
 }
 
 type OfBoolNInt16 map[bool]int16
@@ -465,8 +546,17 @@ type OfBoolNInt32MutIf interface {
 	Delete(bool)
 }
 
+type OfBoolNInt32Looper interface {
+	LoopItem(bool, int32) bool
+}
+type OfBoolNInt32LoopFunc func(bool, int32) bool
+
+func (__ OfBoolNInt32LoopFunc) LoopItem(k bool, v int32) bool {
+	return __(k, v)
+}
+
 type OfBoolNInt32IterIf interface {
-	Range(func(bool, int32) bool)
+	Range(OfBoolNInt32Looper)
 }
 
 type OfBoolNInt32 map[bool]int32
@@ -515,8 +605,17 @@ type OfBoolNInt64MutIf interface {
 	Delete(bool)
 }
 
+type OfBoolNInt64Looper interface {
+	LoopItem(bool, int64) bool
+}
+type OfBoolNInt64LoopFunc func(bool, int64) bool
+
+func (__ OfBoolNInt64LoopFunc) LoopItem(k bool, v int64) bool {
+	return __(k, v)
+}
+
 type OfBoolNInt64IterIf interface {
-	Range(func(bool, int64) bool)
+	Range(OfBoolNInt64Looper)
 }
 
 type OfBoolNInt64 map[bool]int64
@@ -565,8 +664,17 @@ type OfBoolNInt8MutIf interface {
 	Delete(bool)
 }
 
+type OfBoolNInt8Looper interface {
+	LoopItem(bool, int8) bool
+}
+type OfBoolNInt8LoopFunc func(bool, int8) bool
+
+func (__ OfBoolNInt8LoopFunc) LoopItem(k bool, v int8) bool {
+	return __(k, v)
+}
+
 type OfBoolNInt8IterIf interface {
-	Range(func(bool, int8) bool)
+	Range(OfBoolNInt8Looper)
 }
 
 type OfBoolNInt8 map[bool]int8
@@ -615,8 +723,17 @@ type OfBoolNRuneMutIf interface {
 	Delete(bool)
 }
 
+type OfBoolNRuneLooper interface {
+	LoopItem(bool, rune) bool
+}
+type OfBoolNRuneLoopFunc func(bool, rune) bool
+
+func (__ OfBoolNRuneLoopFunc) LoopItem(k bool, v rune) bool {
+	return __(k, v)
+}
+
 type OfBoolNRuneIterIf interface {
-	Range(func(bool, rune) bool)
+	Range(OfBoolNRuneLooper)
 }
 
 type OfBoolNRune map[bool]rune
@@ -665,8 +782,17 @@ type OfBoolNStringMutIf interface {
 	Delete(bool)
 }
 
+type OfBoolNStringLooper interface {
+	LoopItem(bool, string) bool
+}
+type OfBoolNStringLoopFunc func(bool, string) bool
+
+func (__ OfBoolNStringLoopFunc) LoopItem(k bool, v string) bool {
+	return __(k, v)
+}
+
 type OfBoolNStringIterIf interface {
-	Range(func(bool, string) bool)
+	Range(OfBoolNStringLooper)
 }
 
 type OfBoolNString map[bool]string
@@ -715,8 +841,17 @@ type OfBoolNUintMutIf interface {
 	Delete(bool)
 }
 
+type OfBoolNUintLooper interface {
+	LoopItem(bool, uint) bool
+}
+type OfBoolNUintLoopFunc func(bool, uint) bool
+
+func (__ OfBoolNUintLoopFunc) LoopItem(k bool, v uint) bool {
+	return __(k, v)
+}
+
 type OfBoolNUintIterIf interface {
-	Range(func(bool, uint) bool)
+	Range(OfBoolNUintLooper)
 }
 
 type OfBoolNUint map[bool]uint
@@ -765,8 +900,17 @@ type OfBoolNUint16MutIf interface {
 	Delete(bool)
 }
 
+type OfBoolNUint16Looper interface {
+	LoopItem(bool, uint16) bool
+}
+type OfBoolNUint16LoopFunc func(bool, uint16) bool
+
+func (__ OfBoolNUint16LoopFunc) LoopItem(k bool, v uint16) bool {
+	return __(k, v)
+}
+
 type OfBoolNUint16IterIf interface {
-	Range(func(bool, uint16) bool)
+	Range(OfBoolNUint16Looper)
 }
 
 type OfBoolNUint16 map[bool]uint16
@@ -815,8 +959,17 @@ type OfBoolNUint32MutIf interface {
 	Delete(bool)
 }
 
+type OfBoolNUint32Looper interface {
+	LoopItem(bool, uint32) bool
+}
+type OfBoolNUint32LoopFunc func(bool, uint32) bool
+
+func (__ OfBoolNUint32LoopFunc) LoopItem(k bool, v uint32) bool {
+	return __(k, v)
+}
+
 type OfBoolNUint32IterIf interface {
-	Range(func(bool, uint32) bool)
+	Range(OfBoolNUint32Looper)
 }
 
 type OfBoolNUint32 map[bool]uint32
@@ -865,8 +1018,17 @@ type OfBoolNUint64MutIf interface {
 	Delete(bool)
 }
 
+type OfBoolNUint64Looper interface {
+	LoopItem(bool, uint64) bool
+}
+type OfBoolNUint64LoopFunc func(bool, uint64) bool
+
+func (__ OfBoolNUint64LoopFunc) LoopItem(k bool, v uint64) bool {
+	return __(k, v)
+}
+
 type OfBoolNUint64IterIf interface {
-	Range(func(bool, uint64) bool)
+	Range(OfBoolNUint64Looper)
 }
 
 type OfBoolNUint64 map[bool]uint64
@@ -915,8 +1077,17 @@ type OfBoolNUint8MutIf interface {
 	Delete(bool)
 }
 
+type OfBoolNUint8Looper interface {
+	LoopItem(bool, uint8) bool
+}
+type OfBoolNUint8LoopFunc func(bool, uint8) bool
+
+func (__ OfBoolNUint8LoopFunc) LoopItem(k bool, v uint8) bool {
+	return __(k, v)
+}
+
 type OfBoolNUint8IterIf interface {
-	Range(func(bool, uint8) bool)
+	Range(OfBoolNUint8Looper)
 }
 
 type OfBoolNUint8 map[bool]uint8
@@ -965,8 +1136,17 @@ type OfBoolNUintptrMutIf interface {
 	Delete(bool)
 }
 
+type OfBoolNUintptrLooper interface {
+	LoopItem(bool, uintptr) bool
+}
+type OfBoolNUintptrLoopFunc func(bool, uintptr) bool
+
+func (__ OfBoolNUintptrLoopFunc) LoopItem(k bool, v uintptr) bool {
+	return __(k, v)
+}
+
 type OfBoolNUintptrIterIf interface {
-	Range(func(bool, uintptr) bool)
+	Range(OfBoolNUintptrLooper)
 }
 
 type OfBoolNUintptr map[bool]uintptr
@@ -1015,8 +1195,17 @@ type OfBoolNInterfaceMutIf interface {
 	Delete(bool)
 }
 
+type OfBoolNInterfaceLooper interface {
+	LoopItem(bool, interface{}) bool
+}
+type OfBoolNInterfaceLoopFunc func(bool, interface{}) bool
+
+func (__ OfBoolNInterfaceLoopFunc) LoopItem(k bool, v interface{}) bool {
+	return __(k, v)
+}
+
 type OfBoolNInterfaceIterIf interface {
-	Range(func(bool, interface{}) bool)
+	Range(OfBoolNInterfaceLooper)
 }
 
 type OfBoolNInterface map[bool]interface{}
@@ -1065,8 +1254,17 @@ type OfByteNBoolMutIf interface {
 	Delete(byte)
 }
 
+type OfByteNBoolLooper interface {
+	LoopItem(byte, bool) bool
+}
+type OfByteNBoolLoopFunc func(byte, bool) bool
+
+func (__ OfByteNBoolLoopFunc) LoopItem(k byte, v bool) bool {
+	return __(k, v)
+}
+
 type OfByteNBoolIterIf interface {
-	Range(func(byte, bool) bool)
+	Range(OfByteNBoolLooper)
 }
 
 type OfByteNBool map[byte]bool
@@ -1115,8 +1313,17 @@ type OfByteNByteMutIf interface {
 	Delete(byte)
 }
 
+type OfByteNByteLooper interface {
+	LoopItem(byte, byte) bool
+}
+type OfByteNByteLoopFunc func(byte, byte) bool
+
+func (__ OfByteNByteLoopFunc) LoopItem(k byte, v byte) bool {
+	return __(k, v)
+}
+
 type OfByteNByteIterIf interface {
-	Range(func(byte, byte) bool)
+	Range(OfByteNByteLooper)
 }
 
 type OfByteNByte map[byte]byte
@@ -1165,8 +1372,17 @@ type OfByteNComplex128MutIf interface {
 	Delete(byte)
 }
 
+type OfByteNComplex128Looper interface {
+	LoopItem(byte, complex128) bool
+}
+type OfByteNComplex128LoopFunc func(byte, complex128) bool
+
+func (__ OfByteNComplex128LoopFunc) LoopItem(k byte, v complex128) bool {
+	return __(k, v)
+}
+
 type OfByteNComplex128IterIf interface {
-	Range(func(byte, complex128) bool)
+	Range(OfByteNComplex128Looper)
 }
 
 type OfByteNComplex128 map[byte]complex128
@@ -1215,8 +1431,17 @@ type OfByteNComplex64MutIf interface {
 	Delete(byte)
 }
 
+type OfByteNComplex64Looper interface {
+	LoopItem(byte, complex64) bool
+}
+type OfByteNComplex64LoopFunc func(byte, complex64) bool
+
+func (__ OfByteNComplex64LoopFunc) LoopItem(k byte, v complex64) bool {
+	return __(k, v)
+}
+
 type OfByteNComplex64IterIf interface {
-	Range(func(byte, complex64) bool)
+	Range(OfByteNComplex64Looper)
 }
 
 type OfByteNComplex64 map[byte]complex64
@@ -1265,8 +1490,17 @@ type OfByteNErrorMutIf interface {
 	Delete(byte)
 }
 
+type OfByteNErrorLooper interface {
+	LoopItem(byte, error) bool
+}
+type OfByteNErrorLoopFunc func(byte, error) bool
+
+func (__ OfByteNErrorLoopFunc) LoopItem(k byte, v error) bool {
+	return __(k, v)
+}
+
 type OfByteNErrorIterIf interface {
-	Range(func(byte, error) bool)
+	Range(OfByteNErrorLooper)
 }
 
 type OfByteNError map[byte]error
@@ -1315,8 +1549,17 @@ type OfByteNFloat32MutIf interface {
 	Delete(byte)
 }
 
+type OfByteNFloat32Looper interface {
+	LoopItem(byte, float32) bool
+}
+type OfByteNFloat32LoopFunc func(byte, float32) bool
+
+func (__ OfByteNFloat32LoopFunc) LoopItem(k byte, v float32) bool {
+	return __(k, v)
+}
+
 type OfByteNFloat32IterIf interface {
-	Range(func(byte, float32) bool)
+	Range(OfByteNFloat32Looper)
 }
 
 type OfByteNFloat32 map[byte]float32
@@ -1365,8 +1608,17 @@ type OfByteNFloat64MutIf interface {
 	Delete(byte)
 }
 
+type OfByteNFloat64Looper interface {
+	LoopItem(byte, float64) bool
+}
+type OfByteNFloat64LoopFunc func(byte, float64) bool
+
+func (__ OfByteNFloat64LoopFunc) LoopItem(k byte, v float64) bool {
+	return __(k, v)
+}
+
 type OfByteNFloat64IterIf interface {
-	Range(func(byte, float64) bool)
+	Range(OfByteNFloat64Looper)
 }
 
 type OfByteNFloat64 map[byte]float64
@@ -1415,8 +1667,17 @@ type OfByteNIntMutIf interface {
 	Delete(byte)
 }
 
+type OfByteNIntLooper interface {
+	LoopItem(byte, int) bool
+}
+type OfByteNIntLoopFunc func(byte, int) bool
+
+func (__ OfByteNIntLoopFunc) LoopItem(k byte, v int) bool {
+	return __(k, v)
+}
+
 type OfByteNIntIterIf interface {
-	Range(func(byte, int) bool)
+	Range(OfByteNIntLooper)
 }
 
 type OfByteNInt map[byte]int
@@ -1465,8 +1726,17 @@ type OfByteNInt16MutIf interface {
 	Delete(byte)
 }
 
+type OfByteNInt16Looper interface {
+	LoopItem(byte, int16) bool
+}
+type OfByteNInt16LoopFunc func(byte, int16) bool
+
+func (__ OfByteNInt16LoopFunc) LoopItem(k byte, v int16) bool {
+	return __(k, v)
+}
+
 type OfByteNInt16IterIf interface {
-	Range(func(byte, int16) bool)
+	Range(OfByteNInt16Looper)
 }
 
 type OfByteNInt16 map[byte]int16
@@ -1515,8 +1785,17 @@ type OfByteNInt32MutIf interface {
 	Delete(byte)
 }
 
+type OfByteNInt32Looper interface {
+	LoopItem(byte, int32) bool
+}
+type OfByteNInt32LoopFunc func(byte, int32) bool
+
+func (__ OfByteNInt32LoopFunc) LoopItem(k byte, v int32) bool {
+	return __(k, v)
+}
+
 type OfByteNInt32IterIf interface {
-	Range(func(byte, int32) bool)
+	Range(OfByteNInt32Looper)
 }
 
 type OfByteNInt32 map[byte]int32
@@ -1565,8 +1844,17 @@ type OfByteNInt64MutIf interface {
 	Delete(byte)
 }
 
+type OfByteNInt64Looper interface {
+	LoopItem(byte, int64) bool
+}
+type OfByteNInt64LoopFunc func(byte, int64) bool
+
+func (__ OfByteNInt64LoopFunc) LoopItem(k byte, v int64) bool {
+	return __(k, v)
+}
+
 type OfByteNInt64IterIf interface {
-	Range(func(byte, int64) bool)
+	Range(OfByteNInt64Looper)
 }
 
 type OfByteNInt64 map[byte]int64
@@ -1615,8 +1903,17 @@ type OfByteNInt8MutIf interface {
 	Delete(byte)
 }
 
+type OfByteNInt8Looper interface {
+	LoopItem(byte, int8) bool
+}
+type OfByteNInt8LoopFunc func(byte, int8) bool
+
+func (__ OfByteNInt8LoopFunc) LoopItem(k byte, v int8) bool {
+	return __(k, v)
+}
+
 type OfByteNInt8IterIf interface {
-	Range(func(byte, int8) bool)
+	Range(OfByteNInt8Looper)
 }
 
 type OfByteNInt8 map[byte]int8
@@ -1665,8 +1962,17 @@ type OfByteNRuneMutIf interface {
 	Delete(byte)
 }
 
+type OfByteNRuneLooper interface {
+	LoopItem(byte, rune) bool
+}
+type OfByteNRuneLoopFunc func(byte, rune) bool
+
+func (__ OfByteNRuneLoopFunc) LoopItem(k byte, v rune) bool {
+	return __(k, v)
+}
+
 type OfByteNRuneIterIf interface {
-	Range(func(byte, rune) bool)
+	Range(OfByteNRuneLooper)
 }
 
 type OfByteNRune map[byte]rune
@@ -1715,8 +2021,17 @@ type OfByteNStringMutIf interface {
 	Delete(byte)
 }
 
+type OfByteNStringLooper interface {
+	LoopItem(byte, string) bool
+}
+type OfByteNStringLoopFunc func(byte, string) bool
+
+func (__ OfByteNStringLoopFunc) LoopItem(k byte, v string) bool {
+	return __(k, v)
+}
+
 type OfByteNStringIterIf interface {
-	Range(func(byte, string) bool)
+	Range(OfByteNStringLooper)
 }
 
 type OfByteNString map[byte]string
@@ -1765,8 +2080,17 @@ type OfByteNUintMutIf interface {
 	Delete(byte)
 }
 
+type OfByteNUintLooper interface {
+	LoopItem(byte, uint) bool
+}
+type OfByteNUintLoopFunc func(byte, uint) bool
+
+func (__ OfByteNUintLoopFunc) LoopItem(k byte, v uint) bool {
+	return __(k, v)
+}
+
 type OfByteNUintIterIf interface {
-	Range(func(byte, uint) bool)
+	Range(OfByteNUintLooper)
 }
 
 type OfByteNUint map[byte]uint
@@ -1815,8 +2139,17 @@ type OfByteNUint16MutIf interface {
 	Delete(byte)
 }
 
+type OfByteNUint16Looper interface {
+	LoopItem(byte, uint16) bool
+}
+type OfByteNUint16LoopFunc func(byte, uint16) bool
+
+func (__ OfByteNUint16LoopFunc) LoopItem(k byte, v uint16) bool {
+	return __(k, v)
+}
+
 type OfByteNUint16IterIf interface {
-	Range(func(byte, uint16) bool)
+	Range(OfByteNUint16Looper)
 }
 
 type OfByteNUint16 map[byte]uint16
@@ -1865,8 +2198,17 @@ type OfByteNUint32MutIf interface {
 	Delete(byte)
 }
 
+type OfByteNUint32Looper interface {
+	LoopItem(byte, uint32) bool
+}
+type OfByteNUint32LoopFunc func(byte, uint32) bool
+
+func (__ OfByteNUint32LoopFunc) LoopItem(k byte, v uint32) bool {
+	return __(k, v)
+}
+
 type OfByteNUint32IterIf interface {
-	Range(func(byte, uint32) bool)
+	Range(OfByteNUint32Looper)
 }
 
 type OfByteNUint32 map[byte]uint32
@@ -1915,8 +2257,17 @@ type OfByteNUint64MutIf interface {
 	Delete(byte)
 }
 
+type OfByteNUint64Looper interface {
+	LoopItem(byte, uint64) bool
+}
+type OfByteNUint64LoopFunc func(byte, uint64) bool
+
+func (__ OfByteNUint64LoopFunc) LoopItem(k byte, v uint64) bool {
+	return __(k, v)
+}
+
 type OfByteNUint64IterIf interface {
-	Range(func(byte, uint64) bool)
+	Range(OfByteNUint64Looper)
 }
 
 type OfByteNUint64 map[byte]uint64
@@ -1965,8 +2316,17 @@ type OfByteNUint8MutIf interface {
 	Delete(byte)
 }
 
+type OfByteNUint8Looper interface {
+	LoopItem(byte, uint8) bool
+}
+type OfByteNUint8LoopFunc func(byte, uint8) bool
+
+func (__ OfByteNUint8LoopFunc) LoopItem(k byte, v uint8) bool {
+	return __(k, v)
+}
+
 type OfByteNUint8IterIf interface {
-	Range(func(byte, uint8) bool)
+	Range(OfByteNUint8Looper)
 }
 
 type OfByteNUint8 map[byte]uint8
@@ -2015,8 +2375,17 @@ type OfByteNUintptrMutIf interface {
 	Delete(byte)
 }
 
+type OfByteNUintptrLooper interface {
+	LoopItem(byte, uintptr) bool
+}
+type OfByteNUintptrLoopFunc func(byte, uintptr) bool
+
+func (__ OfByteNUintptrLoopFunc) LoopItem(k byte, v uintptr) bool {
+	return __(k, v)
+}
+
 type OfByteNUintptrIterIf interface {
-	Range(func(byte, uintptr) bool)
+	Range(OfByteNUintptrLooper)
 }
 
 type OfByteNUintptr map[byte]uintptr
@@ -2065,8 +2434,17 @@ type OfByteNInterfaceMutIf interface {
 	Delete(byte)
 }
 
+type OfByteNInterfaceLooper interface {
+	LoopItem(byte, interface{}) bool
+}
+type OfByteNInterfaceLoopFunc func(byte, interface{}) bool
+
+func (__ OfByteNInterfaceLoopFunc) LoopItem(k byte, v interface{}) bool {
+	return __(k, v)
+}
+
 type OfByteNInterfaceIterIf interface {
-	Range(func(byte, interface{}) bool)
+	Range(OfByteNInterfaceLooper)
 }
 
 type OfByteNInterface map[byte]interface{}
@@ -2115,8 +2493,17 @@ type OfComplex128NBoolMutIf interface {
 	Delete(complex128)
 }
 
+type OfComplex128NBoolLooper interface {
+	LoopItem(complex128, bool) bool
+}
+type OfComplex128NBoolLoopFunc func(complex128, bool) bool
+
+func (__ OfComplex128NBoolLoopFunc) LoopItem(k complex128, v bool) bool {
+	return __(k, v)
+}
+
 type OfComplex128NBoolIterIf interface {
-	Range(func(complex128, bool) bool)
+	Range(OfComplex128NBoolLooper)
 }
 
 type OfComplex128NBool map[complex128]bool
@@ -2165,8 +2552,17 @@ type OfComplex128NByteMutIf interface {
 	Delete(complex128)
 }
 
+type OfComplex128NByteLooper interface {
+	LoopItem(complex128, byte) bool
+}
+type OfComplex128NByteLoopFunc func(complex128, byte) bool
+
+func (__ OfComplex128NByteLoopFunc) LoopItem(k complex128, v byte) bool {
+	return __(k, v)
+}
+
 type OfComplex128NByteIterIf interface {
-	Range(func(complex128, byte) bool)
+	Range(OfComplex128NByteLooper)
 }
 
 type OfComplex128NByte map[complex128]byte
@@ -2215,8 +2611,17 @@ type OfComplex128NComplex128MutIf interface {
 	Delete(complex128)
 }
 
+type OfComplex128NComplex128Looper interface {
+	LoopItem(complex128, complex128) bool
+}
+type OfComplex128NComplex128LoopFunc func(complex128, complex128) bool
+
+func (__ OfComplex128NComplex128LoopFunc) LoopItem(k complex128, v complex128) bool {
+	return __(k, v)
+}
+
 type OfComplex128NComplex128IterIf interface {
-	Range(func(complex128, complex128) bool)
+	Range(OfComplex128NComplex128Looper)
 }
 
 type OfComplex128NComplex128 map[complex128]complex128
@@ -2265,8 +2670,17 @@ type OfComplex128NComplex64MutIf interface {
 	Delete(complex128)
 }
 
+type OfComplex128NComplex64Looper interface {
+	LoopItem(complex128, complex64) bool
+}
+type OfComplex128NComplex64LoopFunc func(complex128, complex64) bool
+
+func (__ OfComplex128NComplex64LoopFunc) LoopItem(k complex128, v complex64) bool {
+	return __(k, v)
+}
+
 type OfComplex128NComplex64IterIf interface {
-	Range(func(complex128, complex64) bool)
+	Range(OfComplex128NComplex64Looper)
 }
 
 type OfComplex128NComplex64 map[complex128]complex64
@@ -2315,8 +2729,17 @@ type OfComplex128NErrorMutIf interface {
 	Delete(complex128)
 }
 
+type OfComplex128NErrorLooper interface {
+	LoopItem(complex128, error) bool
+}
+type OfComplex128NErrorLoopFunc func(complex128, error) bool
+
+func (__ OfComplex128NErrorLoopFunc) LoopItem(k complex128, v error) bool {
+	return __(k, v)
+}
+
 type OfComplex128NErrorIterIf interface {
-	Range(func(complex128, error) bool)
+	Range(OfComplex128NErrorLooper)
 }
 
 type OfComplex128NError map[complex128]error
@@ -2365,8 +2788,17 @@ type OfComplex128NFloat32MutIf interface {
 	Delete(complex128)
 }
 
+type OfComplex128NFloat32Looper interface {
+	LoopItem(complex128, float32) bool
+}
+type OfComplex128NFloat32LoopFunc func(complex128, float32) bool
+
+func (__ OfComplex128NFloat32LoopFunc) LoopItem(k complex128, v float32) bool {
+	return __(k, v)
+}
+
 type OfComplex128NFloat32IterIf interface {
-	Range(func(complex128, float32) bool)
+	Range(OfComplex128NFloat32Looper)
 }
 
 type OfComplex128NFloat32 map[complex128]float32
@@ -2415,8 +2847,17 @@ type OfComplex128NFloat64MutIf interface {
 	Delete(complex128)
 }
 
+type OfComplex128NFloat64Looper interface {
+	LoopItem(complex128, float64) bool
+}
+type OfComplex128NFloat64LoopFunc func(complex128, float64) bool
+
+func (__ OfComplex128NFloat64LoopFunc) LoopItem(k complex128, v float64) bool {
+	return __(k, v)
+}
+
 type OfComplex128NFloat64IterIf interface {
-	Range(func(complex128, float64) bool)
+	Range(OfComplex128NFloat64Looper)
 }
 
 type OfComplex128NFloat64 map[complex128]float64
@@ -2465,8 +2906,17 @@ type OfComplex128NIntMutIf interface {
 	Delete(complex128)
 }
 
+type OfComplex128NIntLooper interface {
+	LoopItem(complex128, int) bool
+}
+type OfComplex128NIntLoopFunc func(complex128, int) bool
+
+func (__ OfComplex128NIntLoopFunc) LoopItem(k complex128, v int) bool {
+	return __(k, v)
+}
+
 type OfComplex128NIntIterIf interface {
-	Range(func(complex128, int) bool)
+	Range(OfComplex128NIntLooper)
 }
 
 type OfComplex128NInt map[complex128]int
@@ -2515,8 +2965,17 @@ type OfComplex128NInt16MutIf interface {
 	Delete(complex128)
 }
 
+type OfComplex128NInt16Looper interface {
+	LoopItem(complex128, int16) bool
+}
+type OfComplex128NInt16LoopFunc func(complex128, int16) bool
+
+func (__ OfComplex128NInt16LoopFunc) LoopItem(k complex128, v int16) bool {
+	return __(k, v)
+}
+
 type OfComplex128NInt16IterIf interface {
-	Range(func(complex128, int16) bool)
+	Range(OfComplex128NInt16Looper)
 }
 
 type OfComplex128NInt16 map[complex128]int16
@@ -2565,8 +3024,17 @@ type OfComplex128NInt32MutIf interface {
 	Delete(complex128)
 }
 
+type OfComplex128NInt32Looper interface {
+	LoopItem(complex128, int32) bool
+}
+type OfComplex128NInt32LoopFunc func(complex128, int32) bool
+
+func (__ OfComplex128NInt32LoopFunc) LoopItem(k complex128, v int32) bool {
+	return __(k, v)
+}
+
 type OfComplex128NInt32IterIf interface {
-	Range(func(complex128, int32) bool)
+	Range(OfComplex128NInt32Looper)
 }
 
 type OfComplex128NInt32 map[complex128]int32
@@ -2615,8 +3083,17 @@ type OfComplex128NInt64MutIf interface {
 	Delete(complex128)
 }
 
+type OfComplex128NInt64Looper interface {
+	LoopItem(complex128, int64) bool
+}
+type OfComplex128NInt64LoopFunc func(complex128, int64) bool
+
+func (__ OfComplex128NInt64LoopFunc) LoopItem(k complex128, v int64) bool {
+	return __(k, v)
+}
+
 type OfComplex128NInt64IterIf interface {
-	Range(func(complex128, int64) bool)
+	Range(OfComplex128NInt64Looper)
 }
 
 type OfComplex128NInt64 map[complex128]int64
@@ -2665,8 +3142,17 @@ type OfComplex128NInt8MutIf interface {
 	Delete(complex128)
 }
 
+type OfComplex128NInt8Looper interface {
+	LoopItem(complex128, int8) bool
+}
+type OfComplex128NInt8LoopFunc func(complex128, int8) bool
+
+func (__ OfComplex128NInt8LoopFunc) LoopItem(k complex128, v int8) bool {
+	return __(k, v)
+}
+
 type OfComplex128NInt8IterIf interface {
-	Range(func(complex128, int8) bool)
+	Range(OfComplex128NInt8Looper)
 }
 
 type OfComplex128NInt8 map[complex128]int8
@@ -2715,8 +3201,17 @@ type OfComplex128NRuneMutIf interface {
 	Delete(complex128)
 }
 
+type OfComplex128NRuneLooper interface {
+	LoopItem(complex128, rune) bool
+}
+type OfComplex128NRuneLoopFunc func(complex128, rune) bool
+
+func (__ OfComplex128NRuneLoopFunc) LoopItem(k complex128, v rune) bool {
+	return __(k, v)
+}
+
 type OfComplex128NRuneIterIf interface {
-	Range(func(complex128, rune) bool)
+	Range(OfComplex128NRuneLooper)
 }
 
 type OfComplex128NRune map[complex128]rune
@@ -2765,8 +3260,17 @@ type OfComplex128NStringMutIf interface {
 	Delete(complex128)
 }
 
+type OfComplex128NStringLooper interface {
+	LoopItem(complex128, string) bool
+}
+type OfComplex128NStringLoopFunc func(complex128, string) bool
+
+func (__ OfComplex128NStringLoopFunc) LoopItem(k complex128, v string) bool {
+	return __(k, v)
+}
+
 type OfComplex128NStringIterIf interface {
-	Range(func(complex128, string) bool)
+	Range(OfComplex128NStringLooper)
 }
 
 type OfComplex128NString map[complex128]string
@@ -2815,8 +3319,17 @@ type OfComplex128NUintMutIf interface {
 	Delete(complex128)
 }
 
+type OfComplex128NUintLooper interface {
+	LoopItem(complex128, uint) bool
+}
+type OfComplex128NUintLoopFunc func(complex128, uint) bool
+
+func (__ OfComplex128NUintLoopFunc) LoopItem(k complex128, v uint) bool {
+	return __(k, v)
+}
+
 type OfComplex128NUintIterIf interface {
-	Range(func(complex128, uint) bool)
+	Range(OfComplex128NUintLooper)
 }
 
 type OfComplex128NUint map[complex128]uint
@@ -2865,8 +3378,17 @@ type OfComplex128NUint16MutIf interface {
 	Delete(complex128)
 }
 
+type OfComplex128NUint16Looper interface {
+	LoopItem(complex128, uint16) bool
+}
+type OfComplex128NUint16LoopFunc func(complex128, uint16) bool
+
+func (__ OfComplex128NUint16LoopFunc) LoopItem(k complex128, v uint16) bool {
+	return __(k, v)
+}
+
 type OfComplex128NUint16IterIf interface {
-	Range(func(complex128, uint16) bool)
+	Range(OfComplex128NUint16Looper)
 }
 
 type OfComplex128NUint16 map[complex128]uint16
@@ -2915,8 +3437,17 @@ type OfComplex128NUint32MutIf interface {
 	Delete(complex128)
 }
 
+type OfComplex128NUint32Looper interface {
+	LoopItem(complex128, uint32) bool
+}
+type OfComplex128NUint32LoopFunc func(complex128, uint32) bool
+
+func (__ OfComplex128NUint32LoopFunc) LoopItem(k complex128, v uint32) bool {
+	return __(k, v)
+}
+
 type OfComplex128NUint32IterIf interface {
-	Range(func(complex128, uint32) bool)
+	Range(OfComplex128NUint32Looper)
 }
 
 type OfComplex128NUint32 map[complex128]uint32
@@ -2965,8 +3496,17 @@ type OfComplex128NUint64MutIf interface {
 	Delete(complex128)
 }
 
+type OfComplex128NUint64Looper interface {
+	LoopItem(complex128, uint64) bool
+}
+type OfComplex128NUint64LoopFunc func(complex128, uint64) bool
+
+func (__ OfComplex128NUint64LoopFunc) LoopItem(k complex128, v uint64) bool {
+	return __(k, v)
+}
+
 type OfComplex128NUint64IterIf interface {
-	Range(func(complex128, uint64) bool)
+	Range(OfComplex128NUint64Looper)
 }
 
 type OfComplex128NUint64 map[complex128]uint64
@@ -3015,8 +3555,17 @@ type OfComplex128NUint8MutIf interface {
 	Delete(complex128)
 }
 
+type OfComplex128NUint8Looper interface {
+	LoopItem(complex128, uint8) bool
+}
+type OfComplex128NUint8LoopFunc func(complex128, uint8) bool
+
+func (__ OfComplex128NUint8LoopFunc) LoopItem(k complex128, v uint8) bool {
+	return __(k, v)
+}
+
 type OfComplex128NUint8IterIf interface {
-	Range(func(complex128, uint8) bool)
+	Range(OfComplex128NUint8Looper)
 }
 
 type OfComplex128NUint8 map[complex128]uint8
@@ -3065,8 +3614,17 @@ type OfComplex128NUintptrMutIf interface {
 	Delete(complex128)
 }
 
+type OfComplex128NUintptrLooper interface {
+	LoopItem(complex128, uintptr) bool
+}
+type OfComplex128NUintptrLoopFunc func(complex128, uintptr) bool
+
+func (__ OfComplex128NUintptrLoopFunc) LoopItem(k complex128, v uintptr) bool {
+	return __(k, v)
+}
+
 type OfComplex128NUintptrIterIf interface {
-	Range(func(complex128, uintptr) bool)
+	Range(OfComplex128NUintptrLooper)
 }
 
 type OfComplex128NUintptr map[complex128]uintptr
@@ -3115,8 +3673,17 @@ type OfComplex128NInterfaceMutIf interface {
 	Delete(complex128)
 }
 
+type OfComplex128NInterfaceLooper interface {
+	LoopItem(complex128, interface{}) bool
+}
+type OfComplex128NInterfaceLoopFunc func(complex128, interface{}) bool
+
+func (__ OfComplex128NInterfaceLoopFunc) LoopItem(k complex128, v interface{}) bool {
+	return __(k, v)
+}
+
 type OfComplex128NInterfaceIterIf interface {
-	Range(func(complex128, interface{}) bool)
+	Range(OfComplex128NInterfaceLooper)
 }
 
 type OfComplex128NInterface map[complex128]interface{}
@@ -3165,8 +3732,17 @@ type OfComplex64NBoolMutIf interface {
 	Delete(complex64)
 }
 
+type OfComplex64NBoolLooper interface {
+	LoopItem(complex64, bool) bool
+}
+type OfComplex64NBoolLoopFunc func(complex64, bool) bool
+
+func (__ OfComplex64NBoolLoopFunc) LoopItem(k complex64, v bool) bool {
+	return __(k, v)
+}
+
 type OfComplex64NBoolIterIf interface {
-	Range(func(complex64, bool) bool)
+	Range(OfComplex64NBoolLooper)
 }
 
 type OfComplex64NBool map[complex64]bool
@@ -3215,8 +3791,17 @@ type OfComplex64NByteMutIf interface {
 	Delete(complex64)
 }
 
+type OfComplex64NByteLooper interface {
+	LoopItem(complex64, byte) bool
+}
+type OfComplex64NByteLoopFunc func(complex64, byte) bool
+
+func (__ OfComplex64NByteLoopFunc) LoopItem(k complex64, v byte) bool {
+	return __(k, v)
+}
+
 type OfComplex64NByteIterIf interface {
-	Range(func(complex64, byte) bool)
+	Range(OfComplex64NByteLooper)
 }
 
 type OfComplex64NByte map[complex64]byte
@@ -3265,8 +3850,17 @@ type OfComplex64NComplex128MutIf interface {
 	Delete(complex64)
 }
 
+type OfComplex64NComplex128Looper interface {
+	LoopItem(complex64, complex128) bool
+}
+type OfComplex64NComplex128LoopFunc func(complex64, complex128) bool
+
+func (__ OfComplex64NComplex128LoopFunc) LoopItem(k complex64, v complex128) bool {
+	return __(k, v)
+}
+
 type OfComplex64NComplex128IterIf interface {
-	Range(func(complex64, complex128) bool)
+	Range(OfComplex64NComplex128Looper)
 }
 
 type OfComplex64NComplex128 map[complex64]complex128
@@ -3315,8 +3909,17 @@ type OfComplex64NComplex64MutIf interface {
 	Delete(complex64)
 }
 
+type OfComplex64NComplex64Looper interface {
+	LoopItem(complex64, complex64) bool
+}
+type OfComplex64NComplex64LoopFunc func(complex64, complex64) bool
+
+func (__ OfComplex64NComplex64LoopFunc) LoopItem(k complex64, v complex64) bool {
+	return __(k, v)
+}
+
 type OfComplex64NComplex64IterIf interface {
-	Range(func(complex64, complex64) bool)
+	Range(OfComplex64NComplex64Looper)
 }
 
 type OfComplex64NComplex64 map[complex64]complex64
@@ -3365,8 +3968,17 @@ type OfComplex64NErrorMutIf interface {
 	Delete(complex64)
 }
 
+type OfComplex64NErrorLooper interface {
+	LoopItem(complex64, error) bool
+}
+type OfComplex64NErrorLoopFunc func(complex64, error) bool
+
+func (__ OfComplex64NErrorLoopFunc) LoopItem(k complex64, v error) bool {
+	return __(k, v)
+}
+
 type OfComplex64NErrorIterIf interface {
-	Range(func(complex64, error) bool)
+	Range(OfComplex64NErrorLooper)
 }
 
 type OfComplex64NError map[complex64]error
@@ -3415,8 +4027,17 @@ type OfComplex64NFloat32MutIf interface {
 	Delete(complex64)
 }
 
+type OfComplex64NFloat32Looper interface {
+	LoopItem(complex64, float32) bool
+}
+type OfComplex64NFloat32LoopFunc func(complex64, float32) bool
+
+func (__ OfComplex64NFloat32LoopFunc) LoopItem(k complex64, v float32) bool {
+	return __(k, v)
+}
+
 type OfComplex64NFloat32IterIf interface {
-	Range(func(complex64, float32) bool)
+	Range(OfComplex64NFloat32Looper)
 }
 
 type OfComplex64NFloat32 map[complex64]float32
@@ -3465,8 +4086,17 @@ type OfComplex64NFloat64MutIf interface {
 	Delete(complex64)
 }
 
+type OfComplex64NFloat64Looper interface {
+	LoopItem(complex64, float64) bool
+}
+type OfComplex64NFloat64LoopFunc func(complex64, float64) bool
+
+func (__ OfComplex64NFloat64LoopFunc) LoopItem(k complex64, v float64) bool {
+	return __(k, v)
+}
+
 type OfComplex64NFloat64IterIf interface {
-	Range(func(complex64, float64) bool)
+	Range(OfComplex64NFloat64Looper)
 }
 
 type OfComplex64NFloat64 map[complex64]float64
@@ -3515,8 +4145,17 @@ type OfComplex64NIntMutIf interface {
 	Delete(complex64)
 }
 
+type OfComplex64NIntLooper interface {
+	LoopItem(complex64, int) bool
+}
+type OfComplex64NIntLoopFunc func(complex64, int) bool
+
+func (__ OfComplex64NIntLoopFunc) LoopItem(k complex64, v int) bool {
+	return __(k, v)
+}
+
 type OfComplex64NIntIterIf interface {
-	Range(func(complex64, int) bool)
+	Range(OfComplex64NIntLooper)
 }
 
 type OfComplex64NInt map[complex64]int
@@ -3565,8 +4204,17 @@ type OfComplex64NInt16MutIf interface {
 	Delete(complex64)
 }
 
+type OfComplex64NInt16Looper interface {
+	LoopItem(complex64, int16) bool
+}
+type OfComplex64NInt16LoopFunc func(complex64, int16) bool
+
+func (__ OfComplex64NInt16LoopFunc) LoopItem(k complex64, v int16) bool {
+	return __(k, v)
+}
+
 type OfComplex64NInt16IterIf interface {
-	Range(func(complex64, int16) bool)
+	Range(OfComplex64NInt16Looper)
 }
 
 type OfComplex64NInt16 map[complex64]int16
@@ -3615,8 +4263,17 @@ type OfComplex64NInt32MutIf interface {
 	Delete(complex64)
 }
 
+type OfComplex64NInt32Looper interface {
+	LoopItem(complex64, int32) bool
+}
+type OfComplex64NInt32LoopFunc func(complex64, int32) bool
+
+func (__ OfComplex64NInt32LoopFunc) LoopItem(k complex64, v int32) bool {
+	return __(k, v)
+}
+
 type OfComplex64NInt32IterIf interface {
-	Range(func(complex64, int32) bool)
+	Range(OfComplex64NInt32Looper)
 }
 
 type OfComplex64NInt32 map[complex64]int32
@@ -3665,8 +4322,17 @@ type OfComplex64NInt64MutIf interface {
 	Delete(complex64)
 }
 
+type OfComplex64NInt64Looper interface {
+	LoopItem(complex64, int64) bool
+}
+type OfComplex64NInt64LoopFunc func(complex64, int64) bool
+
+func (__ OfComplex64NInt64LoopFunc) LoopItem(k complex64, v int64) bool {
+	return __(k, v)
+}
+
 type OfComplex64NInt64IterIf interface {
-	Range(func(complex64, int64) bool)
+	Range(OfComplex64NInt64Looper)
 }
 
 type OfComplex64NInt64 map[complex64]int64
@@ -3715,8 +4381,17 @@ type OfComplex64NInt8MutIf interface {
 	Delete(complex64)
 }
 
+type OfComplex64NInt8Looper interface {
+	LoopItem(complex64, int8) bool
+}
+type OfComplex64NInt8LoopFunc func(complex64, int8) bool
+
+func (__ OfComplex64NInt8LoopFunc) LoopItem(k complex64, v int8) bool {
+	return __(k, v)
+}
+
 type OfComplex64NInt8IterIf interface {
-	Range(func(complex64, int8) bool)
+	Range(OfComplex64NInt8Looper)
 }
 
 type OfComplex64NInt8 map[complex64]int8
@@ -3765,8 +4440,17 @@ type OfComplex64NRuneMutIf interface {
 	Delete(complex64)
 }
 
+type OfComplex64NRuneLooper interface {
+	LoopItem(complex64, rune) bool
+}
+type OfComplex64NRuneLoopFunc func(complex64, rune) bool
+
+func (__ OfComplex64NRuneLoopFunc) LoopItem(k complex64, v rune) bool {
+	return __(k, v)
+}
+
 type OfComplex64NRuneIterIf interface {
-	Range(func(complex64, rune) bool)
+	Range(OfComplex64NRuneLooper)
 }
 
 type OfComplex64NRune map[complex64]rune
@@ -3815,8 +4499,17 @@ type OfComplex64NStringMutIf interface {
 	Delete(complex64)
 }
 
+type OfComplex64NStringLooper interface {
+	LoopItem(complex64, string) bool
+}
+type OfComplex64NStringLoopFunc func(complex64, string) bool
+
+func (__ OfComplex64NStringLoopFunc) LoopItem(k complex64, v string) bool {
+	return __(k, v)
+}
+
 type OfComplex64NStringIterIf interface {
-	Range(func(complex64, string) bool)
+	Range(OfComplex64NStringLooper)
 }
 
 type OfComplex64NString map[complex64]string
@@ -3865,8 +4558,17 @@ type OfComplex64NUintMutIf interface {
 	Delete(complex64)
 }
 
+type OfComplex64NUintLooper interface {
+	LoopItem(complex64, uint) bool
+}
+type OfComplex64NUintLoopFunc func(complex64, uint) bool
+
+func (__ OfComplex64NUintLoopFunc) LoopItem(k complex64, v uint) bool {
+	return __(k, v)
+}
+
 type OfComplex64NUintIterIf interface {
-	Range(func(complex64, uint) bool)
+	Range(OfComplex64NUintLooper)
 }
 
 type OfComplex64NUint map[complex64]uint
@@ -3915,8 +4617,17 @@ type OfComplex64NUint16MutIf interface {
 	Delete(complex64)
 }
 
+type OfComplex64NUint16Looper interface {
+	LoopItem(complex64, uint16) bool
+}
+type OfComplex64NUint16LoopFunc func(complex64, uint16) bool
+
+func (__ OfComplex64NUint16LoopFunc) LoopItem(k complex64, v uint16) bool {
+	return __(k, v)
+}
+
 type OfComplex64NUint16IterIf interface {
-	Range(func(complex64, uint16) bool)
+	Range(OfComplex64NUint16Looper)
 }
 
 type OfComplex64NUint16 map[complex64]uint16
@@ -3965,8 +4676,17 @@ type OfComplex64NUint32MutIf interface {
 	Delete(complex64)
 }
 
+type OfComplex64NUint32Looper interface {
+	LoopItem(complex64, uint32) bool
+}
+type OfComplex64NUint32LoopFunc func(complex64, uint32) bool
+
+func (__ OfComplex64NUint32LoopFunc) LoopItem(k complex64, v uint32) bool {
+	return __(k, v)
+}
+
 type OfComplex64NUint32IterIf interface {
-	Range(func(complex64, uint32) bool)
+	Range(OfComplex64NUint32Looper)
 }
 
 type OfComplex64NUint32 map[complex64]uint32
@@ -4015,8 +4735,17 @@ type OfComplex64NUint64MutIf interface {
 	Delete(complex64)
 }
 
+type OfComplex64NUint64Looper interface {
+	LoopItem(complex64, uint64) bool
+}
+type OfComplex64NUint64LoopFunc func(complex64, uint64) bool
+
+func (__ OfComplex64NUint64LoopFunc) LoopItem(k complex64, v uint64) bool {
+	return __(k, v)
+}
+
 type OfComplex64NUint64IterIf interface {
-	Range(func(complex64, uint64) bool)
+	Range(OfComplex64NUint64Looper)
 }
 
 type OfComplex64NUint64 map[complex64]uint64
@@ -4065,8 +4794,17 @@ type OfComplex64NUint8MutIf interface {
 	Delete(complex64)
 }
 
+type OfComplex64NUint8Looper interface {
+	LoopItem(complex64, uint8) bool
+}
+type OfComplex64NUint8LoopFunc func(complex64, uint8) bool
+
+func (__ OfComplex64NUint8LoopFunc) LoopItem(k complex64, v uint8) bool {
+	return __(k, v)
+}
+
 type OfComplex64NUint8IterIf interface {
-	Range(func(complex64, uint8) bool)
+	Range(OfComplex64NUint8Looper)
 }
 
 type OfComplex64NUint8 map[complex64]uint8
@@ -4115,8 +4853,17 @@ type OfComplex64NUintptrMutIf interface {
 	Delete(complex64)
 }
 
+type OfComplex64NUintptrLooper interface {
+	LoopItem(complex64, uintptr) bool
+}
+type OfComplex64NUintptrLoopFunc func(complex64, uintptr) bool
+
+func (__ OfComplex64NUintptrLoopFunc) LoopItem(k complex64, v uintptr) bool {
+	return __(k, v)
+}
+
 type OfComplex64NUintptrIterIf interface {
-	Range(func(complex64, uintptr) bool)
+	Range(OfComplex64NUintptrLooper)
 }
 
 type OfComplex64NUintptr map[complex64]uintptr
@@ -4165,8 +4912,17 @@ type OfComplex64NInterfaceMutIf interface {
 	Delete(complex64)
 }
 
+type OfComplex64NInterfaceLooper interface {
+	LoopItem(complex64, interface{}) bool
+}
+type OfComplex64NInterfaceLoopFunc func(complex64, interface{}) bool
+
+func (__ OfComplex64NInterfaceLoopFunc) LoopItem(k complex64, v interface{}) bool {
+	return __(k, v)
+}
+
 type OfComplex64NInterfaceIterIf interface {
-	Range(func(complex64, interface{}) bool)
+	Range(OfComplex64NInterfaceLooper)
 }
 
 type OfComplex64NInterface map[complex64]interface{}
@@ -4215,8 +4971,17 @@ type OfErrorNBoolMutIf interface {
 	Delete(error)
 }
 
+type OfErrorNBoolLooper interface {
+	LoopItem(error, bool) bool
+}
+type OfErrorNBoolLoopFunc func(error, bool) bool
+
+func (__ OfErrorNBoolLoopFunc) LoopItem(k error, v bool) bool {
+	return __(k, v)
+}
+
 type OfErrorNBoolIterIf interface {
-	Range(func(error, bool) bool)
+	Range(OfErrorNBoolLooper)
 }
 
 type OfErrorNBool map[error]bool
@@ -4265,8 +5030,17 @@ type OfErrorNByteMutIf interface {
 	Delete(error)
 }
 
+type OfErrorNByteLooper interface {
+	LoopItem(error, byte) bool
+}
+type OfErrorNByteLoopFunc func(error, byte) bool
+
+func (__ OfErrorNByteLoopFunc) LoopItem(k error, v byte) bool {
+	return __(k, v)
+}
+
 type OfErrorNByteIterIf interface {
-	Range(func(error, byte) bool)
+	Range(OfErrorNByteLooper)
 }
 
 type OfErrorNByte map[error]byte
@@ -4315,8 +5089,17 @@ type OfErrorNComplex128MutIf interface {
 	Delete(error)
 }
 
+type OfErrorNComplex128Looper interface {
+	LoopItem(error, complex128) bool
+}
+type OfErrorNComplex128LoopFunc func(error, complex128) bool
+
+func (__ OfErrorNComplex128LoopFunc) LoopItem(k error, v complex128) bool {
+	return __(k, v)
+}
+
 type OfErrorNComplex128IterIf interface {
-	Range(func(error, complex128) bool)
+	Range(OfErrorNComplex128Looper)
 }
 
 type OfErrorNComplex128 map[error]complex128
@@ -4365,8 +5148,17 @@ type OfErrorNComplex64MutIf interface {
 	Delete(error)
 }
 
+type OfErrorNComplex64Looper interface {
+	LoopItem(error, complex64) bool
+}
+type OfErrorNComplex64LoopFunc func(error, complex64) bool
+
+func (__ OfErrorNComplex64LoopFunc) LoopItem(k error, v complex64) bool {
+	return __(k, v)
+}
+
 type OfErrorNComplex64IterIf interface {
-	Range(func(error, complex64) bool)
+	Range(OfErrorNComplex64Looper)
 }
 
 type OfErrorNComplex64 map[error]complex64
@@ -4415,8 +5207,17 @@ type OfErrorNErrorMutIf interface {
 	Delete(error)
 }
 
+type OfErrorNErrorLooper interface {
+	LoopItem(error, error) bool
+}
+type OfErrorNErrorLoopFunc func(error, error) bool
+
+func (__ OfErrorNErrorLoopFunc) LoopItem(k error, v error) bool {
+	return __(k, v)
+}
+
 type OfErrorNErrorIterIf interface {
-	Range(func(error, error) bool)
+	Range(OfErrorNErrorLooper)
 }
 
 type OfErrorNError map[error]error
@@ -4465,8 +5266,17 @@ type OfErrorNFloat32MutIf interface {
 	Delete(error)
 }
 
+type OfErrorNFloat32Looper interface {
+	LoopItem(error, float32) bool
+}
+type OfErrorNFloat32LoopFunc func(error, float32) bool
+
+func (__ OfErrorNFloat32LoopFunc) LoopItem(k error, v float32) bool {
+	return __(k, v)
+}
+
 type OfErrorNFloat32IterIf interface {
-	Range(func(error, float32) bool)
+	Range(OfErrorNFloat32Looper)
 }
 
 type OfErrorNFloat32 map[error]float32
@@ -4515,8 +5325,17 @@ type OfErrorNFloat64MutIf interface {
 	Delete(error)
 }
 
+type OfErrorNFloat64Looper interface {
+	LoopItem(error, float64) bool
+}
+type OfErrorNFloat64LoopFunc func(error, float64) bool
+
+func (__ OfErrorNFloat64LoopFunc) LoopItem(k error, v float64) bool {
+	return __(k, v)
+}
+
 type OfErrorNFloat64IterIf interface {
-	Range(func(error, float64) bool)
+	Range(OfErrorNFloat64Looper)
 }
 
 type OfErrorNFloat64 map[error]float64
@@ -4565,8 +5384,17 @@ type OfErrorNIntMutIf interface {
 	Delete(error)
 }
 
+type OfErrorNIntLooper interface {
+	LoopItem(error, int) bool
+}
+type OfErrorNIntLoopFunc func(error, int) bool
+
+func (__ OfErrorNIntLoopFunc) LoopItem(k error, v int) bool {
+	return __(k, v)
+}
+
 type OfErrorNIntIterIf interface {
-	Range(func(error, int) bool)
+	Range(OfErrorNIntLooper)
 }
 
 type OfErrorNInt map[error]int
@@ -4615,8 +5443,17 @@ type OfErrorNInt16MutIf interface {
 	Delete(error)
 }
 
+type OfErrorNInt16Looper interface {
+	LoopItem(error, int16) bool
+}
+type OfErrorNInt16LoopFunc func(error, int16) bool
+
+func (__ OfErrorNInt16LoopFunc) LoopItem(k error, v int16) bool {
+	return __(k, v)
+}
+
 type OfErrorNInt16IterIf interface {
-	Range(func(error, int16) bool)
+	Range(OfErrorNInt16Looper)
 }
 
 type OfErrorNInt16 map[error]int16
@@ -4665,8 +5502,17 @@ type OfErrorNInt32MutIf interface {
 	Delete(error)
 }
 
+type OfErrorNInt32Looper interface {
+	LoopItem(error, int32) bool
+}
+type OfErrorNInt32LoopFunc func(error, int32) bool
+
+func (__ OfErrorNInt32LoopFunc) LoopItem(k error, v int32) bool {
+	return __(k, v)
+}
+
 type OfErrorNInt32IterIf interface {
-	Range(func(error, int32) bool)
+	Range(OfErrorNInt32Looper)
 }
 
 type OfErrorNInt32 map[error]int32
@@ -4715,8 +5561,17 @@ type OfErrorNInt64MutIf interface {
 	Delete(error)
 }
 
+type OfErrorNInt64Looper interface {
+	LoopItem(error, int64) bool
+}
+type OfErrorNInt64LoopFunc func(error, int64) bool
+
+func (__ OfErrorNInt64LoopFunc) LoopItem(k error, v int64) bool {
+	return __(k, v)
+}
+
 type OfErrorNInt64IterIf interface {
-	Range(func(error, int64) bool)
+	Range(OfErrorNInt64Looper)
 }
 
 type OfErrorNInt64 map[error]int64
@@ -4765,8 +5620,17 @@ type OfErrorNInt8MutIf interface {
 	Delete(error)
 }
 
+type OfErrorNInt8Looper interface {
+	LoopItem(error, int8) bool
+}
+type OfErrorNInt8LoopFunc func(error, int8) bool
+
+func (__ OfErrorNInt8LoopFunc) LoopItem(k error, v int8) bool {
+	return __(k, v)
+}
+
 type OfErrorNInt8IterIf interface {
-	Range(func(error, int8) bool)
+	Range(OfErrorNInt8Looper)
 }
 
 type OfErrorNInt8 map[error]int8
@@ -4815,8 +5679,17 @@ type OfErrorNRuneMutIf interface {
 	Delete(error)
 }
 
+type OfErrorNRuneLooper interface {
+	LoopItem(error, rune) bool
+}
+type OfErrorNRuneLoopFunc func(error, rune) bool
+
+func (__ OfErrorNRuneLoopFunc) LoopItem(k error, v rune) bool {
+	return __(k, v)
+}
+
 type OfErrorNRuneIterIf interface {
-	Range(func(error, rune) bool)
+	Range(OfErrorNRuneLooper)
 }
 
 type OfErrorNRune map[error]rune
@@ -4865,8 +5738,17 @@ type OfErrorNStringMutIf interface {
 	Delete(error)
 }
 
+type OfErrorNStringLooper interface {
+	LoopItem(error, string) bool
+}
+type OfErrorNStringLoopFunc func(error, string) bool
+
+func (__ OfErrorNStringLoopFunc) LoopItem(k error, v string) bool {
+	return __(k, v)
+}
+
 type OfErrorNStringIterIf interface {
-	Range(func(error, string) bool)
+	Range(OfErrorNStringLooper)
 }
 
 type OfErrorNString map[error]string
@@ -4915,8 +5797,17 @@ type OfErrorNUintMutIf interface {
 	Delete(error)
 }
 
+type OfErrorNUintLooper interface {
+	LoopItem(error, uint) bool
+}
+type OfErrorNUintLoopFunc func(error, uint) bool
+
+func (__ OfErrorNUintLoopFunc) LoopItem(k error, v uint) bool {
+	return __(k, v)
+}
+
 type OfErrorNUintIterIf interface {
-	Range(func(error, uint) bool)
+	Range(OfErrorNUintLooper)
 }
 
 type OfErrorNUint map[error]uint
@@ -4965,8 +5856,17 @@ type OfErrorNUint16MutIf interface {
 	Delete(error)
 }
 
+type OfErrorNUint16Looper interface {
+	LoopItem(error, uint16) bool
+}
+type OfErrorNUint16LoopFunc func(error, uint16) bool
+
+func (__ OfErrorNUint16LoopFunc) LoopItem(k error, v uint16) bool {
+	return __(k, v)
+}
+
 type OfErrorNUint16IterIf interface {
-	Range(func(error, uint16) bool)
+	Range(OfErrorNUint16Looper)
 }
 
 type OfErrorNUint16 map[error]uint16
@@ -5015,8 +5915,17 @@ type OfErrorNUint32MutIf interface {
 	Delete(error)
 }
 
+type OfErrorNUint32Looper interface {
+	LoopItem(error, uint32) bool
+}
+type OfErrorNUint32LoopFunc func(error, uint32) bool
+
+func (__ OfErrorNUint32LoopFunc) LoopItem(k error, v uint32) bool {
+	return __(k, v)
+}
+
 type OfErrorNUint32IterIf interface {
-	Range(func(error, uint32) bool)
+	Range(OfErrorNUint32Looper)
 }
 
 type OfErrorNUint32 map[error]uint32
@@ -5065,8 +5974,17 @@ type OfErrorNUint64MutIf interface {
 	Delete(error)
 }
 
+type OfErrorNUint64Looper interface {
+	LoopItem(error, uint64) bool
+}
+type OfErrorNUint64LoopFunc func(error, uint64) bool
+
+func (__ OfErrorNUint64LoopFunc) LoopItem(k error, v uint64) bool {
+	return __(k, v)
+}
+
 type OfErrorNUint64IterIf interface {
-	Range(func(error, uint64) bool)
+	Range(OfErrorNUint64Looper)
 }
 
 type OfErrorNUint64 map[error]uint64
@@ -5115,8 +6033,17 @@ type OfErrorNUint8MutIf interface {
 	Delete(error)
 }
 
+type OfErrorNUint8Looper interface {
+	LoopItem(error, uint8) bool
+}
+type OfErrorNUint8LoopFunc func(error, uint8) bool
+
+func (__ OfErrorNUint8LoopFunc) LoopItem(k error, v uint8) bool {
+	return __(k, v)
+}
+
 type OfErrorNUint8IterIf interface {
-	Range(func(error, uint8) bool)
+	Range(OfErrorNUint8Looper)
 }
 
 type OfErrorNUint8 map[error]uint8
@@ -5165,8 +6092,17 @@ type OfErrorNUintptrMutIf interface {
 	Delete(error)
 }
 
+type OfErrorNUintptrLooper interface {
+	LoopItem(error, uintptr) bool
+}
+type OfErrorNUintptrLoopFunc func(error, uintptr) bool
+
+func (__ OfErrorNUintptrLoopFunc) LoopItem(k error, v uintptr) bool {
+	return __(k, v)
+}
+
 type OfErrorNUintptrIterIf interface {
-	Range(func(error, uintptr) bool)
+	Range(OfErrorNUintptrLooper)
 }
 
 type OfErrorNUintptr map[error]uintptr
@@ -5215,8 +6151,17 @@ type OfErrorNInterfaceMutIf interface {
 	Delete(error)
 }
 
+type OfErrorNInterfaceLooper interface {
+	LoopItem(error, interface{}) bool
+}
+type OfErrorNInterfaceLoopFunc func(error, interface{}) bool
+
+func (__ OfErrorNInterfaceLoopFunc) LoopItem(k error, v interface{}) bool {
+	return __(k, v)
+}
+
 type OfErrorNInterfaceIterIf interface {
-	Range(func(error, interface{}) bool)
+	Range(OfErrorNInterfaceLooper)
 }
 
 type OfErrorNInterface map[error]interface{}
@@ -5265,8 +6210,17 @@ type OfFloat32NBoolMutIf interface {
 	Delete(float32)
 }
 
+type OfFloat32NBoolLooper interface {
+	LoopItem(float32, bool) bool
+}
+type OfFloat32NBoolLoopFunc func(float32, bool) bool
+
+func (__ OfFloat32NBoolLoopFunc) LoopItem(k float32, v bool) bool {
+	return __(k, v)
+}
+
 type OfFloat32NBoolIterIf interface {
-	Range(func(float32, bool) bool)
+	Range(OfFloat32NBoolLooper)
 }
 
 type OfFloat32NBool map[float32]bool
@@ -5315,8 +6269,17 @@ type OfFloat32NByteMutIf interface {
 	Delete(float32)
 }
 
+type OfFloat32NByteLooper interface {
+	LoopItem(float32, byte) bool
+}
+type OfFloat32NByteLoopFunc func(float32, byte) bool
+
+func (__ OfFloat32NByteLoopFunc) LoopItem(k float32, v byte) bool {
+	return __(k, v)
+}
+
 type OfFloat32NByteIterIf interface {
-	Range(func(float32, byte) bool)
+	Range(OfFloat32NByteLooper)
 }
 
 type OfFloat32NByte map[float32]byte
@@ -5365,8 +6328,17 @@ type OfFloat32NComplex128MutIf interface {
 	Delete(float32)
 }
 
+type OfFloat32NComplex128Looper interface {
+	LoopItem(float32, complex128) bool
+}
+type OfFloat32NComplex128LoopFunc func(float32, complex128) bool
+
+func (__ OfFloat32NComplex128LoopFunc) LoopItem(k float32, v complex128) bool {
+	return __(k, v)
+}
+
 type OfFloat32NComplex128IterIf interface {
-	Range(func(float32, complex128) bool)
+	Range(OfFloat32NComplex128Looper)
 }
 
 type OfFloat32NComplex128 map[float32]complex128
@@ -5415,8 +6387,17 @@ type OfFloat32NComplex64MutIf interface {
 	Delete(float32)
 }
 
+type OfFloat32NComplex64Looper interface {
+	LoopItem(float32, complex64) bool
+}
+type OfFloat32NComplex64LoopFunc func(float32, complex64) bool
+
+func (__ OfFloat32NComplex64LoopFunc) LoopItem(k float32, v complex64) bool {
+	return __(k, v)
+}
+
 type OfFloat32NComplex64IterIf interface {
-	Range(func(float32, complex64) bool)
+	Range(OfFloat32NComplex64Looper)
 }
 
 type OfFloat32NComplex64 map[float32]complex64
@@ -5465,8 +6446,17 @@ type OfFloat32NErrorMutIf interface {
 	Delete(float32)
 }
 
+type OfFloat32NErrorLooper interface {
+	LoopItem(float32, error) bool
+}
+type OfFloat32NErrorLoopFunc func(float32, error) bool
+
+func (__ OfFloat32NErrorLoopFunc) LoopItem(k float32, v error) bool {
+	return __(k, v)
+}
+
 type OfFloat32NErrorIterIf interface {
-	Range(func(float32, error) bool)
+	Range(OfFloat32NErrorLooper)
 }
 
 type OfFloat32NError map[float32]error
@@ -5515,8 +6505,17 @@ type OfFloat32NFloat32MutIf interface {
 	Delete(float32)
 }
 
+type OfFloat32NFloat32Looper interface {
+	LoopItem(float32, float32) bool
+}
+type OfFloat32NFloat32LoopFunc func(float32, float32) bool
+
+func (__ OfFloat32NFloat32LoopFunc) LoopItem(k float32, v float32) bool {
+	return __(k, v)
+}
+
 type OfFloat32NFloat32IterIf interface {
-	Range(func(float32, float32) bool)
+	Range(OfFloat32NFloat32Looper)
 }
 
 type OfFloat32NFloat32 map[float32]float32
@@ -5565,8 +6564,17 @@ type OfFloat32NFloat64MutIf interface {
 	Delete(float32)
 }
 
+type OfFloat32NFloat64Looper interface {
+	LoopItem(float32, float64) bool
+}
+type OfFloat32NFloat64LoopFunc func(float32, float64) bool
+
+func (__ OfFloat32NFloat64LoopFunc) LoopItem(k float32, v float64) bool {
+	return __(k, v)
+}
+
 type OfFloat32NFloat64IterIf interface {
-	Range(func(float32, float64) bool)
+	Range(OfFloat32NFloat64Looper)
 }
 
 type OfFloat32NFloat64 map[float32]float64
@@ -5615,8 +6623,17 @@ type OfFloat32NIntMutIf interface {
 	Delete(float32)
 }
 
+type OfFloat32NIntLooper interface {
+	LoopItem(float32, int) bool
+}
+type OfFloat32NIntLoopFunc func(float32, int) bool
+
+func (__ OfFloat32NIntLoopFunc) LoopItem(k float32, v int) bool {
+	return __(k, v)
+}
+
 type OfFloat32NIntIterIf interface {
-	Range(func(float32, int) bool)
+	Range(OfFloat32NIntLooper)
 }
 
 type OfFloat32NInt map[float32]int
@@ -5665,8 +6682,17 @@ type OfFloat32NInt16MutIf interface {
 	Delete(float32)
 }
 
+type OfFloat32NInt16Looper interface {
+	LoopItem(float32, int16) bool
+}
+type OfFloat32NInt16LoopFunc func(float32, int16) bool
+
+func (__ OfFloat32NInt16LoopFunc) LoopItem(k float32, v int16) bool {
+	return __(k, v)
+}
+
 type OfFloat32NInt16IterIf interface {
-	Range(func(float32, int16) bool)
+	Range(OfFloat32NInt16Looper)
 }
 
 type OfFloat32NInt16 map[float32]int16
@@ -5715,8 +6741,17 @@ type OfFloat32NInt32MutIf interface {
 	Delete(float32)
 }
 
+type OfFloat32NInt32Looper interface {
+	LoopItem(float32, int32) bool
+}
+type OfFloat32NInt32LoopFunc func(float32, int32) bool
+
+func (__ OfFloat32NInt32LoopFunc) LoopItem(k float32, v int32) bool {
+	return __(k, v)
+}
+
 type OfFloat32NInt32IterIf interface {
-	Range(func(float32, int32) bool)
+	Range(OfFloat32NInt32Looper)
 }
 
 type OfFloat32NInt32 map[float32]int32
@@ -5765,8 +6800,17 @@ type OfFloat32NInt64MutIf interface {
 	Delete(float32)
 }
 
+type OfFloat32NInt64Looper interface {
+	LoopItem(float32, int64) bool
+}
+type OfFloat32NInt64LoopFunc func(float32, int64) bool
+
+func (__ OfFloat32NInt64LoopFunc) LoopItem(k float32, v int64) bool {
+	return __(k, v)
+}
+
 type OfFloat32NInt64IterIf interface {
-	Range(func(float32, int64) bool)
+	Range(OfFloat32NInt64Looper)
 }
 
 type OfFloat32NInt64 map[float32]int64
@@ -5815,8 +6859,17 @@ type OfFloat32NInt8MutIf interface {
 	Delete(float32)
 }
 
+type OfFloat32NInt8Looper interface {
+	LoopItem(float32, int8) bool
+}
+type OfFloat32NInt8LoopFunc func(float32, int8) bool
+
+func (__ OfFloat32NInt8LoopFunc) LoopItem(k float32, v int8) bool {
+	return __(k, v)
+}
+
 type OfFloat32NInt8IterIf interface {
-	Range(func(float32, int8) bool)
+	Range(OfFloat32NInt8Looper)
 }
 
 type OfFloat32NInt8 map[float32]int8
@@ -5865,8 +6918,17 @@ type OfFloat32NRuneMutIf interface {
 	Delete(float32)
 }
 
+type OfFloat32NRuneLooper interface {
+	LoopItem(float32, rune) bool
+}
+type OfFloat32NRuneLoopFunc func(float32, rune) bool
+
+func (__ OfFloat32NRuneLoopFunc) LoopItem(k float32, v rune) bool {
+	return __(k, v)
+}
+
 type OfFloat32NRuneIterIf interface {
-	Range(func(float32, rune) bool)
+	Range(OfFloat32NRuneLooper)
 }
 
 type OfFloat32NRune map[float32]rune
@@ -5915,8 +6977,17 @@ type OfFloat32NStringMutIf interface {
 	Delete(float32)
 }
 
+type OfFloat32NStringLooper interface {
+	LoopItem(float32, string) bool
+}
+type OfFloat32NStringLoopFunc func(float32, string) bool
+
+func (__ OfFloat32NStringLoopFunc) LoopItem(k float32, v string) bool {
+	return __(k, v)
+}
+
 type OfFloat32NStringIterIf interface {
-	Range(func(float32, string) bool)
+	Range(OfFloat32NStringLooper)
 }
 
 type OfFloat32NString map[float32]string
@@ -5965,8 +7036,17 @@ type OfFloat32NUintMutIf interface {
 	Delete(float32)
 }
 
+type OfFloat32NUintLooper interface {
+	LoopItem(float32, uint) bool
+}
+type OfFloat32NUintLoopFunc func(float32, uint) bool
+
+func (__ OfFloat32NUintLoopFunc) LoopItem(k float32, v uint) bool {
+	return __(k, v)
+}
+
 type OfFloat32NUintIterIf interface {
-	Range(func(float32, uint) bool)
+	Range(OfFloat32NUintLooper)
 }
 
 type OfFloat32NUint map[float32]uint
@@ -6015,8 +7095,17 @@ type OfFloat32NUint16MutIf interface {
 	Delete(float32)
 }
 
+type OfFloat32NUint16Looper interface {
+	LoopItem(float32, uint16) bool
+}
+type OfFloat32NUint16LoopFunc func(float32, uint16) bool
+
+func (__ OfFloat32NUint16LoopFunc) LoopItem(k float32, v uint16) bool {
+	return __(k, v)
+}
+
 type OfFloat32NUint16IterIf interface {
-	Range(func(float32, uint16) bool)
+	Range(OfFloat32NUint16Looper)
 }
 
 type OfFloat32NUint16 map[float32]uint16
@@ -6065,8 +7154,17 @@ type OfFloat32NUint32MutIf interface {
 	Delete(float32)
 }
 
+type OfFloat32NUint32Looper interface {
+	LoopItem(float32, uint32) bool
+}
+type OfFloat32NUint32LoopFunc func(float32, uint32) bool
+
+func (__ OfFloat32NUint32LoopFunc) LoopItem(k float32, v uint32) bool {
+	return __(k, v)
+}
+
 type OfFloat32NUint32IterIf interface {
-	Range(func(float32, uint32) bool)
+	Range(OfFloat32NUint32Looper)
 }
 
 type OfFloat32NUint32 map[float32]uint32
@@ -6115,8 +7213,17 @@ type OfFloat32NUint64MutIf interface {
 	Delete(float32)
 }
 
+type OfFloat32NUint64Looper interface {
+	LoopItem(float32, uint64) bool
+}
+type OfFloat32NUint64LoopFunc func(float32, uint64) bool
+
+func (__ OfFloat32NUint64LoopFunc) LoopItem(k float32, v uint64) bool {
+	return __(k, v)
+}
+
 type OfFloat32NUint64IterIf interface {
-	Range(func(float32, uint64) bool)
+	Range(OfFloat32NUint64Looper)
 }
 
 type OfFloat32NUint64 map[float32]uint64
@@ -6165,8 +7272,17 @@ type OfFloat32NUint8MutIf interface {
 	Delete(float32)
 }
 
+type OfFloat32NUint8Looper interface {
+	LoopItem(float32, uint8) bool
+}
+type OfFloat32NUint8LoopFunc func(float32, uint8) bool
+
+func (__ OfFloat32NUint8LoopFunc) LoopItem(k float32, v uint8) bool {
+	return __(k, v)
+}
+
 type OfFloat32NUint8IterIf interface {
-	Range(func(float32, uint8) bool)
+	Range(OfFloat32NUint8Looper)
 }
 
 type OfFloat32NUint8 map[float32]uint8
@@ -6215,8 +7331,17 @@ type OfFloat32NUintptrMutIf interface {
 	Delete(float32)
 }
 
+type OfFloat32NUintptrLooper interface {
+	LoopItem(float32, uintptr) bool
+}
+type OfFloat32NUintptrLoopFunc func(float32, uintptr) bool
+
+func (__ OfFloat32NUintptrLoopFunc) LoopItem(k float32, v uintptr) bool {
+	return __(k, v)
+}
+
 type OfFloat32NUintptrIterIf interface {
-	Range(func(float32, uintptr) bool)
+	Range(OfFloat32NUintptrLooper)
 }
 
 type OfFloat32NUintptr map[float32]uintptr
@@ -6265,8 +7390,17 @@ type OfFloat32NInterfaceMutIf interface {
 	Delete(float32)
 }
 
+type OfFloat32NInterfaceLooper interface {
+	LoopItem(float32, interface{}) bool
+}
+type OfFloat32NInterfaceLoopFunc func(float32, interface{}) bool
+
+func (__ OfFloat32NInterfaceLoopFunc) LoopItem(k float32, v interface{}) bool {
+	return __(k, v)
+}
+
 type OfFloat32NInterfaceIterIf interface {
-	Range(func(float32, interface{}) bool)
+	Range(OfFloat32NInterfaceLooper)
 }
 
 type OfFloat32NInterface map[float32]interface{}
@@ -6315,8 +7449,17 @@ type OfFloat64NBoolMutIf interface {
 	Delete(float64)
 }
 
+type OfFloat64NBoolLooper interface {
+	LoopItem(float64, bool) bool
+}
+type OfFloat64NBoolLoopFunc func(float64, bool) bool
+
+func (__ OfFloat64NBoolLoopFunc) LoopItem(k float64, v bool) bool {
+	return __(k, v)
+}
+
 type OfFloat64NBoolIterIf interface {
-	Range(func(float64, bool) bool)
+	Range(OfFloat64NBoolLooper)
 }
 
 type OfFloat64NBool map[float64]bool
@@ -6365,8 +7508,17 @@ type OfFloat64NByteMutIf interface {
 	Delete(float64)
 }
 
+type OfFloat64NByteLooper interface {
+	LoopItem(float64, byte) bool
+}
+type OfFloat64NByteLoopFunc func(float64, byte) bool
+
+func (__ OfFloat64NByteLoopFunc) LoopItem(k float64, v byte) bool {
+	return __(k, v)
+}
+
 type OfFloat64NByteIterIf interface {
-	Range(func(float64, byte) bool)
+	Range(OfFloat64NByteLooper)
 }
 
 type OfFloat64NByte map[float64]byte
@@ -6415,8 +7567,17 @@ type OfFloat64NComplex128MutIf interface {
 	Delete(float64)
 }
 
+type OfFloat64NComplex128Looper interface {
+	LoopItem(float64, complex128) bool
+}
+type OfFloat64NComplex128LoopFunc func(float64, complex128) bool
+
+func (__ OfFloat64NComplex128LoopFunc) LoopItem(k float64, v complex128) bool {
+	return __(k, v)
+}
+
 type OfFloat64NComplex128IterIf interface {
-	Range(func(float64, complex128) bool)
+	Range(OfFloat64NComplex128Looper)
 }
 
 type OfFloat64NComplex128 map[float64]complex128
@@ -6465,8 +7626,17 @@ type OfFloat64NComplex64MutIf interface {
 	Delete(float64)
 }
 
+type OfFloat64NComplex64Looper interface {
+	LoopItem(float64, complex64) bool
+}
+type OfFloat64NComplex64LoopFunc func(float64, complex64) bool
+
+func (__ OfFloat64NComplex64LoopFunc) LoopItem(k float64, v complex64) bool {
+	return __(k, v)
+}
+
 type OfFloat64NComplex64IterIf interface {
-	Range(func(float64, complex64) bool)
+	Range(OfFloat64NComplex64Looper)
 }
 
 type OfFloat64NComplex64 map[float64]complex64
@@ -6515,8 +7685,17 @@ type OfFloat64NErrorMutIf interface {
 	Delete(float64)
 }
 
+type OfFloat64NErrorLooper interface {
+	LoopItem(float64, error) bool
+}
+type OfFloat64NErrorLoopFunc func(float64, error) bool
+
+func (__ OfFloat64NErrorLoopFunc) LoopItem(k float64, v error) bool {
+	return __(k, v)
+}
+
 type OfFloat64NErrorIterIf interface {
-	Range(func(float64, error) bool)
+	Range(OfFloat64NErrorLooper)
 }
 
 type OfFloat64NError map[float64]error
@@ -6565,8 +7744,17 @@ type OfFloat64NFloat32MutIf interface {
 	Delete(float64)
 }
 
+type OfFloat64NFloat32Looper interface {
+	LoopItem(float64, float32) bool
+}
+type OfFloat64NFloat32LoopFunc func(float64, float32) bool
+
+func (__ OfFloat64NFloat32LoopFunc) LoopItem(k float64, v float32) bool {
+	return __(k, v)
+}
+
 type OfFloat64NFloat32IterIf interface {
-	Range(func(float64, float32) bool)
+	Range(OfFloat64NFloat32Looper)
 }
 
 type OfFloat64NFloat32 map[float64]float32
@@ -6615,8 +7803,17 @@ type OfFloat64NFloat64MutIf interface {
 	Delete(float64)
 }
 
+type OfFloat64NFloat64Looper interface {
+	LoopItem(float64, float64) bool
+}
+type OfFloat64NFloat64LoopFunc func(float64, float64) bool
+
+func (__ OfFloat64NFloat64LoopFunc) LoopItem(k float64, v float64) bool {
+	return __(k, v)
+}
+
 type OfFloat64NFloat64IterIf interface {
-	Range(func(float64, float64) bool)
+	Range(OfFloat64NFloat64Looper)
 }
 
 type OfFloat64NFloat64 map[float64]float64
@@ -6665,8 +7862,17 @@ type OfFloat64NIntMutIf interface {
 	Delete(float64)
 }
 
+type OfFloat64NIntLooper interface {
+	LoopItem(float64, int) bool
+}
+type OfFloat64NIntLoopFunc func(float64, int) bool
+
+func (__ OfFloat64NIntLoopFunc) LoopItem(k float64, v int) bool {
+	return __(k, v)
+}
+
 type OfFloat64NIntIterIf interface {
-	Range(func(float64, int) bool)
+	Range(OfFloat64NIntLooper)
 }
 
 type OfFloat64NInt map[float64]int
@@ -6715,8 +7921,17 @@ type OfFloat64NInt16MutIf interface {
 	Delete(float64)
 }
 
+type OfFloat64NInt16Looper interface {
+	LoopItem(float64, int16) bool
+}
+type OfFloat64NInt16LoopFunc func(float64, int16) bool
+
+func (__ OfFloat64NInt16LoopFunc) LoopItem(k float64, v int16) bool {
+	return __(k, v)
+}
+
 type OfFloat64NInt16IterIf interface {
-	Range(func(float64, int16) bool)
+	Range(OfFloat64NInt16Looper)
 }
 
 type OfFloat64NInt16 map[float64]int16
@@ -6765,8 +7980,17 @@ type OfFloat64NInt32MutIf interface {
 	Delete(float64)
 }
 
+type OfFloat64NInt32Looper interface {
+	LoopItem(float64, int32) bool
+}
+type OfFloat64NInt32LoopFunc func(float64, int32) bool
+
+func (__ OfFloat64NInt32LoopFunc) LoopItem(k float64, v int32) bool {
+	return __(k, v)
+}
+
 type OfFloat64NInt32IterIf interface {
-	Range(func(float64, int32) bool)
+	Range(OfFloat64NInt32Looper)
 }
 
 type OfFloat64NInt32 map[float64]int32
@@ -6815,8 +8039,17 @@ type OfFloat64NInt64MutIf interface {
 	Delete(float64)
 }
 
+type OfFloat64NInt64Looper interface {
+	LoopItem(float64, int64) bool
+}
+type OfFloat64NInt64LoopFunc func(float64, int64) bool
+
+func (__ OfFloat64NInt64LoopFunc) LoopItem(k float64, v int64) bool {
+	return __(k, v)
+}
+
 type OfFloat64NInt64IterIf interface {
-	Range(func(float64, int64) bool)
+	Range(OfFloat64NInt64Looper)
 }
 
 type OfFloat64NInt64 map[float64]int64
@@ -6865,8 +8098,17 @@ type OfFloat64NInt8MutIf interface {
 	Delete(float64)
 }
 
+type OfFloat64NInt8Looper interface {
+	LoopItem(float64, int8) bool
+}
+type OfFloat64NInt8LoopFunc func(float64, int8) bool
+
+func (__ OfFloat64NInt8LoopFunc) LoopItem(k float64, v int8) bool {
+	return __(k, v)
+}
+
 type OfFloat64NInt8IterIf interface {
-	Range(func(float64, int8) bool)
+	Range(OfFloat64NInt8Looper)
 }
 
 type OfFloat64NInt8 map[float64]int8
@@ -6915,8 +8157,17 @@ type OfFloat64NRuneMutIf interface {
 	Delete(float64)
 }
 
+type OfFloat64NRuneLooper interface {
+	LoopItem(float64, rune) bool
+}
+type OfFloat64NRuneLoopFunc func(float64, rune) bool
+
+func (__ OfFloat64NRuneLoopFunc) LoopItem(k float64, v rune) bool {
+	return __(k, v)
+}
+
 type OfFloat64NRuneIterIf interface {
-	Range(func(float64, rune) bool)
+	Range(OfFloat64NRuneLooper)
 }
 
 type OfFloat64NRune map[float64]rune
@@ -6965,8 +8216,17 @@ type OfFloat64NStringMutIf interface {
 	Delete(float64)
 }
 
+type OfFloat64NStringLooper interface {
+	LoopItem(float64, string) bool
+}
+type OfFloat64NStringLoopFunc func(float64, string) bool
+
+func (__ OfFloat64NStringLoopFunc) LoopItem(k float64, v string) bool {
+	return __(k, v)
+}
+
 type OfFloat64NStringIterIf interface {
-	Range(func(float64, string) bool)
+	Range(OfFloat64NStringLooper)
 }
 
 type OfFloat64NString map[float64]string
@@ -7015,8 +8275,17 @@ type OfFloat64NUintMutIf interface {
 	Delete(float64)
 }
 
+type OfFloat64NUintLooper interface {
+	LoopItem(float64, uint) bool
+}
+type OfFloat64NUintLoopFunc func(float64, uint) bool
+
+func (__ OfFloat64NUintLoopFunc) LoopItem(k float64, v uint) bool {
+	return __(k, v)
+}
+
 type OfFloat64NUintIterIf interface {
-	Range(func(float64, uint) bool)
+	Range(OfFloat64NUintLooper)
 }
 
 type OfFloat64NUint map[float64]uint
@@ -7065,8 +8334,17 @@ type OfFloat64NUint16MutIf interface {
 	Delete(float64)
 }
 
+type OfFloat64NUint16Looper interface {
+	LoopItem(float64, uint16) bool
+}
+type OfFloat64NUint16LoopFunc func(float64, uint16) bool
+
+func (__ OfFloat64NUint16LoopFunc) LoopItem(k float64, v uint16) bool {
+	return __(k, v)
+}
+
 type OfFloat64NUint16IterIf interface {
-	Range(func(float64, uint16) bool)
+	Range(OfFloat64NUint16Looper)
 }
 
 type OfFloat64NUint16 map[float64]uint16
@@ -7115,8 +8393,17 @@ type OfFloat64NUint32MutIf interface {
 	Delete(float64)
 }
 
+type OfFloat64NUint32Looper interface {
+	LoopItem(float64, uint32) bool
+}
+type OfFloat64NUint32LoopFunc func(float64, uint32) bool
+
+func (__ OfFloat64NUint32LoopFunc) LoopItem(k float64, v uint32) bool {
+	return __(k, v)
+}
+
 type OfFloat64NUint32IterIf interface {
-	Range(func(float64, uint32) bool)
+	Range(OfFloat64NUint32Looper)
 }
 
 type OfFloat64NUint32 map[float64]uint32
@@ -7165,8 +8452,17 @@ type OfFloat64NUint64MutIf interface {
 	Delete(float64)
 }
 
+type OfFloat64NUint64Looper interface {
+	LoopItem(float64, uint64) bool
+}
+type OfFloat64NUint64LoopFunc func(float64, uint64) bool
+
+func (__ OfFloat64NUint64LoopFunc) LoopItem(k float64, v uint64) bool {
+	return __(k, v)
+}
+
 type OfFloat64NUint64IterIf interface {
-	Range(func(float64, uint64) bool)
+	Range(OfFloat64NUint64Looper)
 }
 
 type OfFloat64NUint64 map[float64]uint64
@@ -7215,8 +8511,17 @@ type OfFloat64NUint8MutIf interface {
 	Delete(float64)
 }
 
+type OfFloat64NUint8Looper interface {
+	LoopItem(float64, uint8) bool
+}
+type OfFloat64NUint8LoopFunc func(float64, uint8) bool
+
+func (__ OfFloat64NUint8LoopFunc) LoopItem(k float64, v uint8) bool {
+	return __(k, v)
+}
+
 type OfFloat64NUint8IterIf interface {
-	Range(func(float64, uint8) bool)
+	Range(OfFloat64NUint8Looper)
 }
 
 type OfFloat64NUint8 map[float64]uint8
@@ -7265,8 +8570,17 @@ type OfFloat64NUintptrMutIf interface {
 	Delete(float64)
 }
 
+type OfFloat64NUintptrLooper interface {
+	LoopItem(float64, uintptr) bool
+}
+type OfFloat64NUintptrLoopFunc func(float64, uintptr) bool
+
+func (__ OfFloat64NUintptrLoopFunc) LoopItem(k float64, v uintptr) bool {
+	return __(k, v)
+}
+
 type OfFloat64NUintptrIterIf interface {
-	Range(func(float64, uintptr) bool)
+	Range(OfFloat64NUintptrLooper)
 }
 
 type OfFloat64NUintptr map[float64]uintptr
@@ -7315,8 +8629,17 @@ type OfFloat64NInterfaceMutIf interface {
 	Delete(float64)
 }
 
+type OfFloat64NInterfaceLooper interface {
+	LoopItem(float64, interface{}) bool
+}
+type OfFloat64NInterfaceLoopFunc func(float64, interface{}) bool
+
+func (__ OfFloat64NInterfaceLoopFunc) LoopItem(k float64, v interface{}) bool {
+	return __(k, v)
+}
+
 type OfFloat64NInterfaceIterIf interface {
-	Range(func(float64, interface{}) bool)
+	Range(OfFloat64NInterfaceLooper)
 }
 
 type OfFloat64NInterface map[float64]interface{}
@@ -7365,8 +8688,17 @@ type OfIntNBoolMutIf interface {
 	Delete(int)
 }
 
+type OfIntNBoolLooper interface {
+	LoopItem(int, bool) bool
+}
+type OfIntNBoolLoopFunc func(int, bool) bool
+
+func (__ OfIntNBoolLoopFunc) LoopItem(k int, v bool) bool {
+	return __(k, v)
+}
+
 type OfIntNBoolIterIf interface {
-	Range(func(int, bool) bool)
+	Range(OfIntNBoolLooper)
 }
 
 type OfIntNBool map[int]bool
@@ -7415,8 +8747,17 @@ type OfIntNByteMutIf interface {
 	Delete(int)
 }
 
+type OfIntNByteLooper interface {
+	LoopItem(int, byte) bool
+}
+type OfIntNByteLoopFunc func(int, byte) bool
+
+func (__ OfIntNByteLoopFunc) LoopItem(k int, v byte) bool {
+	return __(k, v)
+}
+
 type OfIntNByteIterIf interface {
-	Range(func(int, byte) bool)
+	Range(OfIntNByteLooper)
 }
 
 type OfIntNByte map[int]byte
@@ -7465,8 +8806,17 @@ type OfIntNComplex128MutIf interface {
 	Delete(int)
 }
 
+type OfIntNComplex128Looper interface {
+	LoopItem(int, complex128) bool
+}
+type OfIntNComplex128LoopFunc func(int, complex128) bool
+
+func (__ OfIntNComplex128LoopFunc) LoopItem(k int, v complex128) bool {
+	return __(k, v)
+}
+
 type OfIntNComplex128IterIf interface {
-	Range(func(int, complex128) bool)
+	Range(OfIntNComplex128Looper)
 }
 
 type OfIntNComplex128 map[int]complex128
@@ -7515,8 +8865,17 @@ type OfIntNComplex64MutIf interface {
 	Delete(int)
 }
 
+type OfIntNComplex64Looper interface {
+	LoopItem(int, complex64) bool
+}
+type OfIntNComplex64LoopFunc func(int, complex64) bool
+
+func (__ OfIntNComplex64LoopFunc) LoopItem(k int, v complex64) bool {
+	return __(k, v)
+}
+
 type OfIntNComplex64IterIf interface {
-	Range(func(int, complex64) bool)
+	Range(OfIntNComplex64Looper)
 }
 
 type OfIntNComplex64 map[int]complex64
@@ -7565,8 +8924,17 @@ type OfIntNErrorMutIf interface {
 	Delete(int)
 }
 
+type OfIntNErrorLooper interface {
+	LoopItem(int, error) bool
+}
+type OfIntNErrorLoopFunc func(int, error) bool
+
+func (__ OfIntNErrorLoopFunc) LoopItem(k int, v error) bool {
+	return __(k, v)
+}
+
 type OfIntNErrorIterIf interface {
-	Range(func(int, error) bool)
+	Range(OfIntNErrorLooper)
 }
 
 type OfIntNError map[int]error
@@ -7615,8 +8983,17 @@ type OfIntNFloat32MutIf interface {
 	Delete(int)
 }
 
+type OfIntNFloat32Looper interface {
+	LoopItem(int, float32) bool
+}
+type OfIntNFloat32LoopFunc func(int, float32) bool
+
+func (__ OfIntNFloat32LoopFunc) LoopItem(k int, v float32) bool {
+	return __(k, v)
+}
+
 type OfIntNFloat32IterIf interface {
-	Range(func(int, float32) bool)
+	Range(OfIntNFloat32Looper)
 }
 
 type OfIntNFloat32 map[int]float32
@@ -7665,8 +9042,17 @@ type OfIntNFloat64MutIf interface {
 	Delete(int)
 }
 
+type OfIntNFloat64Looper interface {
+	LoopItem(int, float64) bool
+}
+type OfIntNFloat64LoopFunc func(int, float64) bool
+
+func (__ OfIntNFloat64LoopFunc) LoopItem(k int, v float64) bool {
+	return __(k, v)
+}
+
 type OfIntNFloat64IterIf interface {
-	Range(func(int, float64) bool)
+	Range(OfIntNFloat64Looper)
 }
 
 type OfIntNFloat64 map[int]float64
@@ -7715,8 +9101,17 @@ type OfIntNIntMutIf interface {
 	Delete(int)
 }
 
+type OfIntNIntLooper interface {
+	LoopItem(int, int) bool
+}
+type OfIntNIntLoopFunc func(int, int) bool
+
+func (__ OfIntNIntLoopFunc) LoopItem(k int, v int) bool {
+	return __(k, v)
+}
+
 type OfIntNIntIterIf interface {
-	Range(func(int, int) bool)
+	Range(OfIntNIntLooper)
 }
 
 type OfIntNInt map[int]int
@@ -7765,8 +9160,17 @@ type OfIntNInt16MutIf interface {
 	Delete(int)
 }
 
+type OfIntNInt16Looper interface {
+	LoopItem(int, int16) bool
+}
+type OfIntNInt16LoopFunc func(int, int16) bool
+
+func (__ OfIntNInt16LoopFunc) LoopItem(k int, v int16) bool {
+	return __(k, v)
+}
+
 type OfIntNInt16IterIf interface {
-	Range(func(int, int16) bool)
+	Range(OfIntNInt16Looper)
 }
 
 type OfIntNInt16 map[int]int16
@@ -7815,8 +9219,17 @@ type OfIntNInt32MutIf interface {
 	Delete(int)
 }
 
+type OfIntNInt32Looper interface {
+	LoopItem(int, int32) bool
+}
+type OfIntNInt32LoopFunc func(int, int32) bool
+
+func (__ OfIntNInt32LoopFunc) LoopItem(k int, v int32) bool {
+	return __(k, v)
+}
+
 type OfIntNInt32IterIf interface {
-	Range(func(int, int32) bool)
+	Range(OfIntNInt32Looper)
 }
 
 type OfIntNInt32 map[int]int32
@@ -7865,8 +9278,17 @@ type OfIntNInt64MutIf interface {
 	Delete(int)
 }
 
+type OfIntNInt64Looper interface {
+	LoopItem(int, int64) bool
+}
+type OfIntNInt64LoopFunc func(int, int64) bool
+
+func (__ OfIntNInt64LoopFunc) LoopItem(k int, v int64) bool {
+	return __(k, v)
+}
+
 type OfIntNInt64IterIf interface {
-	Range(func(int, int64) bool)
+	Range(OfIntNInt64Looper)
 }
 
 type OfIntNInt64 map[int]int64
@@ -7915,8 +9337,17 @@ type OfIntNInt8MutIf interface {
 	Delete(int)
 }
 
+type OfIntNInt8Looper interface {
+	LoopItem(int, int8) bool
+}
+type OfIntNInt8LoopFunc func(int, int8) bool
+
+func (__ OfIntNInt8LoopFunc) LoopItem(k int, v int8) bool {
+	return __(k, v)
+}
+
 type OfIntNInt8IterIf interface {
-	Range(func(int, int8) bool)
+	Range(OfIntNInt8Looper)
 }
 
 type OfIntNInt8 map[int]int8
@@ -7965,8 +9396,17 @@ type OfIntNRuneMutIf interface {
 	Delete(int)
 }
 
+type OfIntNRuneLooper interface {
+	LoopItem(int, rune) bool
+}
+type OfIntNRuneLoopFunc func(int, rune) bool
+
+func (__ OfIntNRuneLoopFunc) LoopItem(k int, v rune) bool {
+	return __(k, v)
+}
+
 type OfIntNRuneIterIf interface {
-	Range(func(int, rune) bool)
+	Range(OfIntNRuneLooper)
 }
 
 type OfIntNRune map[int]rune
@@ -8015,8 +9455,17 @@ type OfIntNStringMutIf interface {
 	Delete(int)
 }
 
+type OfIntNStringLooper interface {
+	LoopItem(int, string) bool
+}
+type OfIntNStringLoopFunc func(int, string) bool
+
+func (__ OfIntNStringLoopFunc) LoopItem(k int, v string) bool {
+	return __(k, v)
+}
+
 type OfIntNStringIterIf interface {
-	Range(func(int, string) bool)
+	Range(OfIntNStringLooper)
 }
 
 type OfIntNString map[int]string
@@ -8065,8 +9514,17 @@ type OfIntNUintMutIf interface {
 	Delete(int)
 }
 
+type OfIntNUintLooper interface {
+	LoopItem(int, uint) bool
+}
+type OfIntNUintLoopFunc func(int, uint) bool
+
+func (__ OfIntNUintLoopFunc) LoopItem(k int, v uint) bool {
+	return __(k, v)
+}
+
 type OfIntNUintIterIf interface {
-	Range(func(int, uint) bool)
+	Range(OfIntNUintLooper)
 }
 
 type OfIntNUint map[int]uint
@@ -8115,8 +9573,17 @@ type OfIntNUint16MutIf interface {
 	Delete(int)
 }
 
+type OfIntNUint16Looper interface {
+	LoopItem(int, uint16) bool
+}
+type OfIntNUint16LoopFunc func(int, uint16) bool
+
+func (__ OfIntNUint16LoopFunc) LoopItem(k int, v uint16) bool {
+	return __(k, v)
+}
+
 type OfIntNUint16IterIf interface {
-	Range(func(int, uint16) bool)
+	Range(OfIntNUint16Looper)
 }
 
 type OfIntNUint16 map[int]uint16
@@ -8165,8 +9632,17 @@ type OfIntNUint32MutIf interface {
 	Delete(int)
 }
 
+type OfIntNUint32Looper interface {
+	LoopItem(int, uint32) bool
+}
+type OfIntNUint32LoopFunc func(int, uint32) bool
+
+func (__ OfIntNUint32LoopFunc) LoopItem(k int, v uint32) bool {
+	return __(k, v)
+}
+
 type OfIntNUint32IterIf interface {
-	Range(func(int, uint32) bool)
+	Range(OfIntNUint32Looper)
 }
 
 type OfIntNUint32 map[int]uint32
@@ -8215,8 +9691,17 @@ type OfIntNUint64MutIf interface {
 	Delete(int)
 }
 
+type OfIntNUint64Looper interface {
+	LoopItem(int, uint64) bool
+}
+type OfIntNUint64LoopFunc func(int, uint64) bool
+
+func (__ OfIntNUint64LoopFunc) LoopItem(k int, v uint64) bool {
+	return __(k, v)
+}
+
 type OfIntNUint64IterIf interface {
-	Range(func(int, uint64) bool)
+	Range(OfIntNUint64Looper)
 }
 
 type OfIntNUint64 map[int]uint64
@@ -8265,8 +9750,17 @@ type OfIntNUint8MutIf interface {
 	Delete(int)
 }
 
+type OfIntNUint8Looper interface {
+	LoopItem(int, uint8) bool
+}
+type OfIntNUint8LoopFunc func(int, uint8) bool
+
+func (__ OfIntNUint8LoopFunc) LoopItem(k int, v uint8) bool {
+	return __(k, v)
+}
+
 type OfIntNUint8IterIf interface {
-	Range(func(int, uint8) bool)
+	Range(OfIntNUint8Looper)
 }
 
 type OfIntNUint8 map[int]uint8
@@ -8315,8 +9809,17 @@ type OfIntNUintptrMutIf interface {
 	Delete(int)
 }
 
+type OfIntNUintptrLooper interface {
+	LoopItem(int, uintptr) bool
+}
+type OfIntNUintptrLoopFunc func(int, uintptr) bool
+
+func (__ OfIntNUintptrLoopFunc) LoopItem(k int, v uintptr) bool {
+	return __(k, v)
+}
+
 type OfIntNUintptrIterIf interface {
-	Range(func(int, uintptr) bool)
+	Range(OfIntNUintptrLooper)
 }
 
 type OfIntNUintptr map[int]uintptr
@@ -8365,8 +9868,17 @@ type OfIntNInterfaceMutIf interface {
 	Delete(int)
 }
 
+type OfIntNInterfaceLooper interface {
+	LoopItem(int, interface{}) bool
+}
+type OfIntNInterfaceLoopFunc func(int, interface{}) bool
+
+func (__ OfIntNInterfaceLoopFunc) LoopItem(k int, v interface{}) bool {
+	return __(k, v)
+}
+
 type OfIntNInterfaceIterIf interface {
-	Range(func(int, interface{}) bool)
+	Range(OfIntNInterfaceLooper)
 }
 
 type OfIntNInterface map[int]interface{}
@@ -8415,8 +9927,17 @@ type OfInt16NBoolMutIf interface {
 	Delete(int16)
 }
 
+type OfInt16NBoolLooper interface {
+	LoopItem(int16, bool) bool
+}
+type OfInt16NBoolLoopFunc func(int16, bool) bool
+
+func (__ OfInt16NBoolLoopFunc) LoopItem(k int16, v bool) bool {
+	return __(k, v)
+}
+
 type OfInt16NBoolIterIf interface {
-	Range(func(int16, bool) bool)
+	Range(OfInt16NBoolLooper)
 }
 
 type OfInt16NBool map[int16]bool
@@ -8465,8 +9986,17 @@ type OfInt16NByteMutIf interface {
 	Delete(int16)
 }
 
+type OfInt16NByteLooper interface {
+	LoopItem(int16, byte) bool
+}
+type OfInt16NByteLoopFunc func(int16, byte) bool
+
+func (__ OfInt16NByteLoopFunc) LoopItem(k int16, v byte) bool {
+	return __(k, v)
+}
+
 type OfInt16NByteIterIf interface {
-	Range(func(int16, byte) bool)
+	Range(OfInt16NByteLooper)
 }
 
 type OfInt16NByte map[int16]byte
@@ -8515,8 +10045,17 @@ type OfInt16NComplex128MutIf interface {
 	Delete(int16)
 }
 
+type OfInt16NComplex128Looper interface {
+	LoopItem(int16, complex128) bool
+}
+type OfInt16NComplex128LoopFunc func(int16, complex128) bool
+
+func (__ OfInt16NComplex128LoopFunc) LoopItem(k int16, v complex128) bool {
+	return __(k, v)
+}
+
 type OfInt16NComplex128IterIf interface {
-	Range(func(int16, complex128) bool)
+	Range(OfInt16NComplex128Looper)
 }
 
 type OfInt16NComplex128 map[int16]complex128
@@ -8565,8 +10104,17 @@ type OfInt16NComplex64MutIf interface {
 	Delete(int16)
 }
 
+type OfInt16NComplex64Looper interface {
+	LoopItem(int16, complex64) bool
+}
+type OfInt16NComplex64LoopFunc func(int16, complex64) bool
+
+func (__ OfInt16NComplex64LoopFunc) LoopItem(k int16, v complex64) bool {
+	return __(k, v)
+}
+
 type OfInt16NComplex64IterIf interface {
-	Range(func(int16, complex64) bool)
+	Range(OfInt16NComplex64Looper)
 }
 
 type OfInt16NComplex64 map[int16]complex64
@@ -8615,8 +10163,17 @@ type OfInt16NErrorMutIf interface {
 	Delete(int16)
 }
 
+type OfInt16NErrorLooper interface {
+	LoopItem(int16, error) bool
+}
+type OfInt16NErrorLoopFunc func(int16, error) bool
+
+func (__ OfInt16NErrorLoopFunc) LoopItem(k int16, v error) bool {
+	return __(k, v)
+}
+
 type OfInt16NErrorIterIf interface {
-	Range(func(int16, error) bool)
+	Range(OfInt16NErrorLooper)
 }
 
 type OfInt16NError map[int16]error
@@ -8665,8 +10222,17 @@ type OfInt16NFloat32MutIf interface {
 	Delete(int16)
 }
 
+type OfInt16NFloat32Looper interface {
+	LoopItem(int16, float32) bool
+}
+type OfInt16NFloat32LoopFunc func(int16, float32) bool
+
+func (__ OfInt16NFloat32LoopFunc) LoopItem(k int16, v float32) bool {
+	return __(k, v)
+}
+
 type OfInt16NFloat32IterIf interface {
-	Range(func(int16, float32) bool)
+	Range(OfInt16NFloat32Looper)
 }
 
 type OfInt16NFloat32 map[int16]float32
@@ -8715,8 +10281,17 @@ type OfInt16NFloat64MutIf interface {
 	Delete(int16)
 }
 
+type OfInt16NFloat64Looper interface {
+	LoopItem(int16, float64) bool
+}
+type OfInt16NFloat64LoopFunc func(int16, float64) bool
+
+func (__ OfInt16NFloat64LoopFunc) LoopItem(k int16, v float64) bool {
+	return __(k, v)
+}
+
 type OfInt16NFloat64IterIf interface {
-	Range(func(int16, float64) bool)
+	Range(OfInt16NFloat64Looper)
 }
 
 type OfInt16NFloat64 map[int16]float64
@@ -8765,8 +10340,17 @@ type OfInt16NIntMutIf interface {
 	Delete(int16)
 }
 
+type OfInt16NIntLooper interface {
+	LoopItem(int16, int) bool
+}
+type OfInt16NIntLoopFunc func(int16, int) bool
+
+func (__ OfInt16NIntLoopFunc) LoopItem(k int16, v int) bool {
+	return __(k, v)
+}
+
 type OfInt16NIntIterIf interface {
-	Range(func(int16, int) bool)
+	Range(OfInt16NIntLooper)
 }
 
 type OfInt16NInt map[int16]int
@@ -8815,8 +10399,17 @@ type OfInt16NInt16MutIf interface {
 	Delete(int16)
 }
 
+type OfInt16NInt16Looper interface {
+	LoopItem(int16, int16) bool
+}
+type OfInt16NInt16LoopFunc func(int16, int16) bool
+
+func (__ OfInt16NInt16LoopFunc) LoopItem(k int16, v int16) bool {
+	return __(k, v)
+}
+
 type OfInt16NInt16IterIf interface {
-	Range(func(int16, int16) bool)
+	Range(OfInt16NInt16Looper)
 }
 
 type OfInt16NInt16 map[int16]int16
@@ -8865,8 +10458,17 @@ type OfInt16NInt32MutIf interface {
 	Delete(int16)
 }
 
+type OfInt16NInt32Looper interface {
+	LoopItem(int16, int32) bool
+}
+type OfInt16NInt32LoopFunc func(int16, int32) bool
+
+func (__ OfInt16NInt32LoopFunc) LoopItem(k int16, v int32) bool {
+	return __(k, v)
+}
+
 type OfInt16NInt32IterIf interface {
-	Range(func(int16, int32) bool)
+	Range(OfInt16NInt32Looper)
 }
 
 type OfInt16NInt32 map[int16]int32
@@ -8915,8 +10517,17 @@ type OfInt16NInt64MutIf interface {
 	Delete(int16)
 }
 
+type OfInt16NInt64Looper interface {
+	LoopItem(int16, int64) bool
+}
+type OfInt16NInt64LoopFunc func(int16, int64) bool
+
+func (__ OfInt16NInt64LoopFunc) LoopItem(k int16, v int64) bool {
+	return __(k, v)
+}
+
 type OfInt16NInt64IterIf interface {
-	Range(func(int16, int64) bool)
+	Range(OfInt16NInt64Looper)
 }
 
 type OfInt16NInt64 map[int16]int64
@@ -8965,8 +10576,17 @@ type OfInt16NInt8MutIf interface {
 	Delete(int16)
 }
 
+type OfInt16NInt8Looper interface {
+	LoopItem(int16, int8) bool
+}
+type OfInt16NInt8LoopFunc func(int16, int8) bool
+
+func (__ OfInt16NInt8LoopFunc) LoopItem(k int16, v int8) bool {
+	return __(k, v)
+}
+
 type OfInt16NInt8IterIf interface {
-	Range(func(int16, int8) bool)
+	Range(OfInt16NInt8Looper)
 }
 
 type OfInt16NInt8 map[int16]int8
@@ -9015,8 +10635,17 @@ type OfInt16NRuneMutIf interface {
 	Delete(int16)
 }
 
+type OfInt16NRuneLooper interface {
+	LoopItem(int16, rune) bool
+}
+type OfInt16NRuneLoopFunc func(int16, rune) bool
+
+func (__ OfInt16NRuneLoopFunc) LoopItem(k int16, v rune) bool {
+	return __(k, v)
+}
+
 type OfInt16NRuneIterIf interface {
-	Range(func(int16, rune) bool)
+	Range(OfInt16NRuneLooper)
 }
 
 type OfInt16NRune map[int16]rune
@@ -9065,8 +10694,17 @@ type OfInt16NStringMutIf interface {
 	Delete(int16)
 }
 
+type OfInt16NStringLooper interface {
+	LoopItem(int16, string) bool
+}
+type OfInt16NStringLoopFunc func(int16, string) bool
+
+func (__ OfInt16NStringLoopFunc) LoopItem(k int16, v string) bool {
+	return __(k, v)
+}
+
 type OfInt16NStringIterIf interface {
-	Range(func(int16, string) bool)
+	Range(OfInt16NStringLooper)
 }
 
 type OfInt16NString map[int16]string
@@ -9115,8 +10753,17 @@ type OfInt16NUintMutIf interface {
 	Delete(int16)
 }
 
+type OfInt16NUintLooper interface {
+	LoopItem(int16, uint) bool
+}
+type OfInt16NUintLoopFunc func(int16, uint) bool
+
+func (__ OfInt16NUintLoopFunc) LoopItem(k int16, v uint) bool {
+	return __(k, v)
+}
+
 type OfInt16NUintIterIf interface {
-	Range(func(int16, uint) bool)
+	Range(OfInt16NUintLooper)
 }
 
 type OfInt16NUint map[int16]uint
@@ -9165,8 +10812,17 @@ type OfInt16NUint16MutIf interface {
 	Delete(int16)
 }
 
+type OfInt16NUint16Looper interface {
+	LoopItem(int16, uint16) bool
+}
+type OfInt16NUint16LoopFunc func(int16, uint16) bool
+
+func (__ OfInt16NUint16LoopFunc) LoopItem(k int16, v uint16) bool {
+	return __(k, v)
+}
+
 type OfInt16NUint16IterIf interface {
-	Range(func(int16, uint16) bool)
+	Range(OfInt16NUint16Looper)
 }
 
 type OfInt16NUint16 map[int16]uint16
@@ -9215,8 +10871,17 @@ type OfInt16NUint32MutIf interface {
 	Delete(int16)
 }
 
+type OfInt16NUint32Looper interface {
+	LoopItem(int16, uint32) bool
+}
+type OfInt16NUint32LoopFunc func(int16, uint32) bool
+
+func (__ OfInt16NUint32LoopFunc) LoopItem(k int16, v uint32) bool {
+	return __(k, v)
+}
+
 type OfInt16NUint32IterIf interface {
-	Range(func(int16, uint32) bool)
+	Range(OfInt16NUint32Looper)
 }
 
 type OfInt16NUint32 map[int16]uint32
@@ -9265,8 +10930,17 @@ type OfInt16NUint64MutIf interface {
 	Delete(int16)
 }
 
+type OfInt16NUint64Looper interface {
+	LoopItem(int16, uint64) bool
+}
+type OfInt16NUint64LoopFunc func(int16, uint64) bool
+
+func (__ OfInt16NUint64LoopFunc) LoopItem(k int16, v uint64) bool {
+	return __(k, v)
+}
+
 type OfInt16NUint64IterIf interface {
-	Range(func(int16, uint64) bool)
+	Range(OfInt16NUint64Looper)
 }
 
 type OfInt16NUint64 map[int16]uint64
@@ -9315,8 +10989,17 @@ type OfInt16NUint8MutIf interface {
 	Delete(int16)
 }
 
+type OfInt16NUint8Looper interface {
+	LoopItem(int16, uint8) bool
+}
+type OfInt16NUint8LoopFunc func(int16, uint8) bool
+
+func (__ OfInt16NUint8LoopFunc) LoopItem(k int16, v uint8) bool {
+	return __(k, v)
+}
+
 type OfInt16NUint8IterIf interface {
-	Range(func(int16, uint8) bool)
+	Range(OfInt16NUint8Looper)
 }
 
 type OfInt16NUint8 map[int16]uint8
@@ -9365,8 +11048,17 @@ type OfInt16NUintptrMutIf interface {
 	Delete(int16)
 }
 
+type OfInt16NUintptrLooper interface {
+	LoopItem(int16, uintptr) bool
+}
+type OfInt16NUintptrLoopFunc func(int16, uintptr) bool
+
+func (__ OfInt16NUintptrLoopFunc) LoopItem(k int16, v uintptr) bool {
+	return __(k, v)
+}
+
 type OfInt16NUintptrIterIf interface {
-	Range(func(int16, uintptr) bool)
+	Range(OfInt16NUintptrLooper)
 }
 
 type OfInt16NUintptr map[int16]uintptr
@@ -9415,8 +11107,17 @@ type OfInt16NInterfaceMutIf interface {
 	Delete(int16)
 }
 
+type OfInt16NInterfaceLooper interface {
+	LoopItem(int16, interface{}) bool
+}
+type OfInt16NInterfaceLoopFunc func(int16, interface{}) bool
+
+func (__ OfInt16NInterfaceLoopFunc) LoopItem(k int16, v interface{}) bool {
+	return __(k, v)
+}
+
 type OfInt16NInterfaceIterIf interface {
-	Range(func(int16, interface{}) bool)
+	Range(OfInt16NInterfaceLooper)
 }
 
 type OfInt16NInterface map[int16]interface{}
@@ -9465,8 +11166,17 @@ type OfInt32NBoolMutIf interface {
 	Delete(int32)
 }
 
+type OfInt32NBoolLooper interface {
+	LoopItem(int32, bool) bool
+}
+type OfInt32NBoolLoopFunc func(int32, bool) bool
+
+func (__ OfInt32NBoolLoopFunc) LoopItem(k int32, v bool) bool {
+	return __(k, v)
+}
+
 type OfInt32NBoolIterIf interface {
-	Range(func(int32, bool) bool)
+	Range(OfInt32NBoolLooper)
 }
 
 type OfInt32NBool map[int32]bool
@@ -9515,8 +11225,17 @@ type OfInt32NByteMutIf interface {
 	Delete(int32)
 }
 
+type OfInt32NByteLooper interface {
+	LoopItem(int32, byte) bool
+}
+type OfInt32NByteLoopFunc func(int32, byte) bool
+
+func (__ OfInt32NByteLoopFunc) LoopItem(k int32, v byte) bool {
+	return __(k, v)
+}
+
 type OfInt32NByteIterIf interface {
-	Range(func(int32, byte) bool)
+	Range(OfInt32NByteLooper)
 }
 
 type OfInt32NByte map[int32]byte
@@ -9565,8 +11284,17 @@ type OfInt32NComplex128MutIf interface {
 	Delete(int32)
 }
 
+type OfInt32NComplex128Looper interface {
+	LoopItem(int32, complex128) bool
+}
+type OfInt32NComplex128LoopFunc func(int32, complex128) bool
+
+func (__ OfInt32NComplex128LoopFunc) LoopItem(k int32, v complex128) bool {
+	return __(k, v)
+}
+
 type OfInt32NComplex128IterIf interface {
-	Range(func(int32, complex128) bool)
+	Range(OfInt32NComplex128Looper)
 }
 
 type OfInt32NComplex128 map[int32]complex128
@@ -9615,8 +11343,17 @@ type OfInt32NComplex64MutIf interface {
 	Delete(int32)
 }
 
+type OfInt32NComplex64Looper interface {
+	LoopItem(int32, complex64) bool
+}
+type OfInt32NComplex64LoopFunc func(int32, complex64) bool
+
+func (__ OfInt32NComplex64LoopFunc) LoopItem(k int32, v complex64) bool {
+	return __(k, v)
+}
+
 type OfInt32NComplex64IterIf interface {
-	Range(func(int32, complex64) bool)
+	Range(OfInt32NComplex64Looper)
 }
 
 type OfInt32NComplex64 map[int32]complex64
@@ -9665,8 +11402,17 @@ type OfInt32NErrorMutIf interface {
 	Delete(int32)
 }
 
+type OfInt32NErrorLooper interface {
+	LoopItem(int32, error) bool
+}
+type OfInt32NErrorLoopFunc func(int32, error) bool
+
+func (__ OfInt32NErrorLoopFunc) LoopItem(k int32, v error) bool {
+	return __(k, v)
+}
+
 type OfInt32NErrorIterIf interface {
-	Range(func(int32, error) bool)
+	Range(OfInt32NErrorLooper)
 }
 
 type OfInt32NError map[int32]error
@@ -9715,8 +11461,17 @@ type OfInt32NFloat32MutIf interface {
 	Delete(int32)
 }
 
+type OfInt32NFloat32Looper interface {
+	LoopItem(int32, float32) bool
+}
+type OfInt32NFloat32LoopFunc func(int32, float32) bool
+
+func (__ OfInt32NFloat32LoopFunc) LoopItem(k int32, v float32) bool {
+	return __(k, v)
+}
+
 type OfInt32NFloat32IterIf interface {
-	Range(func(int32, float32) bool)
+	Range(OfInt32NFloat32Looper)
 }
 
 type OfInt32NFloat32 map[int32]float32
@@ -9765,8 +11520,17 @@ type OfInt32NFloat64MutIf interface {
 	Delete(int32)
 }
 
+type OfInt32NFloat64Looper interface {
+	LoopItem(int32, float64) bool
+}
+type OfInt32NFloat64LoopFunc func(int32, float64) bool
+
+func (__ OfInt32NFloat64LoopFunc) LoopItem(k int32, v float64) bool {
+	return __(k, v)
+}
+
 type OfInt32NFloat64IterIf interface {
-	Range(func(int32, float64) bool)
+	Range(OfInt32NFloat64Looper)
 }
 
 type OfInt32NFloat64 map[int32]float64
@@ -9815,8 +11579,17 @@ type OfInt32NIntMutIf interface {
 	Delete(int32)
 }
 
+type OfInt32NIntLooper interface {
+	LoopItem(int32, int) bool
+}
+type OfInt32NIntLoopFunc func(int32, int) bool
+
+func (__ OfInt32NIntLoopFunc) LoopItem(k int32, v int) bool {
+	return __(k, v)
+}
+
 type OfInt32NIntIterIf interface {
-	Range(func(int32, int) bool)
+	Range(OfInt32NIntLooper)
 }
 
 type OfInt32NInt map[int32]int
@@ -9865,8 +11638,17 @@ type OfInt32NInt16MutIf interface {
 	Delete(int32)
 }
 
+type OfInt32NInt16Looper interface {
+	LoopItem(int32, int16) bool
+}
+type OfInt32NInt16LoopFunc func(int32, int16) bool
+
+func (__ OfInt32NInt16LoopFunc) LoopItem(k int32, v int16) bool {
+	return __(k, v)
+}
+
 type OfInt32NInt16IterIf interface {
-	Range(func(int32, int16) bool)
+	Range(OfInt32NInt16Looper)
 }
 
 type OfInt32NInt16 map[int32]int16
@@ -9915,8 +11697,17 @@ type OfInt32NInt32MutIf interface {
 	Delete(int32)
 }
 
+type OfInt32NInt32Looper interface {
+	LoopItem(int32, int32) bool
+}
+type OfInt32NInt32LoopFunc func(int32, int32) bool
+
+func (__ OfInt32NInt32LoopFunc) LoopItem(k int32, v int32) bool {
+	return __(k, v)
+}
+
 type OfInt32NInt32IterIf interface {
-	Range(func(int32, int32) bool)
+	Range(OfInt32NInt32Looper)
 }
 
 type OfInt32NInt32 map[int32]int32
@@ -9965,8 +11756,17 @@ type OfInt32NInt64MutIf interface {
 	Delete(int32)
 }
 
+type OfInt32NInt64Looper interface {
+	LoopItem(int32, int64) bool
+}
+type OfInt32NInt64LoopFunc func(int32, int64) bool
+
+func (__ OfInt32NInt64LoopFunc) LoopItem(k int32, v int64) bool {
+	return __(k, v)
+}
+
 type OfInt32NInt64IterIf interface {
-	Range(func(int32, int64) bool)
+	Range(OfInt32NInt64Looper)
 }
 
 type OfInt32NInt64 map[int32]int64
@@ -10015,8 +11815,17 @@ type OfInt32NInt8MutIf interface {
 	Delete(int32)
 }
 
+type OfInt32NInt8Looper interface {
+	LoopItem(int32, int8) bool
+}
+type OfInt32NInt8LoopFunc func(int32, int8) bool
+
+func (__ OfInt32NInt8LoopFunc) LoopItem(k int32, v int8) bool {
+	return __(k, v)
+}
+
 type OfInt32NInt8IterIf interface {
-	Range(func(int32, int8) bool)
+	Range(OfInt32NInt8Looper)
 }
 
 type OfInt32NInt8 map[int32]int8
@@ -10065,8 +11874,17 @@ type OfInt32NRuneMutIf interface {
 	Delete(int32)
 }
 
+type OfInt32NRuneLooper interface {
+	LoopItem(int32, rune) bool
+}
+type OfInt32NRuneLoopFunc func(int32, rune) bool
+
+func (__ OfInt32NRuneLoopFunc) LoopItem(k int32, v rune) bool {
+	return __(k, v)
+}
+
 type OfInt32NRuneIterIf interface {
-	Range(func(int32, rune) bool)
+	Range(OfInt32NRuneLooper)
 }
 
 type OfInt32NRune map[int32]rune
@@ -10115,8 +11933,17 @@ type OfInt32NStringMutIf interface {
 	Delete(int32)
 }
 
+type OfInt32NStringLooper interface {
+	LoopItem(int32, string) bool
+}
+type OfInt32NStringLoopFunc func(int32, string) bool
+
+func (__ OfInt32NStringLoopFunc) LoopItem(k int32, v string) bool {
+	return __(k, v)
+}
+
 type OfInt32NStringIterIf interface {
-	Range(func(int32, string) bool)
+	Range(OfInt32NStringLooper)
 }
 
 type OfInt32NString map[int32]string
@@ -10165,8 +11992,17 @@ type OfInt32NUintMutIf interface {
 	Delete(int32)
 }
 
+type OfInt32NUintLooper interface {
+	LoopItem(int32, uint) bool
+}
+type OfInt32NUintLoopFunc func(int32, uint) bool
+
+func (__ OfInt32NUintLoopFunc) LoopItem(k int32, v uint) bool {
+	return __(k, v)
+}
+
 type OfInt32NUintIterIf interface {
-	Range(func(int32, uint) bool)
+	Range(OfInt32NUintLooper)
 }
 
 type OfInt32NUint map[int32]uint
@@ -10215,8 +12051,17 @@ type OfInt32NUint16MutIf interface {
 	Delete(int32)
 }
 
+type OfInt32NUint16Looper interface {
+	LoopItem(int32, uint16) bool
+}
+type OfInt32NUint16LoopFunc func(int32, uint16) bool
+
+func (__ OfInt32NUint16LoopFunc) LoopItem(k int32, v uint16) bool {
+	return __(k, v)
+}
+
 type OfInt32NUint16IterIf interface {
-	Range(func(int32, uint16) bool)
+	Range(OfInt32NUint16Looper)
 }
 
 type OfInt32NUint16 map[int32]uint16
@@ -10265,8 +12110,17 @@ type OfInt32NUint32MutIf interface {
 	Delete(int32)
 }
 
+type OfInt32NUint32Looper interface {
+	LoopItem(int32, uint32) bool
+}
+type OfInt32NUint32LoopFunc func(int32, uint32) bool
+
+func (__ OfInt32NUint32LoopFunc) LoopItem(k int32, v uint32) bool {
+	return __(k, v)
+}
+
 type OfInt32NUint32IterIf interface {
-	Range(func(int32, uint32) bool)
+	Range(OfInt32NUint32Looper)
 }
 
 type OfInt32NUint32 map[int32]uint32
@@ -10315,8 +12169,17 @@ type OfInt32NUint64MutIf interface {
 	Delete(int32)
 }
 
+type OfInt32NUint64Looper interface {
+	LoopItem(int32, uint64) bool
+}
+type OfInt32NUint64LoopFunc func(int32, uint64) bool
+
+func (__ OfInt32NUint64LoopFunc) LoopItem(k int32, v uint64) bool {
+	return __(k, v)
+}
+
 type OfInt32NUint64IterIf interface {
-	Range(func(int32, uint64) bool)
+	Range(OfInt32NUint64Looper)
 }
 
 type OfInt32NUint64 map[int32]uint64
@@ -10365,8 +12228,17 @@ type OfInt32NUint8MutIf interface {
 	Delete(int32)
 }
 
+type OfInt32NUint8Looper interface {
+	LoopItem(int32, uint8) bool
+}
+type OfInt32NUint8LoopFunc func(int32, uint8) bool
+
+func (__ OfInt32NUint8LoopFunc) LoopItem(k int32, v uint8) bool {
+	return __(k, v)
+}
+
 type OfInt32NUint8IterIf interface {
-	Range(func(int32, uint8) bool)
+	Range(OfInt32NUint8Looper)
 }
 
 type OfInt32NUint8 map[int32]uint8
@@ -10415,8 +12287,17 @@ type OfInt32NUintptrMutIf interface {
 	Delete(int32)
 }
 
+type OfInt32NUintptrLooper interface {
+	LoopItem(int32, uintptr) bool
+}
+type OfInt32NUintptrLoopFunc func(int32, uintptr) bool
+
+func (__ OfInt32NUintptrLoopFunc) LoopItem(k int32, v uintptr) bool {
+	return __(k, v)
+}
+
 type OfInt32NUintptrIterIf interface {
-	Range(func(int32, uintptr) bool)
+	Range(OfInt32NUintptrLooper)
 }
 
 type OfInt32NUintptr map[int32]uintptr
@@ -10465,8 +12346,17 @@ type OfInt32NInterfaceMutIf interface {
 	Delete(int32)
 }
 
+type OfInt32NInterfaceLooper interface {
+	LoopItem(int32, interface{}) bool
+}
+type OfInt32NInterfaceLoopFunc func(int32, interface{}) bool
+
+func (__ OfInt32NInterfaceLoopFunc) LoopItem(k int32, v interface{}) bool {
+	return __(k, v)
+}
+
 type OfInt32NInterfaceIterIf interface {
-	Range(func(int32, interface{}) bool)
+	Range(OfInt32NInterfaceLooper)
 }
 
 type OfInt32NInterface map[int32]interface{}
@@ -10515,8 +12405,17 @@ type OfInt64NBoolMutIf interface {
 	Delete(int64)
 }
 
+type OfInt64NBoolLooper interface {
+	LoopItem(int64, bool) bool
+}
+type OfInt64NBoolLoopFunc func(int64, bool) bool
+
+func (__ OfInt64NBoolLoopFunc) LoopItem(k int64, v bool) bool {
+	return __(k, v)
+}
+
 type OfInt64NBoolIterIf interface {
-	Range(func(int64, bool) bool)
+	Range(OfInt64NBoolLooper)
 }
 
 type OfInt64NBool map[int64]bool
@@ -10565,8 +12464,17 @@ type OfInt64NByteMutIf interface {
 	Delete(int64)
 }
 
+type OfInt64NByteLooper interface {
+	LoopItem(int64, byte) bool
+}
+type OfInt64NByteLoopFunc func(int64, byte) bool
+
+func (__ OfInt64NByteLoopFunc) LoopItem(k int64, v byte) bool {
+	return __(k, v)
+}
+
 type OfInt64NByteIterIf interface {
-	Range(func(int64, byte) bool)
+	Range(OfInt64NByteLooper)
 }
 
 type OfInt64NByte map[int64]byte
@@ -10615,8 +12523,17 @@ type OfInt64NComplex128MutIf interface {
 	Delete(int64)
 }
 
+type OfInt64NComplex128Looper interface {
+	LoopItem(int64, complex128) bool
+}
+type OfInt64NComplex128LoopFunc func(int64, complex128) bool
+
+func (__ OfInt64NComplex128LoopFunc) LoopItem(k int64, v complex128) bool {
+	return __(k, v)
+}
+
 type OfInt64NComplex128IterIf interface {
-	Range(func(int64, complex128) bool)
+	Range(OfInt64NComplex128Looper)
 }
 
 type OfInt64NComplex128 map[int64]complex128
@@ -10665,8 +12582,17 @@ type OfInt64NComplex64MutIf interface {
 	Delete(int64)
 }
 
+type OfInt64NComplex64Looper interface {
+	LoopItem(int64, complex64) bool
+}
+type OfInt64NComplex64LoopFunc func(int64, complex64) bool
+
+func (__ OfInt64NComplex64LoopFunc) LoopItem(k int64, v complex64) bool {
+	return __(k, v)
+}
+
 type OfInt64NComplex64IterIf interface {
-	Range(func(int64, complex64) bool)
+	Range(OfInt64NComplex64Looper)
 }
 
 type OfInt64NComplex64 map[int64]complex64
@@ -10715,8 +12641,17 @@ type OfInt64NErrorMutIf interface {
 	Delete(int64)
 }
 
+type OfInt64NErrorLooper interface {
+	LoopItem(int64, error) bool
+}
+type OfInt64NErrorLoopFunc func(int64, error) bool
+
+func (__ OfInt64NErrorLoopFunc) LoopItem(k int64, v error) bool {
+	return __(k, v)
+}
+
 type OfInt64NErrorIterIf interface {
-	Range(func(int64, error) bool)
+	Range(OfInt64NErrorLooper)
 }
 
 type OfInt64NError map[int64]error
@@ -10765,8 +12700,17 @@ type OfInt64NFloat32MutIf interface {
 	Delete(int64)
 }
 
+type OfInt64NFloat32Looper interface {
+	LoopItem(int64, float32) bool
+}
+type OfInt64NFloat32LoopFunc func(int64, float32) bool
+
+func (__ OfInt64NFloat32LoopFunc) LoopItem(k int64, v float32) bool {
+	return __(k, v)
+}
+
 type OfInt64NFloat32IterIf interface {
-	Range(func(int64, float32) bool)
+	Range(OfInt64NFloat32Looper)
 }
 
 type OfInt64NFloat32 map[int64]float32
@@ -10815,8 +12759,17 @@ type OfInt64NFloat64MutIf interface {
 	Delete(int64)
 }
 
+type OfInt64NFloat64Looper interface {
+	LoopItem(int64, float64) bool
+}
+type OfInt64NFloat64LoopFunc func(int64, float64) bool
+
+func (__ OfInt64NFloat64LoopFunc) LoopItem(k int64, v float64) bool {
+	return __(k, v)
+}
+
 type OfInt64NFloat64IterIf interface {
-	Range(func(int64, float64) bool)
+	Range(OfInt64NFloat64Looper)
 }
 
 type OfInt64NFloat64 map[int64]float64
@@ -10865,8 +12818,17 @@ type OfInt64NIntMutIf interface {
 	Delete(int64)
 }
 
+type OfInt64NIntLooper interface {
+	LoopItem(int64, int) bool
+}
+type OfInt64NIntLoopFunc func(int64, int) bool
+
+func (__ OfInt64NIntLoopFunc) LoopItem(k int64, v int) bool {
+	return __(k, v)
+}
+
 type OfInt64NIntIterIf interface {
-	Range(func(int64, int) bool)
+	Range(OfInt64NIntLooper)
 }
 
 type OfInt64NInt map[int64]int
@@ -10915,8 +12877,17 @@ type OfInt64NInt16MutIf interface {
 	Delete(int64)
 }
 
+type OfInt64NInt16Looper interface {
+	LoopItem(int64, int16) bool
+}
+type OfInt64NInt16LoopFunc func(int64, int16) bool
+
+func (__ OfInt64NInt16LoopFunc) LoopItem(k int64, v int16) bool {
+	return __(k, v)
+}
+
 type OfInt64NInt16IterIf interface {
-	Range(func(int64, int16) bool)
+	Range(OfInt64NInt16Looper)
 }
 
 type OfInt64NInt16 map[int64]int16
@@ -10965,8 +12936,17 @@ type OfInt64NInt32MutIf interface {
 	Delete(int64)
 }
 
+type OfInt64NInt32Looper interface {
+	LoopItem(int64, int32) bool
+}
+type OfInt64NInt32LoopFunc func(int64, int32) bool
+
+func (__ OfInt64NInt32LoopFunc) LoopItem(k int64, v int32) bool {
+	return __(k, v)
+}
+
 type OfInt64NInt32IterIf interface {
-	Range(func(int64, int32) bool)
+	Range(OfInt64NInt32Looper)
 }
 
 type OfInt64NInt32 map[int64]int32
@@ -11015,8 +12995,17 @@ type OfInt64NInt64MutIf interface {
 	Delete(int64)
 }
 
+type OfInt64NInt64Looper interface {
+	LoopItem(int64, int64) bool
+}
+type OfInt64NInt64LoopFunc func(int64, int64) bool
+
+func (__ OfInt64NInt64LoopFunc) LoopItem(k int64, v int64) bool {
+	return __(k, v)
+}
+
 type OfInt64NInt64IterIf interface {
-	Range(func(int64, int64) bool)
+	Range(OfInt64NInt64Looper)
 }
 
 type OfInt64NInt64 map[int64]int64
@@ -11065,8 +13054,17 @@ type OfInt64NInt8MutIf interface {
 	Delete(int64)
 }
 
+type OfInt64NInt8Looper interface {
+	LoopItem(int64, int8) bool
+}
+type OfInt64NInt8LoopFunc func(int64, int8) bool
+
+func (__ OfInt64NInt8LoopFunc) LoopItem(k int64, v int8) bool {
+	return __(k, v)
+}
+
 type OfInt64NInt8IterIf interface {
-	Range(func(int64, int8) bool)
+	Range(OfInt64NInt8Looper)
 }
 
 type OfInt64NInt8 map[int64]int8
@@ -11115,8 +13113,17 @@ type OfInt64NRuneMutIf interface {
 	Delete(int64)
 }
 
+type OfInt64NRuneLooper interface {
+	LoopItem(int64, rune) bool
+}
+type OfInt64NRuneLoopFunc func(int64, rune) bool
+
+func (__ OfInt64NRuneLoopFunc) LoopItem(k int64, v rune) bool {
+	return __(k, v)
+}
+
 type OfInt64NRuneIterIf interface {
-	Range(func(int64, rune) bool)
+	Range(OfInt64NRuneLooper)
 }
 
 type OfInt64NRune map[int64]rune
@@ -11165,8 +13172,17 @@ type OfInt64NStringMutIf interface {
 	Delete(int64)
 }
 
+type OfInt64NStringLooper interface {
+	LoopItem(int64, string) bool
+}
+type OfInt64NStringLoopFunc func(int64, string) bool
+
+func (__ OfInt64NStringLoopFunc) LoopItem(k int64, v string) bool {
+	return __(k, v)
+}
+
 type OfInt64NStringIterIf interface {
-	Range(func(int64, string) bool)
+	Range(OfInt64NStringLooper)
 }
 
 type OfInt64NString map[int64]string
@@ -11215,8 +13231,17 @@ type OfInt64NUintMutIf interface {
 	Delete(int64)
 }
 
+type OfInt64NUintLooper interface {
+	LoopItem(int64, uint) bool
+}
+type OfInt64NUintLoopFunc func(int64, uint) bool
+
+func (__ OfInt64NUintLoopFunc) LoopItem(k int64, v uint) bool {
+	return __(k, v)
+}
+
 type OfInt64NUintIterIf interface {
-	Range(func(int64, uint) bool)
+	Range(OfInt64NUintLooper)
 }
 
 type OfInt64NUint map[int64]uint
@@ -11265,8 +13290,17 @@ type OfInt64NUint16MutIf interface {
 	Delete(int64)
 }
 
+type OfInt64NUint16Looper interface {
+	LoopItem(int64, uint16) bool
+}
+type OfInt64NUint16LoopFunc func(int64, uint16) bool
+
+func (__ OfInt64NUint16LoopFunc) LoopItem(k int64, v uint16) bool {
+	return __(k, v)
+}
+
 type OfInt64NUint16IterIf interface {
-	Range(func(int64, uint16) bool)
+	Range(OfInt64NUint16Looper)
 }
 
 type OfInt64NUint16 map[int64]uint16
@@ -11315,8 +13349,17 @@ type OfInt64NUint32MutIf interface {
 	Delete(int64)
 }
 
+type OfInt64NUint32Looper interface {
+	LoopItem(int64, uint32) bool
+}
+type OfInt64NUint32LoopFunc func(int64, uint32) bool
+
+func (__ OfInt64NUint32LoopFunc) LoopItem(k int64, v uint32) bool {
+	return __(k, v)
+}
+
 type OfInt64NUint32IterIf interface {
-	Range(func(int64, uint32) bool)
+	Range(OfInt64NUint32Looper)
 }
 
 type OfInt64NUint32 map[int64]uint32
@@ -11365,8 +13408,17 @@ type OfInt64NUint64MutIf interface {
 	Delete(int64)
 }
 
+type OfInt64NUint64Looper interface {
+	LoopItem(int64, uint64) bool
+}
+type OfInt64NUint64LoopFunc func(int64, uint64) bool
+
+func (__ OfInt64NUint64LoopFunc) LoopItem(k int64, v uint64) bool {
+	return __(k, v)
+}
+
 type OfInt64NUint64IterIf interface {
-	Range(func(int64, uint64) bool)
+	Range(OfInt64NUint64Looper)
 }
 
 type OfInt64NUint64 map[int64]uint64
@@ -11415,8 +13467,17 @@ type OfInt64NUint8MutIf interface {
 	Delete(int64)
 }
 
+type OfInt64NUint8Looper interface {
+	LoopItem(int64, uint8) bool
+}
+type OfInt64NUint8LoopFunc func(int64, uint8) bool
+
+func (__ OfInt64NUint8LoopFunc) LoopItem(k int64, v uint8) bool {
+	return __(k, v)
+}
+
 type OfInt64NUint8IterIf interface {
-	Range(func(int64, uint8) bool)
+	Range(OfInt64NUint8Looper)
 }
 
 type OfInt64NUint8 map[int64]uint8
@@ -11465,8 +13526,17 @@ type OfInt64NUintptrMutIf interface {
 	Delete(int64)
 }
 
+type OfInt64NUintptrLooper interface {
+	LoopItem(int64, uintptr) bool
+}
+type OfInt64NUintptrLoopFunc func(int64, uintptr) bool
+
+func (__ OfInt64NUintptrLoopFunc) LoopItem(k int64, v uintptr) bool {
+	return __(k, v)
+}
+
 type OfInt64NUintptrIterIf interface {
-	Range(func(int64, uintptr) bool)
+	Range(OfInt64NUintptrLooper)
 }
 
 type OfInt64NUintptr map[int64]uintptr
@@ -11515,8 +13585,17 @@ type OfInt64NInterfaceMutIf interface {
 	Delete(int64)
 }
 
+type OfInt64NInterfaceLooper interface {
+	LoopItem(int64, interface{}) bool
+}
+type OfInt64NInterfaceLoopFunc func(int64, interface{}) bool
+
+func (__ OfInt64NInterfaceLoopFunc) LoopItem(k int64, v interface{}) bool {
+	return __(k, v)
+}
+
 type OfInt64NInterfaceIterIf interface {
-	Range(func(int64, interface{}) bool)
+	Range(OfInt64NInterfaceLooper)
 }
 
 type OfInt64NInterface map[int64]interface{}
@@ -11565,8 +13644,17 @@ type OfInt8NBoolMutIf interface {
 	Delete(int8)
 }
 
+type OfInt8NBoolLooper interface {
+	LoopItem(int8, bool) bool
+}
+type OfInt8NBoolLoopFunc func(int8, bool) bool
+
+func (__ OfInt8NBoolLoopFunc) LoopItem(k int8, v bool) bool {
+	return __(k, v)
+}
+
 type OfInt8NBoolIterIf interface {
-	Range(func(int8, bool) bool)
+	Range(OfInt8NBoolLooper)
 }
 
 type OfInt8NBool map[int8]bool
@@ -11615,8 +13703,17 @@ type OfInt8NByteMutIf interface {
 	Delete(int8)
 }
 
+type OfInt8NByteLooper interface {
+	LoopItem(int8, byte) bool
+}
+type OfInt8NByteLoopFunc func(int8, byte) bool
+
+func (__ OfInt8NByteLoopFunc) LoopItem(k int8, v byte) bool {
+	return __(k, v)
+}
+
 type OfInt8NByteIterIf interface {
-	Range(func(int8, byte) bool)
+	Range(OfInt8NByteLooper)
 }
 
 type OfInt8NByte map[int8]byte
@@ -11665,8 +13762,17 @@ type OfInt8NComplex128MutIf interface {
 	Delete(int8)
 }
 
+type OfInt8NComplex128Looper interface {
+	LoopItem(int8, complex128) bool
+}
+type OfInt8NComplex128LoopFunc func(int8, complex128) bool
+
+func (__ OfInt8NComplex128LoopFunc) LoopItem(k int8, v complex128) bool {
+	return __(k, v)
+}
+
 type OfInt8NComplex128IterIf interface {
-	Range(func(int8, complex128) bool)
+	Range(OfInt8NComplex128Looper)
 }
 
 type OfInt8NComplex128 map[int8]complex128
@@ -11715,8 +13821,17 @@ type OfInt8NComplex64MutIf interface {
 	Delete(int8)
 }
 
+type OfInt8NComplex64Looper interface {
+	LoopItem(int8, complex64) bool
+}
+type OfInt8NComplex64LoopFunc func(int8, complex64) bool
+
+func (__ OfInt8NComplex64LoopFunc) LoopItem(k int8, v complex64) bool {
+	return __(k, v)
+}
+
 type OfInt8NComplex64IterIf interface {
-	Range(func(int8, complex64) bool)
+	Range(OfInt8NComplex64Looper)
 }
 
 type OfInt8NComplex64 map[int8]complex64
@@ -11765,8 +13880,17 @@ type OfInt8NErrorMutIf interface {
 	Delete(int8)
 }
 
+type OfInt8NErrorLooper interface {
+	LoopItem(int8, error) bool
+}
+type OfInt8NErrorLoopFunc func(int8, error) bool
+
+func (__ OfInt8NErrorLoopFunc) LoopItem(k int8, v error) bool {
+	return __(k, v)
+}
+
 type OfInt8NErrorIterIf interface {
-	Range(func(int8, error) bool)
+	Range(OfInt8NErrorLooper)
 }
 
 type OfInt8NError map[int8]error
@@ -11815,8 +13939,17 @@ type OfInt8NFloat32MutIf interface {
 	Delete(int8)
 }
 
+type OfInt8NFloat32Looper interface {
+	LoopItem(int8, float32) bool
+}
+type OfInt8NFloat32LoopFunc func(int8, float32) bool
+
+func (__ OfInt8NFloat32LoopFunc) LoopItem(k int8, v float32) bool {
+	return __(k, v)
+}
+
 type OfInt8NFloat32IterIf interface {
-	Range(func(int8, float32) bool)
+	Range(OfInt8NFloat32Looper)
 }
 
 type OfInt8NFloat32 map[int8]float32
@@ -11865,8 +13998,17 @@ type OfInt8NFloat64MutIf interface {
 	Delete(int8)
 }
 
+type OfInt8NFloat64Looper interface {
+	LoopItem(int8, float64) bool
+}
+type OfInt8NFloat64LoopFunc func(int8, float64) bool
+
+func (__ OfInt8NFloat64LoopFunc) LoopItem(k int8, v float64) bool {
+	return __(k, v)
+}
+
 type OfInt8NFloat64IterIf interface {
-	Range(func(int8, float64) bool)
+	Range(OfInt8NFloat64Looper)
 }
 
 type OfInt8NFloat64 map[int8]float64
@@ -11915,8 +14057,17 @@ type OfInt8NIntMutIf interface {
 	Delete(int8)
 }
 
+type OfInt8NIntLooper interface {
+	LoopItem(int8, int) bool
+}
+type OfInt8NIntLoopFunc func(int8, int) bool
+
+func (__ OfInt8NIntLoopFunc) LoopItem(k int8, v int) bool {
+	return __(k, v)
+}
+
 type OfInt8NIntIterIf interface {
-	Range(func(int8, int) bool)
+	Range(OfInt8NIntLooper)
 }
 
 type OfInt8NInt map[int8]int
@@ -11965,8 +14116,17 @@ type OfInt8NInt16MutIf interface {
 	Delete(int8)
 }
 
+type OfInt8NInt16Looper interface {
+	LoopItem(int8, int16) bool
+}
+type OfInt8NInt16LoopFunc func(int8, int16) bool
+
+func (__ OfInt8NInt16LoopFunc) LoopItem(k int8, v int16) bool {
+	return __(k, v)
+}
+
 type OfInt8NInt16IterIf interface {
-	Range(func(int8, int16) bool)
+	Range(OfInt8NInt16Looper)
 }
 
 type OfInt8NInt16 map[int8]int16
@@ -12015,8 +14175,17 @@ type OfInt8NInt32MutIf interface {
 	Delete(int8)
 }
 
+type OfInt8NInt32Looper interface {
+	LoopItem(int8, int32) bool
+}
+type OfInt8NInt32LoopFunc func(int8, int32) bool
+
+func (__ OfInt8NInt32LoopFunc) LoopItem(k int8, v int32) bool {
+	return __(k, v)
+}
+
 type OfInt8NInt32IterIf interface {
-	Range(func(int8, int32) bool)
+	Range(OfInt8NInt32Looper)
 }
 
 type OfInt8NInt32 map[int8]int32
@@ -12065,8 +14234,17 @@ type OfInt8NInt64MutIf interface {
 	Delete(int8)
 }
 
+type OfInt8NInt64Looper interface {
+	LoopItem(int8, int64) bool
+}
+type OfInt8NInt64LoopFunc func(int8, int64) bool
+
+func (__ OfInt8NInt64LoopFunc) LoopItem(k int8, v int64) bool {
+	return __(k, v)
+}
+
 type OfInt8NInt64IterIf interface {
-	Range(func(int8, int64) bool)
+	Range(OfInt8NInt64Looper)
 }
 
 type OfInt8NInt64 map[int8]int64
@@ -12115,8 +14293,17 @@ type OfInt8NInt8MutIf interface {
 	Delete(int8)
 }
 
+type OfInt8NInt8Looper interface {
+	LoopItem(int8, int8) bool
+}
+type OfInt8NInt8LoopFunc func(int8, int8) bool
+
+func (__ OfInt8NInt8LoopFunc) LoopItem(k int8, v int8) bool {
+	return __(k, v)
+}
+
 type OfInt8NInt8IterIf interface {
-	Range(func(int8, int8) bool)
+	Range(OfInt8NInt8Looper)
 }
 
 type OfInt8NInt8 map[int8]int8
@@ -12165,8 +14352,17 @@ type OfInt8NRuneMutIf interface {
 	Delete(int8)
 }
 
+type OfInt8NRuneLooper interface {
+	LoopItem(int8, rune) bool
+}
+type OfInt8NRuneLoopFunc func(int8, rune) bool
+
+func (__ OfInt8NRuneLoopFunc) LoopItem(k int8, v rune) bool {
+	return __(k, v)
+}
+
 type OfInt8NRuneIterIf interface {
-	Range(func(int8, rune) bool)
+	Range(OfInt8NRuneLooper)
 }
 
 type OfInt8NRune map[int8]rune
@@ -12215,8 +14411,17 @@ type OfInt8NStringMutIf interface {
 	Delete(int8)
 }
 
+type OfInt8NStringLooper interface {
+	LoopItem(int8, string) bool
+}
+type OfInt8NStringLoopFunc func(int8, string) bool
+
+func (__ OfInt8NStringLoopFunc) LoopItem(k int8, v string) bool {
+	return __(k, v)
+}
+
 type OfInt8NStringIterIf interface {
-	Range(func(int8, string) bool)
+	Range(OfInt8NStringLooper)
 }
 
 type OfInt8NString map[int8]string
@@ -12265,8 +14470,17 @@ type OfInt8NUintMutIf interface {
 	Delete(int8)
 }
 
+type OfInt8NUintLooper interface {
+	LoopItem(int8, uint) bool
+}
+type OfInt8NUintLoopFunc func(int8, uint) bool
+
+func (__ OfInt8NUintLoopFunc) LoopItem(k int8, v uint) bool {
+	return __(k, v)
+}
+
 type OfInt8NUintIterIf interface {
-	Range(func(int8, uint) bool)
+	Range(OfInt8NUintLooper)
 }
 
 type OfInt8NUint map[int8]uint
@@ -12315,8 +14529,17 @@ type OfInt8NUint16MutIf interface {
 	Delete(int8)
 }
 
+type OfInt8NUint16Looper interface {
+	LoopItem(int8, uint16) bool
+}
+type OfInt8NUint16LoopFunc func(int8, uint16) bool
+
+func (__ OfInt8NUint16LoopFunc) LoopItem(k int8, v uint16) bool {
+	return __(k, v)
+}
+
 type OfInt8NUint16IterIf interface {
-	Range(func(int8, uint16) bool)
+	Range(OfInt8NUint16Looper)
 }
 
 type OfInt8NUint16 map[int8]uint16
@@ -12365,8 +14588,17 @@ type OfInt8NUint32MutIf interface {
 	Delete(int8)
 }
 
+type OfInt8NUint32Looper interface {
+	LoopItem(int8, uint32) bool
+}
+type OfInt8NUint32LoopFunc func(int8, uint32) bool
+
+func (__ OfInt8NUint32LoopFunc) LoopItem(k int8, v uint32) bool {
+	return __(k, v)
+}
+
 type OfInt8NUint32IterIf interface {
-	Range(func(int8, uint32) bool)
+	Range(OfInt8NUint32Looper)
 }
 
 type OfInt8NUint32 map[int8]uint32
@@ -12415,8 +14647,17 @@ type OfInt8NUint64MutIf interface {
 	Delete(int8)
 }
 
+type OfInt8NUint64Looper interface {
+	LoopItem(int8, uint64) bool
+}
+type OfInt8NUint64LoopFunc func(int8, uint64) bool
+
+func (__ OfInt8NUint64LoopFunc) LoopItem(k int8, v uint64) bool {
+	return __(k, v)
+}
+
 type OfInt8NUint64IterIf interface {
-	Range(func(int8, uint64) bool)
+	Range(OfInt8NUint64Looper)
 }
 
 type OfInt8NUint64 map[int8]uint64
@@ -12465,8 +14706,17 @@ type OfInt8NUint8MutIf interface {
 	Delete(int8)
 }
 
+type OfInt8NUint8Looper interface {
+	LoopItem(int8, uint8) bool
+}
+type OfInt8NUint8LoopFunc func(int8, uint8) bool
+
+func (__ OfInt8NUint8LoopFunc) LoopItem(k int8, v uint8) bool {
+	return __(k, v)
+}
+
 type OfInt8NUint8IterIf interface {
-	Range(func(int8, uint8) bool)
+	Range(OfInt8NUint8Looper)
 }
 
 type OfInt8NUint8 map[int8]uint8
@@ -12515,8 +14765,17 @@ type OfInt8NUintptrMutIf interface {
 	Delete(int8)
 }
 
+type OfInt8NUintptrLooper interface {
+	LoopItem(int8, uintptr) bool
+}
+type OfInt8NUintptrLoopFunc func(int8, uintptr) bool
+
+func (__ OfInt8NUintptrLoopFunc) LoopItem(k int8, v uintptr) bool {
+	return __(k, v)
+}
+
 type OfInt8NUintptrIterIf interface {
-	Range(func(int8, uintptr) bool)
+	Range(OfInt8NUintptrLooper)
 }
 
 type OfInt8NUintptr map[int8]uintptr
@@ -12565,8 +14824,17 @@ type OfInt8NInterfaceMutIf interface {
 	Delete(int8)
 }
 
+type OfInt8NInterfaceLooper interface {
+	LoopItem(int8, interface{}) bool
+}
+type OfInt8NInterfaceLoopFunc func(int8, interface{}) bool
+
+func (__ OfInt8NInterfaceLoopFunc) LoopItem(k int8, v interface{}) bool {
+	return __(k, v)
+}
+
 type OfInt8NInterfaceIterIf interface {
-	Range(func(int8, interface{}) bool)
+	Range(OfInt8NInterfaceLooper)
 }
 
 type OfInt8NInterface map[int8]interface{}
@@ -12615,8 +14883,17 @@ type OfRuneNBoolMutIf interface {
 	Delete(rune)
 }
 
+type OfRuneNBoolLooper interface {
+	LoopItem(rune, bool) bool
+}
+type OfRuneNBoolLoopFunc func(rune, bool) bool
+
+func (__ OfRuneNBoolLoopFunc) LoopItem(k rune, v bool) bool {
+	return __(k, v)
+}
+
 type OfRuneNBoolIterIf interface {
-	Range(func(rune, bool) bool)
+	Range(OfRuneNBoolLooper)
 }
 
 type OfRuneNBool map[rune]bool
@@ -12665,8 +14942,17 @@ type OfRuneNByteMutIf interface {
 	Delete(rune)
 }
 
+type OfRuneNByteLooper interface {
+	LoopItem(rune, byte) bool
+}
+type OfRuneNByteLoopFunc func(rune, byte) bool
+
+func (__ OfRuneNByteLoopFunc) LoopItem(k rune, v byte) bool {
+	return __(k, v)
+}
+
 type OfRuneNByteIterIf interface {
-	Range(func(rune, byte) bool)
+	Range(OfRuneNByteLooper)
 }
 
 type OfRuneNByte map[rune]byte
@@ -12715,8 +15001,17 @@ type OfRuneNComplex128MutIf interface {
 	Delete(rune)
 }
 
+type OfRuneNComplex128Looper interface {
+	LoopItem(rune, complex128) bool
+}
+type OfRuneNComplex128LoopFunc func(rune, complex128) bool
+
+func (__ OfRuneNComplex128LoopFunc) LoopItem(k rune, v complex128) bool {
+	return __(k, v)
+}
+
 type OfRuneNComplex128IterIf interface {
-	Range(func(rune, complex128) bool)
+	Range(OfRuneNComplex128Looper)
 }
 
 type OfRuneNComplex128 map[rune]complex128
@@ -12765,8 +15060,17 @@ type OfRuneNComplex64MutIf interface {
 	Delete(rune)
 }
 
+type OfRuneNComplex64Looper interface {
+	LoopItem(rune, complex64) bool
+}
+type OfRuneNComplex64LoopFunc func(rune, complex64) bool
+
+func (__ OfRuneNComplex64LoopFunc) LoopItem(k rune, v complex64) bool {
+	return __(k, v)
+}
+
 type OfRuneNComplex64IterIf interface {
-	Range(func(rune, complex64) bool)
+	Range(OfRuneNComplex64Looper)
 }
 
 type OfRuneNComplex64 map[rune]complex64
@@ -12815,8 +15119,17 @@ type OfRuneNErrorMutIf interface {
 	Delete(rune)
 }
 
+type OfRuneNErrorLooper interface {
+	LoopItem(rune, error) bool
+}
+type OfRuneNErrorLoopFunc func(rune, error) bool
+
+func (__ OfRuneNErrorLoopFunc) LoopItem(k rune, v error) bool {
+	return __(k, v)
+}
+
 type OfRuneNErrorIterIf interface {
-	Range(func(rune, error) bool)
+	Range(OfRuneNErrorLooper)
 }
 
 type OfRuneNError map[rune]error
@@ -12865,8 +15178,17 @@ type OfRuneNFloat32MutIf interface {
 	Delete(rune)
 }
 
+type OfRuneNFloat32Looper interface {
+	LoopItem(rune, float32) bool
+}
+type OfRuneNFloat32LoopFunc func(rune, float32) bool
+
+func (__ OfRuneNFloat32LoopFunc) LoopItem(k rune, v float32) bool {
+	return __(k, v)
+}
+
 type OfRuneNFloat32IterIf interface {
-	Range(func(rune, float32) bool)
+	Range(OfRuneNFloat32Looper)
 }
 
 type OfRuneNFloat32 map[rune]float32
@@ -12915,8 +15237,17 @@ type OfRuneNFloat64MutIf interface {
 	Delete(rune)
 }
 
+type OfRuneNFloat64Looper interface {
+	LoopItem(rune, float64) bool
+}
+type OfRuneNFloat64LoopFunc func(rune, float64) bool
+
+func (__ OfRuneNFloat64LoopFunc) LoopItem(k rune, v float64) bool {
+	return __(k, v)
+}
+
 type OfRuneNFloat64IterIf interface {
-	Range(func(rune, float64) bool)
+	Range(OfRuneNFloat64Looper)
 }
 
 type OfRuneNFloat64 map[rune]float64
@@ -12965,8 +15296,17 @@ type OfRuneNIntMutIf interface {
 	Delete(rune)
 }
 
+type OfRuneNIntLooper interface {
+	LoopItem(rune, int) bool
+}
+type OfRuneNIntLoopFunc func(rune, int) bool
+
+func (__ OfRuneNIntLoopFunc) LoopItem(k rune, v int) bool {
+	return __(k, v)
+}
+
 type OfRuneNIntIterIf interface {
-	Range(func(rune, int) bool)
+	Range(OfRuneNIntLooper)
 }
 
 type OfRuneNInt map[rune]int
@@ -13015,8 +15355,17 @@ type OfRuneNInt16MutIf interface {
 	Delete(rune)
 }
 
+type OfRuneNInt16Looper interface {
+	LoopItem(rune, int16) bool
+}
+type OfRuneNInt16LoopFunc func(rune, int16) bool
+
+func (__ OfRuneNInt16LoopFunc) LoopItem(k rune, v int16) bool {
+	return __(k, v)
+}
+
 type OfRuneNInt16IterIf interface {
-	Range(func(rune, int16) bool)
+	Range(OfRuneNInt16Looper)
 }
 
 type OfRuneNInt16 map[rune]int16
@@ -13065,8 +15414,17 @@ type OfRuneNInt32MutIf interface {
 	Delete(rune)
 }
 
+type OfRuneNInt32Looper interface {
+	LoopItem(rune, int32) bool
+}
+type OfRuneNInt32LoopFunc func(rune, int32) bool
+
+func (__ OfRuneNInt32LoopFunc) LoopItem(k rune, v int32) bool {
+	return __(k, v)
+}
+
 type OfRuneNInt32IterIf interface {
-	Range(func(rune, int32) bool)
+	Range(OfRuneNInt32Looper)
 }
 
 type OfRuneNInt32 map[rune]int32
@@ -13115,8 +15473,17 @@ type OfRuneNInt64MutIf interface {
 	Delete(rune)
 }
 
+type OfRuneNInt64Looper interface {
+	LoopItem(rune, int64) bool
+}
+type OfRuneNInt64LoopFunc func(rune, int64) bool
+
+func (__ OfRuneNInt64LoopFunc) LoopItem(k rune, v int64) bool {
+	return __(k, v)
+}
+
 type OfRuneNInt64IterIf interface {
-	Range(func(rune, int64) bool)
+	Range(OfRuneNInt64Looper)
 }
 
 type OfRuneNInt64 map[rune]int64
@@ -13165,8 +15532,17 @@ type OfRuneNInt8MutIf interface {
 	Delete(rune)
 }
 
+type OfRuneNInt8Looper interface {
+	LoopItem(rune, int8) bool
+}
+type OfRuneNInt8LoopFunc func(rune, int8) bool
+
+func (__ OfRuneNInt8LoopFunc) LoopItem(k rune, v int8) bool {
+	return __(k, v)
+}
+
 type OfRuneNInt8IterIf interface {
-	Range(func(rune, int8) bool)
+	Range(OfRuneNInt8Looper)
 }
 
 type OfRuneNInt8 map[rune]int8
@@ -13215,8 +15591,17 @@ type OfRuneNRuneMutIf interface {
 	Delete(rune)
 }
 
+type OfRuneNRuneLooper interface {
+	LoopItem(rune, rune) bool
+}
+type OfRuneNRuneLoopFunc func(rune, rune) bool
+
+func (__ OfRuneNRuneLoopFunc) LoopItem(k rune, v rune) bool {
+	return __(k, v)
+}
+
 type OfRuneNRuneIterIf interface {
-	Range(func(rune, rune) bool)
+	Range(OfRuneNRuneLooper)
 }
 
 type OfRuneNRune map[rune]rune
@@ -13265,8 +15650,17 @@ type OfRuneNStringMutIf interface {
 	Delete(rune)
 }
 
+type OfRuneNStringLooper interface {
+	LoopItem(rune, string) bool
+}
+type OfRuneNStringLoopFunc func(rune, string) bool
+
+func (__ OfRuneNStringLoopFunc) LoopItem(k rune, v string) bool {
+	return __(k, v)
+}
+
 type OfRuneNStringIterIf interface {
-	Range(func(rune, string) bool)
+	Range(OfRuneNStringLooper)
 }
 
 type OfRuneNString map[rune]string
@@ -13315,8 +15709,17 @@ type OfRuneNUintMutIf interface {
 	Delete(rune)
 }
 
+type OfRuneNUintLooper interface {
+	LoopItem(rune, uint) bool
+}
+type OfRuneNUintLoopFunc func(rune, uint) bool
+
+func (__ OfRuneNUintLoopFunc) LoopItem(k rune, v uint) bool {
+	return __(k, v)
+}
+
 type OfRuneNUintIterIf interface {
-	Range(func(rune, uint) bool)
+	Range(OfRuneNUintLooper)
 }
 
 type OfRuneNUint map[rune]uint
@@ -13365,8 +15768,17 @@ type OfRuneNUint16MutIf interface {
 	Delete(rune)
 }
 
+type OfRuneNUint16Looper interface {
+	LoopItem(rune, uint16) bool
+}
+type OfRuneNUint16LoopFunc func(rune, uint16) bool
+
+func (__ OfRuneNUint16LoopFunc) LoopItem(k rune, v uint16) bool {
+	return __(k, v)
+}
+
 type OfRuneNUint16IterIf interface {
-	Range(func(rune, uint16) bool)
+	Range(OfRuneNUint16Looper)
 }
 
 type OfRuneNUint16 map[rune]uint16
@@ -13415,8 +15827,17 @@ type OfRuneNUint32MutIf interface {
 	Delete(rune)
 }
 
+type OfRuneNUint32Looper interface {
+	LoopItem(rune, uint32) bool
+}
+type OfRuneNUint32LoopFunc func(rune, uint32) bool
+
+func (__ OfRuneNUint32LoopFunc) LoopItem(k rune, v uint32) bool {
+	return __(k, v)
+}
+
 type OfRuneNUint32IterIf interface {
-	Range(func(rune, uint32) bool)
+	Range(OfRuneNUint32Looper)
 }
 
 type OfRuneNUint32 map[rune]uint32
@@ -13465,8 +15886,17 @@ type OfRuneNUint64MutIf interface {
 	Delete(rune)
 }
 
+type OfRuneNUint64Looper interface {
+	LoopItem(rune, uint64) bool
+}
+type OfRuneNUint64LoopFunc func(rune, uint64) bool
+
+func (__ OfRuneNUint64LoopFunc) LoopItem(k rune, v uint64) bool {
+	return __(k, v)
+}
+
 type OfRuneNUint64IterIf interface {
-	Range(func(rune, uint64) bool)
+	Range(OfRuneNUint64Looper)
 }
 
 type OfRuneNUint64 map[rune]uint64
@@ -13515,8 +15945,17 @@ type OfRuneNUint8MutIf interface {
 	Delete(rune)
 }
 
+type OfRuneNUint8Looper interface {
+	LoopItem(rune, uint8) bool
+}
+type OfRuneNUint8LoopFunc func(rune, uint8) bool
+
+func (__ OfRuneNUint8LoopFunc) LoopItem(k rune, v uint8) bool {
+	return __(k, v)
+}
+
 type OfRuneNUint8IterIf interface {
-	Range(func(rune, uint8) bool)
+	Range(OfRuneNUint8Looper)
 }
 
 type OfRuneNUint8 map[rune]uint8
@@ -13565,8 +16004,17 @@ type OfRuneNUintptrMutIf interface {
 	Delete(rune)
 }
 
+type OfRuneNUintptrLooper interface {
+	LoopItem(rune, uintptr) bool
+}
+type OfRuneNUintptrLoopFunc func(rune, uintptr) bool
+
+func (__ OfRuneNUintptrLoopFunc) LoopItem(k rune, v uintptr) bool {
+	return __(k, v)
+}
+
 type OfRuneNUintptrIterIf interface {
-	Range(func(rune, uintptr) bool)
+	Range(OfRuneNUintptrLooper)
 }
 
 type OfRuneNUintptr map[rune]uintptr
@@ -13615,8 +16063,17 @@ type OfRuneNInterfaceMutIf interface {
 	Delete(rune)
 }
 
+type OfRuneNInterfaceLooper interface {
+	LoopItem(rune, interface{}) bool
+}
+type OfRuneNInterfaceLoopFunc func(rune, interface{}) bool
+
+func (__ OfRuneNInterfaceLoopFunc) LoopItem(k rune, v interface{}) bool {
+	return __(k, v)
+}
+
 type OfRuneNInterfaceIterIf interface {
-	Range(func(rune, interface{}) bool)
+	Range(OfRuneNInterfaceLooper)
 }
 
 type OfRuneNInterface map[rune]interface{}
@@ -13665,8 +16122,17 @@ type OfStringNBoolMutIf interface {
 	Delete(string)
 }
 
+type OfStringNBoolLooper interface {
+	LoopItem(string, bool) bool
+}
+type OfStringNBoolLoopFunc func(string, bool) bool
+
+func (__ OfStringNBoolLoopFunc) LoopItem(k string, v bool) bool {
+	return __(k, v)
+}
+
 type OfStringNBoolIterIf interface {
-	Range(func(string, bool) bool)
+	Range(OfStringNBoolLooper)
 }
 
 type OfStringNBool map[string]bool
@@ -13715,8 +16181,17 @@ type OfStringNByteMutIf interface {
 	Delete(string)
 }
 
+type OfStringNByteLooper interface {
+	LoopItem(string, byte) bool
+}
+type OfStringNByteLoopFunc func(string, byte) bool
+
+func (__ OfStringNByteLoopFunc) LoopItem(k string, v byte) bool {
+	return __(k, v)
+}
+
 type OfStringNByteIterIf interface {
-	Range(func(string, byte) bool)
+	Range(OfStringNByteLooper)
 }
 
 type OfStringNByte map[string]byte
@@ -13765,8 +16240,17 @@ type OfStringNComplex128MutIf interface {
 	Delete(string)
 }
 
+type OfStringNComplex128Looper interface {
+	LoopItem(string, complex128) bool
+}
+type OfStringNComplex128LoopFunc func(string, complex128) bool
+
+func (__ OfStringNComplex128LoopFunc) LoopItem(k string, v complex128) bool {
+	return __(k, v)
+}
+
 type OfStringNComplex128IterIf interface {
-	Range(func(string, complex128) bool)
+	Range(OfStringNComplex128Looper)
 }
 
 type OfStringNComplex128 map[string]complex128
@@ -13815,8 +16299,17 @@ type OfStringNComplex64MutIf interface {
 	Delete(string)
 }
 
+type OfStringNComplex64Looper interface {
+	LoopItem(string, complex64) bool
+}
+type OfStringNComplex64LoopFunc func(string, complex64) bool
+
+func (__ OfStringNComplex64LoopFunc) LoopItem(k string, v complex64) bool {
+	return __(k, v)
+}
+
 type OfStringNComplex64IterIf interface {
-	Range(func(string, complex64) bool)
+	Range(OfStringNComplex64Looper)
 }
 
 type OfStringNComplex64 map[string]complex64
@@ -13865,8 +16358,17 @@ type OfStringNErrorMutIf interface {
 	Delete(string)
 }
 
+type OfStringNErrorLooper interface {
+	LoopItem(string, error) bool
+}
+type OfStringNErrorLoopFunc func(string, error) bool
+
+func (__ OfStringNErrorLoopFunc) LoopItem(k string, v error) bool {
+	return __(k, v)
+}
+
 type OfStringNErrorIterIf interface {
-	Range(func(string, error) bool)
+	Range(OfStringNErrorLooper)
 }
 
 type OfStringNError map[string]error
@@ -13915,8 +16417,17 @@ type OfStringNFloat32MutIf interface {
 	Delete(string)
 }
 
+type OfStringNFloat32Looper interface {
+	LoopItem(string, float32) bool
+}
+type OfStringNFloat32LoopFunc func(string, float32) bool
+
+func (__ OfStringNFloat32LoopFunc) LoopItem(k string, v float32) bool {
+	return __(k, v)
+}
+
 type OfStringNFloat32IterIf interface {
-	Range(func(string, float32) bool)
+	Range(OfStringNFloat32Looper)
 }
 
 type OfStringNFloat32 map[string]float32
@@ -13965,8 +16476,17 @@ type OfStringNFloat64MutIf interface {
 	Delete(string)
 }
 
+type OfStringNFloat64Looper interface {
+	LoopItem(string, float64) bool
+}
+type OfStringNFloat64LoopFunc func(string, float64) bool
+
+func (__ OfStringNFloat64LoopFunc) LoopItem(k string, v float64) bool {
+	return __(k, v)
+}
+
 type OfStringNFloat64IterIf interface {
-	Range(func(string, float64) bool)
+	Range(OfStringNFloat64Looper)
 }
 
 type OfStringNFloat64 map[string]float64
@@ -14015,8 +16535,17 @@ type OfStringNIntMutIf interface {
 	Delete(string)
 }
 
+type OfStringNIntLooper interface {
+	LoopItem(string, int) bool
+}
+type OfStringNIntLoopFunc func(string, int) bool
+
+func (__ OfStringNIntLoopFunc) LoopItem(k string, v int) bool {
+	return __(k, v)
+}
+
 type OfStringNIntIterIf interface {
-	Range(func(string, int) bool)
+	Range(OfStringNIntLooper)
 }
 
 type OfStringNInt map[string]int
@@ -14065,8 +16594,17 @@ type OfStringNInt16MutIf interface {
 	Delete(string)
 }
 
+type OfStringNInt16Looper interface {
+	LoopItem(string, int16) bool
+}
+type OfStringNInt16LoopFunc func(string, int16) bool
+
+func (__ OfStringNInt16LoopFunc) LoopItem(k string, v int16) bool {
+	return __(k, v)
+}
+
 type OfStringNInt16IterIf interface {
-	Range(func(string, int16) bool)
+	Range(OfStringNInt16Looper)
 }
 
 type OfStringNInt16 map[string]int16
@@ -14115,8 +16653,17 @@ type OfStringNInt32MutIf interface {
 	Delete(string)
 }
 
+type OfStringNInt32Looper interface {
+	LoopItem(string, int32) bool
+}
+type OfStringNInt32LoopFunc func(string, int32) bool
+
+func (__ OfStringNInt32LoopFunc) LoopItem(k string, v int32) bool {
+	return __(k, v)
+}
+
 type OfStringNInt32IterIf interface {
-	Range(func(string, int32) bool)
+	Range(OfStringNInt32Looper)
 }
 
 type OfStringNInt32 map[string]int32
@@ -14165,8 +16712,17 @@ type OfStringNInt64MutIf interface {
 	Delete(string)
 }
 
+type OfStringNInt64Looper interface {
+	LoopItem(string, int64) bool
+}
+type OfStringNInt64LoopFunc func(string, int64) bool
+
+func (__ OfStringNInt64LoopFunc) LoopItem(k string, v int64) bool {
+	return __(k, v)
+}
+
 type OfStringNInt64IterIf interface {
-	Range(func(string, int64) bool)
+	Range(OfStringNInt64Looper)
 }
 
 type OfStringNInt64 map[string]int64
@@ -14215,8 +16771,17 @@ type OfStringNInt8MutIf interface {
 	Delete(string)
 }
 
+type OfStringNInt8Looper interface {
+	LoopItem(string, int8) bool
+}
+type OfStringNInt8LoopFunc func(string, int8) bool
+
+func (__ OfStringNInt8LoopFunc) LoopItem(k string, v int8) bool {
+	return __(k, v)
+}
+
 type OfStringNInt8IterIf interface {
-	Range(func(string, int8) bool)
+	Range(OfStringNInt8Looper)
 }
 
 type OfStringNInt8 map[string]int8
@@ -14265,8 +16830,17 @@ type OfStringNRuneMutIf interface {
 	Delete(string)
 }
 
+type OfStringNRuneLooper interface {
+	LoopItem(string, rune) bool
+}
+type OfStringNRuneLoopFunc func(string, rune) bool
+
+func (__ OfStringNRuneLoopFunc) LoopItem(k string, v rune) bool {
+	return __(k, v)
+}
+
 type OfStringNRuneIterIf interface {
-	Range(func(string, rune) bool)
+	Range(OfStringNRuneLooper)
 }
 
 type OfStringNRune map[string]rune
@@ -14315,8 +16889,17 @@ type OfStringNStringMutIf interface {
 	Delete(string)
 }
 
+type OfStringNStringLooper interface {
+	LoopItem(string, string) bool
+}
+type OfStringNStringLoopFunc func(string, string) bool
+
+func (__ OfStringNStringLoopFunc) LoopItem(k string, v string) bool {
+	return __(k, v)
+}
+
 type OfStringNStringIterIf interface {
-	Range(func(string, string) bool)
+	Range(OfStringNStringLooper)
 }
 
 type OfStringNString map[string]string
@@ -14365,8 +16948,17 @@ type OfStringNUintMutIf interface {
 	Delete(string)
 }
 
+type OfStringNUintLooper interface {
+	LoopItem(string, uint) bool
+}
+type OfStringNUintLoopFunc func(string, uint) bool
+
+func (__ OfStringNUintLoopFunc) LoopItem(k string, v uint) bool {
+	return __(k, v)
+}
+
 type OfStringNUintIterIf interface {
-	Range(func(string, uint) bool)
+	Range(OfStringNUintLooper)
 }
 
 type OfStringNUint map[string]uint
@@ -14415,8 +17007,17 @@ type OfStringNUint16MutIf interface {
 	Delete(string)
 }
 
+type OfStringNUint16Looper interface {
+	LoopItem(string, uint16) bool
+}
+type OfStringNUint16LoopFunc func(string, uint16) bool
+
+func (__ OfStringNUint16LoopFunc) LoopItem(k string, v uint16) bool {
+	return __(k, v)
+}
+
 type OfStringNUint16IterIf interface {
-	Range(func(string, uint16) bool)
+	Range(OfStringNUint16Looper)
 }
 
 type OfStringNUint16 map[string]uint16
@@ -14465,8 +17066,17 @@ type OfStringNUint32MutIf interface {
 	Delete(string)
 }
 
+type OfStringNUint32Looper interface {
+	LoopItem(string, uint32) bool
+}
+type OfStringNUint32LoopFunc func(string, uint32) bool
+
+func (__ OfStringNUint32LoopFunc) LoopItem(k string, v uint32) bool {
+	return __(k, v)
+}
+
 type OfStringNUint32IterIf interface {
-	Range(func(string, uint32) bool)
+	Range(OfStringNUint32Looper)
 }
 
 type OfStringNUint32 map[string]uint32
@@ -14515,8 +17125,17 @@ type OfStringNUint64MutIf interface {
 	Delete(string)
 }
 
+type OfStringNUint64Looper interface {
+	LoopItem(string, uint64) bool
+}
+type OfStringNUint64LoopFunc func(string, uint64) bool
+
+func (__ OfStringNUint64LoopFunc) LoopItem(k string, v uint64) bool {
+	return __(k, v)
+}
+
 type OfStringNUint64IterIf interface {
-	Range(func(string, uint64) bool)
+	Range(OfStringNUint64Looper)
 }
 
 type OfStringNUint64 map[string]uint64
@@ -14565,8 +17184,17 @@ type OfStringNUint8MutIf interface {
 	Delete(string)
 }
 
+type OfStringNUint8Looper interface {
+	LoopItem(string, uint8) bool
+}
+type OfStringNUint8LoopFunc func(string, uint8) bool
+
+func (__ OfStringNUint8LoopFunc) LoopItem(k string, v uint8) bool {
+	return __(k, v)
+}
+
 type OfStringNUint8IterIf interface {
-	Range(func(string, uint8) bool)
+	Range(OfStringNUint8Looper)
 }
 
 type OfStringNUint8 map[string]uint8
@@ -14615,8 +17243,17 @@ type OfStringNUintptrMutIf interface {
 	Delete(string)
 }
 
+type OfStringNUintptrLooper interface {
+	LoopItem(string, uintptr) bool
+}
+type OfStringNUintptrLoopFunc func(string, uintptr) bool
+
+func (__ OfStringNUintptrLoopFunc) LoopItem(k string, v uintptr) bool {
+	return __(k, v)
+}
+
 type OfStringNUintptrIterIf interface {
-	Range(func(string, uintptr) bool)
+	Range(OfStringNUintptrLooper)
 }
 
 type OfStringNUintptr map[string]uintptr
@@ -14665,8 +17302,17 @@ type OfStringNInterfaceMutIf interface {
 	Delete(string)
 }
 
+type OfStringNInterfaceLooper interface {
+	LoopItem(string, interface{}) bool
+}
+type OfStringNInterfaceLoopFunc func(string, interface{}) bool
+
+func (__ OfStringNInterfaceLoopFunc) LoopItem(k string, v interface{}) bool {
+	return __(k, v)
+}
+
 type OfStringNInterfaceIterIf interface {
-	Range(func(string, interface{}) bool)
+	Range(OfStringNInterfaceLooper)
 }
 
 type OfStringNInterface map[string]interface{}
@@ -14715,8 +17361,17 @@ type OfUintNBoolMutIf interface {
 	Delete(uint)
 }
 
+type OfUintNBoolLooper interface {
+	LoopItem(uint, bool) bool
+}
+type OfUintNBoolLoopFunc func(uint, bool) bool
+
+func (__ OfUintNBoolLoopFunc) LoopItem(k uint, v bool) bool {
+	return __(k, v)
+}
+
 type OfUintNBoolIterIf interface {
-	Range(func(uint, bool) bool)
+	Range(OfUintNBoolLooper)
 }
 
 type OfUintNBool map[uint]bool
@@ -14765,8 +17420,17 @@ type OfUintNByteMutIf interface {
 	Delete(uint)
 }
 
+type OfUintNByteLooper interface {
+	LoopItem(uint, byte) bool
+}
+type OfUintNByteLoopFunc func(uint, byte) bool
+
+func (__ OfUintNByteLoopFunc) LoopItem(k uint, v byte) bool {
+	return __(k, v)
+}
+
 type OfUintNByteIterIf interface {
-	Range(func(uint, byte) bool)
+	Range(OfUintNByteLooper)
 }
 
 type OfUintNByte map[uint]byte
@@ -14815,8 +17479,17 @@ type OfUintNComplex128MutIf interface {
 	Delete(uint)
 }
 
+type OfUintNComplex128Looper interface {
+	LoopItem(uint, complex128) bool
+}
+type OfUintNComplex128LoopFunc func(uint, complex128) bool
+
+func (__ OfUintNComplex128LoopFunc) LoopItem(k uint, v complex128) bool {
+	return __(k, v)
+}
+
 type OfUintNComplex128IterIf interface {
-	Range(func(uint, complex128) bool)
+	Range(OfUintNComplex128Looper)
 }
 
 type OfUintNComplex128 map[uint]complex128
@@ -14865,8 +17538,17 @@ type OfUintNComplex64MutIf interface {
 	Delete(uint)
 }
 
+type OfUintNComplex64Looper interface {
+	LoopItem(uint, complex64) bool
+}
+type OfUintNComplex64LoopFunc func(uint, complex64) bool
+
+func (__ OfUintNComplex64LoopFunc) LoopItem(k uint, v complex64) bool {
+	return __(k, v)
+}
+
 type OfUintNComplex64IterIf interface {
-	Range(func(uint, complex64) bool)
+	Range(OfUintNComplex64Looper)
 }
 
 type OfUintNComplex64 map[uint]complex64
@@ -14915,8 +17597,17 @@ type OfUintNErrorMutIf interface {
 	Delete(uint)
 }
 
+type OfUintNErrorLooper interface {
+	LoopItem(uint, error) bool
+}
+type OfUintNErrorLoopFunc func(uint, error) bool
+
+func (__ OfUintNErrorLoopFunc) LoopItem(k uint, v error) bool {
+	return __(k, v)
+}
+
 type OfUintNErrorIterIf interface {
-	Range(func(uint, error) bool)
+	Range(OfUintNErrorLooper)
 }
 
 type OfUintNError map[uint]error
@@ -14965,8 +17656,17 @@ type OfUintNFloat32MutIf interface {
 	Delete(uint)
 }
 
+type OfUintNFloat32Looper interface {
+	LoopItem(uint, float32) bool
+}
+type OfUintNFloat32LoopFunc func(uint, float32) bool
+
+func (__ OfUintNFloat32LoopFunc) LoopItem(k uint, v float32) bool {
+	return __(k, v)
+}
+
 type OfUintNFloat32IterIf interface {
-	Range(func(uint, float32) bool)
+	Range(OfUintNFloat32Looper)
 }
 
 type OfUintNFloat32 map[uint]float32
@@ -15015,8 +17715,17 @@ type OfUintNFloat64MutIf interface {
 	Delete(uint)
 }
 
+type OfUintNFloat64Looper interface {
+	LoopItem(uint, float64) bool
+}
+type OfUintNFloat64LoopFunc func(uint, float64) bool
+
+func (__ OfUintNFloat64LoopFunc) LoopItem(k uint, v float64) bool {
+	return __(k, v)
+}
+
 type OfUintNFloat64IterIf interface {
-	Range(func(uint, float64) bool)
+	Range(OfUintNFloat64Looper)
 }
 
 type OfUintNFloat64 map[uint]float64
@@ -15065,8 +17774,17 @@ type OfUintNIntMutIf interface {
 	Delete(uint)
 }
 
+type OfUintNIntLooper interface {
+	LoopItem(uint, int) bool
+}
+type OfUintNIntLoopFunc func(uint, int) bool
+
+func (__ OfUintNIntLoopFunc) LoopItem(k uint, v int) bool {
+	return __(k, v)
+}
+
 type OfUintNIntIterIf interface {
-	Range(func(uint, int) bool)
+	Range(OfUintNIntLooper)
 }
 
 type OfUintNInt map[uint]int
@@ -15115,8 +17833,17 @@ type OfUintNInt16MutIf interface {
 	Delete(uint)
 }
 
+type OfUintNInt16Looper interface {
+	LoopItem(uint, int16) bool
+}
+type OfUintNInt16LoopFunc func(uint, int16) bool
+
+func (__ OfUintNInt16LoopFunc) LoopItem(k uint, v int16) bool {
+	return __(k, v)
+}
+
 type OfUintNInt16IterIf interface {
-	Range(func(uint, int16) bool)
+	Range(OfUintNInt16Looper)
 }
 
 type OfUintNInt16 map[uint]int16
@@ -15165,8 +17892,17 @@ type OfUintNInt32MutIf interface {
 	Delete(uint)
 }
 
+type OfUintNInt32Looper interface {
+	LoopItem(uint, int32) bool
+}
+type OfUintNInt32LoopFunc func(uint, int32) bool
+
+func (__ OfUintNInt32LoopFunc) LoopItem(k uint, v int32) bool {
+	return __(k, v)
+}
+
 type OfUintNInt32IterIf interface {
-	Range(func(uint, int32) bool)
+	Range(OfUintNInt32Looper)
 }
 
 type OfUintNInt32 map[uint]int32
@@ -15215,8 +17951,17 @@ type OfUintNInt64MutIf interface {
 	Delete(uint)
 }
 
+type OfUintNInt64Looper interface {
+	LoopItem(uint, int64) bool
+}
+type OfUintNInt64LoopFunc func(uint, int64) bool
+
+func (__ OfUintNInt64LoopFunc) LoopItem(k uint, v int64) bool {
+	return __(k, v)
+}
+
 type OfUintNInt64IterIf interface {
-	Range(func(uint, int64) bool)
+	Range(OfUintNInt64Looper)
 }
 
 type OfUintNInt64 map[uint]int64
@@ -15265,8 +18010,17 @@ type OfUintNInt8MutIf interface {
 	Delete(uint)
 }
 
+type OfUintNInt8Looper interface {
+	LoopItem(uint, int8) bool
+}
+type OfUintNInt8LoopFunc func(uint, int8) bool
+
+func (__ OfUintNInt8LoopFunc) LoopItem(k uint, v int8) bool {
+	return __(k, v)
+}
+
 type OfUintNInt8IterIf interface {
-	Range(func(uint, int8) bool)
+	Range(OfUintNInt8Looper)
 }
 
 type OfUintNInt8 map[uint]int8
@@ -15315,8 +18069,17 @@ type OfUintNRuneMutIf interface {
 	Delete(uint)
 }
 
+type OfUintNRuneLooper interface {
+	LoopItem(uint, rune) bool
+}
+type OfUintNRuneLoopFunc func(uint, rune) bool
+
+func (__ OfUintNRuneLoopFunc) LoopItem(k uint, v rune) bool {
+	return __(k, v)
+}
+
 type OfUintNRuneIterIf interface {
-	Range(func(uint, rune) bool)
+	Range(OfUintNRuneLooper)
 }
 
 type OfUintNRune map[uint]rune
@@ -15365,8 +18128,17 @@ type OfUintNStringMutIf interface {
 	Delete(uint)
 }
 
+type OfUintNStringLooper interface {
+	LoopItem(uint, string) bool
+}
+type OfUintNStringLoopFunc func(uint, string) bool
+
+func (__ OfUintNStringLoopFunc) LoopItem(k uint, v string) bool {
+	return __(k, v)
+}
+
 type OfUintNStringIterIf interface {
-	Range(func(uint, string) bool)
+	Range(OfUintNStringLooper)
 }
 
 type OfUintNString map[uint]string
@@ -15415,8 +18187,17 @@ type OfUintNUintMutIf interface {
 	Delete(uint)
 }
 
+type OfUintNUintLooper interface {
+	LoopItem(uint, uint) bool
+}
+type OfUintNUintLoopFunc func(uint, uint) bool
+
+func (__ OfUintNUintLoopFunc) LoopItem(k uint, v uint) bool {
+	return __(k, v)
+}
+
 type OfUintNUintIterIf interface {
-	Range(func(uint, uint) bool)
+	Range(OfUintNUintLooper)
 }
 
 type OfUintNUint map[uint]uint
@@ -15465,8 +18246,17 @@ type OfUintNUint16MutIf interface {
 	Delete(uint)
 }
 
+type OfUintNUint16Looper interface {
+	LoopItem(uint, uint16) bool
+}
+type OfUintNUint16LoopFunc func(uint, uint16) bool
+
+func (__ OfUintNUint16LoopFunc) LoopItem(k uint, v uint16) bool {
+	return __(k, v)
+}
+
 type OfUintNUint16IterIf interface {
-	Range(func(uint, uint16) bool)
+	Range(OfUintNUint16Looper)
 }
 
 type OfUintNUint16 map[uint]uint16
@@ -15515,8 +18305,17 @@ type OfUintNUint32MutIf interface {
 	Delete(uint)
 }
 
+type OfUintNUint32Looper interface {
+	LoopItem(uint, uint32) bool
+}
+type OfUintNUint32LoopFunc func(uint, uint32) bool
+
+func (__ OfUintNUint32LoopFunc) LoopItem(k uint, v uint32) bool {
+	return __(k, v)
+}
+
 type OfUintNUint32IterIf interface {
-	Range(func(uint, uint32) bool)
+	Range(OfUintNUint32Looper)
 }
 
 type OfUintNUint32 map[uint]uint32
@@ -15565,8 +18364,17 @@ type OfUintNUint64MutIf interface {
 	Delete(uint)
 }
 
+type OfUintNUint64Looper interface {
+	LoopItem(uint, uint64) bool
+}
+type OfUintNUint64LoopFunc func(uint, uint64) bool
+
+func (__ OfUintNUint64LoopFunc) LoopItem(k uint, v uint64) bool {
+	return __(k, v)
+}
+
 type OfUintNUint64IterIf interface {
-	Range(func(uint, uint64) bool)
+	Range(OfUintNUint64Looper)
 }
 
 type OfUintNUint64 map[uint]uint64
@@ -15615,8 +18423,17 @@ type OfUintNUint8MutIf interface {
 	Delete(uint)
 }
 
+type OfUintNUint8Looper interface {
+	LoopItem(uint, uint8) bool
+}
+type OfUintNUint8LoopFunc func(uint, uint8) bool
+
+func (__ OfUintNUint8LoopFunc) LoopItem(k uint, v uint8) bool {
+	return __(k, v)
+}
+
 type OfUintNUint8IterIf interface {
-	Range(func(uint, uint8) bool)
+	Range(OfUintNUint8Looper)
 }
 
 type OfUintNUint8 map[uint]uint8
@@ -15665,8 +18482,17 @@ type OfUintNUintptrMutIf interface {
 	Delete(uint)
 }
 
+type OfUintNUintptrLooper interface {
+	LoopItem(uint, uintptr) bool
+}
+type OfUintNUintptrLoopFunc func(uint, uintptr) bool
+
+func (__ OfUintNUintptrLoopFunc) LoopItem(k uint, v uintptr) bool {
+	return __(k, v)
+}
+
 type OfUintNUintptrIterIf interface {
-	Range(func(uint, uintptr) bool)
+	Range(OfUintNUintptrLooper)
 }
 
 type OfUintNUintptr map[uint]uintptr
@@ -15715,8 +18541,17 @@ type OfUintNInterfaceMutIf interface {
 	Delete(uint)
 }
 
+type OfUintNInterfaceLooper interface {
+	LoopItem(uint, interface{}) bool
+}
+type OfUintNInterfaceLoopFunc func(uint, interface{}) bool
+
+func (__ OfUintNInterfaceLoopFunc) LoopItem(k uint, v interface{}) bool {
+	return __(k, v)
+}
+
 type OfUintNInterfaceIterIf interface {
-	Range(func(uint, interface{}) bool)
+	Range(OfUintNInterfaceLooper)
 }
 
 type OfUintNInterface map[uint]interface{}
@@ -15765,8 +18600,17 @@ type OfUint16NBoolMutIf interface {
 	Delete(uint16)
 }
 
+type OfUint16NBoolLooper interface {
+	LoopItem(uint16, bool) bool
+}
+type OfUint16NBoolLoopFunc func(uint16, bool) bool
+
+func (__ OfUint16NBoolLoopFunc) LoopItem(k uint16, v bool) bool {
+	return __(k, v)
+}
+
 type OfUint16NBoolIterIf interface {
-	Range(func(uint16, bool) bool)
+	Range(OfUint16NBoolLooper)
 }
 
 type OfUint16NBool map[uint16]bool
@@ -15815,8 +18659,17 @@ type OfUint16NByteMutIf interface {
 	Delete(uint16)
 }
 
+type OfUint16NByteLooper interface {
+	LoopItem(uint16, byte) bool
+}
+type OfUint16NByteLoopFunc func(uint16, byte) bool
+
+func (__ OfUint16NByteLoopFunc) LoopItem(k uint16, v byte) bool {
+	return __(k, v)
+}
+
 type OfUint16NByteIterIf interface {
-	Range(func(uint16, byte) bool)
+	Range(OfUint16NByteLooper)
 }
 
 type OfUint16NByte map[uint16]byte
@@ -15865,8 +18718,17 @@ type OfUint16NComplex128MutIf interface {
 	Delete(uint16)
 }
 
+type OfUint16NComplex128Looper interface {
+	LoopItem(uint16, complex128) bool
+}
+type OfUint16NComplex128LoopFunc func(uint16, complex128) bool
+
+func (__ OfUint16NComplex128LoopFunc) LoopItem(k uint16, v complex128) bool {
+	return __(k, v)
+}
+
 type OfUint16NComplex128IterIf interface {
-	Range(func(uint16, complex128) bool)
+	Range(OfUint16NComplex128Looper)
 }
 
 type OfUint16NComplex128 map[uint16]complex128
@@ -15915,8 +18777,17 @@ type OfUint16NComplex64MutIf interface {
 	Delete(uint16)
 }
 
+type OfUint16NComplex64Looper interface {
+	LoopItem(uint16, complex64) bool
+}
+type OfUint16NComplex64LoopFunc func(uint16, complex64) bool
+
+func (__ OfUint16NComplex64LoopFunc) LoopItem(k uint16, v complex64) bool {
+	return __(k, v)
+}
+
 type OfUint16NComplex64IterIf interface {
-	Range(func(uint16, complex64) bool)
+	Range(OfUint16NComplex64Looper)
 }
 
 type OfUint16NComplex64 map[uint16]complex64
@@ -15965,8 +18836,17 @@ type OfUint16NErrorMutIf interface {
 	Delete(uint16)
 }
 
+type OfUint16NErrorLooper interface {
+	LoopItem(uint16, error) bool
+}
+type OfUint16NErrorLoopFunc func(uint16, error) bool
+
+func (__ OfUint16NErrorLoopFunc) LoopItem(k uint16, v error) bool {
+	return __(k, v)
+}
+
 type OfUint16NErrorIterIf interface {
-	Range(func(uint16, error) bool)
+	Range(OfUint16NErrorLooper)
 }
 
 type OfUint16NError map[uint16]error
@@ -16015,8 +18895,17 @@ type OfUint16NFloat32MutIf interface {
 	Delete(uint16)
 }
 
+type OfUint16NFloat32Looper interface {
+	LoopItem(uint16, float32) bool
+}
+type OfUint16NFloat32LoopFunc func(uint16, float32) bool
+
+func (__ OfUint16NFloat32LoopFunc) LoopItem(k uint16, v float32) bool {
+	return __(k, v)
+}
+
 type OfUint16NFloat32IterIf interface {
-	Range(func(uint16, float32) bool)
+	Range(OfUint16NFloat32Looper)
 }
 
 type OfUint16NFloat32 map[uint16]float32
@@ -16065,8 +18954,17 @@ type OfUint16NFloat64MutIf interface {
 	Delete(uint16)
 }
 
+type OfUint16NFloat64Looper interface {
+	LoopItem(uint16, float64) bool
+}
+type OfUint16NFloat64LoopFunc func(uint16, float64) bool
+
+func (__ OfUint16NFloat64LoopFunc) LoopItem(k uint16, v float64) bool {
+	return __(k, v)
+}
+
 type OfUint16NFloat64IterIf interface {
-	Range(func(uint16, float64) bool)
+	Range(OfUint16NFloat64Looper)
 }
 
 type OfUint16NFloat64 map[uint16]float64
@@ -16115,8 +19013,17 @@ type OfUint16NIntMutIf interface {
 	Delete(uint16)
 }
 
+type OfUint16NIntLooper interface {
+	LoopItem(uint16, int) bool
+}
+type OfUint16NIntLoopFunc func(uint16, int) bool
+
+func (__ OfUint16NIntLoopFunc) LoopItem(k uint16, v int) bool {
+	return __(k, v)
+}
+
 type OfUint16NIntIterIf interface {
-	Range(func(uint16, int) bool)
+	Range(OfUint16NIntLooper)
 }
 
 type OfUint16NInt map[uint16]int
@@ -16165,8 +19072,17 @@ type OfUint16NInt16MutIf interface {
 	Delete(uint16)
 }
 
+type OfUint16NInt16Looper interface {
+	LoopItem(uint16, int16) bool
+}
+type OfUint16NInt16LoopFunc func(uint16, int16) bool
+
+func (__ OfUint16NInt16LoopFunc) LoopItem(k uint16, v int16) bool {
+	return __(k, v)
+}
+
 type OfUint16NInt16IterIf interface {
-	Range(func(uint16, int16) bool)
+	Range(OfUint16NInt16Looper)
 }
 
 type OfUint16NInt16 map[uint16]int16
@@ -16215,8 +19131,17 @@ type OfUint16NInt32MutIf interface {
 	Delete(uint16)
 }
 
+type OfUint16NInt32Looper interface {
+	LoopItem(uint16, int32) bool
+}
+type OfUint16NInt32LoopFunc func(uint16, int32) bool
+
+func (__ OfUint16NInt32LoopFunc) LoopItem(k uint16, v int32) bool {
+	return __(k, v)
+}
+
 type OfUint16NInt32IterIf interface {
-	Range(func(uint16, int32) bool)
+	Range(OfUint16NInt32Looper)
 }
 
 type OfUint16NInt32 map[uint16]int32
@@ -16265,8 +19190,17 @@ type OfUint16NInt64MutIf interface {
 	Delete(uint16)
 }
 
+type OfUint16NInt64Looper interface {
+	LoopItem(uint16, int64) bool
+}
+type OfUint16NInt64LoopFunc func(uint16, int64) bool
+
+func (__ OfUint16NInt64LoopFunc) LoopItem(k uint16, v int64) bool {
+	return __(k, v)
+}
+
 type OfUint16NInt64IterIf interface {
-	Range(func(uint16, int64) bool)
+	Range(OfUint16NInt64Looper)
 }
 
 type OfUint16NInt64 map[uint16]int64
@@ -16315,8 +19249,17 @@ type OfUint16NInt8MutIf interface {
 	Delete(uint16)
 }
 
+type OfUint16NInt8Looper interface {
+	LoopItem(uint16, int8) bool
+}
+type OfUint16NInt8LoopFunc func(uint16, int8) bool
+
+func (__ OfUint16NInt8LoopFunc) LoopItem(k uint16, v int8) bool {
+	return __(k, v)
+}
+
 type OfUint16NInt8IterIf interface {
-	Range(func(uint16, int8) bool)
+	Range(OfUint16NInt8Looper)
 }
 
 type OfUint16NInt8 map[uint16]int8
@@ -16365,8 +19308,17 @@ type OfUint16NRuneMutIf interface {
 	Delete(uint16)
 }
 
+type OfUint16NRuneLooper interface {
+	LoopItem(uint16, rune) bool
+}
+type OfUint16NRuneLoopFunc func(uint16, rune) bool
+
+func (__ OfUint16NRuneLoopFunc) LoopItem(k uint16, v rune) bool {
+	return __(k, v)
+}
+
 type OfUint16NRuneIterIf interface {
-	Range(func(uint16, rune) bool)
+	Range(OfUint16NRuneLooper)
 }
 
 type OfUint16NRune map[uint16]rune
@@ -16415,8 +19367,17 @@ type OfUint16NStringMutIf interface {
 	Delete(uint16)
 }
 
+type OfUint16NStringLooper interface {
+	LoopItem(uint16, string) bool
+}
+type OfUint16NStringLoopFunc func(uint16, string) bool
+
+func (__ OfUint16NStringLoopFunc) LoopItem(k uint16, v string) bool {
+	return __(k, v)
+}
+
 type OfUint16NStringIterIf interface {
-	Range(func(uint16, string) bool)
+	Range(OfUint16NStringLooper)
 }
 
 type OfUint16NString map[uint16]string
@@ -16465,8 +19426,17 @@ type OfUint16NUintMutIf interface {
 	Delete(uint16)
 }
 
+type OfUint16NUintLooper interface {
+	LoopItem(uint16, uint) bool
+}
+type OfUint16NUintLoopFunc func(uint16, uint) bool
+
+func (__ OfUint16NUintLoopFunc) LoopItem(k uint16, v uint) bool {
+	return __(k, v)
+}
+
 type OfUint16NUintIterIf interface {
-	Range(func(uint16, uint) bool)
+	Range(OfUint16NUintLooper)
 }
 
 type OfUint16NUint map[uint16]uint
@@ -16515,8 +19485,17 @@ type OfUint16NUint16MutIf interface {
 	Delete(uint16)
 }
 
+type OfUint16NUint16Looper interface {
+	LoopItem(uint16, uint16) bool
+}
+type OfUint16NUint16LoopFunc func(uint16, uint16) bool
+
+func (__ OfUint16NUint16LoopFunc) LoopItem(k uint16, v uint16) bool {
+	return __(k, v)
+}
+
 type OfUint16NUint16IterIf interface {
-	Range(func(uint16, uint16) bool)
+	Range(OfUint16NUint16Looper)
 }
 
 type OfUint16NUint16 map[uint16]uint16
@@ -16565,8 +19544,17 @@ type OfUint16NUint32MutIf interface {
 	Delete(uint16)
 }
 
+type OfUint16NUint32Looper interface {
+	LoopItem(uint16, uint32) bool
+}
+type OfUint16NUint32LoopFunc func(uint16, uint32) bool
+
+func (__ OfUint16NUint32LoopFunc) LoopItem(k uint16, v uint32) bool {
+	return __(k, v)
+}
+
 type OfUint16NUint32IterIf interface {
-	Range(func(uint16, uint32) bool)
+	Range(OfUint16NUint32Looper)
 }
 
 type OfUint16NUint32 map[uint16]uint32
@@ -16615,8 +19603,17 @@ type OfUint16NUint64MutIf interface {
 	Delete(uint16)
 }
 
+type OfUint16NUint64Looper interface {
+	LoopItem(uint16, uint64) bool
+}
+type OfUint16NUint64LoopFunc func(uint16, uint64) bool
+
+func (__ OfUint16NUint64LoopFunc) LoopItem(k uint16, v uint64) bool {
+	return __(k, v)
+}
+
 type OfUint16NUint64IterIf interface {
-	Range(func(uint16, uint64) bool)
+	Range(OfUint16NUint64Looper)
 }
 
 type OfUint16NUint64 map[uint16]uint64
@@ -16665,8 +19662,17 @@ type OfUint16NUint8MutIf interface {
 	Delete(uint16)
 }
 
+type OfUint16NUint8Looper interface {
+	LoopItem(uint16, uint8) bool
+}
+type OfUint16NUint8LoopFunc func(uint16, uint8) bool
+
+func (__ OfUint16NUint8LoopFunc) LoopItem(k uint16, v uint8) bool {
+	return __(k, v)
+}
+
 type OfUint16NUint8IterIf interface {
-	Range(func(uint16, uint8) bool)
+	Range(OfUint16NUint8Looper)
 }
 
 type OfUint16NUint8 map[uint16]uint8
@@ -16715,8 +19721,17 @@ type OfUint16NUintptrMutIf interface {
 	Delete(uint16)
 }
 
+type OfUint16NUintptrLooper interface {
+	LoopItem(uint16, uintptr) bool
+}
+type OfUint16NUintptrLoopFunc func(uint16, uintptr) bool
+
+func (__ OfUint16NUintptrLoopFunc) LoopItem(k uint16, v uintptr) bool {
+	return __(k, v)
+}
+
 type OfUint16NUintptrIterIf interface {
-	Range(func(uint16, uintptr) bool)
+	Range(OfUint16NUintptrLooper)
 }
 
 type OfUint16NUintptr map[uint16]uintptr
@@ -16765,8 +19780,17 @@ type OfUint16NInterfaceMutIf interface {
 	Delete(uint16)
 }
 
+type OfUint16NInterfaceLooper interface {
+	LoopItem(uint16, interface{}) bool
+}
+type OfUint16NInterfaceLoopFunc func(uint16, interface{}) bool
+
+func (__ OfUint16NInterfaceLoopFunc) LoopItem(k uint16, v interface{}) bool {
+	return __(k, v)
+}
+
 type OfUint16NInterfaceIterIf interface {
-	Range(func(uint16, interface{}) bool)
+	Range(OfUint16NInterfaceLooper)
 }
 
 type OfUint16NInterface map[uint16]interface{}
@@ -16815,8 +19839,17 @@ type OfUint32NBoolMutIf interface {
 	Delete(uint32)
 }
 
+type OfUint32NBoolLooper interface {
+	LoopItem(uint32, bool) bool
+}
+type OfUint32NBoolLoopFunc func(uint32, bool) bool
+
+func (__ OfUint32NBoolLoopFunc) LoopItem(k uint32, v bool) bool {
+	return __(k, v)
+}
+
 type OfUint32NBoolIterIf interface {
-	Range(func(uint32, bool) bool)
+	Range(OfUint32NBoolLooper)
 }
 
 type OfUint32NBool map[uint32]bool
@@ -16865,8 +19898,17 @@ type OfUint32NByteMutIf interface {
 	Delete(uint32)
 }
 
+type OfUint32NByteLooper interface {
+	LoopItem(uint32, byte) bool
+}
+type OfUint32NByteLoopFunc func(uint32, byte) bool
+
+func (__ OfUint32NByteLoopFunc) LoopItem(k uint32, v byte) bool {
+	return __(k, v)
+}
+
 type OfUint32NByteIterIf interface {
-	Range(func(uint32, byte) bool)
+	Range(OfUint32NByteLooper)
 }
 
 type OfUint32NByte map[uint32]byte
@@ -16915,8 +19957,17 @@ type OfUint32NComplex128MutIf interface {
 	Delete(uint32)
 }
 
+type OfUint32NComplex128Looper interface {
+	LoopItem(uint32, complex128) bool
+}
+type OfUint32NComplex128LoopFunc func(uint32, complex128) bool
+
+func (__ OfUint32NComplex128LoopFunc) LoopItem(k uint32, v complex128) bool {
+	return __(k, v)
+}
+
 type OfUint32NComplex128IterIf interface {
-	Range(func(uint32, complex128) bool)
+	Range(OfUint32NComplex128Looper)
 }
 
 type OfUint32NComplex128 map[uint32]complex128
@@ -16965,8 +20016,17 @@ type OfUint32NComplex64MutIf interface {
 	Delete(uint32)
 }
 
+type OfUint32NComplex64Looper interface {
+	LoopItem(uint32, complex64) bool
+}
+type OfUint32NComplex64LoopFunc func(uint32, complex64) bool
+
+func (__ OfUint32NComplex64LoopFunc) LoopItem(k uint32, v complex64) bool {
+	return __(k, v)
+}
+
 type OfUint32NComplex64IterIf interface {
-	Range(func(uint32, complex64) bool)
+	Range(OfUint32NComplex64Looper)
 }
 
 type OfUint32NComplex64 map[uint32]complex64
@@ -17015,8 +20075,17 @@ type OfUint32NErrorMutIf interface {
 	Delete(uint32)
 }
 
+type OfUint32NErrorLooper interface {
+	LoopItem(uint32, error) bool
+}
+type OfUint32NErrorLoopFunc func(uint32, error) bool
+
+func (__ OfUint32NErrorLoopFunc) LoopItem(k uint32, v error) bool {
+	return __(k, v)
+}
+
 type OfUint32NErrorIterIf interface {
-	Range(func(uint32, error) bool)
+	Range(OfUint32NErrorLooper)
 }
 
 type OfUint32NError map[uint32]error
@@ -17065,8 +20134,17 @@ type OfUint32NFloat32MutIf interface {
 	Delete(uint32)
 }
 
+type OfUint32NFloat32Looper interface {
+	LoopItem(uint32, float32) bool
+}
+type OfUint32NFloat32LoopFunc func(uint32, float32) bool
+
+func (__ OfUint32NFloat32LoopFunc) LoopItem(k uint32, v float32) bool {
+	return __(k, v)
+}
+
 type OfUint32NFloat32IterIf interface {
-	Range(func(uint32, float32) bool)
+	Range(OfUint32NFloat32Looper)
 }
 
 type OfUint32NFloat32 map[uint32]float32
@@ -17115,8 +20193,17 @@ type OfUint32NFloat64MutIf interface {
 	Delete(uint32)
 }
 
+type OfUint32NFloat64Looper interface {
+	LoopItem(uint32, float64) bool
+}
+type OfUint32NFloat64LoopFunc func(uint32, float64) bool
+
+func (__ OfUint32NFloat64LoopFunc) LoopItem(k uint32, v float64) bool {
+	return __(k, v)
+}
+
 type OfUint32NFloat64IterIf interface {
-	Range(func(uint32, float64) bool)
+	Range(OfUint32NFloat64Looper)
 }
 
 type OfUint32NFloat64 map[uint32]float64
@@ -17165,8 +20252,17 @@ type OfUint32NIntMutIf interface {
 	Delete(uint32)
 }
 
+type OfUint32NIntLooper interface {
+	LoopItem(uint32, int) bool
+}
+type OfUint32NIntLoopFunc func(uint32, int) bool
+
+func (__ OfUint32NIntLoopFunc) LoopItem(k uint32, v int) bool {
+	return __(k, v)
+}
+
 type OfUint32NIntIterIf interface {
-	Range(func(uint32, int) bool)
+	Range(OfUint32NIntLooper)
 }
 
 type OfUint32NInt map[uint32]int
@@ -17215,8 +20311,17 @@ type OfUint32NInt16MutIf interface {
 	Delete(uint32)
 }
 
+type OfUint32NInt16Looper interface {
+	LoopItem(uint32, int16) bool
+}
+type OfUint32NInt16LoopFunc func(uint32, int16) bool
+
+func (__ OfUint32NInt16LoopFunc) LoopItem(k uint32, v int16) bool {
+	return __(k, v)
+}
+
 type OfUint32NInt16IterIf interface {
-	Range(func(uint32, int16) bool)
+	Range(OfUint32NInt16Looper)
 }
 
 type OfUint32NInt16 map[uint32]int16
@@ -17265,8 +20370,17 @@ type OfUint32NInt32MutIf interface {
 	Delete(uint32)
 }
 
+type OfUint32NInt32Looper interface {
+	LoopItem(uint32, int32) bool
+}
+type OfUint32NInt32LoopFunc func(uint32, int32) bool
+
+func (__ OfUint32NInt32LoopFunc) LoopItem(k uint32, v int32) bool {
+	return __(k, v)
+}
+
 type OfUint32NInt32IterIf interface {
-	Range(func(uint32, int32) bool)
+	Range(OfUint32NInt32Looper)
 }
 
 type OfUint32NInt32 map[uint32]int32
@@ -17315,8 +20429,17 @@ type OfUint32NInt64MutIf interface {
 	Delete(uint32)
 }
 
+type OfUint32NInt64Looper interface {
+	LoopItem(uint32, int64) bool
+}
+type OfUint32NInt64LoopFunc func(uint32, int64) bool
+
+func (__ OfUint32NInt64LoopFunc) LoopItem(k uint32, v int64) bool {
+	return __(k, v)
+}
+
 type OfUint32NInt64IterIf interface {
-	Range(func(uint32, int64) bool)
+	Range(OfUint32NInt64Looper)
 }
 
 type OfUint32NInt64 map[uint32]int64
@@ -17365,8 +20488,17 @@ type OfUint32NInt8MutIf interface {
 	Delete(uint32)
 }
 
+type OfUint32NInt8Looper interface {
+	LoopItem(uint32, int8) bool
+}
+type OfUint32NInt8LoopFunc func(uint32, int8) bool
+
+func (__ OfUint32NInt8LoopFunc) LoopItem(k uint32, v int8) bool {
+	return __(k, v)
+}
+
 type OfUint32NInt8IterIf interface {
-	Range(func(uint32, int8) bool)
+	Range(OfUint32NInt8Looper)
 }
 
 type OfUint32NInt8 map[uint32]int8
@@ -17415,8 +20547,17 @@ type OfUint32NRuneMutIf interface {
 	Delete(uint32)
 }
 
+type OfUint32NRuneLooper interface {
+	LoopItem(uint32, rune) bool
+}
+type OfUint32NRuneLoopFunc func(uint32, rune) bool
+
+func (__ OfUint32NRuneLoopFunc) LoopItem(k uint32, v rune) bool {
+	return __(k, v)
+}
+
 type OfUint32NRuneIterIf interface {
-	Range(func(uint32, rune) bool)
+	Range(OfUint32NRuneLooper)
 }
 
 type OfUint32NRune map[uint32]rune
@@ -17465,8 +20606,17 @@ type OfUint32NStringMutIf interface {
 	Delete(uint32)
 }
 
+type OfUint32NStringLooper interface {
+	LoopItem(uint32, string) bool
+}
+type OfUint32NStringLoopFunc func(uint32, string) bool
+
+func (__ OfUint32NStringLoopFunc) LoopItem(k uint32, v string) bool {
+	return __(k, v)
+}
+
 type OfUint32NStringIterIf interface {
-	Range(func(uint32, string) bool)
+	Range(OfUint32NStringLooper)
 }
 
 type OfUint32NString map[uint32]string
@@ -17515,8 +20665,17 @@ type OfUint32NUintMutIf interface {
 	Delete(uint32)
 }
 
+type OfUint32NUintLooper interface {
+	LoopItem(uint32, uint) bool
+}
+type OfUint32NUintLoopFunc func(uint32, uint) bool
+
+func (__ OfUint32NUintLoopFunc) LoopItem(k uint32, v uint) bool {
+	return __(k, v)
+}
+
 type OfUint32NUintIterIf interface {
-	Range(func(uint32, uint) bool)
+	Range(OfUint32NUintLooper)
 }
 
 type OfUint32NUint map[uint32]uint
@@ -17565,8 +20724,17 @@ type OfUint32NUint16MutIf interface {
 	Delete(uint32)
 }
 
+type OfUint32NUint16Looper interface {
+	LoopItem(uint32, uint16) bool
+}
+type OfUint32NUint16LoopFunc func(uint32, uint16) bool
+
+func (__ OfUint32NUint16LoopFunc) LoopItem(k uint32, v uint16) bool {
+	return __(k, v)
+}
+
 type OfUint32NUint16IterIf interface {
-	Range(func(uint32, uint16) bool)
+	Range(OfUint32NUint16Looper)
 }
 
 type OfUint32NUint16 map[uint32]uint16
@@ -17615,8 +20783,17 @@ type OfUint32NUint32MutIf interface {
 	Delete(uint32)
 }
 
+type OfUint32NUint32Looper interface {
+	LoopItem(uint32, uint32) bool
+}
+type OfUint32NUint32LoopFunc func(uint32, uint32) bool
+
+func (__ OfUint32NUint32LoopFunc) LoopItem(k uint32, v uint32) bool {
+	return __(k, v)
+}
+
 type OfUint32NUint32IterIf interface {
-	Range(func(uint32, uint32) bool)
+	Range(OfUint32NUint32Looper)
 }
 
 type OfUint32NUint32 map[uint32]uint32
@@ -17665,8 +20842,17 @@ type OfUint32NUint64MutIf interface {
 	Delete(uint32)
 }
 
+type OfUint32NUint64Looper interface {
+	LoopItem(uint32, uint64) bool
+}
+type OfUint32NUint64LoopFunc func(uint32, uint64) bool
+
+func (__ OfUint32NUint64LoopFunc) LoopItem(k uint32, v uint64) bool {
+	return __(k, v)
+}
+
 type OfUint32NUint64IterIf interface {
-	Range(func(uint32, uint64) bool)
+	Range(OfUint32NUint64Looper)
 }
 
 type OfUint32NUint64 map[uint32]uint64
@@ -17715,8 +20901,17 @@ type OfUint32NUint8MutIf interface {
 	Delete(uint32)
 }
 
+type OfUint32NUint8Looper interface {
+	LoopItem(uint32, uint8) bool
+}
+type OfUint32NUint8LoopFunc func(uint32, uint8) bool
+
+func (__ OfUint32NUint8LoopFunc) LoopItem(k uint32, v uint8) bool {
+	return __(k, v)
+}
+
 type OfUint32NUint8IterIf interface {
-	Range(func(uint32, uint8) bool)
+	Range(OfUint32NUint8Looper)
 }
 
 type OfUint32NUint8 map[uint32]uint8
@@ -17765,8 +20960,17 @@ type OfUint32NUintptrMutIf interface {
 	Delete(uint32)
 }
 
+type OfUint32NUintptrLooper interface {
+	LoopItem(uint32, uintptr) bool
+}
+type OfUint32NUintptrLoopFunc func(uint32, uintptr) bool
+
+func (__ OfUint32NUintptrLoopFunc) LoopItem(k uint32, v uintptr) bool {
+	return __(k, v)
+}
+
 type OfUint32NUintptrIterIf interface {
-	Range(func(uint32, uintptr) bool)
+	Range(OfUint32NUintptrLooper)
 }
 
 type OfUint32NUintptr map[uint32]uintptr
@@ -17815,8 +21019,17 @@ type OfUint32NInterfaceMutIf interface {
 	Delete(uint32)
 }
 
+type OfUint32NInterfaceLooper interface {
+	LoopItem(uint32, interface{}) bool
+}
+type OfUint32NInterfaceLoopFunc func(uint32, interface{}) bool
+
+func (__ OfUint32NInterfaceLoopFunc) LoopItem(k uint32, v interface{}) bool {
+	return __(k, v)
+}
+
 type OfUint32NInterfaceIterIf interface {
-	Range(func(uint32, interface{}) bool)
+	Range(OfUint32NInterfaceLooper)
 }
 
 type OfUint32NInterface map[uint32]interface{}
@@ -17865,8 +21078,17 @@ type OfUint64NBoolMutIf interface {
 	Delete(uint64)
 }
 
+type OfUint64NBoolLooper interface {
+	LoopItem(uint64, bool) bool
+}
+type OfUint64NBoolLoopFunc func(uint64, bool) bool
+
+func (__ OfUint64NBoolLoopFunc) LoopItem(k uint64, v bool) bool {
+	return __(k, v)
+}
+
 type OfUint64NBoolIterIf interface {
-	Range(func(uint64, bool) bool)
+	Range(OfUint64NBoolLooper)
 }
 
 type OfUint64NBool map[uint64]bool
@@ -17915,8 +21137,17 @@ type OfUint64NByteMutIf interface {
 	Delete(uint64)
 }
 
+type OfUint64NByteLooper interface {
+	LoopItem(uint64, byte) bool
+}
+type OfUint64NByteLoopFunc func(uint64, byte) bool
+
+func (__ OfUint64NByteLoopFunc) LoopItem(k uint64, v byte) bool {
+	return __(k, v)
+}
+
 type OfUint64NByteIterIf interface {
-	Range(func(uint64, byte) bool)
+	Range(OfUint64NByteLooper)
 }
 
 type OfUint64NByte map[uint64]byte
@@ -17965,8 +21196,17 @@ type OfUint64NComplex128MutIf interface {
 	Delete(uint64)
 }
 
+type OfUint64NComplex128Looper interface {
+	LoopItem(uint64, complex128) bool
+}
+type OfUint64NComplex128LoopFunc func(uint64, complex128) bool
+
+func (__ OfUint64NComplex128LoopFunc) LoopItem(k uint64, v complex128) bool {
+	return __(k, v)
+}
+
 type OfUint64NComplex128IterIf interface {
-	Range(func(uint64, complex128) bool)
+	Range(OfUint64NComplex128Looper)
 }
 
 type OfUint64NComplex128 map[uint64]complex128
@@ -18015,8 +21255,17 @@ type OfUint64NComplex64MutIf interface {
 	Delete(uint64)
 }
 
+type OfUint64NComplex64Looper interface {
+	LoopItem(uint64, complex64) bool
+}
+type OfUint64NComplex64LoopFunc func(uint64, complex64) bool
+
+func (__ OfUint64NComplex64LoopFunc) LoopItem(k uint64, v complex64) bool {
+	return __(k, v)
+}
+
 type OfUint64NComplex64IterIf interface {
-	Range(func(uint64, complex64) bool)
+	Range(OfUint64NComplex64Looper)
 }
 
 type OfUint64NComplex64 map[uint64]complex64
@@ -18065,8 +21314,17 @@ type OfUint64NErrorMutIf interface {
 	Delete(uint64)
 }
 
+type OfUint64NErrorLooper interface {
+	LoopItem(uint64, error) bool
+}
+type OfUint64NErrorLoopFunc func(uint64, error) bool
+
+func (__ OfUint64NErrorLoopFunc) LoopItem(k uint64, v error) bool {
+	return __(k, v)
+}
+
 type OfUint64NErrorIterIf interface {
-	Range(func(uint64, error) bool)
+	Range(OfUint64NErrorLooper)
 }
 
 type OfUint64NError map[uint64]error
@@ -18115,8 +21373,17 @@ type OfUint64NFloat32MutIf interface {
 	Delete(uint64)
 }
 
+type OfUint64NFloat32Looper interface {
+	LoopItem(uint64, float32) bool
+}
+type OfUint64NFloat32LoopFunc func(uint64, float32) bool
+
+func (__ OfUint64NFloat32LoopFunc) LoopItem(k uint64, v float32) bool {
+	return __(k, v)
+}
+
 type OfUint64NFloat32IterIf interface {
-	Range(func(uint64, float32) bool)
+	Range(OfUint64NFloat32Looper)
 }
 
 type OfUint64NFloat32 map[uint64]float32
@@ -18165,8 +21432,17 @@ type OfUint64NFloat64MutIf interface {
 	Delete(uint64)
 }
 
+type OfUint64NFloat64Looper interface {
+	LoopItem(uint64, float64) bool
+}
+type OfUint64NFloat64LoopFunc func(uint64, float64) bool
+
+func (__ OfUint64NFloat64LoopFunc) LoopItem(k uint64, v float64) bool {
+	return __(k, v)
+}
+
 type OfUint64NFloat64IterIf interface {
-	Range(func(uint64, float64) bool)
+	Range(OfUint64NFloat64Looper)
 }
 
 type OfUint64NFloat64 map[uint64]float64
@@ -18215,8 +21491,17 @@ type OfUint64NIntMutIf interface {
 	Delete(uint64)
 }
 
+type OfUint64NIntLooper interface {
+	LoopItem(uint64, int) bool
+}
+type OfUint64NIntLoopFunc func(uint64, int) bool
+
+func (__ OfUint64NIntLoopFunc) LoopItem(k uint64, v int) bool {
+	return __(k, v)
+}
+
 type OfUint64NIntIterIf interface {
-	Range(func(uint64, int) bool)
+	Range(OfUint64NIntLooper)
 }
 
 type OfUint64NInt map[uint64]int
@@ -18265,8 +21550,17 @@ type OfUint64NInt16MutIf interface {
 	Delete(uint64)
 }
 
+type OfUint64NInt16Looper interface {
+	LoopItem(uint64, int16) bool
+}
+type OfUint64NInt16LoopFunc func(uint64, int16) bool
+
+func (__ OfUint64NInt16LoopFunc) LoopItem(k uint64, v int16) bool {
+	return __(k, v)
+}
+
 type OfUint64NInt16IterIf interface {
-	Range(func(uint64, int16) bool)
+	Range(OfUint64NInt16Looper)
 }
 
 type OfUint64NInt16 map[uint64]int16
@@ -18315,8 +21609,17 @@ type OfUint64NInt32MutIf interface {
 	Delete(uint64)
 }
 
+type OfUint64NInt32Looper interface {
+	LoopItem(uint64, int32) bool
+}
+type OfUint64NInt32LoopFunc func(uint64, int32) bool
+
+func (__ OfUint64NInt32LoopFunc) LoopItem(k uint64, v int32) bool {
+	return __(k, v)
+}
+
 type OfUint64NInt32IterIf interface {
-	Range(func(uint64, int32) bool)
+	Range(OfUint64NInt32Looper)
 }
 
 type OfUint64NInt32 map[uint64]int32
@@ -18365,8 +21668,17 @@ type OfUint64NInt64MutIf interface {
 	Delete(uint64)
 }
 
+type OfUint64NInt64Looper interface {
+	LoopItem(uint64, int64) bool
+}
+type OfUint64NInt64LoopFunc func(uint64, int64) bool
+
+func (__ OfUint64NInt64LoopFunc) LoopItem(k uint64, v int64) bool {
+	return __(k, v)
+}
+
 type OfUint64NInt64IterIf interface {
-	Range(func(uint64, int64) bool)
+	Range(OfUint64NInt64Looper)
 }
 
 type OfUint64NInt64 map[uint64]int64
@@ -18415,8 +21727,17 @@ type OfUint64NInt8MutIf interface {
 	Delete(uint64)
 }
 
+type OfUint64NInt8Looper interface {
+	LoopItem(uint64, int8) bool
+}
+type OfUint64NInt8LoopFunc func(uint64, int8) bool
+
+func (__ OfUint64NInt8LoopFunc) LoopItem(k uint64, v int8) bool {
+	return __(k, v)
+}
+
 type OfUint64NInt8IterIf interface {
-	Range(func(uint64, int8) bool)
+	Range(OfUint64NInt8Looper)
 }
 
 type OfUint64NInt8 map[uint64]int8
@@ -18465,8 +21786,17 @@ type OfUint64NRuneMutIf interface {
 	Delete(uint64)
 }
 
+type OfUint64NRuneLooper interface {
+	LoopItem(uint64, rune) bool
+}
+type OfUint64NRuneLoopFunc func(uint64, rune) bool
+
+func (__ OfUint64NRuneLoopFunc) LoopItem(k uint64, v rune) bool {
+	return __(k, v)
+}
+
 type OfUint64NRuneIterIf interface {
-	Range(func(uint64, rune) bool)
+	Range(OfUint64NRuneLooper)
 }
 
 type OfUint64NRune map[uint64]rune
@@ -18515,8 +21845,17 @@ type OfUint64NStringMutIf interface {
 	Delete(uint64)
 }
 
+type OfUint64NStringLooper interface {
+	LoopItem(uint64, string) bool
+}
+type OfUint64NStringLoopFunc func(uint64, string) bool
+
+func (__ OfUint64NStringLoopFunc) LoopItem(k uint64, v string) bool {
+	return __(k, v)
+}
+
 type OfUint64NStringIterIf interface {
-	Range(func(uint64, string) bool)
+	Range(OfUint64NStringLooper)
 }
 
 type OfUint64NString map[uint64]string
@@ -18565,8 +21904,17 @@ type OfUint64NUintMutIf interface {
 	Delete(uint64)
 }
 
+type OfUint64NUintLooper interface {
+	LoopItem(uint64, uint) bool
+}
+type OfUint64NUintLoopFunc func(uint64, uint) bool
+
+func (__ OfUint64NUintLoopFunc) LoopItem(k uint64, v uint) bool {
+	return __(k, v)
+}
+
 type OfUint64NUintIterIf interface {
-	Range(func(uint64, uint) bool)
+	Range(OfUint64NUintLooper)
 }
 
 type OfUint64NUint map[uint64]uint
@@ -18615,8 +21963,17 @@ type OfUint64NUint16MutIf interface {
 	Delete(uint64)
 }
 
+type OfUint64NUint16Looper interface {
+	LoopItem(uint64, uint16) bool
+}
+type OfUint64NUint16LoopFunc func(uint64, uint16) bool
+
+func (__ OfUint64NUint16LoopFunc) LoopItem(k uint64, v uint16) bool {
+	return __(k, v)
+}
+
 type OfUint64NUint16IterIf interface {
-	Range(func(uint64, uint16) bool)
+	Range(OfUint64NUint16Looper)
 }
 
 type OfUint64NUint16 map[uint64]uint16
@@ -18665,8 +22022,17 @@ type OfUint64NUint32MutIf interface {
 	Delete(uint64)
 }
 
+type OfUint64NUint32Looper interface {
+	LoopItem(uint64, uint32) bool
+}
+type OfUint64NUint32LoopFunc func(uint64, uint32) bool
+
+func (__ OfUint64NUint32LoopFunc) LoopItem(k uint64, v uint32) bool {
+	return __(k, v)
+}
+
 type OfUint64NUint32IterIf interface {
-	Range(func(uint64, uint32) bool)
+	Range(OfUint64NUint32Looper)
 }
 
 type OfUint64NUint32 map[uint64]uint32
@@ -18715,8 +22081,17 @@ type OfUint64NUint64MutIf interface {
 	Delete(uint64)
 }
 
+type OfUint64NUint64Looper interface {
+	LoopItem(uint64, uint64) bool
+}
+type OfUint64NUint64LoopFunc func(uint64, uint64) bool
+
+func (__ OfUint64NUint64LoopFunc) LoopItem(k uint64, v uint64) bool {
+	return __(k, v)
+}
+
 type OfUint64NUint64IterIf interface {
-	Range(func(uint64, uint64) bool)
+	Range(OfUint64NUint64Looper)
 }
 
 type OfUint64NUint64 map[uint64]uint64
@@ -18765,8 +22140,17 @@ type OfUint64NUint8MutIf interface {
 	Delete(uint64)
 }
 
+type OfUint64NUint8Looper interface {
+	LoopItem(uint64, uint8) bool
+}
+type OfUint64NUint8LoopFunc func(uint64, uint8) bool
+
+func (__ OfUint64NUint8LoopFunc) LoopItem(k uint64, v uint8) bool {
+	return __(k, v)
+}
+
 type OfUint64NUint8IterIf interface {
-	Range(func(uint64, uint8) bool)
+	Range(OfUint64NUint8Looper)
 }
 
 type OfUint64NUint8 map[uint64]uint8
@@ -18815,8 +22199,17 @@ type OfUint64NUintptrMutIf interface {
 	Delete(uint64)
 }
 
+type OfUint64NUintptrLooper interface {
+	LoopItem(uint64, uintptr) bool
+}
+type OfUint64NUintptrLoopFunc func(uint64, uintptr) bool
+
+func (__ OfUint64NUintptrLoopFunc) LoopItem(k uint64, v uintptr) bool {
+	return __(k, v)
+}
+
 type OfUint64NUintptrIterIf interface {
-	Range(func(uint64, uintptr) bool)
+	Range(OfUint64NUintptrLooper)
 }
 
 type OfUint64NUintptr map[uint64]uintptr
@@ -18865,8 +22258,17 @@ type OfUint64NInterfaceMutIf interface {
 	Delete(uint64)
 }
 
+type OfUint64NInterfaceLooper interface {
+	LoopItem(uint64, interface{}) bool
+}
+type OfUint64NInterfaceLoopFunc func(uint64, interface{}) bool
+
+func (__ OfUint64NInterfaceLoopFunc) LoopItem(k uint64, v interface{}) bool {
+	return __(k, v)
+}
+
 type OfUint64NInterfaceIterIf interface {
-	Range(func(uint64, interface{}) bool)
+	Range(OfUint64NInterfaceLooper)
 }
 
 type OfUint64NInterface map[uint64]interface{}
@@ -18915,8 +22317,17 @@ type OfUint8NBoolMutIf interface {
 	Delete(uint8)
 }
 
+type OfUint8NBoolLooper interface {
+	LoopItem(uint8, bool) bool
+}
+type OfUint8NBoolLoopFunc func(uint8, bool) bool
+
+func (__ OfUint8NBoolLoopFunc) LoopItem(k uint8, v bool) bool {
+	return __(k, v)
+}
+
 type OfUint8NBoolIterIf interface {
-	Range(func(uint8, bool) bool)
+	Range(OfUint8NBoolLooper)
 }
 
 type OfUint8NBool map[uint8]bool
@@ -18965,8 +22376,17 @@ type OfUint8NByteMutIf interface {
 	Delete(uint8)
 }
 
+type OfUint8NByteLooper interface {
+	LoopItem(uint8, byte) bool
+}
+type OfUint8NByteLoopFunc func(uint8, byte) bool
+
+func (__ OfUint8NByteLoopFunc) LoopItem(k uint8, v byte) bool {
+	return __(k, v)
+}
+
 type OfUint8NByteIterIf interface {
-	Range(func(uint8, byte) bool)
+	Range(OfUint8NByteLooper)
 }
 
 type OfUint8NByte map[uint8]byte
@@ -19015,8 +22435,17 @@ type OfUint8NComplex128MutIf interface {
 	Delete(uint8)
 }
 
+type OfUint8NComplex128Looper interface {
+	LoopItem(uint8, complex128) bool
+}
+type OfUint8NComplex128LoopFunc func(uint8, complex128) bool
+
+func (__ OfUint8NComplex128LoopFunc) LoopItem(k uint8, v complex128) bool {
+	return __(k, v)
+}
+
 type OfUint8NComplex128IterIf interface {
-	Range(func(uint8, complex128) bool)
+	Range(OfUint8NComplex128Looper)
 }
 
 type OfUint8NComplex128 map[uint8]complex128
@@ -19065,8 +22494,17 @@ type OfUint8NComplex64MutIf interface {
 	Delete(uint8)
 }
 
+type OfUint8NComplex64Looper interface {
+	LoopItem(uint8, complex64) bool
+}
+type OfUint8NComplex64LoopFunc func(uint8, complex64) bool
+
+func (__ OfUint8NComplex64LoopFunc) LoopItem(k uint8, v complex64) bool {
+	return __(k, v)
+}
+
 type OfUint8NComplex64IterIf interface {
-	Range(func(uint8, complex64) bool)
+	Range(OfUint8NComplex64Looper)
 }
 
 type OfUint8NComplex64 map[uint8]complex64
@@ -19115,8 +22553,17 @@ type OfUint8NErrorMutIf interface {
 	Delete(uint8)
 }
 
+type OfUint8NErrorLooper interface {
+	LoopItem(uint8, error) bool
+}
+type OfUint8NErrorLoopFunc func(uint8, error) bool
+
+func (__ OfUint8NErrorLoopFunc) LoopItem(k uint8, v error) bool {
+	return __(k, v)
+}
+
 type OfUint8NErrorIterIf interface {
-	Range(func(uint8, error) bool)
+	Range(OfUint8NErrorLooper)
 }
 
 type OfUint8NError map[uint8]error
@@ -19165,8 +22612,17 @@ type OfUint8NFloat32MutIf interface {
 	Delete(uint8)
 }
 
+type OfUint8NFloat32Looper interface {
+	LoopItem(uint8, float32) bool
+}
+type OfUint8NFloat32LoopFunc func(uint8, float32) bool
+
+func (__ OfUint8NFloat32LoopFunc) LoopItem(k uint8, v float32) bool {
+	return __(k, v)
+}
+
 type OfUint8NFloat32IterIf interface {
-	Range(func(uint8, float32) bool)
+	Range(OfUint8NFloat32Looper)
 }
 
 type OfUint8NFloat32 map[uint8]float32
@@ -19215,8 +22671,17 @@ type OfUint8NFloat64MutIf interface {
 	Delete(uint8)
 }
 
+type OfUint8NFloat64Looper interface {
+	LoopItem(uint8, float64) bool
+}
+type OfUint8NFloat64LoopFunc func(uint8, float64) bool
+
+func (__ OfUint8NFloat64LoopFunc) LoopItem(k uint8, v float64) bool {
+	return __(k, v)
+}
+
 type OfUint8NFloat64IterIf interface {
-	Range(func(uint8, float64) bool)
+	Range(OfUint8NFloat64Looper)
 }
 
 type OfUint8NFloat64 map[uint8]float64
@@ -19265,8 +22730,17 @@ type OfUint8NIntMutIf interface {
 	Delete(uint8)
 }
 
+type OfUint8NIntLooper interface {
+	LoopItem(uint8, int) bool
+}
+type OfUint8NIntLoopFunc func(uint8, int) bool
+
+func (__ OfUint8NIntLoopFunc) LoopItem(k uint8, v int) bool {
+	return __(k, v)
+}
+
 type OfUint8NIntIterIf interface {
-	Range(func(uint8, int) bool)
+	Range(OfUint8NIntLooper)
 }
 
 type OfUint8NInt map[uint8]int
@@ -19315,8 +22789,17 @@ type OfUint8NInt16MutIf interface {
 	Delete(uint8)
 }
 
+type OfUint8NInt16Looper interface {
+	LoopItem(uint8, int16) bool
+}
+type OfUint8NInt16LoopFunc func(uint8, int16) bool
+
+func (__ OfUint8NInt16LoopFunc) LoopItem(k uint8, v int16) bool {
+	return __(k, v)
+}
+
 type OfUint8NInt16IterIf interface {
-	Range(func(uint8, int16) bool)
+	Range(OfUint8NInt16Looper)
 }
 
 type OfUint8NInt16 map[uint8]int16
@@ -19365,8 +22848,17 @@ type OfUint8NInt32MutIf interface {
 	Delete(uint8)
 }
 
+type OfUint8NInt32Looper interface {
+	LoopItem(uint8, int32) bool
+}
+type OfUint8NInt32LoopFunc func(uint8, int32) bool
+
+func (__ OfUint8NInt32LoopFunc) LoopItem(k uint8, v int32) bool {
+	return __(k, v)
+}
+
 type OfUint8NInt32IterIf interface {
-	Range(func(uint8, int32) bool)
+	Range(OfUint8NInt32Looper)
 }
 
 type OfUint8NInt32 map[uint8]int32
@@ -19415,8 +22907,17 @@ type OfUint8NInt64MutIf interface {
 	Delete(uint8)
 }
 
+type OfUint8NInt64Looper interface {
+	LoopItem(uint8, int64) bool
+}
+type OfUint8NInt64LoopFunc func(uint8, int64) bool
+
+func (__ OfUint8NInt64LoopFunc) LoopItem(k uint8, v int64) bool {
+	return __(k, v)
+}
+
 type OfUint8NInt64IterIf interface {
-	Range(func(uint8, int64) bool)
+	Range(OfUint8NInt64Looper)
 }
 
 type OfUint8NInt64 map[uint8]int64
@@ -19465,8 +22966,17 @@ type OfUint8NInt8MutIf interface {
 	Delete(uint8)
 }
 
+type OfUint8NInt8Looper interface {
+	LoopItem(uint8, int8) bool
+}
+type OfUint8NInt8LoopFunc func(uint8, int8) bool
+
+func (__ OfUint8NInt8LoopFunc) LoopItem(k uint8, v int8) bool {
+	return __(k, v)
+}
+
 type OfUint8NInt8IterIf interface {
-	Range(func(uint8, int8) bool)
+	Range(OfUint8NInt8Looper)
 }
 
 type OfUint8NInt8 map[uint8]int8
@@ -19515,8 +23025,17 @@ type OfUint8NRuneMutIf interface {
 	Delete(uint8)
 }
 
+type OfUint8NRuneLooper interface {
+	LoopItem(uint8, rune) bool
+}
+type OfUint8NRuneLoopFunc func(uint8, rune) bool
+
+func (__ OfUint8NRuneLoopFunc) LoopItem(k uint8, v rune) bool {
+	return __(k, v)
+}
+
 type OfUint8NRuneIterIf interface {
-	Range(func(uint8, rune) bool)
+	Range(OfUint8NRuneLooper)
 }
 
 type OfUint8NRune map[uint8]rune
@@ -19565,8 +23084,17 @@ type OfUint8NStringMutIf interface {
 	Delete(uint8)
 }
 
+type OfUint8NStringLooper interface {
+	LoopItem(uint8, string) bool
+}
+type OfUint8NStringLoopFunc func(uint8, string) bool
+
+func (__ OfUint8NStringLoopFunc) LoopItem(k uint8, v string) bool {
+	return __(k, v)
+}
+
 type OfUint8NStringIterIf interface {
-	Range(func(uint8, string) bool)
+	Range(OfUint8NStringLooper)
 }
 
 type OfUint8NString map[uint8]string
@@ -19615,8 +23143,17 @@ type OfUint8NUintMutIf interface {
 	Delete(uint8)
 }
 
+type OfUint8NUintLooper interface {
+	LoopItem(uint8, uint) bool
+}
+type OfUint8NUintLoopFunc func(uint8, uint) bool
+
+func (__ OfUint8NUintLoopFunc) LoopItem(k uint8, v uint) bool {
+	return __(k, v)
+}
+
 type OfUint8NUintIterIf interface {
-	Range(func(uint8, uint) bool)
+	Range(OfUint8NUintLooper)
 }
 
 type OfUint8NUint map[uint8]uint
@@ -19665,8 +23202,17 @@ type OfUint8NUint16MutIf interface {
 	Delete(uint8)
 }
 
+type OfUint8NUint16Looper interface {
+	LoopItem(uint8, uint16) bool
+}
+type OfUint8NUint16LoopFunc func(uint8, uint16) bool
+
+func (__ OfUint8NUint16LoopFunc) LoopItem(k uint8, v uint16) bool {
+	return __(k, v)
+}
+
 type OfUint8NUint16IterIf interface {
-	Range(func(uint8, uint16) bool)
+	Range(OfUint8NUint16Looper)
 }
 
 type OfUint8NUint16 map[uint8]uint16
@@ -19715,8 +23261,17 @@ type OfUint8NUint32MutIf interface {
 	Delete(uint8)
 }
 
+type OfUint8NUint32Looper interface {
+	LoopItem(uint8, uint32) bool
+}
+type OfUint8NUint32LoopFunc func(uint8, uint32) bool
+
+func (__ OfUint8NUint32LoopFunc) LoopItem(k uint8, v uint32) bool {
+	return __(k, v)
+}
+
 type OfUint8NUint32IterIf interface {
-	Range(func(uint8, uint32) bool)
+	Range(OfUint8NUint32Looper)
 }
 
 type OfUint8NUint32 map[uint8]uint32
@@ -19765,8 +23320,17 @@ type OfUint8NUint64MutIf interface {
 	Delete(uint8)
 }
 
+type OfUint8NUint64Looper interface {
+	LoopItem(uint8, uint64) bool
+}
+type OfUint8NUint64LoopFunc func(uint8, uint64) bool
+
+func (__ OfUint8NUint64LoopFunc) LoopItem(k uint8, v uint64) bool {
+	return __(k, v)
+}
+
 type OfUint8NUint64IterIf interface {
-	Range(func(uint8, uint64) bool)
+	Range(OfUint8NUint64Looper)
 }
 
 type OfUint8NUint64 map[uint8]uint64
@@ -19815,8 +23379,17 @@ type OfUint8NUint8MutIf interface {
 	Delete(uint8)
 }
 
+type OfUint8NUint8Looper interface {
+	LoopItem(uint8, uint8) bool
+}
+type OfUint8NUint8LoopFunc func(uint8, uint8) bool
+
+func (__ OfUint8NUint8LoopFunc) LoopItem(k uint8, v uint8) bool {
+	return __(k, v)
+}
+
 type OfUint8NUint8IterIf interface {
-	Range(func(uint8, uint8) bool)
+	Range(OfUint8NUint8Looper)
 }
 
 type OfUint8NUint8 map[uint8]uint8
@@ -19865,8 +23438,17 @@ type OfUint8NUintptrMutIf interface {
 	Delete(uint8)
 }
 
+type OfUint8NUintptrLooper interface {
+	LoopItem(uint8, uintptr) bool
+}
+type OfUint8NUintptrLoopFunc func(uint8, uintptr) bool
+
+func (__ OfUint8NUintptrLoopFunc) LoopItem(k uint8, v uintptr) bool {
+	return __(k, v)
+}
+
 type OfUint8NUintptrIterIf interface {
-	Range(func(uint8, uintptr) bool)
+	Range(OfUint8NUintptrLooper)
 }
 
 type OfUint8NUintptr map[uint8]uintptr
@@ -19915,8 +23497,17 @@ type OfUint8NInterfaceMutIf interface {
 	Delete(uint8)
 }
 
+type OfUint8NInterfaceLooper interface {
+	LoopItem(uint8, interface{}) bool
+}
+type OfUint8NInterfaceLoopFunc func(uint8, interface{}) bool
+
+func (__ OfUint8NInterfaceLoopFunc) LoopItem(k uint8, v interface{}) bool {
+	return __(k, v)
+}
+
 type OfUint8NInterfaceIterIf interface {
-	Range(func(uint8, interface{}) bool)
+	Range(OfUint8NInterfaceLooper)
 }
 
 type OfUint8NInterface map[uint8]interface{}
@@ -19965,8 +23556,17 @@ type OfUintptrNBoolMutIf interface {
 	Delete(uintptr)
 }
 
+type OfUintptrNBoolLooper interface {
+	LoopItem(uintptr, bool) bool
+}
+type OfUintptrNBoolLoopFunc func(uintptr, bool) bool
+
+func (__ OfUintptrNBoolLoopFunc) LoopItem(k uintptr, v bool) bool {
+	return __(k, v)
+}
+
 type OfUintptrNBoolIterIf interface {
-	Range(func(uintptr, bool) bool)
+	Range(OfUintptrNBoolLooper)
 }
 
 type OfUintptrNBool map[uintptr]bool
@@ -20015,8 +23615,17 @@ type OfUintptrNByteMutIf interface {
 	Delete(uintptr)
 }
 
+type OfUintptrNByteLooper interface {
+	LoopItem(uintptr, byte) bool
+}
+type OfUintptrNByteLoopFunc func(uintptr, byte) bool
+
+func (__ OfUintptrNByteLoopFunc) LoopItem(k uintptr, v byte) bool {
+	return __(k, v)
+}
+
 type OfUintptrNByteIterIf interface {
-	Range(func(uintptr, byte) bool)
+	Range(OfUintptrNByteLooper)
 }
 
 type OfUintptrNByte map[uintptr]byte
@@ -20065,8 +23674,17 @@ type OfUintptrNComplex128MutIf interface {
 	Delete(uintptr)
 }
 
+type OfUintptrNComplex128Looper interface {
+	LoopItem(uintptr, complex128) bool
+}
+type OfUintptrNComplex128LoopFunc func(uintptr, complex128) bool
+
+func (__ OfUintptrNComplex128LoopFunc) LoopItem(k uintptr, v complex128) bool {
+	return __(k, v)
+}
+
 type OfUintptrNComplex128IterIf interface {
-	Range(func(uintptr, complex128) bool)
+	Range(OfUintptrNComplex128Looper)
 }
 
 type OfUintptrNComplex128 map[uintptr]complex128
@@ -20115,8 +23733,17 @@ type OfUintptrNComplex64MutIf interface {
 	Delete(uintptr)
 }
 
+type OfUintptrNComplex64Looper interface {
+	LoopItem(uintptr, complex64) bool
+}
+type OfUintptrNComplex64LoopFunc func(uintptr, complex64) bool
+
+func (__ OfUintptrNComplex64LoopFunc) LoopItem(k uintptr, v complex64) bool {
+	return __(k, v)
+}
+
 type OfUintptrNComplex64IterIf interface {
-	Range(func(uintptr, complex64) bool)
+	Range(OfUintptrNComplex64Looper)
 }
 
 type OfUintptrNComplex64 map[uintptr]complex64
@@ -20165,8 +23792,17 @@ type OfUintptrNErrorMutIf interface {
 	Delete(uintptr)
 }
 
+type OfUintptrNErrorLooper interface {
+	LoopItem(uintptr, error) bool
+}
+type OfUintptrNErrorLoopFunc func(uintptr, error) bool
+
+func (__ OfUintptrNErrorLoopFunc) LoopItem(k uintptr, v error) bool {
+	return __(k, v)
+}
+
 type OfUintptrNErrorIterIf interface {
-	Range(func(uintptr, error) bool)
+	Range(OfUintptrNErrorLooper)
 }
 
 type OfUintptrNError map[uintptr]error
@@ -20215,8 +23851,17 @@ type OfUintptrNFloat32MutIf interface {
 	Delete(uintptr)
 }
 
+type OfUintptrNFloat32Looper interface {
+	LoopItem(uintptr, float32) bool
+}
+type OfUintptrNFloat32LoopFunc func(uintptr, float32) bool
+
+func (__ OfUintptrNFloat32LoopFunc) LoopItem(k uintptr, v float32) bool {
+	return __(k, v)
+}
+
 type OfUintptrNFloat32IterIf interface {
-	Range(func(uintptr, float32) bool)
+	Range(OfUintptrNFloat32Looper)
 }
 
 type OfUintptrNFloat32 map[uintptr]float32
@@ -20265,8 +23910,17 @@ type OfUintptrNFloat64MutIf interface {
 	Delete(uintptr)
 }
 
+type OfUintptrNFloat64Looper interface {
+	LoopItem(uintptr, float64) bool
+}
+type OfUintptrNFloat64LoopFunc func(uintptr, float64) bool
+
+func (__ OfUintptrNFloat64LoopFunc) LoopItem(k uintptr, v float64) bool {
+	return __(k, v)
+}
+
 type OfUintptrNFloat64IterIf interface {
-	Range(func(uintptr, float64) bool)
+	Range(OfUintptrNFloat64Looper)
 }
 
 type OfUintptrNFloat64 map[uintptr]float64
@@ -20315,8 +23969,17 @@ type OfUintptrNIntMutIf interface {
 	Delete(uintptr)
 }
 
+type OfUintptrNIntLooper interface {
+	LoopItem(uintptr, int) bool
+}
+type OfUintptrNIntLoopFunc func(uintptr, int) bool
+
+func (__ OfUintptrNIntLoopFunc) LoopItem(k uintptr, v int) bool {
+	return __(k, v)
+}
+
 type OfUintptrNIntIterIf interface {
-	Range(func(uintptr, int) bool)
+	Range(OfUintptrNIntLooper)
 }
 
 type OfUintptrNInt map[uintptr]int
@@ -20365,8 +24028,17 @@ type OfUintptrNInt16MutIf interface {
 	Delete(uintptr)
 }
 
+type OfUintptrNInt16Looper interface {
+	LoopItem(uintptr, int16) bool
+}
+type OfUintptrNInt16LoopFunc func(uintptr, int16) bool
+
+func (__ OfUintptrNInt16LoopFunc) LoopItem(k uintptr, v int16) bool {
+	return __(k, v)
+}
+
 type OfUintptrNInt16IterIf interface {
-	Range(func(uintptr, int16) bool)
+	Range(OfUintptrNInt16Looper)
 }
 
 type OfUintptrNInt16 map[uintptr]int16
@@ -20415,8 +24087,17 @@ type OfUintptrNInt32MutIf interface {
 	Delete(uintptr)
 }
 
+type OfUintptrNInt32Looper interface {
+	LoopItem(uintptr, int32) bool
+}
+type OfUintptrNInt32LoopFunc func(uintptr, int32) bool
+
+func (__ OfUintptrNInt32LoopFunc) LoopItem(k uintptr, v int32) bool {
+	return __(k, v)
+}
+
 type OfUintptrNInt32IterIf interface {
-	Range(func(uintptr, int32) bool)
+	Range(OfUintptrNInt32Looper)
 }
 
 type OfUintptrNInt32 map[uintptr]int32
@@ -20465,8 +24146,17 @@ type OfUintptrNInt64MutIf interface {
 	Delete(uintptr)
 }
 
+type OfUintptrNInt64Looper interface {
+	LoopItem(uintptr, int64) bool
+}
+type OfUintptrNInt64LoopFunc func(uintptr, int64) bool
+
+func (__ OfUintptrNInt64LoopFunc) LoopItem(k uintptr, v int64) bool {
+	return __(k, v)
+}
+
 type OfUintptrNInt64IterIf interface {
-	Range(func(uintptr, int64) bool)
+	Range(OfUintptrNInt64Looper)
 }
 
 type OfUintptrNInt64 map[uintptr]int64
@@ -20515,8 +24205,17 @@ type OfUintptrNInt8MutIf interface {
 	Delete(uintptr)
 }
 
+type OfUintptrNInt8Looper interface {
+	LoopItem(uintptr, int8) bool
+}
+type OfUintptrNInt8LoopFunc func(uintptr, int8) bool
+
+func (__ OfUintptrNInt8LoopFunc) LoopItem(k uintptr, v int8) bool {
+	return __(k, v)
+}
+
 type OfUintptrNInt8IterIf interface {
-	Range(func(uintptr, int8) bool)
+	Range(OfUintptrNInt8Looper)
 }
 
 type OfUintptrNInt8 map[uintptr]int8
@@ -20565,8 +24264,17 @@ type OfUintptrNRuneMutIf interface {
 	Delete(uintptr)
 }
 
+type OfUintptrNRuneLooper interface {
+	LoopItem(uintptr, rune) bool
+}
+type OfUintptrNRuneLoopFunc func(uintptr, rune) bool
+
+func (__ OfUintptrNRuneLoopFunc) LoopItem(k uintptr, v rune) bool {
+	return __(k, v)
+}
+
 type OfUintptrNRuneIterIf interface {
-	Range(func(uintptr, rune) bool)
+	Range(OfUintptrNRuneLooper)
 }
 
 type OfUintptrNRune map[uintptr]rune
@@ -20615,8 +24323,17 @@ type OfUintptrNStringMutIf interface {
 	Delete(uintptr)
 }
 
+type OfUintptrNStringLooper interface {
+	LoopItem(uintptr, string) bool
+}
+type OfUintptrNStringLoopFunc func(uintptr, string) bool
+
+func (__ OfUintptrNStringLoopFunc) LoopItem(k uintptr, v string) bool {
+	return __(k, v)
+}
+
 type OfUintptrNStringIterIf interface {
-	Range(func(uintptr, string) bool)
+	Range(OfUintptrNStringLooper)
 }
 
 type OfUintptrNString map[uintptr]string
@@ -20665,8 +24382,17 @@ type OfUintptrNUintMutIf interface {
 	Delete(uintptr)
 }
 
+type OfUintptrNUintLooper interface {
+	LoopItem(uintptr, uint) bool
+}
+type OfUintptrNUintLoopFunc func(uintptr, uint) bool
+
+func (__ OfUintptrNUintLoopFunc) LoopItem(k uintptr, v uint) bool {
+	return __(k, v)
+}
+
 type OfUintptrNUintIterIf interface {
-	Range(func(uintptr, uint) bool)
+	Range(OfUintptrNUintLooper)
 }
 
 type OfUintptrNUint map[uintptr]uint
@@ -20715,8 +24441,17 @@ type OfUintptrNUint16MutIf interface {
 	Delete(uintptr)
 }
 
+type OfUintptrNUint16Looper interface {
+	LoopItem(uintptr, uint16) bool
+}
+type OfUintptrNUint16LoopFunc func(uintptr, uint16) bool
+
+func (__ OfUintptrNUint16LoopFunc) LoopItem(k uintptr, v uint16) bool {
+	return __(k, v)
+}
+
 type OfUintptrNUint16IterIf interface {
-	Range(func(uintptr, uint16) bool)
+	Range(OfUintptrNUint16Looper)
 }
 
 type OfUintptrNUint16 map[uintptr]uint16
@@ -20765,8 +24500,17 @@ type OfUintptrNUint32MutIf interface {
 	Delete(uintptr)
 }
 
+type OfUintptrNUint32Looper interface {
+	LoopItem(uintptr, uint32) bool
+}
+type OfUintptrNUint32LoopFunc func(uintptr, uint32) bool
+
+func (__ OfUintptrNUint32LoopFunc) LoopItem(k uintptr, v uint32) bool {
+	return __(k, v)
+}
+
 type OfUintptrNUint32IterIf interface {
-	Range(func(uintptr, uint32) bool)
+	Range(OfUintptrNUint32Looper)
 }
 
 type OfUintptrNUint32 map[uintptr]uint32
@@ -20815,8 +24559,17 @@ type OfUintptrNUint64MutIf interface {
 	Delete(uintptr)
 }
 
+type OfUintptrNUint64Looper interface {
+	LoopItem(uintptr, uint64) bool
+}
+type OfUintptrNUint64LoopFunc func(uintptr, uint64) bool
+
+func (__ OfUintptrNUint64LoopFunc) LoopItem(k uintptr, v uint64) bool {
+	return __(k, v)
+}
+
 type OfUintptrNUint64IterIf interface {
-	Range(func(uintptr, uint64) bool)
+	Range(OfUintptrNUint64Looper)
 }
 
 type OfUintptrNUint64 map[uintptr]uint64
@@ -20865,8 +24618,17 @@ type OfUintptrNUint8MutIf interface {
 	Delete(uintptr)
 }
 
+type OfUintptrNUint8Looper interface {
+	LoopItem(uintptr, uint8) bool
+}
+type OfUintptrNUint8LoopFunc func(uintptr, uint8) bool
+
+func (__ OfUintptrNUint8LoopFunc) LoopItem(k uintptr, v uint8) bool {
+	return __(k, v)
+}
+
 type OfUintptrNUint8IterIf interface {
-	Range(func(uintptr, uint8) bool)
+	Range(OfUintptrNUint8Looper)
 }
 
 type OfUintptrNUint8 map[uintptr]uint8
@@ -20915,8 +24677,17 @@ type OfUintptrNUintptrMutIf interface {
 	Delete(uintptr)
 }
 
+type OfUintptrNUintptrLooper interface {
+	LoopItem(uintptr, uintptr) bool
+}
+type OfUintptrNUintptrLoopFunc func(uintptr, uintptr) bool
+
+func (__ OfUintptrNUintptrLoopFunc) LoopItem(k uintptr, v uintptr) bool {
+	return __(k, v)
+}
+
 type OfUintptrNUintptrIterIf interface {
-	Range(func(uintptr, uintptr) bool)
+	Range(OfUintptrNUintptrLooper)
 }
 
 type OfUintptrNUintptr map[uintptr]uintptr
@@ -20965,8 +24736,17 @@ type OfUintptrNInterfaceMutIf interface {
 	Delete(uintptr)
 }
 
+type OfUintptrNInterfaceLooper interface {
+	LoopItem(uintptr, interface{}) bool
+}
+type OfUintptrNInterfaceLoopFunc func(uintptr, interface{}) bool
+
+func (__ OfUintptrNInterfaceLoopFunc) LoopItem(k uintptr, v interface{}) bool {
+	return __(k, v)
+}
+
 type OfUintptrNInterfaceIterIf interface {
-	Range(func(uintptr, interface{}) bool)
+	Range(OfUintptrNInterfaceLooper)
 }
 
 type OfUintptrNInterface map[uintptr]interface{}
@@ -21015,8 +24795,17 @@ type OfInterfaceNBoolMutIf interface {
 	Delete(interface{})
 }
 
+type OfInterfaceNBoolLooper interface {
+	LoopItem(interface{}, bool) bool
+}
+type OfInterfaceNBoolLoopFunc func(interface{}, bool) bool
+
+func (__ OfInterfaceNBoolLoopFunc) LoopItem(k interface{}, v bool) bool {
+	return __(k, v)
+}
+
 type OfInterfaceNBoolIterIf interface {
-	Range(func(interface{}, bool) bool)
+	Range(OfInterfaceNBoolLooper)
 }
 
 type OfInterfaceNBool map[interface{}]bool
@@ -21065,8 +24854,17 @@ type OfInterfaceNByteMutIf interface {
 	Delete(interface{})
 }
 
+type OfInterfaceNByteLooper interface {
+	LoopItem(interface{}, byte) bool
+}
+type OfInterfaceNByteLoopFunc func(interface{}, byte) bool
+
+func (__ OfInterfaceNByteLoopFunc) LoopItem(k interface{}, v byte) bool {
+	return __(k, v)
+}
+
 type OfInterfaceNByteIterIf interface {
-	Range(func(interface{}, byte) bool)
+	Range(OfInterfaceNByteLooper)
 }
 
 type OfInterfaceNByte map[interface{}]byte
@@ -21115,8 +24913,17 @@ type OfInterfaceNComplex128MutIf interface {
 	Delete(interface{})
 }
 
+type OfInterfaceNComplex128Looper interface {
+	LoopItem(interface{}, complex128) bool
+}
+type OfInterfaceNComplex128LoopFunc func(interface{}, complex128) bool
+
+func (__ OfInterfaceNComplex128LoopFunc) LoopItem(k interface{}, v complex128) bool {
+	return __(k, v)
+}
+
 type OfInterfaceNComplex128IterIf interface {
-	Range(func(interface{}, complex128) bool)
+	Range(OfInterfaceNComplex128Looper)
 }
 
 type OfInterfaceNComplex128 map[interface{}]complex128
@@ -21165,8 +24972,17 @@ type OfInterfaceNComplex64MutIf interface {
 	Delete(interface{})
 }
 
+type OfInterfaceNComplex64Looper interface {
+	LoopItem(interface{}, complex64) bool
+}
+type OfInterfaceNComplex64LoopFunc func(interface{}, complex64) bool
+
+func (__ OfInterfaceNComplex64LoopFunc) LoopItem(k interface{}, v complex64) bool {
+	return __(k, v)
+}
+
 type OfInterfaceNComplex64IterIf interface {
-	Range(func(interface{}, complex64) bool)
+	Range(OfInterfaceNComplex64Looper)
 }
 
 type OfInterfaceNComplex64 map[interface{}]complex64
@@ -21215,8 +25031,17 @@ type OfInterfaceNErrorMutIf interface {
 	Delete(interface{})
 }
 
+type OfInterfaceNErrorLooper interface {
+	LoopItem(interface{}, error) bool
+}
+type OfInterfaceNErrorLoopFunc func(interface{}, error) bool
+
+func (__ OfInterfaceNErrorLoopFunc) LoopItem(k interface{}, v error) bool {
+	return __(k, v)
+}
+
 type OfInterfaceNErrorIterIf interface {
-	Range(func(interface{}, error) bool)
+	Range(OfInterfaceNErrorLooper)
 }
 
 type OfInterfaceNError map[interface{}]error
@@ -21265,8 +25090,17 @@ type OfInterfaceNFloat32MutIf interface {
 	Delete(interface{})
 }
 
+type OfInterfaceNFloat32Looper interface {
+	LoopItem(interface{}, float32) bool
+}
+type OfInterfaceNFloat32LoopFunc func(interface{}, float32) bool
+
+func (__ OfInterfaceNFloat32LoopFunc) LoopItem(k interface{}, v float32) bool {
+	return __(k, v)
+}
+
 type OfInterfaceNFloat32IterIf interface {
-	Range(func(interface{}, float32) bool)
+	Range(OfInterfaceNFloat32Looper)
 }
 
 type OfInterfaceNFloat32 map[interface{}]float32
@@ -21315,8 +25149,17 @@ type OfInterfaceNFloat64MutIf interface {
 	Delete(interface{})
 }
 
+type OfInterfaceNFloat64Looper interface {
+	LoopItem(interface{}, float64) bool
+}
+type OfInterfaceNFloat64LoopFunc func(interface{}, float64) bool
+
+func (__ OfInterfaceNFloat64LoopFunc) LoopItem(k interface{}, v float64) bool {
+	return __(k, v)
+}
+
 type OfInterfaceNFloat64IterIf interface {
-	Range(func(interface{}, float64) bool)
+	Range(OfInterfaceNFloat64Looper)
 }
 
 type OfInterfaceNFloat64 map[interface{}]float64
@@ -21365,8 +25208,17 @@ type OfInterfaceNIntMutIf interface {
 	Delete(interface{})
 }
 
+type OfInterfaceNIntLooper interface {
+	LoopItem(interface{}, int) bool
+}
+type OfInterfaceNIntLoopFunc func(interface{}, int) bool
+
+func (__ OfInterfaceNIntLoopFunc) LoopItem(k interface{}, v int) bool {
+	return __(k, v)
+}
+
 type OfInterfaceNIntIterIf interface {
-	Range(func(interface{}, int) bool)
+	Range(OfInterfaceNIntLooper)
 }
 
 type OfInterfaceNInt map[interface{}]int
@@ -21415,8 +25267,17 @@ type OfInterfaceNInt16MutIf interface {
 	Delete(interface{})
 }
 
+type OfInterfaceNInt16Looper interface {
+	LoopItem(interface{}, int16) bool
+}
+type OfInterfaceNInt16LoopFunc func(interface{}, int16) bool
+
+func (__ OfInterfaceNInt16LoopFunc) LoopItem(k interface{}, v int16) bool {
+	return __(k, v)
+}
+
 type OfInterfaceNInt16IterIf interface {
-	Range(func(interface{}, int16) bool)
+	Range(OfInterfaceNInt16Looper)
 }
 
 type OfInterfaceNInt16 map[interface{}]int16
@@ -21465,8 +25326,17 @@ type OfInterfaceNInt32MutIf interface {
 	Delete(interface{})
 }
 
+type OfInterfaceNInt32Looper interface {
+	LoopItem(interface{}, int32) bool
+}
+type OfInterfaceNInt32LoopFunc func(interface{}, int32) bool
+
+func (__ OfInterfaceNInt32LoopFunc) LoopItem(k interface{}, v int32) bool {
+	return __(k, v)
+}
+
 type OfInterfaceNInt32IterIf interface {
-	Range(func(interface{}, int32) bool)
+	Range(OfInterfaceNInt32Looper)
 }
 
 type OfInterfaceNInt32 map[interface{}]int32
@@ -21515,8 +25385,17 @@ type OfInterfaceNInt64MutIf interface {
 	Delete(interface{})
 }
 
+type OfInterfaceNInt64Looper interface {
+	LoopItem(interface{}, int64) bool
+}
+type OfInterfaceNInt64LoopFunc func(interface{}, int64) bool
+
+func (__ OfInterfaceNInt64LoopFunc) LoopItem(k interface{}, v int64) bool {
+	return __(k, v)
+}
+
 type OfInterfaceNInt64IterIf interface {
-	Range(func(interface{}, int64) bool)
+	Range(OfInterfaceNInt64Looper)
 }
 
 type OfInterfaceNInt64 map[interface{}]int64
@@ -21565,8 +25444,17 @@ type OfInterfaceNInt8MutIf interface {
 	Delete(interface{})
 }
 
+type OfInterfaceNInt8Looper interface {
+	LoopItem(interface{}, int8) bool
+}
+type OfInterfaceNInt8LoopFunc func(interface{}, int8) bool
+
+func (__ OfInterfaceNInt8LoopFunc) LoopItem(k interface{}, v int8) bool {
+	return __(k, v)
+}
+
 type OfInterfaceNInt8IterIf interface {
-	Range(func(interface{}, int8) bool)
+	Range(OfInterfaceNInt8Looper)
 }
 
 type OfInterfaceNInt8 map[interface{}]int8
@@ -21615,8 +25503,17 @@ type OfInterfaceNRuneMutIf interface {
 	Delete(interface{})
 }
 
+type OfInterfaceNRuneLooper interface {
+	LoopItem(interface{}, rune) bool
+}
+type OfInterfaceNRuneLoopFunc func(interface{}, rune) bool
+
+func (__ OfInterfaceNRuneLoopFunc) LoopItem(k interface{}, v rune) bool {
+	return __(k, v)
+}
+
 type OfInterfaceNRuneIterIf interface {
-	Range(func(interface{}, rune) bool)
+	Range(OfInterfaceNRuneLooper)
 }
 
 type OfInterfaceNRune map[interface{}]rune
@@ -21665,8 +25562,17 @@ type OfInterfaceNStringMutIf interface {
 	Delete(interface{})
 }
 
+type OfInterfaceNStringLooper interface {
+	LoopItem(interface{}, string) bool
+}
+type OfInterfaceNStringLoopFunc func(interface{}, string) bool
+
+func (__ OfInterfaceNStringLoopFunc) LoopItem(k interface{}, v string) bool {
+	return __(k, v)
+}
+
 type OfInterfaceNStringIterIf interface {
-	Range(func(interface{}, string) bool)
+	Range(OfInterfaceNStringLooper)
 }
 
 type OfInterfaceNString map[interface{}]string
@@ -21715,8 +25621,17 @@ type OfInterfaceNUintMutIf interface {
 	Delete(interface{})
 }
 
+type OfInterfaceNUintLooper interface {
+	LoopItem(interface{}, uint) bool
+}
+type OfInterfaceNUintLoopFunc func(interface{}, uint) bool
+
+func (__ OfInterfaceNUintLoopFunc) LoopItem(k interface{}, v uint) bool {
+	return __(k, v)
+}
+
 type OfInterfaceNUintIterIf interface {
-	Range(func(interface{}, uint) bool)
+	Range(OfInterfaceNUintLooper)
 }
 
 type OfInterfaceNUint map[interface{}]uint
@@ -21765,8 +25680,17 @@ type OfInterfaceNUint16MutIf interface {
 	Delete(interface{})
 }
 
+type OfInterfaceNUint16Looper interface {
+	LoopItem(interface{}, uint16) bool
+}
+type OfInterfaceNUint16LoopFunc func(interface{}, uint16) bool
+
+func (__ OfInterfaceNUint16LoopFunc) LoopItem(k interface{}, v uint16) bool {
+	return __(k, v)
+}
+
 type OfInterfaceNUint16IterIf interface {
-	Range(func(interface{}, uint16) bool)
+	Range(OfInterfaceNUint16Looper)
 }
 
 type OfInterfaceNUint16 map[interface{}]uint16
@@ -21815,8 +25739,17 @@ type OfInterfaceNUint32MutIf interface {
 	Delete(interface{})
 }
 
+type OfInterfaceNUint32Looper interface {
+	LoopItem(interface{}, uint32) bool
+}
+type OfInterfaceNUint32LoopFunc func(interface{}, uint32) bool
+
+func (__ OfInterfaceNUint32LoopFunc) LoopItem(k interface{}, v uint32) bool {
+	return __(k, v)
+}
+
 type OfInterfaceNUint32IterIf interface {
-	Range(func(interface{}, uint32) bool)
+	Range(OfInterfaceNUint32Looper)
 }
 
 type OfInterfaceNUint32 map[interface{}]uint32
@@ -21865,8 +25798,17 @@ type OfInterfaceNUint64MutIf interface {
 	Delete(interface{})
 }
 
+type OfInterfaceNUint64Looper interface {
+	LoopItem(interface{}, uint64) bool
+}
+type OfInterfaceNUint64LoopFunc func(interface{}, uint64) bool
+
+func (__ OfInterfaceNUint64LoopFunc) LoopItem(k interface{}, v uint64) bool {
+	return __(k, v)
+}
+
 type OfInterfaceNUint64IterIf interface {
-	Range(func(interface{}, uint64) bool)
+	Range(OfInterfaceNUint64Looper)
 }
 
 type OfInterfaceNUint64 map[interface{}]uint64
@@ -21915,8 +25857,17 @@ type OfInterfaceNUint8MutIf interface {
 	Delete(interface{})
 }
 
+type OfInterfaceNUint8Looper interface {
+	LoopItem(interface{}, uint8) bool
+}
+type OfInterfaceNUint8LoopFunc func(interface{}, uint8) bool
+
+func (__ OfInterfaceNUint8LoopFunc) LoopItem(k interface{}, v uint8) bool {
+	return __(k, v)
+}
+
 type OfInterfaceNUint8IterIf interface {
-	Range(func(interface{}, uint8) bool)
+	Range(OfInterfaceNUint8Looper)
 }
 
 type OfInterfaceNUint8 map[interface{}]uint8
@@ -21965,8 +25916,17 @@ type OfInterfaceNUintptrMutIf interface {
 	Delete(interface{})
 }
 
+type OfInterfaceNUintptrLooper interface {
+	LoopItem(interface{}, uintptr) bool
+}
+type OfInterfaceNUintptrLoopFunc func(interface{}, uintptr) bool
+
+func (__ OfInterfaceNUintptrLoopFunc) LoopItem(k interface{}, v uintptr) bool {
+	return __(k, v)
+}
+
 type OfInterfaceNUintptrIterIf interface {
-	Range(func(interface{}, uintptr) bool)
+	Range(OfInterfaceNUintptrLooper)
 }
 
 type OfInterfaceNUintptr map[interface{}]uintptr
@@ -22015,8 +25975,17 @@ type OfInterfaceNInterfaceMutIf interface {
 	Delete(interface{})
 }
 
+type OfInterfaceNInterfaceLooper interface {
+	LoopItem(interface{}, interface{}) bool
+}
+type OfInterfaceNInterfaceLoopFunc func(interface{}, interface{}) bool
+
+func (__ OfInterfaceNInterfaceLoopFunc) LoopItem(k interface{}, v interface{}) bool {
+	return __(k, v)
+}
+
 type OfInterfaceNInterfaceIterIf interface {
-	Range(func(interface{}, interface{}) bool)
+	Range(OfInterfaceNInterfaceLooper)
 }
 
 type OfInterfaceNInterface map[interface{}]interface{}

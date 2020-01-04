@@ -18,8 +18,17 @@ type _Prefix_SomeKNSomeVMutIf interface {
 	Delete(SomeK)
 }
 
+type _Prefix_SomeKNSomeVLooper interface {
+	LoopItem(SomeK, SomeV) bool
+}
+type _Prefix_SomeKNSomeVLoopFunc func(SomeK, SomeV) bool
+
+func (__ _Prefix_SomeKNSomeVLoopFunc) LoopItem(k SomeK, v SomeV) bool {
+	return __(k, v)
+}
+
 type _Prefix_SomeKNSomeVIterIf interface {
-	Range(func(SomeK, SomeV) bool)
+	Range(_Prefix_SomeKNSomeVLooper)
 }
 
 type _Prefix_SomeKNSomeV map[SomeK]SomeV
